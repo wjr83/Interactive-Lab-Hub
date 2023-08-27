@@ -95,11 +95,12 @@ Recorded sounds: rustling of leaves, gentle breeze, birds chirping at a distance
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a46a0447-a9c7-4bb9-b1a7-e48938c18825">
 
-Noise level measured inside car at 60mph, windows lowered: 60dB.
+Noise level measured inside a car at 60mph, windows lowered: 60dB.
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/16e226d3-b159-4d9b-9c88-16e255682a5f">
 
-
+Noise level measured near sirens (police car, firefighters, ambulance): 140 dB
+<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5c907645-1c50-4bcb-ae28-19316d9f9f13">
 
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
