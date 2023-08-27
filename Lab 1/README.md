@@ -72,14 +72,18 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 The interactive device can be anything *except* a computer, a tablet computer or a smartphone, but the main way it interacts needs to be using light.
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
-**Scenario:**
 
-Sound waves are everywhere. And everywhere, sound waves are intensifying. Noise pollution adversely affects the health of millions of people every day. Studies in humans have shown that in addition to hearing loss, exposure to loud noise can cause high blood pressure, heart disease, sleep disturbances, and stress. Increasing noise pollution also negatively impacts the health and well-being of wildlife, both on land and at sea. Many animals use sound to navigate, attract mates, and find food. These are all vital tasks that determine an animal's ability to survive. In other words, noise disruptances can affect the survival of entire populations of species.
+**Scenario:** Sound waves are everywhere. And everywhere, sound waves are intensifying. Noise pollution adversely affects the health of millions of people every day. Studies in humans have shown that in addition to hearing loss, exposure to loud noise can cause high blood pressure, heart disease, sleep disturbances, and stress. Increasing noise pollution also negatively impacts the health and well-being of wildlife, both on land and at sea. Many animals use sound to navigate, attract mates, and find food. These are all vital tasks that determine an animal's ability to survive. In other words, noise disruptances can affect the survival of entire populations of species.
 
 **Motivation for Interactive Device:** In hopes of mitigating the adverse effects of noise pollution on the human population, the interactive device described below will alert the end user if exposed to unhealthy noise levels. 
 
-\*\***Setting:.**\*\* 
+**_Setting:_** The interaction is happening throughout every activity the end user performs. It is happening at the 6AM yoga class, at the park, while driving to work, in the evening when mowing the lawn, walking through the streets during rush hours, in autumn preparing for winter (gathering wood for the chimney), at night while attending a rock concert, etc. 
 
+**_Players:_** An individual who wants to protect his/her ears and those of the people near him/her. 
+
+**_Activity:_** The individual goes about his day carrying or wearing his interactive device. Meanwhile, the interactive device samples ambient noise every 5 seconds and informs the user via a color display the degree of noise pollution he/she is exposed to. 
+
+**_Goals:_** Reduce one's exposure to noise pollution in order to enhance well-being.
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
