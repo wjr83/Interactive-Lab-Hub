@@ -85,6 +85,12 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 \*\***Include pictures of your storyboards here**\*\*
 
+Noise level measured at a calm day at the park: 30dB. 
+Recorded sounds: rustling of leaves, gentle breeze, birds chirping at a distance.
+<img width="383" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a46a0447-a9c7-4bb9-b1a7-e48938c18825">
+
+
+
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
 \*\***Summarize feedback you got here.**\*\*
@@ -101,7 +107,7 @@ Try physically acting out the interaction you planned. For now, you can just pre
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
+You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smartphone to act as a “light” and use a remote control interface to remotely change the light on that device. 
 
 Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
 
