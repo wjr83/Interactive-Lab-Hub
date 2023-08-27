@@ -89,22 +89,30 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 <img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/fe66d2c5-d7e3-4798-a448-584ea0542e12">
 
+Noise level measured at a yoga class: 10 dB. Recorded sounds: breathing.
 
-Noise level measured at a calm day at the park: 30dB. 
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bb4ca914-8a35-494b-bbbd-4d3aae2ede61">
+
+
+Noise level measured on a calm day at the park: 30 dB. 
 Recorded sounds: rustling of leaves, gentle breeze, birds chirping at a distance.
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a46a0447-a9c7-4bb9-b1a7-e48938c18825">
 
-Noise level measured inside a car at 60mph, windows lowered: 60dB.
+Noise level measured inside a car at 60mph, windows lowered: 60 dB.
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/16e226d3-b159-4d9b-9c88-16e255682a5f">
 
-Noise level measured while using a lawn mower: 85dB
+Noise level measured while using a lawn mower: 85 dB
 
 <img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eca8b9e5-5916-4075-bc7b-376fd9a6861c">
 
+Noise level measured while using an electric chainsaw: 110 dB
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/683a1e3c-34c6-4295-a009-a28c6d8b5ce9">
 
 Noise level measured near sirens (police car, firefighters, ambulance): 140 dB
+
 <img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5c907645-1c50-4bcb-ae28-19316d9f9f13">
 
 
