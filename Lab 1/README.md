@@ -99,6 +99,11 @@ Noise level measured inside a car at 60mph, windows lowered: 60dB.
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/16e226d3-b159-4d9b-9c88-16e255682a5f">
 
+Noise level measured while using a lawn mower: 85dB
+
+<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eca8b9e5-5916-4075-bc7b-376fd9a6861c">
+
+
 Noise level measured near sirens (police car, firefighters, ambulance): 140 dB
 <img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5c907645-1c50-4bcb-ae28-19316d9f9f13">
 
