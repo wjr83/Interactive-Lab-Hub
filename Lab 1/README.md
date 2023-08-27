@@ -89,31 +89,17 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 <img width="550" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a09dccee-5e2c-4027-89ea-6bc090b9ec4a">
 
-Noise level measured at a yoga class: 5 dB. Recorded sounds: breathing.
+|Noise level measured at a yoga class: 5 dB. Recorded sounds: breathing.|Noise level measured on a calm day at the park: 30 dB. Recorded sounds: rustling of leaves, gentle breeze, birds chirping at a distance.|
+|:-:|:-:|
+|<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bb4ca914-8a35-494b-bbbd-4d3aae2ede61">|<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a46a0447-a9c7-4bb9-b1a7-e48938c18825">|
 
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bb4ca914-8a35-494b-bbbd-4d3aae2ede61">
+|Noise level measured inside a car at 60mph, windows lowered: 60 dB|Noise level measured while using a lawn mower: 75 dB|
+|:-:|:-:|
+|<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/16e226d3-b159-4d9b-9c88-16e255682a5f">|<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eca8b9e5-5916-4075-bc7b-376fd9a6861c">|
 
-
-Noise level measured on a calm day at the park: 30 dB. 
-Recorded sounds: rustling of leaves, gentle breeze, birds chirping at a distance.
-
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a46a0447-a9c7-4bb9-b1a7-e48938c18825">
-
-Noise level measured inside a car at 60mph, windows lowered: 60 dB.
-
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/16e226d3-b159-4d9b-9c88-16e255682a5f">
-
-Noise level measured while using a lawn mower: 75 dB
-
-<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eca8b9e5-5916-4075-bc7b-376fd9a6861c">
-
-Noise level measured while using an electric chainsaw: 90 dB
-
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/683a1e3c-34c6-4295-a009-a28c6d8b5ce9">
-
-Noise level measured near sirens (police car, firefighters, ambulance): 120 dB
-
-<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5c907645-1c50-4bcb-ae28-19316d9f9f13">
+|Noise level measured while using an electric chainsaw: 90 dB|Noise level measured near sirens (police car, firefighters, ambulance): 120 dB|
+|:-:|:-:|
+|<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/683a1e3c-34c6-4295-a009-a28c6d8b5ce9">|<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5c907645-1c50-4bcb-ae28-19316d9f9f13">|
 
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
