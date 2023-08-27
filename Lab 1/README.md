@@ -63,15 +63,23 @@ To stage an interaction with your interactive device, think about:
 
 _Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
 
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
+_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current-day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
 
 _Activity:_ What is happening between the actors?
 
 _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
 
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
+The interactive device can be anything *except* a computer, a tablet computer or a smartphone, but the main way it interacts needs to be using light.
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
+**Scenario:**
+
+Sound waves are everywhere. And everywhere, sound waves are intensifying. Noise pollution adversely affects the health of millions of people every day. Studies in humans have shown that in addition to hearing loss, exposure to loud noise can cause high blood pressure, heart disease, sleep disturbances, and stress. Increasing noise pollution also negatively impacts the health and well-being of wildlife, both on land and at sea. Many animals use sound to navigate, attract mates, and find food. These are all vital tasks that determine an animal's ability to survive. In other words, noise disruptances can affect the survival of entire populations of species. From accelerating a caterpillar's "heart rate", to reducing the number of offspring of bluebirds, to disrupting the ability of dolphins and  whales to use echolocation, sound blasts are causing serious damages worldwide, many of which go beyond those of the ear canal. Works Cited: https://education.nationalgeographic.org/resource/noise-pollution/
+
+**Motivation for Interactive Device:** Noise pollution adversely affects the health of millions of people every day. In addition to hearing loss, exposure to loud noise can cause high blood pressure, heart disease, sleep disturbances, and stress. In hopes of mitigating the adverse effects of noise pollution on the human population, the interactive device described below will alert the end user if exposed to unhealthy noise levels. 
+
+\*\***Setting:.**\*\* 
+
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
@@ -122,7 +130,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 
-\*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+\*\***What concerns or opportunities are influencing the way you've designed the device to look?**\*\*
 
 
 ## Part F. Record
