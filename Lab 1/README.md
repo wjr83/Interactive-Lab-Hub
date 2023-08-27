@@ -112,16 +112,20 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
 \*\***Summarize feedback you got here.**\*\*
-  1. What if the end-user is color-blind? How might he/she be informed of the degree of the noise pollution (minimal to severe) without being confused by the colors? What if the end-user is blind? 
+  1. What if the end-user is color-blind? How might he/she be informed of the degree of the noise pollution (minimal to severe) without being confused by the colors?
+  2. What if the end-user is blind? 
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+- I originally thought I would be more attentive to the changes in color while doing regular activities throughout the day. However, that was not the case. As someone who tries to minimize screentime as much as possible, I would dislike having to constantly glance at the interactive device to verify whether the noise pollution I am exposed to exceeds the recommended upper limit. Though auditive alerts are not appropriate for this application, some type of alert should call the user's attention if the noise levels are close to reaching those that could cause hearing damage. The device should make greater and greater efforts to alert the user if the noise level continues to intensify past the safe limits.
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
-- If the user is not looking at the interactive device, should he/she be alerted via vibration of an unhealthy increase is noise level? 
+- If the user is not looking at the interactive device, should he/she be alerted via vibration of an unhealthy increase in noise level?
+- What if in addition to only alerting the user of exposure to noise pollution, the interactive device could also help mitigate the adverse consequences of noise pollution by dampening the noise pollution if the decibels measured exceed a certain threshold. For example, the Centers for Disease Control advises that prolonged exposure to noise above 70 dB starts to deteriorate one's hearing sensitivity. Additionally, noises above 120 dB result in immediate harm to the ears.
+> - Therefore, to reduce or eliminate harmful noise levels, the interactive device could generate anti-noise sounds to cancel or reduce the perceived noises of the environment.
 
 ## Part C. Prototype the device
 
@@ -131,10 +135,11 @@ Code for the "Tinkerbelle" tool, and instructions for setting up the server and 
 
 We invented this tool for this lab! 
 
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
+If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
-
+- After several hours of troubleshooting Tinkerbelle on my Ubuntu 22.04 system, though I could run ```tinker.py``` successfully, I could not connect to the ```localhost``` on my Ubuntu system nor on my iPhone, which were both connected to the same WiFi. I made sure to turn off all firewalls and VPNs on both devices. I also created a new virtual environment specifically for running Tinkerbelle. Unfortunately, that didn't make a difference on my Ubuntu system. I decided to switch over to my Windows 10 partition and run it from there. Tinkerbelle ran successfully on the first try, including connecting to ```localhost:5001```. 
+> - It would be appreciated if Tinkerbelle could be made compatible with Linux distributions, such as Ubuntu 22.04.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
