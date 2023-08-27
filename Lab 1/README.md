@@ -121,7 +121,7 @@ Try physically acting out the interaction you planned. For now, you can just pre
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
-
+- If the user is not looking at the interactive device, should he/she be alerted via vibration of an unhealthy increase is noise level? 
 
 ## Part C. Prototype the device
 
