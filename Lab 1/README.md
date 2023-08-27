@@ -85,6 +85,10 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 \*\***Include pictures of your storyboards here**\*\*
 
+Legend: Noise level in decibels (dB) of various scenarios.
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/fe66d2c5-d7e3-4798-a448-584ea0542e12)
+
+
 Noise level measured at a calm day at the park: 30dB. 
 Recorded sounds: rustling of leaves, gentle breeze, birds chirping at a distance.
 <img width="383" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a46a0447-a9c7-4bb9-b1a7-e48938c18825">
