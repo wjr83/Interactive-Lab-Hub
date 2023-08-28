@@ -8,7 +8,7 @@ In the original stage production of Peter Pan, Tinker Bell was represented by a 
 
 There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
 
-For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
+For lab this week, we draw on this and other inspirations from theatre-to-stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
 
 _Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
 
@@ -126,6 +126,11 @@ Try physically acting out the interaction you planned. For now, you can just pre
 - If the user is not looking at the interactive device, should he/she be alerted via vibration of an unhealthy increase in noise level?
 - What if in addition to only alerting the user of exposure to noise pollution, the interactive device could also help mitigate the adverse consequences of noise pollution by dampening the noise pollution if the decibels measured exceed a certain threshold. For example, the Centers for Disease Control advises that prolonged exposure to noise above 70 dB starts to deteriorate one's hearing sensitivity. Additionally, noises above 120 dB result in immediate harm to the ears.
 > - Therefore, to reduce or eliminate harmful noise levels, the interactive device could generate anti-noise sounds to cancel or reduce the perceived noises of the environment.
+
+- An air pollution sensor could be designed in a similar way as the noise pollution sensor described. Refer to the rough storyboard below of the air pollution interaction. **NOTE:** For the purposes of this lab, we will focus on the noise pollution interactive device.
+![new doc 2023-08-27 23 56 08_1](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/af997e92-0ff9-4edf-a384-0fb36c24d62a)
+
+
 
 ## Part C. Prototype the device
 
