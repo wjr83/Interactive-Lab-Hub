@@ -2,7 +2,7 @@
 
 # Staging Interaction
 
-\*\***Collaborators: Khushi Bhansali, Net ID kb737 ([GitHub Page](https://github.com/Khushibhansali/Interactive-Lab-Hub))**\*\*
+\*\***Collaborators: Khushi Bhansali, NetID kb737 ([GitHub Page](https://github.com/Khushibhansali/Interactive-Lab-Hub))**\*\*
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
@@ -55,29 +55,17 @@ E) [Costume the device](#part-e-costume-the-device)
 
 F) [Record the interaction](#part-f-record)
 
-Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
+Labs are due on Mondays. Make sure this page is linked to your main class hub page.
 
 ## Part A. Plan 
 
-To stage an interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current-day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smartphone, but the main way it interacts needs to be using light.
-
-\*\***Describe your setting, players, activity and goals here.**\*\*
+\*\***Describe your setting, players, activity, and goals here.**\*\*
 
 **Scenario:** Sound waves are everywhere. And everywhere, sound waves are intensifying. Noise pollution adversely affects the health of millions of people every day. Studies in humans have shown that in addition to hearing loss, exposure to loud noise can cause high blood pressure, heart disease, sleep disturbances, and stress. Increasing noise pollution also negatively impacts the health and well-being of wildlife, both on land and at sea. Many animals use sound to navigate, attract mates, and find food. These are all vital tasks that determine an animal's ability to survive. In other words, noise disruptances can affect the survival of entire populations of species.
 
 **Motivation for Interactive Device:** In hopes of mitigating the adverse effects of noise pollution on the human population, the interactive device described below will alert the end user if exposed to unhealthy noise levels. 
 
-**_Setting:_** The interaction is happening throughout every activity the end user performs. It is happening at the 6AM yoga class, at the park, while driving to work, in the evening when mowing the lawn, walking through the streets during rush hours, in autumn preparing for winter (gathering wood for the chimney), at night while attending a rock concert, etc. 
+**_Setting:_** The interaction is happening throughout every activity the end user performs. It is happening at the 6:00 AM yoga class, at the park, while driving to work, in the evening when mowing the lawn, walking through the streets during rush hours, in autumn preparing for winter (gathering wood for the chimney), at night while attending a rock concert, etc. 
 
 **_Players:_** An individual who wants to protect his/her ears and those of the people near him/her. 
 
@@ -85,7 +73,7 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 **_Goals:_** Reduce one's exposure to noise pollution in order to enhance well-being.
 
-Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
+Storyboards are a tool for visually exploring a user's interaction with a device. They are a fast and cheap method to understand user flow and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketches of seven storyboards of the interaction planned are shown below. 
 
 \*\***Include pictures of your storyboards here**\*\*
 
@@ -117,8 +105,6 @@ Present your ideas to the other people in your breakout room (or in small groups
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
-
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 - I originally thought I would be more attentive to the changes in color while doing regular activities throughout the day. However, that was not the case. As someone who tries to minimize screentime as much as possible, I would dislike having to constantly glance at the interactive device to verify whether the noise pollution I am exposed to exceeds the recommended upper limit. Though auditive alerts are not appropriate for this application, some type of alert should call the user's attention if the noise levels are close to reaching those that could cause hearing damage. The device should make greater and greater efforts to alert the user if the noise level continues to intensify past the safe limits.
 
@@ -147,8 +133,6 @@ If you run into technical issues with this tool, you can also use a light switch
 > - It would be appreciated if Tinkerbelle could be made compatible with Linux distributions, such as Ubuntu 22.04.
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene that you want to record. 
-
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
 > 1st Attempt: Noise pollution sensor (Activity - Yoga)  
@@ -163,10 +147,6 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 
 ## Part E. Costume the device
-
-Only now should you start worrying about what the device should look like. Develop three costumes so that you can use your phone as this device.
-
-Think about the setting of the device: Is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 Costume #1 & #2:
@@ -200,7 +180,7 @@ Costume #3: Student ID or Work ID will flash a decibel color according to the am
  > - Video Link: https://drive.google.com/file/d/1E6vMMqZUP1CwLoogb5-c1ipOq8aPnDYs/view?usp=drive_link
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+I collaborated with Khushi Bhansali (NetID kb737) to brainstorm and prototype the device interactions.
 
 
 
