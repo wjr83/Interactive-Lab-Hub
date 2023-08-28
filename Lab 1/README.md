@@ -151,17 +151,15 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-1st Attempt: Noise pollution sensor (Activity - Yoga)  
-- Video Link: https://drive.google.com/file/d/1UcbLCNHmjGJeT0vCRg5s4n8qu7ObRPKA/view?usp=drive_link
-
-Now, change the goal within the same setting, and update the interaction with the paper prototype. 
+> 1st Attempt: Noise pollution sensor (Activity - Yoga)  
+> - Video Link: https://drive.google.com/file/d/1UcbLCNHmjGJeT0vCRg5s4n8qu7ObRPKA/view?usp=drive_link
 
 \*\***Show the follow-up work here.**\*\*
-1st Attempt: Noise pollution sensor (Activity - Using a Vacuum Cleaner) 
-- Video Link: https://drive.google.com/file/d/1i4UjSGp6NVlKe58aV6IBVzhrGstu32zD/view?usp=drive_link
+> 1st Attempt: Noise pollution sensor (Activity - Using a Vacuum Cleaner) 
+> - Video Link: https://drive.google.com/file/d/1i4UjSGp6NVlKe58aV6IBVzhrGstu32zD/view?usp=drive_link
 
-1st Attempt: Noise pollution sensor (Activity - Listening to Music) 
-- Video Link: https://drive.google.com/file/d/1WFDPzasBbHPToe3-VWZr6nvbcHeq1Fxv/view?usp=drive_link
+> 1st Attempt: Noise pollution sensor (Activity - Listening to Music) 
+> - Video Link: https://drive.google.com/file/d/1WFDPzasBbHPToe3-VWZr6nvbcHeq1Fxv/view?usp=drive_link
 
 
 ## Part E. Costume the device
