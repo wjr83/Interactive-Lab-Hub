@@ -2,7 +2,7 @@
 
 # Staging Interaction
 
-\*\***Collaborators: Khushi Bhansali, Net ID kd737 ([GitHub Page](https://github.com/Khushibhansali/Interactive-Lab-Hub))**\*\*
+\*\***Collaborators: Khushi Bhansali, Net ID kb737 ([GitHub Page](https://github.com/Khushibhansali/Interactive-Lab-Hub))**\*\*
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
