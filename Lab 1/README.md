@@ -147,20 +147,28 @@ If you run into technical issues with this tool, you can also use a light switch
 > - It would be appreciated if Tinkerbelle could be made compatible with Linux distributions, such as Ubuntu 22.04.
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
+Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene that you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+1st Attempt: Noise pollution sensor (Activity - Yoga)  
+- Video Link: https://drive.google.com/file/d/1UcbLCNHmjGJeT0vCRg5s4n8qu7ObRPKA/view?usp=drive_link
+
+Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
+1st Attempt: Noise pollution sensor (Activity - Using a Vacuum Cleaner) 
+- Video Link: https://drive.google.com/file/d/1i4UjSGp6NVlKe58aV6IBVzhrGstu32zD/view?usp=drive_link
+
+1st Attempt: Noise pollution sensor (Activity - Listening to Music) 
+- Video Link: https://drive.google.com/file/d/1WFDPzasBbHPToe3-VWZr6nvbcHeq1Fxv/view?usp=drive_link
 
 
 ## Part E. Costume the device
 
 Only now should you start worrying about what the device should look like. Develop three costumes so that you can use your phone as this device.
 
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
+Think about the setting of the device: Is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 Costume #1 & #2:
@@ -181,6 +189,17 @@ Costume #3: Student ID or Work ID will flash a decibel color according to the am
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
+ 
+ Refer to Video Captures of Prototyped Interactions below:
+ 
+ > Activity: Yoga
+ > - Video Link: https://drive.google.com/file/d/14k7-33IXaVQNuokcsFP2Fs-GepLb_jVg/view?usp=sharing
+
+ > Activity: Using a Vacuum Cleaner
+ > - Video Link: https://drive.google.com/file/d/1_s5cAzFF7Y-wo7EVkC407lNMoD9x8AHf/view?usp=drive_link
+
+ > Activity: Listening to Music
+ > - Video Link: https://drive.google.com/file/d/1E6vMMqZUP1CwLoogb5-c1ipOq8aPnDYs/view?usp=drive_link
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
