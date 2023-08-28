@@ -105,7 +105,7 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 |:-:|:-:|
 |<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/683a1e3c-34c6-4295-a009-a28c6d8b5ce9">|<img width="350" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5c907645-1c50-4bcb-ae28-19316d9f9f13">|
 
-|Noise level measured at a rock concert: 160 dB on stage (purple), 140 db first few rows (pink), 120 db at row 30 (red). | |
+|Noise level measured at a rock concert: 160 dB on stage (purple), 140 dB first few rows (pink/fuchsia), 120 dB at row 30 (red). | |
 |:-:|:-:|
 |<img width="600" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/b75cc68e-8f16-462d-92a7-f3c91dba3ac3">||
 
@@ -158,6 +158,11 @@ Only now should you start worrying about what the device should look like. Devel
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 \*\***Include sketches of what your devices might look like here.**\*\*
+Costume #1 & #2:
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2d3b5775-eb0f-480a-8dc2-8931a5e51ebd)
+
+Costume #3: Student ID or Work ID will flash a decibel color according to the ambient noise loudness measured.
+![image_6487327](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0d0a3cc9-68a5-4f74-9540-009e941d8295)
 
 \*\***What concerns or opportunities are influencing the way you've designed the device to look?**\*\*
 
