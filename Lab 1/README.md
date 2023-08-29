@@ -55,6 +55,7 @@ Tip: Storyboards are a tool for visually exploring a users interaction with a de
 ![94904e147a14df9eea6c2e82ae97774f](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8c22372d-3871-417b-a107-e87c51213623)
 
 \*\***Summarize feedback you got here.**\*\*
+
 They like my ideas on versatility since the device combines weather tracking, soil health monitoring, and music playback to help plants grow. They say there can be additional features like music selection, a companion smartphone app, and an eco-friendly design that could make it even more appealing to users.
 
 ## Part B. Act out the Interaction
@@ -62,11 +63,12 @@ They like my ideas on versatility since the device combines weather tracking, so
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+
 Yes, watering the plant and then getting an immediate update might be logistically difficult, depending on how the device is set up. For example, if the watering can is far away, the user may not hear the feedback right away.
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
-Yes, I can also allow users to select the type of music the plants will listen to since different genres may have different effects on plant growth.
 
+Yes, I can also allow users to select the type of music the plants will listen to since different genres may have different effects on plant growth.
 
 ## Part C. Prototype the device
 
@@ -74,23 +76,14 @@ You will be using your smartphone as a stand-in for the device you are prototypi
 
 Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
 
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
 \*\***Give us feedback on Tinkerbelle.**\*\*
+
 It works smoothly for me :D
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
-
 \*\***Include your first attempts at recording the set-up video here.**\*\*
-<param name="movie" value="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg" />
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
-
-\*\***Show the follow-up work here.**\*\*
-
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/5e7da599-0f9d-4e5d-a795-06e05e978f06
 
 ## Part E. Costume the device
 ![51693280306_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ad4c0965-266e-4189-a2fa-0f666ef30d0f)
@@ -107,14 +100,27 @@ Now, hange the goal within the same setting, and update the interaction with the
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+1. when a person walks to bathroom during the night, the device lights up as a lamp for 1 minutes
 
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/950e74bd-3291-47d9-9b2a-8f15ead3b41c
+
+2. when the plant is in need of water, the screen is green and there will be sound reminders
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/49598d8d-0d55-4cd3-8b15-310fbae99f45
+
+3. when the plant is in need of shade when the temperature is too high
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/a820434b-5434-4447-94e4-991e6e030254
+
+
+
+\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+None.
 
 
 # Staging Interaction, Part 2 
 
-This describes the second week's work for this lab activity.
+It will add the parts describing the current temperature/humidity/fertality level. It will also display a prediction and countdown of when will the next watering be happening or fertalizer will be added.
 
 ## Prep (to be done before Lab on Wednesday)
 
@@ -122,11 +128,6 @@ You will be assigned three partners from another group. Go to their github pages
 
 \*\***Summarize feedback from your partners here.**\*\*
 
-## Make it your own
 
-Do last week’s assignment again, but this time: 
-1) It doesn’t have to (just) use light, 
-2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative! Feel free to fork and modify the tinkerbell code! 
-3) We will be grading with an emphasis on creativity. 
 
-\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+
