@@ -12,7 +12,6 @@ For lab this week, we draw on this and other inspirations from theatre to stage 
 _Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
 
 
-
 ## Prep
 
 ### To start the semester, you will need:
@@ -43,6 +42,7 @@ This README.md page in your own repository should be edited to include the work 
 For this assignment, you are going to:
 
 A) [Plan](#part-a-plan) 
+[storyboard](#storyboard)
 
 B) [Act out the interaction](#part-b-act-out-the-interaction) 
 
@@ -58,37 +58,34 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. Plan 
 
-To stage an interaction with your interactive device, think about:
+_Setting:_ The device can be put in anywhere with plants, including home-decoration plants, lab plants, forest, jungle, etc. It reminds human of the weather and the health of soil. It can also play songs to the plants as needed, since plants will grow better when they listen to music!!!
 
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-The interaction would 
+_Players:_ Every can involved with the device, as long as they pass by, they can know the weather and the state of plants.
 
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
+_Activity:_ Each actor is independent. It does not matter whether who comes over, (unless with a version allows to implement detectors for botanic acadamic research purposes.)
 
-_Activity:_ What is happening between the actors?
+_Goals:_ Each player can pass by the device, waive to the device, water (the plants) on the device so that the plants can grow better.
 
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
 
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
+### storyboard
+Tip: Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. 
 
-\*\***Describe your setting, players, activity and goals here.**\*\*
+![c175112d142f2bb16fb78861b41cfb80](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6b4699c3-1ae5-4a23-8e20-d83e2bdf2771)
 
-Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
-
-\*\***Include pictures of your storyboards here**\*\*
-
-Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
+![94904e147a14df9eea6c2e82ae97774f](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8c22372d-3871-417b-a107-e87c51213623)
 
 \*\***Summarize feedback you got here.**\*\*
-
+They like my ideas on versatility since the device combines weather tracking, soil health monitoring, and music playback to help plants grow. They say there can be additional features like music selection, a companion smartphone app, and an eco-friendly design that could make it even more appealing to users.
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+Yes, watering the plant and then getting an immediate update might be logistically difficult, depending on how the device is set up. For example, if the watering can is far away, the user may not hear the feedback right away.
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+Yes, I can also allow users to select the type of music the plants will listen to since different genres may have different effects on plant growth.
 
 
 ## Part C. Prototype the device
@@ -102,7 +99,7 @@ We invented this tool for this lab!
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
-
+It works smoothly for me :D
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
@@ -115,14 +112,14 @@ Now, hange the goal within the same setting, and update the interaction with the
 
 
 ## Part E. Costume the device
-
-Only now should you start worrying about what the device should look like. Develop three costumes so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
-\*\***Include sketches of what your devices might look like here.**\*\*
+![51693280306_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ad4c0965-266e-4189-a2fa-0f666ef30d0f)
+![61693280672_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/f153ad68-5573-4d29-9fe7-0e863f22d6b6)
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+- Water resistance
+- Eco-friendly
+- Feedback Mechanism
+- Ease to use
 
 
 ## Part F. Record
@@ -137,7 +134,6 @@ Be generous in acknowledging their contributions! And also recognizing any other
 # Staging Interaction, Part 2 
 
 This describes the second week's work for this lab activity.
-
 
 ## Prep (to be done before Lab on Wednesday)
 
