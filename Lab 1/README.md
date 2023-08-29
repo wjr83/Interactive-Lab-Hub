@@ -1,17 +1,10 @@
-
-
 # Staging Interaction
-
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
-There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
-
 For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
 
-_Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
-
-### Deliverables for this lab are: 
+### Deliverables
 1. 7 Storyboards
 1. 3 Sketches/photos of costumed devices
 1. Any reflections you have on the process
@@ -33,8 +26,6 @@ D) [Wizard the device](#part-d-wizard-the-device)
 E) [Costume the device](#part-e-costume-the-device)
 
 F) [Record the interaction](#part-f-record)
-
-Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
 
 ## Part A. Plan 
 
@@ -114,13 +105,13 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/a820434b-54
 
 
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+\*\***Please indicate anyone you collaborated with on this Lab.**\*\*  
 None.
 
 
 # Staging Interaction, Part 2 
 
-It will add the parts describing the current temperature/humidity/fertality level. It will also display a prediction and countdown of when will the next watering be happening or fertalizer will be added.
+It will add the parts describing the current temperature/humidity/fertility level. It will also display a prediction and countdown of when will the next watering be happening or fertilizer will be added.
 
 ## Prep (to be done before Lab on Wednesday)
 
