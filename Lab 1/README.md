@@ -196,20 +196,18 @@ You will be assigned three partners from another group. Go to their github pages
 \*\***Summarize feedback from your partners here.**\*\*
 Rephrase later:
 
-There can be buzz/vibration to warn the level of noise.
+- There can be buzz/vibration to warn the level of noise.
 -	I guess it’s the same issue I get from the lab feedback that there is just one idea about noise pollution.
-o	Random ideas? there can be other implementations like monitoring a person’s lung/throat/voice health, or a singer’s practice progress if adding a tune detector
-There can also be a cumulative measure for the noise exposure (since the length), reminder for an annual physical audiology check, 
-I really like the customed designs and they are so creative
+-	Random ideas? there can be other implementations like monitoring a person’s lung/throat/voice health, or a singer’s practice progress if adding a tune detector
+- There can also be a cumulative measure for the noise exposure (since the length), reminder for an annual physical audiology check, 
+- I really like the customed designs and they are so creative
 -	It can be implemented on a earphones’ case
 -	How would the device be charged? By sunlight or motion
 -	If one put earplugs on, can one manually put in the after-protection noise level
 -	When one is putting on headphone, can the device be connected to the phone
--	
-Questions: how can the device warning be differentiated from (if listening to music) a pop-up warning on phones, in what ways would it be more helpful in people’s lives
-
-Add text notification in addition to color of light displayed – (eg. For color blind individuals)
-What other kinds of pollution can the device detect? (visibility of stars, light pollution, etc.)
+-	Questions: how can the device warning be differentiated from (if listening to music) a pop-up warning on phones, in what ways would it be more helpful in people’s lives
+-	Add text notification in addition to color of light displayed – (eg. For color blind individuals)
+-	What other kinds of pollution can the device detect? (visibility of stars, light pollution, etc.)
 
 
 ## Make it your own
