@@ -1,4 +1,4 @@
-[lab1a is pasted after this lab](#lab1-a) 
+[Note: lab1 part a is pasted after this lab (click to jump there)](#lab1-a) 
 
 # Staging Interaction
 
