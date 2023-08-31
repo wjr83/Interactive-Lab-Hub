@@ -157,8 +157,7 @@ Do last week’s assignment again, but this time:
 
 
 
-
-- lab1-a
+# lab1-a
 
 
 # Staging Interaction
