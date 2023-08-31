@@ -1,4 +1,4 @@
-### [lab1a is pasted after this lab] (#lab1-a) 
+##### [lab1a is pasted after this lab] (#lab1-a) 
 
 # Staging Interaction
 
@@ -158,7 +158,7 @@ Do last week’s assignment again, but this time:
 
 
 
-## lab1-a(#lab1-a)
+#lab1-a
 
 
 # Staging Interaction
