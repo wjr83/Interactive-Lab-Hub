@@ -1,4 +1,4 @@
-### [lab1a is pasted after this lab] (lab1-a) 
+### [lab1a is pasted after this lab] (#lab1-a) 
 
 # Staging Interaction
 
