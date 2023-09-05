@@ -28,10 +28,10 @@ This README.md page in your own repository should be edited to include the work 
 ## Lab Overview
 For this assignment, you are going to:
 
-A) [Plan](#part-a-plan) 
-- [Storyboard 1](#Storyboard-1:-Displaying-Plant-Surrounding-Status)
-- [Storyboard 2](#Storyboard-2:-Plant-Voice-Assistant)
-- [Storyboard 3](#Storyboard-3:-Plant-Identifier-for-Hiking)
+A) [Plan](#part-a-general-plan) 
+- [Storyboard 1](#Storyboard-1-Displaying-Plant-Surrounding-Status)
+- [Storyboard 2](#Storyboard-2-Plant-Voice-Assistant)
+- [Storyboard 3](#Storyboard-3-Plant-Identifier-for-Hiking)
 - [Storyboard 4](#Storyboard-4:)
 - [Storyboard 5](#Storyboard-5:)
 - [Storyboard 6](#Storyboard-6:)
@@ -58,7 +58,7 @@ _Activity:_ Each actor is independent. It does not matter whether who comes over
 _Goals:_ Each player can pass by the device, waive to the device, water (the plants) on the device so that the plants can grow better.
 
 
-### Storyboard 1: Displaying Plant Surrounding Status 
+### Storyboard 1. Displaying Plant Surrounding Status 
 The device indicates the conditions inclusding water, temperature, and nutrients of the soil with different colors, and reminding people to take care of the plants with sounding and vibration.
 It also displays on the device shows plant-themed emojis or symbols to convey the plant's needs. A water droplet emoji could signal the need for watering, for example.
 
@@ -72,7 +72,7 @@ Goals: The primary goal is to keep the plant owner informed about the plant's en
 
 ![131693953374_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/64f81abc-511d-4da0-a2f3-2de88f6035dc)
 
-### Storyboard 2: Plant Voice Assistant
+### Storyboard 2. Plant Voice Assistant
 The device incorporates a voice assistant feature that responds to user questions about the plant's health and care, providing tips and reminders in a conversational manner.
 
 Setting: The setting is a cozy home environment with indoor plants placed around the room. The device is positioned near one of the plants.
@@ -85,7 +85,7 @@ Goals: The main goal is to enhance the user's plant care experience by providing
 
 ![141693953754_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/26c11420-9efb-4d6a-bb8c-b11853b749f1)
 
-### Storyboard 3: Plant Identifier for Hiking
+### Storyboard 3. Plant Identifier for Hiking
 The device incorporates a voice assistant feature and a camera, becoming a Plant Identifier that helps users identify plants. Users can point the device at a plant, and it provides information about the plant's species and whether the fruit is edible.
 
 Setting: The setting is a lush hiking trail in a forest or natural wilderness with various plant species, including edible fruits and foliage.
