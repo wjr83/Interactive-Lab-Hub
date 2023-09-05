@@ -29,6 +29,7 @@ This README.md page in your own repository should be edited to include the work 
 For this assignment, you are going to:
 
 A) [Plan](#part-a-plan) 
+- [storyboard](#storyboard)
 
 B) [Act out the interaction](#part-b-act-out-the-interaction) 
 
@@ -40,31 +41,28 @@ E) [Costume the device](#part-e-costume-the-device)
 
 F) [Record the interaction](#part-f-record)
 
-Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
-
 ## Part A. Plan 
 
-To stage an interaction with your interactive device, think about:
+_Setting:_ The device can be put in anywhere with plants, including home-decoration plants, lab plants, forest, jungle, etc. It reminds human of the weather and the health of soil. It can also play songs to the plants as needed, since plants will grow better when they listen to music!!!
 
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
+_Players:_ Every can involved with the device, as long as they pass by, they can know the weather and the state of plants.
 
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
+_Activity:_ Each actor is independent. It does not matter whether who comes over, (unless with a version allows to implement detectors for botanic acadamic research purposes.)
 
-_Activity:_ What is happening between the actors?
+_Goals:_ Each player can pass by the device, waive to the device, water (the plants) on the device so that the plants can grow better.
 
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
 
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
+### Storyboard 1: Displaying Plant Health Status 
+The device indicates the conditions inclusding water, temperature, and nutrients of the soil with different colors, and reminding people to take care of the plants with sounding and vibration.
+![c175112d142f2bb16fb78861b41cfb80](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6b4699c3-1ae5-4a23-8e20-d83e2bdf2771)
+![94904e147a14df9eea6c2e82ae97774f](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8c22372d-3871-417b-a107-e87c51213623)
 
-\*\***Describe your setting, players, activity and goals here.**\*\*
+### Storyboard 2: Displaying Plant Health Status 
 
-Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
-
-\*\***Include pictures of your storyboards here**\*\*
-
-Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
 \*\***Summarize feedback you got here.**\*\*
+
+They like my ideas on versatility since the device combines weather tracking, soil health monitoring, and music playback to help plants grow. They say there can be additional features like music selection, a companion smartphone app, and an eco-friendly design that could make it even more appealing to users.
 
 
 ## Part B. Act out the Interaction
