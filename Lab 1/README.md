@@ -46,41 +46,43 @@ _Goals:_ Each player can pass by the device, waive to the device, water (the pla
 The device indicates the conditions inclusding water, temperature, and nutrients of the soil with different colors, and reminding people to take care of the plants with sounding and vibration.
 It also displays on the device shows plant-themed emojis or symbols to convey the plant's needs. A water droplet emoji could signal the need for watering, for example.
 
-_Setting: The device is placed near a potted plant in a living room with ample natural light.
+_Setting: The device is placed near a potted plant in a living room with ample natural light._
 
-Players: The primary player is the plant owner or caregiver. The secondary player is the device itself, designed to interact with the user.
+_Players: The primary player is the plant owner or caregiver. The secondary player is the device itself, designed to interact with the user._
 
-Activity: The device continuously monitors the conditions surrounding the plant, including soil moisture, temperature, and nutrient levels. It utilizes a multicolored LED display to indicate these conditions. For instance, a blue light signifies that the soil is adequately moist, a green light indicates optimal temperature, and a red light signals low nutrient levels. Additionally, the device displays plant-themed emojis or symbols on its screen to convey the plant's specific needs, such as a water droplet emoji when it's time for watering. When the plant requires attention, the device emits gentle sounds and vibrations to alert the user.
+_Activity: The device continuously monitors the conditions surrounding the plant, including soil moisture, temperature, and nutrient levels. It utilizes a multicolored LED display to indicate these conditions. For instance, a blue light signifies that the soil is adequately moist, a green light indicates optimal temperature, and a red light signals low nutrient levels. Additionally, the device displays plant-themed emojis or symbols on its screen to convey the plant's specific needs, such as a water droplet emoji when it's time for watering. When the plant requires attention, the device emits gentle sounds and vibrations to alert the user._
 
-Goals: The primary goal is to keep the plant owner informed about the plant's environment and needs, enhancing their ability to provide proper care. The device aims to simplify plant care by translating complex data into intuitive visual and auditory cues, ultimately promoting the plant's health and well-being._
+_Goals: The primary goal is to keep the plant owner informed about the plant's environment and needs, enhancing their ability to provide proper care. The device aims to simplify plant care by translating complex data into intuitive visual and auditory cues, ultimately promoting the plant's health and well-being._
 
 ![131693953374_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/64f81abc-511d-4da0-a2f3-2de88f6035dc)
 
 ### Storyboard 2. Plant Voice Assistant
 The device incorporates a voice assistant feature that responds to user questions about the plant's health and care, providing tips and reminders in a conversational manner.
 
-_Setting: The setting is a cozy home environment with indoor plants placed around the room. The device is positioned near one of the plants.
+_Setting: The setting is a cozy home environment with indoor plants placed around the room. The device is positioned near one of the plants._
 
-Players: The primary player is the plant owner or caregiver, and the secondary player is the device, which functions as a voice-activated assistant.
+_Players: The primary player is the plant owner or caregiver, and the secondary player is the device, which functions as a voice-activated assistant._
 
-Activity: The device actively listens for user questions or prompts related to the plant's health and care. When the user engages with the device by asking questions like, "How's my plant doing today?" or "When should I water my plant?" the device responds in a friendly and conversational manner. It provides information about the plant's current health status, including soil moisture levels, light exposure, and any specific care recommendations. The device can also offer reminders, such as, "It's a good time to water your plant," or "Your plant is thriving, keep up the excellent care!"
+_Activity: The device actively listens for user questions or prompts related to the plant's health and care. When the user engages with the device by asking questions like, "How's my plant doing today?" or "When should I water my plant?" the device responds in a friendly and conversational manner. It provides information about the plant's current health status, including soil moisture levels, light exposure, and any specific care recommendations. The device can also offer reminders, such as, "It's a good time to water your plant," or "Your plant is thriving, keep up the excellent care!"_
 
-Goals: The main goal is to enhance the user's plant care experience by providing real-time information and guidance. The device aims to make plant care more accessible and engaging by fostering a conversational interaction. It helps users understand their plant's needs, promotes proactive care, and ultimately contributes to the plant's overall well-being._
+_Goals: The main goal is to enhance the user's plant care experience by providing real-time information and guidance. The device aims to make plant care more accessible and engaging by fostering a conversational interaction. It helps users understand their plant's needs, promotes proactive care, and ultimately contributes to the plant's overall well-being._
 
 ![141693953754_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/26c11420-9efb-4d6a-bb8c-b11853b749f1)
 
 ### Storyboard 3. Plant Identifier for Hiking
 The device incorporates a voice assistant feature and a camera, becoming a Plant Identifier that helps users identify plants. Users can point the device at a plant, and it provides information about the plant's species and whether the fruit is edible.
 
-_Setting: The setting is a lush hiking trail in a forest or natural wilderness with various plant species, including edible fruits and foliage.
+_Setting: The setting is a lush hiking trail in a forest or natural wilderness with various plant species, including edible fruits and foliage._
 
-Players: The primary players are hikers and outdoor enthusiasts exploring the trail. The secondary player is the Plant Identifier device, functioning as a helpful tool.
+_Players: The primary players are hikers and outdoor enthusiasts exploring the trail. The secondary player is the Plant Identifier device, functioning as a helpful tool._
 
-Activity: As hikers venture through the trail, they encounter unfamiliar plants. To identify edible fruits and foliage, they use the Plant Identifier device. The device incorporates a voice assistant feature and a built-in camera. Hikers point the device at the plant of interest, and the camera captures an image of the plant's leaves or fruit. The voice assistant then analyzes the image and identifies the plant species. It provides valuable information about the plant, including its common name, scientific name, edibility, potential uses, and any cautionary notes. This enables hikers to make informed decisions about foraging for food during their hike.
+_Activity: As hikers venture through the trail, they encounter unfamiliar plants. To identify edible fruits and foliage, they use the Plant Identifier device. The device incorporates a voice assistant feature and a built-in camera. Hikers point the device at the plant of interest, and the camera captures an image of the plant's leaves or fruit. The voice assistant then analyzes the image and identifies the plant species. It provides valuable information about the plant, including its common name, scientific name, edibility, potential uses, and any cautionary notes. This enables hikers to make informed decisions about foraging for food during their hike._
 
-Goals: The primary goal is to enhance the hiker's outdoor experience by providing a practical tool for plant identification. The Plant Identifier aims to promote safety and awareness during hikes by helping users distinguish edible plants from potentially harmful ones. It encourages sustainable foraging practices and connects users with the natural environment they explore._
+_Goals: The primary goal is to enhance the hiker's outdoor experience by providing a practical tool for plant identification. The Plant Identifier aims to promote safety and awareness during hikes by helping users distinguish edible plants from potentially harmful ones. It encourages sustainable foraging practices and connects users with the natural environment they explore._
 
 ![151693954671_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/9509e412-5e1d-4043-8452-88c82772db56)
+
+
 
 \*\***Summarize feedback you got here.**\*\*
 
