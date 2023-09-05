@@ -2,7 +2,7 @@
 
 # Lab 1
 
-## Lab Overview
+## Overview
 
 A) [Plan](#part-a-general-plan) 
 - [Storyboard 1: Displaying Plant Surrounding Status](#Storyboard-1-Displaying-Plant-Surrounding-Status)
