@@ -8,7 +8,7 @@ A) [Plan](#part-a-general-plan)
 - [Storyboard 1: Displaying Plant Surrounding Status](#Storyboard-1-Displaying-Plant-Surrounding-Status)
 - [Storyboard 2: Plant Voice Assistant](#Storyboard-2-Plant-Voice-Assistant)
 - [Storyboard 3: Plant Identifier for Hiking](#Storyboard-3-Plant-Identifier-for-Hiking)
-- [Storyboard 4](#Storyboard-4:)
+- [Storyboard 4: Plant Telepathy](#Storyboard-4-Plant-Telepathy)
 - [Storyboard 5](#Storyboard-5:)
 - [Storyboard 6](#Storyboard-6:)
 - [Storyboard 7](#Storyboard-7:)
@@ -73,6 +73,23 @@ _Activity: As hikers venture through the trail, they encounter unfamiliar plants
 _Goals: The primary goal is to enhance the hiker's outdoor experience by providing a practical tool for plant identification. The Plant Identifier aims to promote safety and awareness during hikes by helping users distinguish edible plants from potentially harmful ones. It encourages sustainable foraging practices and connects users with the natural environment they explore._
 
 ![151693954671_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/9509e412-5e1d-4043-8452-88c82772db56)
+
+### Storyboard 4. Plant Telepathy
+The device incorporates with brain-computer interfaces (BCI) that allow users to communicate with the plant directly through their thoughts. The device deciphers the user's intentions and conveys them to the plant in a telepathic fashion.
+Based on the paper ["Psychological and Physiological Effect in Plant Growth and Health by using Positive and Negative Words"](https://www.ijirt.org/master/publishedpaper/IJIRT151445_PAPER.pdf]
+
+_Players: The primary player is the plant enthusiast or caregiver, while the secondary player is the Plant Telepathy device, designed to facilitate a telepathic connection._
+
+_Activity: The Plant Telepathy device utilizes advanced brain-computer interface (BCI) technology. The user wears a lightweight and comfortable EEG (electroencephalogram) headset that monitors their brain activity. As the user focuses their thoughts on a particular plant, the BCI interprets their intentions and converts them into telepathic signals._
+
+_For example, the plant often provides subtle feedback through its physical state. It might exhibit a slight change in posture or leaf movement, signifying its acknowledgment of the user's telepathic communication. The device translates player's intent into a telepathic message to the plant, indicating nice words etc._
+
+_Goals: The primary goal is to create a unique and immersive connection between the user and their plants. Plant Telepathy seeks to enhance the emotional bond between humans and nature by enabling users to communicate with their plants in a profound, telepathic manner. The device fosters a sense of empathy and mindfulness towards plant care while promoting a holistic and spiritually enriching experience in tending to the green companions._
+
+![201693957301_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/12bcaef2-a6f7-4593-94af-df6f81354151)
+
+
+
 
 
 
