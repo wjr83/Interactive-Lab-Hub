@@ -9,24 +9,8 @@ There is no actor that plays Tinkerbell--her existence in the play comes from th
 
 For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
 
-_Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
-
-
-
-## Prep
-
-### Deliverables for this lab are: 
-1. 7 Storyboards
-1. 3 Sketches/photos of costumed devices
-1. Any reflections you have on the process
-1. Video sketch of 3 prototyped interactions
-1. Submit the items above in the lab1 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same from each person in the group.
-
-### The Report
-This README.md page in your own repository should be edited to include the work you have done (the deliverables mentioned above). Following the format below, you can delete everything but the headers and the sections between the **stars**. Write the answers to the questions under the starred sentences. Include any material that explains what you did in this lab hub folder, and link it in your README.md for the lab.
 
 ## Lab Overview
-For this assignment, you are going to:
 
 A) [Plan](#part-a-general-plan) 
 - [Storyboard 1](#Storyboard-1-Displaying-Plant-Surrounding-Status)
@@ -62,39 +46,39 @@ _Goals:_ Each player can pass by the device, waive to the device, water (the pla
 The device indicates the conditions inclusding water, temperature, and nutrients of the soil with different colors, and reminding people to take care of the plants with sounding and vibration.
 It also displays on the device shows plant-themed emojis or symbols to convey the plant's needs. A water droplet emoji could signal the need for watering, for example.
 
-Setting: The device is placed near a potted plant in a living room with ample natural light.
+_Setting: The device is placed near a potted plant in a living room with ample natural light.
 
 Players: The primary player is the plant owner or caregiver. The secondary player is the device itself, designed to interact with the user.
 
 Activity: The device continuously monitors the conditions surrounding the plant, including soil moisture, temperature, and nutrient levels. It utilizes a multicolored LED display to indicate these conditions. For instance, a blue light signifies that the soil is adequately moist, a green light indicates optimal temperature, and a red light signals low nutrient levels. Additionally, the device displays plant-themed emojis or symbols on its screen to convey the plant's specific needs, such as a water droplet emoji when it's time for watering. When the plant requires attention, the device emits gentle sounds and vibrations to alert the user.
 
-Goals: The primary goal is to keep the plant owner informed about the plant's environment and needs, enhancing their ability to provide proper care. The device aims to simplify plant care by translating complex data into intuitive visual and auditory cues, ultimately promoting the plant's health and well-being.
+Goals: The primary goal is to keep the plant owner informed about the plant's environment and needs, enhancing their ability to provide proper care. The device aims to simplify plant care by translating complex data into intuitive visual and auditory cues, ultimately promoting the plant's health and well-being._
 
 ![131693953374_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/64f81abc-511d-4da0-a2f3-2de88f6035dc)
 
 ### Storyboard 2. Plant Voice Assistant
 The device incorporates a voice assistant feature that responds to user questions about the plant's health and care, providing tips and reminders in a conversational manner.
 
-Setting: The setting is a cozy home environment with indoor plants placed around the room. The device is positioned near one of the plants.
+_Setting: The setting is a cozy home environment with indoor plants placed around the room. The device is positioned near one of the plants.
 
 Players: The primary player is the plant owner or caregiver, and the secondary player is the device, which functions as a voice-activated assistant.
 
 Activity: The device actively listens for user questions or prompts related to the plant's health and care. When the user engages with the device by asking questions like, "How's my plant doing today?" or "When should I water my plant?" the device responds in a friendly and conversational manner. It provides information about the plant's current health status, including soil moisture levels, light exposure, and any specific care recommendations. The device can also offer reminders, such as, "It's a good time to water your plant," or "Your plant is thriving, keep up the excellent care!"
 
-Goals: The main goal is to enhance the user's plant care experience by providing real-time information and guidance. The device aims to make plant care more accessible and engaging by fostering a conversational interaction. It helps users understand their plant's needs, promotes proactive care, and ultimately contributes to the plant's overall well-being.
+Goals: The main goal is to enhance the user's plant care experience by providing real-time information and guidance. The device aims to make plant care more accessible and engaging by fostering a conversational interaction. It helps users understand their plant's needs, promotes proactive care, and ultimately contributes to the plant's overall well-being._
 
 ![141693953754_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/26c11420-9efb-4d6a-bb8c-b11853b749f1)
 
 ### Storyboard 3. Plant Identifier for Hiking
 The device incorporates a voice assistant feature and a camera, becoming a Plant Identifier that helps users identify plants. Users can point the device at a plant, and it provides information about the plant's species and whether the fruit is edible.
 
-Setting: The setting is a lush hiking trail in a forest or natural wilderness with various plant species, including edible fruits and foliage.
+_Setting: The setting is a lush hiking trail in a forest or natural wilderness with various plant species, including edible fruits and foliage.
 
 Players: The primary players are hikers and outdoor enthusiasts exploring the trail. The secondary player is the Plant Identifier device, functioning as a helpful tool.
 
 Activity: As hikers venture through the trail, they encounter unfamiliar plants. To identify edible fruits and foliage, they use the Plant Identifier device. The device incorporates a voice assistant feature and a built-in camera. Hikers point the device at the plant of interest, and the camera captures an image of the plant's leaves or fruit. The voice assistant then analyzes the image and identifies the plant species. It provides valuable information about the plant, including its common name, scientific name, edibility, potential uses, and any cautionary notes. This enables hikers to make informed decisions about foraging for food during their hike.
 
-Goals: The primary goal is to enhance the hiker's outdoor experience by providing a practical tool for plant identification. The Plant Identifier aims to promote safety and awareness during hikes by helping users distinguish edible plants from potentially harmful ones. It encourages sustainable foraging practices and connects users with the natural environment they explore.
+Goals: The primary goal is to enhance the hiker's outdoor experience by providing a practical tool for plant identification. The Plant Identifier aims to promote safety and awareness during hikes by helping users distinguish edible plants from potentially harmful ones. It encourages sustainable foraging practices and connects users with the natural environment they explore._
 
 ![151693954671_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/9509e412-5e1d-4043-8452-88c82772db56)
 
