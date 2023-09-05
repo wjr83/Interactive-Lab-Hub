@@ -1,21 +1,13 @@
 [Note: lab1 part a is pasted after this lab (click to jump there)](#lab1-a) 
 
 # Lab 1
-# Staging Interaction
-
-In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
-
-There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
-
-For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
-
 
 ## Lab Overview
 
 A) [Plan](#part-a-general-plan) 
-- [Storyboard 1](#Storyboard-1-Displaying-Plant-Surrounding-Status)
-- [Storyboard 2](#Storyboard-2-Plant-Voice-Assistant)
-- [Storyboard 3](#Storyboard-3-Plant-Identifier-for-Hiking)
+- [Storyboard 1: Displaying Plant Surrounding Status](#Storyboard-1-Displaying-Plant-Surrounding-Status)
+- [Storyboard 2: Plant Voice Assistant](#Storyboard-2-Plant-Voice-Assistant)
+- [Storyboard 3: Plant Identifier for Hiking](#Storyboard-3-Plant-Identifier-for-Hiking)
 - [Storyboard 4](#Storyboard-4:)
 - [Storyboard 5](#Storyboard-5:)
 - [Storyboard 6](#Storyboard-6:)
