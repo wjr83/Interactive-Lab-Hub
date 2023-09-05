@@ -211,7 +211,7 @@ You will be assigned three partners from another group. Go to their github pages
 
 - **Design Considerations:**
   - Explore creative and customized designs.
-  - Implement on earphones' cases.
+  - Implement on earphones cases.
   - Explore device connectivity with smartphones when using headphones.
   
 - **Charging and Manual Adjustments:**
@@ -234,51 +234,51 @@ You will be assigned three partners from another group. Go to their github pages
 \*\***Include pictures of your storyboards here**\*\*
 
 **Storyboard #1:  This is the storyboard we decided to pursue for this part.**
- - Setting: Grocery store or supermarket anytime from 9-5pm.
- - Players: People who are shopping, kids, supermarket workers, and people surrounding the shoppers whose opinions could be influenced as a result of the "Nutriscore Companion". 
- - Activity: An individual wears the "Nutriscore Companion" device on their wrist. They can scan an item they are interested in purchasing. "Nutriscore Companion" will tell them how safe/healthy/chemical-free the item is. "Nutriscore Companion" will give the user a ranking of A being the healthiest to E being the unhealthiest. In the example storyboard, when the user scanned the bottle of deodorant, a list of ingredients revealed talcum powder which typically has traces of asbestos and was therefore given a ranking of E, and a red screen was displayed on the "Nutriscore Companion" device. 
- - Goals: To help shoppers purchase items that are safe, healthy, and chemical-free. Users are rewarded with a vibration from the device indicating that they should add it to the cart and redeemable points towards an item of their choice. 
+ - **_Setting_**: Grocery store or supermarket anytime from 9-5pm.
+ - **_Players_**: People who are shopping, kids, supermarket workers, and people surrounding the shoppers whose opinions could be influenced as a result of the "Nutriscore Companion". 
+ - **_Activity_**: An individual wears the "Nutriscore Companion" device on their wrist. They can scan an item they are interested in purchasing. "Nutriscore Companion" will tell them how safe/healthy/chemical-free the item is. "Nutriscore Companion" will give the user a ranking of A being the healthiest to E being the unhealthiest. In the example storyboard, when the user scanned the bottle of deodorant, a list of ingredients revealed talcum powder which typically has traces of asbestos and was therefore given a ranking of E, and a red screen was displayed on the "Nutriscore Companion" device. 
+ - **_Goals_**: To help shoppers purchase items that are safe, healthy, and chemical-free. Users are rewarded with a vibration from the device indicating that they should add it to the cart and redeemable points towards an item of their choice. 
 
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/grocery.jpg" width="650" height="350" alt="image">
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/grocery2.jpg" width="650" height="350" alt="image">
 
 **Storyboard #2:**
- - Setting: Artist's room. 
- - Players: Single-player of just an artist.
- - Activity: If an artist is stuck on what to paint, they can open the "Random Paint Generator" device. This device will generate 5 random colors for the artist to paint with.
- - Goals: To help artist decide what colors to paint with and showcase their work in a digital museum. This offers the artist greater incentive and exposure. 
+ - **_Setting_:** Artist's room. 
+ - **_Players_:** Single-player of just an artist.
+ - **_Activity_:** If an artist is stuck on what to paint, they can open the "Random Paint Generator" device. This device will generate 5 random colors for the artist to paint with.
+ - **_Goals_:** To help artist decide what colors to paint with and showcase their work in a digital museum. This offers the artist greater incentive and exposure. 
 
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/paint.jpg" width="650" height="350" alt="image">
 
 **Storyboard #3:**
- - Setting: The game is set in shared living spaces like homes or communal areas with a virtual overlay light of the streets.   
- - Players: The primary user engages directly with the game, while passive observers, like friends and family, may watch or provide input. Roommates may be impacted by the game's lights and sounds.    Children and pets could be curious or influenced by game elements, and neighbors may notice noise or light effects. 
- - Activity: When the light is green, players run. When it's yellow, they slow down to a walk, and when it turns red, they stop. The objective is to follow these signals correctly. The player who fails to follow the signal gets eliminated from the game, while the reward for the last remaining player is to be freed from the game, signifying their victory.
- - Goals: The goal of each player in the traffic light game is to accurately follow the traffic signals, avoid elimination, and ultimately be the last remaining player to win and exit the game. 
+ - **_Setting_:** The game is set in shared living spaces like homes or communal areas with a virtual overlay light of the streets.   
+ - **_Players_:** The primary user engages directly with the game, while passive observers, like friends and family, may watch or provide input. Roommates may be impacted by the game's lights and sounds.    Children and pets could be curious or influenced by game elements, and neighbors may notice noise or light effects. 
+ - **_Activity_:** When the light is green, players run. When it's yellow, they slow down to a walk, and when it turns red, they stop. The objective is to follow these signals correctly. The player who fails to follow the signal gets eliminated from the game, while the reward for the last remaining player is to be freed from the game, signifying their victory.
+ - **_Goals_:** The goal of each player in the traffic light game is to accurately follow the traffic signals, avoid elimination, and ultimately be the last remaining player to win and exit the game. 
 
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/trafficlightgame.jpg" width="650" height="350" alt="image">
 
 **Storyboard #4:**  
- - Setting: An AR/VR environment of a zoo with digital animals like dolphins, monkeys, parrots, and giraffes.
- - Players: Anyone with an AR/VR headset who is exploring the virtual zoo. Additionally, the people in the physical environment surrounding the AR/VR player may also become secondary players as they observe and potentially interact with the AR/VR experience.  
- - Activity: The interaction between the actors involves players commanding digital animals to perform tricks using a light signal. Players illuminate the digital animal with a specific light, and the animal responds by executing a trick corresponding to the color of the light. This interaction allows players to engage with the digital animals without the need for a zookeeper, creating an entertaining and interactive experience.
- - Goals: Players can elicit a happy dance from the digital animal, create a colorful screen display, and enable the animal to perform tricks independently, all through the effective use of light signals.
+ - **_Setting_:** An AR/VR environment of a zoo with digital animals like dolphins, monkeys, parrots, and giraffes.
+ - **_Players_:** Anyone with an AR/VR headset who is exploring the virtual zoo. Additionally, the people in the physical environment surrounding the AR/VR player may also become secondary players as they observe and potentially interact with the AR/VR experience.  
+ - **_Activity_:** The interaction between the actors involves players commanding digital animals to perform tricks using a light signal. Players illuminate the digital animal with a specific light, and the animal responds by executing a trick corresponding to the color of the light. This interaction allows players to engage with the digital animals without the need for a zookeeper, creating an entertaining and interactive experience.
+ - **_Goals_:** Players can elicit a happy dance from the digital animal, create a colorful screen display, and enable the animal to perform tricks independently, all through the effective use of light signals.
 
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/zoo.jpg" width="650" height="350" alt="image">
 
 **Storyboard #5:** 
- - Setting: A remote and lush jungle devoid of cellular reception or police presence, but equipped with a device containing survival essentials like instructions, food, clothing, and basic necessities.
- - Players: A team comprising coworkers from an office.
- - Activity: Stranded in the jungle, players receive instructions from the device to undertake a scavenger hunt as their means of escaping. Their task is to match the colors displayed on the device with elements in the natural surroundings. Completing all color matches enables their escape.
- - Goals: Foster team bonding among coworkers and successfully leave the jungle by completing the scavenger hunt challenge.
+ - **_Setting_:** A remote and lush jungle devoid of cellular reception or police presence, but equipped with a device containing survival essentials like instructions, food, clothing, and basic necessities.
+ - **_Players_:** A team comprising coworkers from an office.
+ - **_Activity_:** Stranded in the jungle, players receive instructions from the device to undertake a scavenger hunt as their means of escaping. Their task is to match the colors displayed on the device with elements in the natural surroundings. Completing all color matches enables their escape.
+ - **_Goals_:** Foster team bonding among coworkers and successfully leave the jungle by completing the scavenger hunt challenge.
 
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/survivor.jpg" width="650" height="350" alt="image">
 
 **Storyboard #6:**  
- - Setting: The kitchen.
- - Players: A novice cook.
- - Activity: An intelligent pot equipped with LED lights on the handle indicates the pot's temperature. The user can program the pot to cook foods at their desired temperature. When the food is cooked, the pot turns off and plays a song as a delightful reward. The strategically placed LED lights on the handle ensure they are not damaged by flames, as it's an electric pot with temperature control. Additionally, it's waterproof, allowing easy cleaning.
- - Goals: Enhance users' ability to multitask, make cooking an enjoyable experience, and provide a musical reward when the food is ready.
+ - **_Setting_:** The kitchen.
+ - **_Players_:** A novice cook.
+ - **_Activity_:** An intelligent pot equipped with LED lights on the handle indicates the pot's temperature. The user can program the pot to cook foods at their desired temperature. When the food is cooked, the pot turns off and plays a song as a delightful reward. The strategically placed LED lights on the handle ensure they are not damaged by flames, as it's an electric pot with temperature control. Additionally, it's waterproof, allowing easy cleaning.
+ - **_Goals_:** Enhance users' ability to multitask, make cooking an enjoyable experience, and provide a musical reward when the food is ready.
 
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/storyboards/chef.jpg" width="650" height="350" alt="image">
 
@@ -288,13 +288,10 @@ You will be assigned three partners from another group. Go to their github pages
 
 **Motivation for Interactive Device:** In hopes of mitigating the adverse effects of noise pollution on the human population, the interactive device described below will alert the end user if exposed to unhealthy noise levels. 
 
-**_Setting:_** The interaction is happening throughout every activity the end user performs. It is happening at the 6:00 AM yoga class, at the park, while driving to work, in the evening when mowing the lawn, walking through the streets during rush hours, in autumn preparing for winter (gathering wood for the chimney), at night while attending a rock concert, etc. 
-
-**_Players:_** An individual who wants to protect his/her ears and those of the people near him/her. 
-
-**_Activity:_** The individual goes about his day carrying or wearing his interactive device (implemented on earphone cases). Meanwhile, the interactive device samples ambient noise every 5 seconds and informs the user via a color display the degree of noise pollution he/she is exposed to. 
-
-**_Goals:_** Reduce the end user's exposure to noise pollution throughout their daily activities in order to enhance well-being.
+- **_Setting:_** The interaction is happening throughout every activity the end user performs. It is happening at the 6:00 AM yoga class, at the park, while driving to work, in the evening when mowing the lawn, walking through the streets during rush hours, in autumn preparing for winter (gathering wood for the chimney), at night while attending a rock concert, etc. 
+- **_Players:_** An individual who wants to protect his/her ears and those of the people near him/her. 
+- **_Activity:_** The individual goes about his day carrying or wearing his interactive device (implemented on earphone cases). Meanwhile, the interactive device samples ambient noise every 5 seconds and informs the user via a color display the degree of noise pollution he/she is exposed to. 
+- **_Goals:_** Reduce the end user's exposure to noise pollution throughout their daily activities in order to enhance well-being.
  
 **Legend:** Noise level in decibels (dB) color-coded.
 
@@ -343,14 +340,14 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 For these videos, I was trying to be mindful of different types of users. I added an audio component so that colorblind people are accommodated for.
 
- 1st Attempt: Buying a Box of Pringles (chips)   
- - Video Link: https://drive.google.com/file/d/1VyPzp77fNWMvaAuqg0AmY-9RjiWOFls5/view?usp=sharing
+> 1st Attempt: Buying a Box of Pringles (chips)   
+> - Video Link: https://drive.google.com/file/d/1VyPzp77fNWMvaAuqg0AmY-9RjiWOFls5/view?usp=sharing
 
-1st Attempt: Buying Deodorant  
- - Video Link: https://drive.google.com/file/d/14L421gkfDYM2WNyhOSf1noe5Ctxw9a35/view?usp=sharing
+> 1st Attempt: Buying Deodorant  
+> - Video Link: https://drive.google.com/file/d/14L421gkfDYM2WNyhOSf1noe5Ctxw9a35/view?usp=sharing
 
- 1st Attempt: Buying a box of blueberries    
- - Video Link: https://drive.google.com/file/d/1m2A6bxKcx3oydcWnbnfWWtPxZH-zINd4/view?usp=sharing
+> 1st Attempt: Buying a box of blueberries    
+> - Video Link: https://drive.google.com/file/d/1m2A6bxKcx3oydcWnbnfWWtPxZH-zINd4/view?usp=sharing
 
 ## Part E. Costume the device
 
@@ -372,14 +369,14 @@ Costume #3:
 For these videos, we incorporated an incentive to buy healthier items at the grocery store.
 
 \*\***Take a video of your prototyped interaction.**\*\*
-2nd Attempt: Buying a Box of Pringles (chips)   
- - Video Link: https://drive.google.com/file/d/1spUfMA_TXJybp9jJPcvVQJMYZzTA__Mc/view?usp=sharing
+> 2nd Attempt: Buying a Box of Pringles (chips)   
+> - Video Link: https://drive.google.com/file/d/1spUfMA_TXJybp9jJPcvVQJMYZzTA__Mc/view?usp=sharing
 
-2nd Attempt: Buying Deodorant  
- - Video Link: https://drive.google.com/file/d/1lcWbMIkx9WEMMb6cUzTg9HHFr6KkCxbJ/view?usp=sharing
+> 2nd Attempt: Buying Deodorant  
+> - Video Link: https://drive.google.com/file/d/1lcWbMIkx9WEMMb6cUzTg9HHFr6KkCxbJ/view?usp=sharing
 
-2nd Attempt: Buying a box of blueberries    
- - Video Link: https://drive.google.com/file/d/1dyHJbtJ1lSzUYCbZIcScNE2h41wzWrR5/view?usp=sharing
+> 2nd Attempt: Buying a box of blueberries    
+> - Video Link: https://drive.google.com/file/d/1dyHJbtJ1lSzUYCbZIcScNE2h41wzWrR5/view?usp=sharing
    
 **Please indicate anyone you collaborated with on this Lab.**
 I worked with my partner Khushi Bhansali. We were inspired by Europe's existing [NutriScore implementation](https://en.wikipedia.org/wiki/Nutri-Score) as labels on food packaging. However, throughout this project, we got to take it to the next level as a live interactive experience for all supermarket products, not just food products!
