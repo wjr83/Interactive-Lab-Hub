@@ -76,7 +76,7 @@ _Goals: The primary goal is to enhance the hiker's outdoor experience by providi
 
 ### Storyboard 4. Plant Telepathy
 The device incorporates with brain-computer interfaces (BCI) that allow users to communicate with the plant directly through their thoughts. The device deciphers the user's intentions and conveys them to the plant in a telepathic fashion.
-Based on the paper ["Psychological and Physiological Effect in Plant Growth and Health by using Positive and Negative Words"](https://www.ijirt.org/master/publishedpaper/IJIRT151445_PAPER.pdf]
+Based on the paper ["Psychological and Physiological Effect in Plant Growth and Health by using Positive and Negative Words"](https://www.ijirt.org/master/publishedpaper/IJIRT151445_PAPER.pdf)
 
 _Players: The primary player is the plant enthusiast or caregiver, while the secondary player is the Plant Telepathy device, designed to facilitate a telepathic connection._
 
