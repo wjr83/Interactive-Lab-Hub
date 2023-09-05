@@ -354,16 +354,17 @@ For these videos, I was trying to be mindful of different types of users. I adde
 Transforming the "Nutriscore Companion" into a watch introduces critical design considerations that were taken into consideration in the following designs. Given its potential use in various environments, it's crucial to prevent overheating by implementing effective heat dissipation measures. Waterproofing is equally essential, considering the watch's exposure to rain and water splashes during daily activities. In an emergency, visibility is key, and while bright colors can aid visibility, it's imperative to balance aesthetics and practicality to ensure the display remains user-friendly and legible in low-light or critical situations. 
 
 Costume #1:
+
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/costumes/1.jpg" width="650" height="350" alt="image">
 
 Costume #2:
+
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/costumes/2.jpg" width="650" height="350" alt="image">
 
 Costume #3:
+
 <img src="https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/Lab%201/costumes/3.jpg" width="650" height="350" alt="image">
 
-
-\*\***Show the follow-up work here.**\*\*
 ## Part F. Record
 
 For these videos, we incorporated an incentive to buy healthier items at the grocery store.
