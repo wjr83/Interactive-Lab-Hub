@@ -156,9 +156,8 @@ If you run into technical issues with this tool, you can also use a light switch
 
 ## Part D. Wizard the device
 \*\***Include your first attempts at recording the set-up video here.**\*\*
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/5e7da599-0f9d-4e5d-a795-06e05e978f06
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e41cd022-e7d3-431f-815c-0cfcbd009f2f
 
 \*\***Show the follow-up work here.**\*\*
 
@@ -178,15 +177,18 @@ Now, hange the goal within the same setting, and update the interaction with the
 \*\***Take a video of your prototyped interaction.**\*\*
 1. when a person walks to bathroom during the night, the device lights up as a lamp for 1 minutes
 
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/950e74bd-3291-47d9-9b2a-8f15ead3b41c
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8cab318c-b942-4af3-84aa-60f7288198c4
+
 
 2. when the plant is in need of water, the screen is green and there will be sound reminders
 
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/49598d8d-0d55-4cd3-8b15-310fbae99f45
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/eb2c39e4-dd68-47ec-9669-989111c5b25e
+
 
 3. when the plant is in need of shade when the temperature is too high
 
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/a820434b-5434-4447-94e4-991e6e030254
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6f15afe9-82db-43c3-b518-e66b0d9ef650
+
 
 \*\***Show the follow-up work here.**\*\*
 
