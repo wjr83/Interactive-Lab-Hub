@@ -200,6 +200,9 @@ This describes the second week's work for this lab activity.
 You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
 \*\***Summarize feedback from your partners here.**\*\*
+
+The feedback I got about the device was generally positive, with my peers praising its creativity and the idea itself. However, some questions and suggestions were raised. Firstly, they wanted me to clarify which nutrients the sensor responds to and if it adjusts its readings based on the plant type. Different plant species have unique soil and climate requirements. There's a suggestion to add weather forecasts to warn users not to water plants if it's going to rain. Another idea is to provide instant feedback to prevent overwatering. The users appreciate the range of data the sensor provides. Additionally, the suggestion is made to record plant conditions by the sensor and send alerts during vacations for remote monitoring. For the design of the sensor, I have received inquiries regarding the noises it makes and if it should have a camouflage for garden use, such as a rock disguise. Additionally, there are questions about the assumption that individuals bring their phones to the bathroom at night, as well as the method for charging the device.
+
 * Very creative! Love the idea of a soil condition sensor!
     * What nutrients in the soil does the sensor respond to?
     * How will the user know (for image #7, what nutrients to add? Does it differentiate / adapt the reading according the plant type where the sensor is located? Each plant grows best in soil & climate conditions unique to its species)
@@ -214,6 +217,18 @@ You will be assigned three partners from another group. Go to their github pages
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+______________________________
 
 _____________________________
 
