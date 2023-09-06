@@ -22,6 +22,8 @@ E) [Costume the device](#part-e-costume-the-device)
 
 F) [Record the interaction](#part-f-record)
 
+G) [Part 2: peer feedback](#-Part-2)
+
 ## Part A. General Plan 
 
 _Setting:_ The device can be put in anywhere with plants, including home-decoration plants, lab plants, forest, jungle, etc. It reminds human of the weather and the health of soil. It can also play songs to the plants as needed, since plants will grow better when they listen to music!!!
@@ -156,7 +158,7 @@ If you run into technical issues with this tool, you can also use a light switch
 ## Part D. Wizard the device
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-[setup](https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link)
+[setup video](https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link)
 
 \*\***Show the follow-up work here.**\*\*
 
@@ -190,10 +192,9 @@ https://drive.google.com/file/d/10Rpi_2AhRUagbRH1HU_X-LTn2pVgLHKy/view?usp=share
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\* None.
 
 
-# Staging Interaction, Part 2 
+# Part 2 
 
 This describes the second week's work for this lab activity.
-
 
 ## Prep (to be done before Lab on Wednesday)
 
