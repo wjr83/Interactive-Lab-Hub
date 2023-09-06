@@ -1,6 +1,5 @@
-[Note: lab1 part a is pasted after this lab (click to jump there)](#lab1-a) 
-https://googledrive.com/host/1lPWmXIXiS76P67gYvnofT3txindkSaav/setup
 # Lab 1
+[Note: lab1 part a is pasted after this lab (click to jump there)](#lab1-a) 
 
 ## Overview
 
@@ -157,9 +156,7 @@ If you run into technical issues with this tool, you can also use a light switch
 ## Part D. Wizard the device
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link
-
-https://googledrive.com/host/1lPWmXIXiS76P67gYvnofT3txindkSaav/setup.mp4
+[setup](https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link)
 
 \*\***Show the follow-up work here.**\*\*
 
@@ -178,19 +175,14 @@ https://googledrive.com/host/1lPWmXIXiS76P67gYvnofT3txindkSaav/setup.mp4
 
 \*\***Take a video of your prototyped interaction.**\*\*
 1. when a person walks to bathroom during the night, the device lights up as a lamp for 1 minutes
-
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8cab318c-b942-4af3-84aa-60f7288198c4
-
+https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link
 
 2. when the plant is in need of water, the screen is green and there will be sound reminders
-
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/eb2c39e4-dd68-47ec-9669-989111c5b25e
+https://drive.google.com/file/d/196fyDHyJfVpeWgyHOeG1dwahPGxWSIpa/view?usp=share_link
 
 
 3. when the plant is in need of shade when the temperature is too high
-
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6f15afe9-82db-43c3-b518-e66b0d9ef650
-
+https://drive.google.com/file/d/10Rpi_2AhRUagbRH1HU_X-LTn2pVgLHKy/view?usp=share_link
 
 \*\***Show the follow-up work here.**\*\*
 
