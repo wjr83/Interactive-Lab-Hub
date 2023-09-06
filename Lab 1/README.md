@@ -9,7 +9,7 @@ A) [Plan](#part-a-general-plan)
 - [Storyboard 2: Plant Voice Assistant](#Storyboard-2-Plant-Voice-Assistant)
 - [Storyboard 3: Plant Identifier for Hiking](#Storyboard-3-Plant-Identifier-for-Hiking)
 - [Storyboard 4: Plant Telepathy](#Storyboard-4-Plant-Telepathy)
-- [Storyboard 5](#Storyboard-5:)
+- [Storyboard 5: Plant Integrated Music Player](#Storyboard-5-Plant-Integrated-Music-Player)
 - [Storyboard 6](#Storyboard-6:)
 - [Storyboard 7](#Storyboard-7:)
 
@@ -89,8 +89,20 @@ _Goals: The primary goal is to create a unique and immersive connection between 
 ![201693957301_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/12bcaef2-a6f7-4593-94af-df6f81354151)
 
 
+### Storyboard 5. Plant Integrated Music Player
+The Plant-Integrated Music Player is a device designed to enhance the plant care experience by playing soothing music or nature sounds through built-in speakers. It not only creates a tranquil atmosphere but also serves as a gentle reminder to care for the plants when needed, fostering a harmonious and nurturing environment.
 
+_Setting: The setting is a cozy living room adorned with a variety of indoor plants, creating a harmonious green oasis within the home._
 
+_Players: The primary player is the plant enthusiast or caregiver, and the secondary player is the Plant-Integrated Music Player device, designed to enhance the plant care experience._
+
+_Activity: The Plant-Integrated Music Player device is equipped with built-in speakers and a carefully curated playlist of soothing and nature-inspired music._
+
+_For instance, When the user want to study, the device responds by playing gentle, calming music or nature sounds. It creates a tranquil atmosphere in the room, enhancing the overall well-being of the plants and the user. The user can also customize the music selection based on their personal preferences and the type of plant they have. Different genres and styles of music may be associated with different plants, allowing users to fine-tune the auditory experience._
+
+_Goals: The primary goal is to make plant care a delightful and sensory-rich experience. The Plant-Integrated Music Player aims to engage the user's auditory senses while providing subtle cues for plant care. It encourages users to maintain a harmonious environment for their plants, with music as a motivational and rewarding element in the care routine._
+
+![261693961654_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/003f79bb-0e0c-462f-b154-6296dc0fc2d9)
 
 
 \*\***Summarize feedback you got here.**\*\*
