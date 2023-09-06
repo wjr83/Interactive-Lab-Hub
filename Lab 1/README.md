@@ -157,7 +157,9 @@ If you run into technical issues with this tool, you can also use a light switch
 ## Part D. Wizard the device
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e41cd022-e7d3-431f-815c-0cfcbd009f2f
+https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link
+
+https://googledrive.com/host/1lPWmXIXiS76P67gYvnofT3txindkSaav/setup.mp4
 
 \*\***Show the follow-up work here.**\*\*
 
