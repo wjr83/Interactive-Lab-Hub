@@ -161,6 +161,7 @@ If you run into technical issues with this tool, you can also use a light switch
 [original setup video](https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link)
 
 \*\***Show the follow-up work here.**\*\*
+Setup: 
 https://drive.google.com/file/d/1qzdW_n8DwJk97tRhM8uJ1DKpUlcBx5UG/view?usp=share_link
 
 
@@ -188,6 +189,17 @@ https://drive.google.com/file/d/196fyDHyJfVpeWgyHOeG1dwahPGxWSIpa/view?usp=share
 https://drive.google.com/file/d/10Rpi_2AhRUagbRH1HU_X-LTn2pVgLHKy/view?usp=share_link
 
 \*\***Show the follow-up work here.**\*\*
+1. Plant Integrated Music Player
+   
+https://drive.google.com/file/d/1hbI64vZqqNZ1vi2OMmoRMrfXRb-wWlNX/view?usp=share_link
+
+2. Plant Identifier
+
+https://drive.google.com/file/d/1hth7etkSGezaMttaYhh-ADwHscz72RLB/view?usp=share_link
+
+3. Plant Status Monitor
+
+https://drive.google.com/file/d/1IojseATZACQVbJHP3Lcdn6VCMnYukA7I/view?usp=share_link
 
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\* None.
