@@ -27,7 +27,7 @@ F) [Record the interaction](#part-f-record)
 
 _Setting:_ The device can be put in anywhere with plants, including home-decoration plants, lab plants, forest, jungle, etc. It reminds human of the weather and the health of soil. It can also play songs to the plants as needed, since plants will grow better when they listen to music!!!
 
-_Players:_ Every can involved with the device, as long as they pass by, they can know the weather and the state of plants.
+_Players:_ Every one can involved with the device, they can know the weather and the state of plants and they can also interact with the device for commmunication and mediation.
 
 _Activity:_ Each actor is independent. It does not matter whether who comes over, (unless with a version allows to implement detectors for botanic acadamic research purposes.)
 
@@ -39,24 +39,17 @@ The device indicates the conditions inclusding water, temperature, and nutrients
 It also displays on the device shows plant-themed emojis or symbols to convey the plant's needs. A water droplet emoji could signal the need for watering, for example.
 
 _Setting: The device is placed near a potted plant in a living room with ample natural light._
-
 _Players: The primary player is the plant owner or caregiver. The secondary player is the device itself, designed to interact with the user._
-
 _Activity: The device continuously monitors the conditions surrounding the plant, including soil moisture, temperature, and nutrient levels. It utilizes a multicolored LED display to indicate these conditions. For instance, a blue light signifies that the soil is adequately moist, a green light indicates optimal temperature, and a red light signals low nutrient levels. Additionally, the device displays plant-themed emojis or symbols on its screen to convey the plant's specific needs, such as a water droplet emoji when it's time for watering. When the plant requires attention, the device emits gentle sounds and vibrations to alert the user._
-
 _Goals: The primary goal is to keep the plant owner informed about the plant's environment and needs, enhancing their ability to provide proper care. The device aims to simplify plant care by translating complex data into intuitive visual and auditory cues, ultimately promoting the plant's health and well-being._
-
 ![131693953374_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/64f81abc-511d-4da0-a2f3-2de88f6035dc)
 
 ### Storyboard 2. Plant Voice Assistant
 The device incorporates a voice assistant feature that responds to user questions about the plant's health and care, providing tips and reminders in a conversational manner.
 
 _Setting: The setting is a cozy home environment with indoor plants placed around the room. The device is positioned near one of the plants._
-
 _Players: The primary player is the plant owner or caregiver, and the secondary player is the device, which functions as a voice-activated assistant._
-
 _Activity: The device actively listens for user questions or prompts related to the plant's health and care. When the user engages with the device by asking questions like, "How's my plant doing today?" or "When should I water my plant?" the device responds in a friendly and conversational manner. It provides information about the plant's current health status, including soil moisture levels, light exposure, and any specific care recommendations. The device can also offer reminders, such as, "It's a good time to water your plant," or "Your plant is thriving, keep up the excellent care!"_
-
 _Goals: The main goal is to enhance the user's plant care experience by providing real-time information and guidance. The device aims to make plant care more accessible and engaging by fostering a conversational interaction. It helps users understand their plant's needs, promotes proactive care, and ultimately contributes to the plant's overall well-being._
 
 ![141693953754_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/26c11420-9efb-4d6a-bb8c-b11853b749f1)
@@ -65,11 +58,8 @@ _Goals: The main goal is to enhance the user's plant care experience by providin
 The device incorporates a voice assistant feature and a camera, becoming a Plant Identifier that helps users identify plants. Users can point the device at a plant, and it provides information about the plant's species and whether the fruit is edible.
 
 _Setting: The setting is a lush hiking trail in a forest or natural wilderness with various plant species, including edible fruits and foliage._
-
 _Players: The primary players are hikers and outdoor enthusiasts exploring the trail. The secondary player is the Plant Identifier device, functioning as a helpful tool._
-
 _Activity: As hikers venture through the trail, they encounter unfamiliar plants. To identify edible fruits and foliage, they use the Plant Identifier device. The device incorporates a voice assistant feature and a built-in camera. Hikers point the device at the plant of interest, and the camera captures an image of the plant's leaves or fruit. The voice assistant then analyzes the image and identifies the plant species. It provides valuable information about the plant, including its common name, scientific name, edibility, potential uses, and any cautionary notes. This enables hikers to make informed decisions about foraging for food during their hike._
-
 _Goals: The primary goal is to enhance the hiker's outdoor experience by providing a practical tool for plant identification. The Plant Identifier aims to promote safety and awareness during hikes by helping users distinguish edible plants from potentially harmful ones. It encourages sustainable foraging practices and connects users with the natural environment they explore._
 
 ![151693954671_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/9509e412-5e1d-4043-8452-88c82772db56)
@@ -79,11 +69,8 @@ The device incorporates with brain-computer interfaces (BCI) that allow users to
 Based on the paper ["Psychological and Physiological Effect in Plant Growth and Health by using Positive and Negative Words"](https://www.ijirt.org/master/publishedpaper/IJIRT151445_PAPER.pdf)
 
 _Players: The primary player is the plant enthusiast or caregiver, while the secondary player is the Plant Telepathy device, designed to facilitate a telepathic connection._
-
 _Activity: The Plant Telepathy device utilizes advanced brain-computer interface (BCI) technology. The user wears a lightweight and comfortable EEG (electroencephalogram) headset that monitors their brain activity. As the user focuses their thoughts on a particular plant, the BCI interprets their intentions and converts them into telepathic signals._
-
 _For example, the plant often provides subtle feedback through its physical state. It might exhibit a slight change in posture or leaf movement, signifying its acknowledgment of the user's telepathic communication. The device translates player's intent into a telepathic message to the plant, indicating nice words etc._
-
 _Goals: The primary goal is to create a unique and immersive connection between the user and their plants. Plant Telepathy seeks to enhance the emotional bond between humans and nature by enabling users to communicate with their plants in a profound, telepathic manner. The device fosters a sense of empathy and mindfulness towards plant care while promoting a holistic and spiritually enriching experience in tending to the green companions._
 
 ![201693957301_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/12bcaef2-a6f7-4593-94af-df6f81354151)
@@ -93,13 +80,9 @@ _Goals: The primary goal is to create a unique and immersive connection between 
 The Plant-Integrated Music Player is a device designed to enhance the plant care experience by playing soothing music or nature sounds through built-in speakers. It not only creates a tranquil atmosphere but also serves as a gentle reminder to care for the plants when needed, fostering a harmonious and nurturing environment.
 
 _Setting: The setting is a cozy living room adorned with a variety of indoor plants, creating a harmonious green oasis within the home._
-
 _Players: The primary player is the plant enthusiast or caregiver, and the secondary player is the Plant-Integrated Music Player device, designed to enhance the plant care experience._
-
 _Activity: The Plant-Integrated Music Player device is equipped with built-in speakers and a carefully curated playlist of soothing and nature-inspired music._
-
 _For instance, When the user want to study, the device responds by playing gentle, calming music or nature sounds. It creates a tranquil atmosphere in the room, enhancing the overall well-being of the plants and the user. The user can also customize the music selection based on their personal preferences and the type of plant they have. Different genres and styles of music may be associated with different plants, allowing users to fine-tune the auditory experience._
-
 _Goals: The primary goal is to make plant care a delightful and sensory-rich experience. The Plant-Integrated Music Player aims to engage the user's auditory senses while providing subtle cues for plant care. It encourages users to maintain a harmonious environment for their plants, with music as a motivational and rewarding element in the care routine._
 
 ![261693961654_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/003f79bb-0e0c-462f-b154-6296dc0fc2d9)
