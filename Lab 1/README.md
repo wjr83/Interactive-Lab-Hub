@@ -158,9 +158,10 @@ If you run into technical issues with this tool, you can also use a light switch
 ## Part D. Wizard the device
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-[setup video](https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link)
+[original setup video](https://drive.google.com/file/d/16Tj0tpb1MhJFWgi2WGAsjIMsQOVOHXn5/view?usp=share_link)
 
 \*\***Show the follow-up work here.**\*\*
+https://drive.google.com/file/d/1qzdW_n8DwJk97tRhM8uJ1DKpUlcBx5UG/view?usp=share_link
 
 
 ## Part E. Costume the device
