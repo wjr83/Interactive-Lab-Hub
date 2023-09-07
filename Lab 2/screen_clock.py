@@ -74,3 +74,4 @@ while True:
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
+# Test commit to ensure HaukeCornell is no longer the driver of the commit and instead wjr83 is the driver.
