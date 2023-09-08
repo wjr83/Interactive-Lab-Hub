@@ -74,4 +74,3 @@ while True:
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
-    # Testing commit from wjr83 git user (again)
