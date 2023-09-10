@@ -259,7 +259,9 @@ The Clock will generate a random task on the right side, and display the time re
 1. **Baseline: Mirroring the changing emotions**
 
 - As time differs 12PM ('noon') and 2AM ('night'), the background color shifts gradually and dynamically, reflect the changing scenes of nature or life events.
+
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/da2f63ca-d1d0-4ab5-b787-ccc313e78dd9
+
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/7fc741b5-d88e-44f5-bb72-b265239a864e
 
 
@@ -272,7 +274,7 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6811117a-97
 
 - When taking the video, it's autumn and 12PM ('noon'). When click both A and B buttons, the clock will display cheering reminders.
 
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ae15f66d-200f-46a7-8cfa-985f2db3661b
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4dd66868-4acc-42bc-8db3-c3568f18f561
 
 
 
@@ -284,12 +286,10 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ffb916fa-64
 
 - When taking the video, it's 12PM ('noon'). It might suggest a work quote, an encouragement, or a task reminder.
 
-https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4dd66868-4acc-42bc-8db3-c3568f18f561
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ae15f66d-200f-46a7-8cfa-985f2db3661b
 
-
-if video fails:
-<iframe src='https://drive.google.com/file/d/1roAu-us-zZCgr0KqiqU9MT7Ns-EORCeH/view?usp=share_link' width='100%' frameborder='0'>
-<iframe src='https://drive.google.com/file/d/1zVvcHukhR_-wzbQTmiBfuWEqClR5NMag/view?usp=share_link' width='100%' frameborder='0'>
+if video fails, please see the folder:
+https://drive.google.com/drive/folders/1kv7lCBnJk674OqSsMxS0a3OFfw85_XtE?usp=share_link
   
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
