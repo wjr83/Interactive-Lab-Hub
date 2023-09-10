@@ -1,5 +1,27 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
+
+## Overview
+For this assignment, you are going to 
+
+A) [Connect to your Pi](#part-a)  
+
+B) [Try out cli_clock.py](#part-b) 
+
+C) [Set up your RGB display](#part-c)
+
+D) [Try out clock_display_demo](#part-d) 
+
+E) [Modify the code to make the display your own](#part-e)
+- [The Sensory Time Capsule Clock, ClockIn](#The-Sensory-Time-Capsule-Clock-ClockIn)
+- [Baseline. Mirroring the changing emotions](#Baseline-Mirroring-the-changing-emotions)
+- [Interactions 1. Reflection Reminder](#Interactions-1-Reflection-Reminder)
+- [Interactions 2. Emotion Checker](#Interactions-2-Emotion-Checker)
+- [Interactions 3. Memory Collector](#Interactions-3-Memory-Collector)
+
+F) [Make a short video of your modified barebones PiClock](#part-f)
+
+G) [Sketch and brainstorm further interactions and features you would like for your clock for Part 2.](#part-g)
+
 
 Does it feel like time is moving strangely during this semester?
 
@@ -47,25 +69,6 @@ Prior to the lab session on Thursday, taken inventory of the kit parts that you 
 3. ### Prepare your Pi for lab this week
 [Follow these instructions](prep.md) to download and burn the image for your Raspberry Pi before lab Thursday.
 
-
-
-
-## Overview
-For this assignment, you are going to 
-
-A) [Connect to your Pi](#part-a)  
-
-B) [Try out cli_clock.py](#part-b) 
-
-C) [Set up your RGB display](#part-c)
-
-D) [Try out clock_display_demo](#part-d) 
-
-E) [Modify the code to make the display your own](#part-e)
-
-F) [Make a short video of your modified barebones PiClock](#part-f)
-
-G) [Sketch and brainstorm further interactions and features you would like for your clock for Part 2.](#part-g)
 
 ## The Report
 This readme.md page in your own repository should be edited to include the work you have done. You can delete everything but the headers and the sections between the \*\*\***stars**\*\*\*. Write the answers to the questions under the starred sentences. Include any material that explains what you did in this lab hub folder, and link it in the readme.
@@ -195,23 +198,23 @@ Can you make time interactive? You can look in `screen_test.py` for examples for
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
-## The "Sensory Time Capsule" Clock, ClockIn
+## The Sensory Time Capsule Clock. ClockIn
 
 ### ClockIn as an Emotion Checker and Memory Collector 
 The "Sensory Time Capsule" clock is designed to make time a multisensory and interactive experience. It focuses on measuring time in personal and meaningful ways, incorporating elements like background color change, background image change, text display, and interactive buttons. Instead of displaying hours and minutes conventionally, this clock encourages users to engage with time through their senses and emotions.
 - \*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*  
 Please see the file ```screen_clock.py``` for my code for ClockIn. 
 
-**Baseline: Mirroring the changing emotions**
+#### Baseline. Mirroring the changing emotions
 The clock wil change its display and background color based on time as a reminding of time and avoking different energy or emotions to the users. (Please see video).
 
   _after coding I found that the backgroud image changes need some intereactions, so the image change becomes interaction #1 when both A and B are pressed._
 ![Alt text](diagram0.jpg)
 
-- **Interactions #1: Reflection Reminder**
+#### Interactions 1. Reflection Reminder
 Instead of showing numerical time, the clock displays inspirational quotes, personal affirmations, or thought-provoking messages related to the time of day or the month of year. These messages are designed to stimulate reflection and mindfulness as well. (Please see video).
 
-**Interactions #2: Emotion Checker**
+#### Interactions 2. Emotion Checker
 
 The clock triggers a brief mindfulness exercise base on time, prompting users to reflect on their emotions and well-being. It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise. (Please see video).
 
@@ -245,23 +248,30 @@ suggestions = {
               "Prepare for tomorrow and set goals.",'ƪ(˘⌣˘)ʃ']}
 ```
 
-- **Interactions #3: Memory Collector**
-The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snip with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
+#### Interactions 3. Memory Collector
+The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snap with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
 ![Alt text](diagram2.jpg)
 
 
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
-
-\*\*\***Take a video of your PiClock.**\*\*\*
 1. **Baseline: Mirroring the changing emotions**
-As time differs, the background color shifts gradually and dynamically, reflect the changing scenes of nature or life events. 
-2. **Interactions #1: Reflection Reminder**
+As time differs, the background color shifts gradually and dynamically, reflect the changing scenes of nature or life events.
+ 
+3. **Interactions #1: Reflection Reminder**
 When taking the video, it's autumn and 2AM ('night'). When click both A and B buttons, the clock will display random season-related or time-related images with season-related or time-related reminders.
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6811117a-97aa-4250-a3dd-d602004ea246
+
 <iframe src='https://drive.google.com/file/d/1roAu-us-zZCgr0KqiqU9MT7Ns-EORCeH/view?usp=share_link' width='100%' frameborder='0'>
+
+
 
 3. **Interactions #2: Emotion Checker**
 When taking the video, it's 2AM ('night'). When click and hold on A button, the clock will triggers a brief mindfulness exercise, prompting users to reflect on their emotions and well-being. It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise.
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ffb916fa-6401-4451-8d52-4c0c02dcdca7
+
 <iframe src='https://drive.google.com/file/d/1zVvcHukhR_-wzbQTmiBfuWEqClR5NMag/view?usp=share_link' width='100%' frameborder='0'>
 
 
