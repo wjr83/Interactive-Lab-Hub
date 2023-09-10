@@ -193,11 +193,103 @@ Does time have to be linear?  How do you measure a year? [In daylights? In midni
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
 
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
-
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
+## The "Sensory Time Capsule" Clock, ClockIn
 
-\*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*
+### ClockIn as an Emotion Checker and Memory Collector 
+The "Sensory Time Capsule" clock is designed to make time a multisensory and interactive experience. It focuses on measuring time in personal and meaningful ways, incorporating elements like background color change, background image change, text display, and interactive buttons. Instead of displaying hours and minutes conventionally, this clock encourages users to engage with time through their senses and emotions.
+- \*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*  
+Please see the file ```screen_clock.py``` for my code for ClockIn. 
+
+**Baseline: Mirroring the changing emotions**
+The clock wil change its display and background color based on time as a reminding of time and avoking different energy or emotions to the users. (Please see video).
+
+  _after coding I found that the backgroud image changes need some intereactions, so the image change becomes interaction #1 when both A and B are pressed._
+![Alt text](diagram0.jpg)
+
+- **Interactions #1: Reflection Reminder**
+Instead of showing numerical time, the clock displays inspirational quotes, personal affirmations, or thought-provoking messages related to the time of day or the month of year. These messages are designed to stimulate reflection and mindfulness as well. (Please see video).
+
+**Interactions #2: Emotion Checker**
+
+The clock triggers a brief mindfulness exercise base on time, prompting users to reflect on their emotions and well-being. It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise. (Please see video).
+
+![Alt text](diagram1.jpg)
+Sample Exercises
+```
+suggestions = {
+  'morning' : ['Good Morning~~~~~',
+                      'Time for a coffee!',
+                      'Do some morning mediation!',
+                      'Stretching Time.',
+                      'Do some light exercises.',
+                      "Plan for the day ahead."],
+  'noon': ['Stay hydrated!',
+            "Grab a snack to keep up energy.",
+            'Check your emails',
+            'Prioritize tasks.',
+            "Take a short break :D",
+            "Do a mindfulness exercise.",
+            'Get some fresh air.'],
+  "afternoon": ["Wind down and review your day's progress.",
+                "Spend time with family or friends.",
+                "Have a relaxing evening routine.",
+                "Take a walk for a mental break.",
+                'Time for some exercise!','(°∀°)ﾉ',
+                'Live in the moment.'] ,
+  'night' : ['Goodnight~~~~~','ʕ•ᴥ•ʔ',
+              "Limit screen time for better sleep.",
+              "Practice deep breathing to unwind.",'_(:3」∠)____',
+              "Reflect on the positive moments.",
+              "Prepare for tomorrow and set goals.",'ƪ(˘⌣˘)ʃ']}
+```
+
+- **Interactions #3: Memory Collector**
+The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snip with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
+![Alt text](diagram2.jpg)
+
+
+## Part F. 
+## Make a short video of your modified barebones PiClock
+
+\*\*\***Take a video of your PiClock.**\*\*\*
+1. **Baseline: Mirroring the changing emotions**
+As time differs, the background color shifts gradually and dynamically, reflect the changing scenes of nature or life events. 
+2. **Interactions #1: Reflection Reminder**
+When taking the video, it's autumn and 2AM ('night'). When click both A and B buttons, the clock will display random season-related or time-related images with season-related or time-related reminders.
+<iframe src='https://drive.google.com/file/d/1roAu-us-zZCgr0KqiqU9MT7Ns-EORCeH/view?usp=share_link' width='100%' frameborder='0'>
+
+3. **Interactions #2: Emotion Checker**
+When taking the video, it's 2AM ('night'). When click and hold on A button, the clock will triggers a brief mindfulness exercise, prompting users to reflect on their emotions and well-being. It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise.
+<iframe src='https://drive.google.com/file/d/1zVvcHukhR_-wzbQTmiBfuWEqClR5NMag/view?usp=share_link' width='100%' frameborder='0'>
+
+
+## Part G. 
+## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+
+1. Interactions: Mood Tracker
+Include a mood tracker that prompts users to rate their mood periodically. Over time, the clock can create a mood history chart, helping users identify patterns in their emotional well-being.
+
+2. Interactions: Music and Soundscapes
+Allow users to select background music or soundscapes that match the sensory experience. For example, during a "Beach Day" theme, users can choose to play ocean waves in the background.
+
+3. Interactions: Mindful Breathing Exercises
+Expand the "Emotion Checker" interaction to include guided mindful breathing exercises. Users can follow along with on-screen animations and instructions for relaxation and stress reduction.
+
+4. Interactions: Goal Setting
+Enable users to set daily or weekly goals through the clock. The clock can remind users of their goals and provide motivational messages to help them stay on track.
+
+5. Interactions: Daily Challenges
+Present users with daily challenges related to well-being, creativity, or personal growth. Completing these challenges can lead to rewards or additional sensory experiences.
+
+6. Feature: Weather
+Integrate weather information and adjust the clock's sensory elements based on the current weather conditions. For instance, on a rainy day, the clock could display soothing raindrop animations and calming messages.
+
+7. Feature: Themed Days
+Introduce themed days or weeks where the clock aligns its sensory elements with a particular theme chosen by the user. For example, a "Nature Week" could feature natural background images, colors, and messages related to the outdoors.
+
+_____________
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -208,15 +300,6 @@ After you edit and work on the scripts for Lab 2, the files should be upload bac
 ```
 
 After that, Git will ask you to login to your GitHub account to push the updates online, you will be asked to provide your GitHub user name and password. Remember to use the "Personal Access Tokens" you set up in Part A as the password instead of your account one! Go on your GitHub repo with your laptop, you should be able to see the updated files from your Pi!
-
-
-## Part F. 
-## Make a short video of your modified barebones PiClock
-
-\*\*\***Take a video of your PiClock.**\*\*\*
-
-## Part G. 
-## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
 
 # Prep for Part 2
