@@ -255,26 +255,42 @@ The Clock will generate a random task on the right side, and display the time re
 
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
+
 1. **Baseline: Mirroring the changing emotions**
-As time differs, the background color shifts gradually and dynamically, reflect the changing scenes of nature or life events.
+
+- As time differs 12PM ('noon') and 2AM ('night'), the background color shifts gradually and dynamically, reflect the changing scenes of nature or life events.
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/da2f63ca-d1d0-4ab5-b787-ccc313e78dd9
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/7fc741b5-d88e-44f5-bb72-b265239a864e
+
+
  
 3. **Interactions #1: Reflection Reminder**
-When taking the video, it's autumn and 2AM ('night'). When click both A and B buttons, the clock will display random season-related or time-related images with season-related or time-related reminders.
+
+- When taking the video, it's autumn and 2AM ('night'). When click both A and B buttons, the clock will display smoothing reminders.
 
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6811117a-97aa-4250-a3dd-d602004ea246
 
-<iframe src='https://drive.google.com/file/d/1roAu-us-zZCgr0KqiqU9MT7Ns-EORCeH/view?usp=share_link' width='100%' frameborder='0'>
+- When taking the video, it's autumn and 12PM ('noon'). When click both A and B buttons, the clock will display cheering reminders.
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ae15f66d-200f-46a7-8cfa-985f2db3661b
 
 
 
 3. **Interactions #2: Emotion Checker**
-When taking the video, it's 2AM ('night'). When click and hold on A button, the clock will triggers a brief mindfulness exercise, prompting users to reflect on their emotions and well-being. It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise.
+
+- When taking the video, it's 2AM ('night'). It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise.
 
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ffb916fa-6401-4451-8d52-4c0c02dcdca7
 
+- When taking the video, it's 12PM ('noon'). It might suggest a work quote, an encouragement, or a task reminder.
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4dd66868-4acc-42bc-8db3-c3568f18f561
+
+
+if video fails:
+<iframe src='https://drive.google.com/file/d/1roAu-us-zZCgr0KqiqU9MT7Ns-EORCeH/view?usp=share_link' width='100%' frameborder='0'>
 <iframe src='https://drive.google.com/file/d/1zVvcHukhR_-wzbQTmiBfuWEqClR5NMag/view?usp=share_link' width='100%' frameborder='0'>
-
-
+  
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
