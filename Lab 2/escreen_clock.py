@@ -162,6 +162,7 @@ while True:
     hours, minutes, seconds  = list(map(int,date_time[-8:].split(":"))) # Cast items in list to numbers
     
     # TODO: Verify parameters plot correct number of petals according to hours, minutes, seconds
+    
     # Seconds
     # if seconds % 2 == 0 and seconds/2 % 2 == 0: # seconds are even
     #     # seconds = seconds/2
@@ -208,13 +209,13 @@ while True:
     #     hh = a_hr * np.sin(hours*rads)
     #     # plt.polar(rads, hh, 'b.')
     
+    # Generate function output for plotting time on a polar graph.
     ss = a_sec * np.sin(seconds*rads)
     mm = a_min * np.sin(minutes*rads)
     hh = a_hr * np.sin(hours*rads)
-    # plt.polar(rads, mm, 'g.')
+
     
-    # plt.polar(rads, hh, 'b.')
-    
+    #TODO: Remove Degree Labels on Polar Subplots
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, subplot_kw=dict(projection='polar'))
     ax1.plot(rads, hh, color='r')
     ax2.plot(rads, mm, color='b',)
@@ -247,6 +248,7 @@ while True:
     backlight.switch_to_output()
     backlight.value = True
 
+    # Width of Plot: 640px | Height of Plot: 480px
     # Scale the image to the smaller screen dimension
     image_ratio = image.width / image.height
     screen_ratio = width / height
