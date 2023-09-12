@@ -193,12 +193,16 @@ Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/lates
 
 ## Part E.
 ### Modify the barebones clock to make it your own
+> **Note: All of Part E was developed in the python script named `escreen_clock.py`.**
 
 Does time have to be linear?  How do you measure a year? [In daylights? In midnights? In cups of coffee?](https://www.youtube.com/watch?v=wsj15wPpjLY)
-
+* We are measuring time with flowers! More specifically, by counting the petals of flowers!
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
-
+* Will attempt to make use of the screen's buttons for Part 2 of the Lab.
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
+![IMG_3564](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/95e1c5b4-8717-4a63-a831-13deba834306)
+
+I decided to implement Idea "D" shown above as it seemed the most artistic and intuitive representation of time using mathematical functions (cosine and sine functions plotted in polar coordinates).
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
