@@ -217,6 +217,22 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1223c9c8-5dc2-4ea9
 After trying to tweak the parameters over and over so that the overlay is not overly cluttered in the tiny screen on the Raspberry Pi, I decided to separate the hour, minutes, and seconds "flowers" into their own "flower pot" (or formally, polar plot) for improved reading of the time. A sample output is shown below (where the time displayed HH:MM:SS is 01:22:18 PM, as indicated by the number of petals in each flower):
 ![time_output](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bd0782f5-cadb-42d3-8cda-0f6e975c61ac)
 
+After some more work, these were the results:
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d1677c33-f145-4659-abd8-c0afa33757e0
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a9bbab2c-85d4-424e-a02d-78bb44064924
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9a10dcdd-c79f-4d91-a2ec-b557041413d2
+
+
+
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
@@ -238,6 +254,12 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+After investing time in making my code more efficient so as to make the transition of time smoother, this was the result:
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab-b4a9-029ce1d61044
+
+
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
