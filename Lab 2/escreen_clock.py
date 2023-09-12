@@ -163,74 +163,89 @@ while True:
     
     # TODO: Verify parameters plot correct number of petals according to hours, minutes, seconds
     # Seconds
-    if seconds % 2 == 0 and seconds/2 % 2 == 0: # seconds are even
-        # seconds = seconds/2
-        ss = a_sec * np.sin(seconds*rads)
-        plt.polar(rads, ss, 'g.')
-    elif seconds % 2 == 0 and seconds/2 % 2 != 0:
-        ss = a_sec * np.cos((seconds/2)*rads)
-        plt.polar(rads, ss, 'g.')
-        ss = a_sec * np.cos((seconds/2)*rads)
-        plt.polar(rads, ss, 'g.')
-    else: # seconds are odd
-        ss = a_sec * np.sin(seconds*rads)
-        plt.polar(rads, ss, 'g.')
+    # if seconds % 2 == 0 and seconds/2 % 2 == 0: # seconds are even
+    #     # seconds = seconds/2
+    #     ss = a_sec * np.sin(seconds*rads)
+    #     # plt.polar(rads, ss, 'g.')
+    # elif seconds % 2 == 0 and seconds/2 % 2 != 0:
+    #     ss = a_sec * np.cos((seconds/2)*rads)
+    #     # plt.polar(rads, ss, 'g.')
+    #     ss = a_sec * np.cos((seconds/2)*rads)
+    #     # plt.polar(rads, ss, 'g.')
+    # else: # seconds are odd
+    #     ss = a_sec * np.sin(seconds*rads)
+    #     # plt.polar(rads, ss, 'g.')
 
-    # Minutes
-    if minutes % 2 == 0 and minutes/2 % 2 == 0: # minute is even
-        # minutes = minutes/2
-        mm = a_min * np.sin(minutes*rads)
-        plt.polar(rads, mm, 'r.')
-    elif minutes % 2 == 0 and minutes/2 % 2 != 0:
-        mm = a_min * np.cos((minutes/2)*rads)
-        plt.polar(rads, mm, 'r.')
-        mm = a_min * np.cos((minutes/2)*rads)
-        plt.polar(rads, mm, 'r.')
-    else: # hour is odd
-        mm = a_min * np.sin(minutes*rads)
-        plt.polar(rads, mm, 'r.')
+    # # Minutes
+    # if minutes % 2 == 0 and minutes/2 % 2 == 0: # minute is even
+    #     # minutes = minutes/2
+    #     mm = a_min * np.sin(minutes*rads)
+    #     # plt.polar(rads, mm, 'r.')
+    # elif minutes % 2 == 0 and minutes/2 % 2 != 0:
+    #     mm = a_min * np.cos((minutes/2)*rads)
+    #     # plt.polar(rads, mm, 'r.')
+    #     mm = a_min * np.cos((minutes/2)*rads)
+    #     # plt.polar(rads, mm, 'r.')
+    # else: # hour is odd
+    #     mm = a_min * np.sin(minutes*rads)
+    #     # plt.polar(rads, mm, 'r.')
 
-    # Hours
-    if hours == 0:
-        hours = 12
-    if hours > 12:
-        hours = hours - 12
-    if hours % 2 == 0 and hours/2 % 2 == 0: # hour is even
-        # hours = hours/2
-        hh = a_hr * np.sin(hours*rads)
-        plt.polar(rads, hh, 'b.')
-    elif hours % 2 == 0 and hours/2 % 2 != 0:
-        hh = a_hr * np.cos((hours/2)*rads)
-        plt.polar(rads, hh, 'b.')
-        hh = a_hr * np.sin((hours/2)*rads)
-        plt.polar(rads, hh, 'b.')
-    else: # hour is odd
-        hh = a_hr * np.sin(hours*rads)
-        plt.polar(rads, hh, 'b.')
+    # # Hours
+    # if hours == 0:
+    #     hours = 12
+    # if hours > 12:
+    #     hours = hours - 12
+    # if hours % 2 == 0 and hours/2 % 2 == 0: # hour is even
+    #     # hours = hours/2
+    #     hh = a_hr * np.sin(hours*rads)
+    #     # plt.polar(rads, hh, 'b.')
+    # elif hours % 2 == 0 and hours/2 % 2 != 0:
+    #     hh = a_hr * np.cos((hours/2)*rads)
+    #     # plt.polar(rads, hh, 'b.')
+    #     hh = a_hr * np.sin((hours/2)*rads)
+    #     # plt.polar(rads, hh, 'b.')
+    # else: # hour is odd
+    #     hh = a_hr * np.sin(hours*rads)
+    #     # plt.polar(rads, hh, 'b.')
     
-
-    # mm = a_min * np.sin(minutes*rads)
+    ss = a_sec * np.sin(seconds*rads)
+    mm = a_min * np.sin(minutes*rads)
+    hh = a_hr * np.sin(hours*rads)
     # plt.polar(rads, mm, 'g.')
-    # hh = a_hr * np.sin(hours*rads)
+    
     # plt.polar(rads, hh, 'b.')
+    
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, subplot_kw=dict(projection='polar'))
+    ax1.plot(rads, hh, color='r')
+    ax2.plot(rads, mm, color='b',)
+    ax3.plot(rads, ss, color='g')
+    ax1.set_yticklabels([])
+    ax1.set_theta_zero_location('N')
+    ax2.set_yticklabels([])
+    ax2.set_theta_zero_location('N')
+    ax3.set_yticklabels([])
+    ax3.set_theta_zero_location('N')
+    ax1.title.set_text('Hours')
+    ax2.title.set_text('Minutes')
+    ax3.title.set_text('Seconds')
 
+    # Save subplots as image 
     plt.savefig("time_output.jpg")
     
-   
-
-    # Draw a white filled box to clear the image.
-    image = Image.new("RGB", (width, height))
-    draw = ImageDraw.Draw(image)
-    draw.rectangle((0, 0, width, height), outline=0, fill=(255, 255, 255))
-    disp.image(image)
-
+    plt.close() # close plot to save resources
     
+   
+    # Draw a white filled box to clear the image.
+    # image = Image.new("RGB", (width, height))
+    # draw = ImageDraw.Draw(image)
+    # draw.rectangle((0, 0, width, height), outline=0, fill=(255, 255, 255))
+    # disp.image(image)
 
-    image = Image.open("time_output.jpg")
+    image = Image.open("time_output.jpg").rotate(90)  # Open saved subplots showing current time 
+
     backlight = digitalio.DigitalInOut(board.D22)
     backlight.switch_to_output()
     backlight.value = True
-
 
     # Scale the image to the smaller screen dimension
     image_ratio = image.width / image.height
