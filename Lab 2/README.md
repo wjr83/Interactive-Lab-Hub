@@ -263,7 +263,12 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
-
+* Buttons:
+> - Zoom in on each plot (hour, minutes, seconds) with each click
+> - Switch display to showcase whether it is night or day
+> - Switch display to showcase month, day, year
+>   - Display the zodiac constellation to indicate the current month
+>   - Display images to tell about an important event in history or holiday (e.g., Independence Day, Christmas, New Year's Eve).
 
 # Prep for Part 2
 
