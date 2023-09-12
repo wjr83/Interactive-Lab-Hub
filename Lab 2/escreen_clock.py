@@ -126,7 +126,7 @@ image = Image.new("RGB", (width, height))
 draw = ImageDraw.Draw(image)
 
 # Draw a black filled box to clear the image.
-draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+draw.rectangle((0, 0, width, height), outline=0, fill=(255, 255, 255))
 disp.image(image)
 
 
@@ -135,52 +135,122 @@ disp.image(image)
 plt.axes(projection='polar')
   
 # setting the length and number of petals
-a = 1
-n = 12
+# a = 1
+# n = 12
 
-# TODO: get current time
+# # TODO: get current date & time
+# date_time = strftime("%m/%d/%Y %H:%M:%S")
+# month, day, year = date_time[:10].split("/")
+# hour, minutes, seconds  = date_time[-8:].split(":")
 
-  
-# creating an array
-# containing the radian values
+################################################
+
+
+# Instantiante sampling size of radians 
 rads = np.arange(0, 2 * np.pi, 0.001) 
-  
-# plotting the rose
-# TODO: vectorize to improve processing time
-for rad in rads:
-    hh = a * np.cos(n*rad)
-    mm = 3 * np.cos(33*rad)
-    ss = 2 * np.sin(14*rad)
-    plt.polar(rad, hh, 'b.')
-    plt.polar(rad, mm, 'g.')
-    plt.polar(rad, ss, 'r.')
 
-plt.savefig("time_output.jpg")
-image = Image.open("time_output.jpg")
-backlight = digitalio.DigitalInOut(board.D22)
-backlight.switch_to_output()
-backlight.value = True
+# Instantiante Amplitude of hours, minutes, seconds roses
+a_hr = 15
+a_min = 10
+a_sec = 5
 
 
-# Scale the image to the smaller screen dimension
-image_ratio = image.width / image.height
-screen_ratio = width / height
-if screen_ratio < image_ratio:
-    scaled_width = image.width * height // image.height
-    scaled_height = height
-else:
-    scaled_width = width
-    scaled_height = image.height * width // image.width
-image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+while True:
+    # Get current date & time
+    date_time = strftime("%m/%d/%Y %H:%M:%S")
+    month, day, year = list(map(int,date_time[:10].split("/")))  # Cast items in list to numbers
+    hours, minutes, seconds  = list(map(int,date_time[-8:].split(":"))) # Cast items in list to numbers
+    
+    # TODO: Verify parameters plot correct number of petals according to hours, minutes, seconds
+    # Seconds
+    if seconds % 2 == 0 and seconds/2 % 2 == 0: # seconds are even
+        # seconds = seconds/2
+        ss = a_sec * np.sin(seconds*rads)
+        plt.polar(rads, ss, 'g.')
+    elif seconds % 2 == 0 and seconds/2 % 2 != 0:
+        ss = a_sec * np.cos((seconds/2)*rads)
+        plt.polar(rads, ss, 'g.')
+        ss = a_sec * np.cos((seconds/2)*rads)
+        plt.polar(rads, ss, 'g.')
+    else: # seconds are odd
+        ss = a_sec * np.sin(seconds*rads)
+        plt.polar(rads, ss, 'g.')
 
-# Crop and center the image
-x = scaled_width // 2 - width // 2
-y = scaled_height // 2 - height // 2
-image = image.crop((x, y, x + width, y + height))
+    # Minutes
+    if minutes % 2 == 0 and minutes/2 % 2 == 0: # minute is even
+        # minutes = minutes/2
+        mm = a_min * np.sin(minutes*rads)
+        plt.polar(rads, mm, 'r.')
+    elif minutes % 2 == 0 and minutes/2 % 2 != 0:
+        mm = a_min * np.cos((minutes/2)*rads)
+        plt.polar(rads, mm, 'r.')
+        mm = a_min * np.cos((minutes/2)*rads)
+        plt.polar(rads, mm, 'r.')
+    else: # hour is odd
+        mm = a_min * np.sin(minutes*rads)
+        plt.polar(rads, mm, 'r.')
 
-# Display image.
-disp.image(image)
-  
+    # Hours
+    if hours == 0:
+        hours = 12
+    if hours > 12:
+        hours = hours - 12
+    if hours % 2 == 0 and hours/2 % 2 == 0: # hour is even
+        # hours = hours/2
+        hh = a_hr * np.sin(hours*rads)
+        plt.polar(rads, hh, 'b.')
+    elif hours % 2 == 0 and hours/2 % 2 != 0:
+        hh = a_hr * np.cos((hours/2)*rads)
+        plt.polar(rads, hh, 'b.')
+        hh = a_hr * np.sin((hours/2)*rads)
+        plt.polar(rads, hh, 'b.')
+    else: # hour is odd
+        hh = a_hr * np.sin(hours*rads)
+        plt.polar(rads, hh, 'b.')
+    
+
+    # mm = a_min * np.sin(minutes*rads)
+    # plt.polar(rads, mm, 'g.')
+    # hh = a_hr * np.sin(hours*rads)
+    # plt.polar(rads, hh, 'b.')
+
+    plt.savefig("time_output.jpg")
+    
+   
+
+    # Draw a white filled box to clear the image.
+    image = Image.new("RGB", (width, height))
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((0, 0, width, height), outline=0, fill=(255, 255, 255))
+    disp.image(image)
+
+    
+
+    image = Image.open("time_output.jpg")
+    backlight = digitalio.DigitalInOut(board.D22)
+    backlight.switch_to_output()
+    backlight.value = True
+
+
+    # Scale the image to the smaller screen dimension
+    image_ratio = image.width / image.height
+    screen_ratio = width / height
+    if screen_ratio < image_ratio:
+        scaled_width = image.width * height // image.height
+        scaled_height = height
+    else:
+        scaled_width = width
+        scaled_height = image.height * width // image.width
+    image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+    # Crop and center the image
+    x = scaled_width // 2 - width // 2
+    y = scaled_height // 2 - height // 2
+    image = image.crop((x, y, x + width, y + height))
+
+    # Display image.
+    disp.image(image)
+    
   
 
     
