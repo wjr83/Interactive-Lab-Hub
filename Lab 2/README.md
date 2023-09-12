@@ -193,12 +193,30 @@ Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/lates
 
 ## Part E.
 ### Modify the barebones clock to make it your own
+> **Note: All of Part E was developed in the python script named `escreen_clock.py`.**
 
 Does time have to be linear?  How do you measure a year? [In daylights? In midnights? In cups of coffee?](https://www.youtube.com/watch?v=wsj15wPpjLY)
-
+* We are measuring time with flowers! More specifically, by counting the petals of flowers!
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
-
+* Will attempt to make use of the screen's buttons for Part 2 of the Lab.
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
+![IMG_3564](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/95e1c5b4-8717-4a63-a831-13deba834306)
+
+I decided to implement Idea "D" shown above as it seemed the most artistic and intuitive representation of time using mathematical functions (cosine and sine functions plotted in polar coordinates).
+The first attempts at implementing Idea D are shown below:
+![IMG_3542](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eca07f64-f529-4c55-b7fe-3ec9c9007979)
+![IMG_3535](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0b74bdd1-fe0a-4afa-91cc-e6d62b54759f)
+![IMG_3534](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0a70de14-952f-4577-b289-12d5b5997bd1)
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cb120392-d470-42f9-9694-f596b5641df9
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1223c9c8-5dc2-4ea9-857f-930fc33645d0
+
+After trying to tweak the parameters over and over so that the overlay is not overly cluttered in the tiny screen on the Raspberry Pi, I decided to separate the hour, minutes, and seconds "flowers" into their own "flower pot" (or formally, polar plot) for improved reading of the time. A sample output is shown below (where the time displayed HH:MM:SS is 01:22:18 PM, as indicated by the number of petals in each flower):
+![time_output](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bd0782f5-cadb-42d3-8cda-0f6e975c61ac)
+
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
