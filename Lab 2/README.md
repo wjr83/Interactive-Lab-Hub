@@ -289,6 +289,15 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
+Feedback received:
+- I found the geometrical aesthetic quite captivating
+- Nice contrast in colors and curves
+- The labels seem to distract a bit from this
+- I would try to find a way to fullscreen the visuals and discard the text and white space
+- The aesthetics are really awesome, thinking about ways to maximize there appearance
+- Maybe divide the 3 units of time across 3 different screens, integrating a button to push between them
+- Overall I think you're on to something great with this, just need to try and remove the text distractors
+
 # Lab 2 Part 2
 
 Pull Interactive Lab Hub updates to your repo.
