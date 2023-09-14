@@ -26,7 +26,7 @@
 
 1 x [Adafruit MPR121 Capacitive Touch Sensor QT](https://www.adafruit.com/product/4830)
 
-1 x [SparkFun Qwiic Joystick](https://www.sparkfun.com/products/15168) [N/A YET] 
+1 x [SparkFun Qwiic Joystick](https://www.sparkfun.com/products/15168)
 
 1 x [SparkFun Qwiic OLED Display](https://www.sparkfun.com/products/17153) [N/A YET] 
 
@@ -65,3 +65,4 @@
 
 ## Missing Parts here
 \*\*\***List down parts you did not get from the kit here**\*\*\*
+Missing 1 x [AdafruitI2C GPIO Expander Breakout](https://www.adafruit.com/product/5545)
