@@ -268,7 +268,19 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab
 > - Switch display to showcase whether it is night or day
 > - Switch display to showcase month, day, year
 >   - Display the zodiac constellation to indicate the current month
->   - Display images to tell about an important event in history or holiday (e.g., Independence Day, Christmas, New Year's Eve).
+>   - Display images representing important events in history for today's date (e.g., Independence Day, Christmas, New Year's Eve, birthdays of family and friends).
+* Design the clock as a timer/reminder to take a break from studying (e.g., every 50min for 10 minutes).
+* Design the screen as a countdown that tracks the metro lines Q & F in NYC at specific locations (Roosevelt Island and Midtown).
+* - The countdown can be the logo of the line moving across the screen (or the logo fading away, or a train moving across the screen and coming to a stop when at the station).
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/3c5bbbca-9c4a-46d3-b539-b896aa854457">
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d56295c9-8ce4-4466-bd37-a9a2dd8c43b9">
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e21c8f59-1e7d-47ba-8655-2bc6a201f90f">
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/474fe5ff-95b2-47b5-9924-460b1baab9eb">
+<img width="40" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/192f4f2d-74f5-4f99-be71-1e45b74503c2">
+<img width="40" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/fd4a28da-816c-48ff-8283-cc7c82014339">
+<img width="80" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/701bcabe-eb64-4838-a599-aa991322e4a1">
+
+
 
 # Prep for Part 2
 
