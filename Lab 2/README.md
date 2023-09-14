@@ -297,6 +297,7 @@ Feedback received:
 - The aesthetics are really awesome, thinking about ways to maximize there appearance
 - Maybe divide the 3 units of time across 3 different screens, integrating a button to push between them
 - Overall I think you're on to something great with this, just need to try and remove the text distractors
+- Add dynamic art component (similar to abstract screensaver, but this time the art itself should tell time).
 
 # Lab 2 Part 2
 
