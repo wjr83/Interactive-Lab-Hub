@@ -217,6 +217,22 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1223c9c8-5dc2-4ea9
 After trying to tweak the parameters over and over so that the overlay is not overly cluttered in the tiny screen on the Raspberry Pi, I decided to separate the hour, minutes, and seconds "flowers" into their own "flower pot" (or formally, polar plot) for improved reading of the time. A sample output is shown below (where the time displayed HH:MM:SS is 01:22:18 PM, as indicated by the number of petals in each flower):
 ![time_output](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bd0782f5-cadb-42d3-8cda-0f6e975c61ac)
 
+After some more work, these were the results:
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d1677c33-f145-4659-abd8-c0afa33757e0
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a9bbab2c-85d4-424e-a02d-78bb44064924
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9a10dcdd-c79f-4d91-a2ec-b557041413d2
+
+
+
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
@@ -239,8 +255,31 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+After investing time in making my code more efficient so as to make the transition of time smoother, this was the result:
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab-b4a9-029ce1d61044
+
+
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+* Buttons:
+> - Zoom in on each plot (hour, minutes, seconds) with each click
+> - Switch display to showcase whether it is night or day
+> - Switch display to showcase month, day, year
+>   - Display the zodiac constellation to indicate the current month
+>   - Display images representing important events in history for today's date (e.g., Independence Day, Christmas, New Year's Eve, birthdays of family and friends).
+* Design the clock as a timer/reminder to take a break from studying (e.g., every 50min for 10 minutes).
+* Design the screen as a countdown that tracks the metro lines Q & F in NYC at specific locations (Roosevelt Island and Midtown).
+* - The countdown can be the logo of the line moving across the screen (or the logo fading away, or a train moving across the screen and coming to a stop when at the station).
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/3c5bbbca-9c4a-46d3-b539-b896aa854457">
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d56295c9-8ce4-4466-bd37-a9a2dd8c43b9">
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e21c8f59-1e7d-47ba-8655-2bc6a201f90f">
+<img width="30" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/474fe5ff-95b2-47b5-9924-460b1baab9eb">
+<img width="40" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/192f4f2d-74f5-4f99-be71-1e45b74503c2">
+<img width="40" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/fd4a28da-816c-48ff-8283-cc7c82014339">
+<img width="80" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/701bcabe-eb64-4838-a599-aa991322e4a1">
+
 
 
 # Prep for Part 2
@@ -249,6 +288,18 @@ After that, Git will ask you to login to your GitHub account to push the updates
   
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+
+Feedback received:
+- I found the geometrical aesthetic quite captivating
+- Nice contrast in colors and curves
+- The labels seem to distract a bit from this
+- I would try to find a way to fullscreen the visuals and discard the text and white space
+- The aesthetics are really awesome, thinking about ways to maximize there appearance
+- Maybe divide the 3 units of time across 3 different screens, integrating a button to push between them
+- Overall I think you're on to something great with this, just need to try and remove the text distractors
+- Add dynamic art component (similar to abstract screensaver, but this time the art itself should tell time).
+- How important are the hours and minutes polar displays of time? Maybe these can be smaller compared to the seconds display as they change less frequently.
+- - Maybe stack the hours and minutes vertically and center the seconds polar display on the screen.
 
 # Lab 2 Part 2
 
