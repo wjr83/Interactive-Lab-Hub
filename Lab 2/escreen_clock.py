@@ -11,12 +11,61 @@ from adafruit_bus_device.i2c_device import I2CDevice
 from struct import pack, unpack
 import RPi.GPIO as GPIO            # import RPi.GPIO module for buttons 
 from time import sleep             # lets us have a delay  
+import subprocess
+import pathlib
+
+# Stop two scripts from trying to use the screen at once.
+subprocess.call(["sudo", "systemctl", "stop", "mini-screen.service"])
+sleep(2)
+
+#Helper function to pad image background with white
+def add_margin(pil_img, top, right, bottom, left, color):
+    width, height = pil_img.size
+    new_width = width + right + left
+    new_height = height + top + bottom
+    result = Image.new(pil_img.mode, (new_width, new_height), color)
+    result.paste(pil_img, (left, top))
+    return result
+
+def image_raspPi(image):
+    # if image == "Images\\time_output.jpg":
+    image = Image.open(pathlib.Path(image)).rotate(90)
+    # else:
+    #     image = Image.open(pathlib.Path(image))
+    backlight = digitalio.DigitalInOut(board.D22)
+    backlight.switch_to_output()
+    backlight.value = True
+
+    # Width of Plot: 640px | Height of Plot: 480px
+    # Scale the image to the smaller screen dimension
+    image_ratio = image.width / image.height
+    screen_ratio = width / height
+    if screen_ratio < image_ratio:
+        scaled_width = image.width * height // image.height
+        scaled_height = height
+    else:
+        scaled_width = width
+        scaled_height = image.height * width // image.width
+    image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+    # Crop and center the image
+    x = scaled_width // 2 - width // 2
+    y = scaled_height // 2 - height // 2
+    image = image.crop((x, y, x + width, y + height))
+
+    return image
+    # Display image.
+
+# Define filepaths of images to display:
+flip_steak = "Images/Time_to_Flip_Steak.png"
+show_time = "Images/time_output.jpg"
+
 
 GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
 GPIO.setup(23, GPIO.OUT)           # set GPIO24 as an output   
 GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output   
-GPIO.output(23, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton A, upper) 
-GPIO.output(24, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton B, lower) 
+GPIO.output(23, 1)         # set GPIO24 to 1/GPIO.HIGH/True (Button A, upper) (0/GPIO.LOW/FALSE)
+GPIO.output(24, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton B, lower) (0/GPIO.LOW/FALSE)
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -232,16 +281,16 @@ while True:
     hh = a_hr * np.sin(hours*rads)
 
     
-    #TODO: Remove Degree Labels on Polar Subplots
+    # Plot time as a polar plot of sin()
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, subplot_kw=dict(projection='polar'))
-    ax1.plot(rads, hh, color='r')
-    ax1.axis('off')
+    ax1.plot(rads, hh, color='r', )
+    ax1.axis('off') # Remove Degree Labels on Polar Subplots
     ax2.plot(rads, mm, color='b',)
-    ax2.axis('off')
+    ax2.axis('off') # Remove Degree Labels on Polar Subplots
     ax3.plot(rads, ss, color='g')
-    ax3.axis('off')
+    ax3.axis('off') # Remove Degree Labels on Polar Subplots
     ax1.set_yticklabels([])
-    ax1.set_theta_zero_location('N')
+    # ax1.set_theta_zero_location('N')
     ax2.set_yticklabels([])
     ax2.set_theta_zero_location('N')
     ax3.set_yticklabels([])
@@ -251,21 +300,52 @@ while True:
     ax3.title.set_text('Seconds')
 
     # Save subplots as image 
-    plt.savefig("time_output.jpg")
+    plt.savefig("Images/time_output.jpg")
     
     plt.close() # close plot to save resources
     
+    
+
+    
+
+
+
+    # image = Image.open("Images\\time_output.jpg").rotate(90)  # Open saved subplots showing current time 
+
+    # Display Image
+    
+
+    # Add white margin to image
+    # image = add_margin(image, 50, 100, 50, 100, (0, 255, 100)) # left, bottom, right, top
+    # image.save('time_output.jpg', quality=100)
+    # image = Image.open("time_output.jpg")
+
+
+
+
+
     #TODO: Incorporate button functionality into telling of time
     try:  
-        while True:  
-            print(GPIO.input(24))
-            # sleep(0.5)                 # wait half a second  
-            if GPIO.input(24) == 1:  
-                print("Button B is unpressed")  
-            # GPIO.output(24, 0)         # set GPIO24 to 0/GPIO.LOW/False  
-            # sleep(0.5)                 # wait half a second  
-            if GPIO.input(24) == 0:  
-                print("Button was pressed")  
+        print(GPIO.input(24))
+        # sleep(0.5)                 # wait half a second  
+        if GPIO.input(23) == 1:
+            GPIO.output(23, 1)  
+            print("Button B is unpressed")
+            t_image = image_raspPi(show_time)
+            disp.image(t_image)  
+
+        # GPIO.output(24, 0)         # set GPIO24 to 0/GPIO.LOW/False  
+        # sleep(0.5)                 # wait half a second  
+            
+        if GPIO.input(24) == 0:
+            GPIO.output(24, 0)  
+            print("Button was pressed") 
+            image = image_raspPi(flip_steak)
+            disp.image(image)
+            
+
+            
+
     except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt  
         GPIO.cleanup()    
 
@@ -276,31 +356,7 @@ while True:
     # draw.rectangle((0, 0, width, height), outline=0, fill=(255, 255, 255))
     # disp.image(image)
 
-    image = Image.open("time_output.jpg").rotate(90)  # Open saved subplots showing current time 
-
-    backlight = digitalio.DigitalInOut(board.D22)
-    backlight.switch_to_output()
-    backlight.value = True
-
-    # Width of Plot: 640px | Height of Plot: 480px
-    # Scale the image to the smaller screen dimension
-    image_ratio = image.width / image.height
-    screen_ratio = width / height
-    if screen_ratio < image_ratio:
-        scaled_width = image.width * height // image.height
-        scaled_height = height
-    else:
-        scaled_width = width
-        scaled_height = image.height * width // image.width
-    image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
-
-    # Crop and center the image
-    x = scaled_width // 2 - width // 2
-    y = scaled_height // 2 - height // 2
-    image = image.crop((x, y, x + width, y + height))
-
-    # Display image.
-    disp.image(image)
+    
     
   
 
