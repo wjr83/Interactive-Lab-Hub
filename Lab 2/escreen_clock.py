@@ -212,14 +212,22 @@ while True:
     # Generate function output for plotting time on a polar graph.
     ss = a_sec * np.sin(seconds*rads)
     mm = a_min * np.sin(minutes*rads)
+    # Hours
+    if hours == 0:
+        hours = 12
+    if hours > 12:
+        hours = hours - 12
     hh = a_hr * np.sin(hours*rads)
 
     
     #TODO: Remove Degree Labels on Polar Subplots
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, subplot_kw=dict(projection='polar'))
     ax1.plot(rads, hh, color='r')
+    ax1.axis('off')
     ax2.plot(rads, mm, color='b',)
+    ax2.axis('off')
     ax3.plot(rads, ss, color='g')
+    ax3.axis('off')
     ax1.set_yticklabels([])
     ax1.set_theta_zero_location('N')
     ax2.set_yticklabels([])
