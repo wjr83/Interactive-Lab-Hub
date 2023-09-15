@@ -5,6 +5,18 @@ import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from time import strftime, sleep
+import busio
+import board
+from adafruit_bus_device.i2c_device import I2CDevice
+from struct import pack, unpack
+import RPi.GPIO as GPIO            # import RPi.GPIO module for buttons 
+from time import sleep             # lets us have a delay  
+
+GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
+GPIO.setup(23, GPIO.OUT)           # set GPIO24 as an output   
+GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output   
+GPIO.output(23, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton A, upper) 
+GPIO.output(24, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton B, lower) 
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -243,7 +255,21 @@ while True:
     
     plt.close() # close plot to save resources
     
-   
+    #TODO: Incorporate button functionality into telling of time
+    try:  
+        while True:  
+            print(GPIO.input(24))
+            # sleep(0.5)                 # wait half a second  
+            if GPIO.input(24) == 1:  
+                print("Button B is unpressed")  
+            # GPIO.output(24, 0)         # set GPIO24 to 0/GPIO.LOW/False  
+            # sleep(0.5)                 # wait half a second  
+            if GPIO.input(24) == 0:  
+                print("Button was pressed")  
+    except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt  
+        GPIO.cleanup()    
+
+    
     # Draw a white filled box to clear the image.
     # image = Image.new("RGB", (width, height))
     # draw = ImageDraw.Draw(image)
