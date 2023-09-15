@@ -309,6 +309,9 @@ Modify the code from last week's lab to make a new visual interface for your new
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
+You are permitted (but not required) to work in groups and share a turn-in; you are expected to make equal contributions on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn-in is linked to your Interactive Lab Hub page. 
+
+## Per feedback received in class, I removed the axis of the polar plots to just display flowers (cosines and sines plotted in polar coordinates) with changing petals to denote hours, minutes, and seconds.
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/b9b1864f-2092-46c8-b8ff-f806594da82c)
 
 
