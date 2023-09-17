@@ -213,8 +213,7 @@ Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www
 
 ### ClockIn as an Emotion Checker and Memory Collector 
 The "Sensory Time Capsule" clock is designed to make time a multisensory and interactive experience. It focuses on measuring time in personal and meaningful ways, incorporating elements like background color change, background image change, text display, and interactive buttons. Instead of displaying hours and minutes conventionally, this clock encourages users to engage with time through their senses and emotions.
-- \*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*  
-Please see the file ```screen_clock.py``` for my code for ClockIn. 
+- \*\*\***Please see the file ```clockin.py``` for my code for ClockIn.**\*\*\*  
 
 #### Baseline. Mirroring the changing emotions
 The clock wil change its display and background color based on time as a reminding of time and avoking different energy or emotions to the users. (Please see video).
@@ -231,9 +230,7 @@ The clock triggers a brief mindfulness exercise base on time, prompting users to
 
 ![Alt text](diagram1.jpg)
 
-<details>
-  <summary>Sample Exercises</summary>
-  
+
 ```
 suggestions = {
   'morning' : ['Good Morning~~~~~',
@@ -262,7 +259,7 @@ suggestions = {
               "Prepare for tomorrow and set goals.",'ƪ(˘⌣˘)ʃ']}
 ```
 
-</details>
+
 
 #### Interactions 3. Tour with Sustainability Awareness 
 The Clock will allow you take a brief break to another world at different altitude. After the tour it will display a enviormental issue 
@@ -272,11 +269,19 @@ It allows you to go to different levels of altitude or different views at the sa
 After the tour, it will tell you how many marine animals have died because of the plastic during your touring time length. (Please see video).
 
 Folder `aqua` contains different photos for the tour, and here are a few examples:
-1. 60 meter example ![60_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/43a96764-566d-459b-8bb5-a0ddc27ab863)
-2. 0 meter sea level example ![0_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e404e4ef-4546-4b03-aa86-23766bb108ea)
-3. -1000 meters underwater exaple ![-100_1](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8dd49c90-b93c-4fc5-9027-94bf7419955a)
+1. 60 meter example
 
+   ![60_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/43a96764-566d-459b-8bb5-a0ddc27ab863)
+  
+3. 0 meter sea level example
+   
+   ![0_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e404e4ef-4546-4b03-aa86-23766bb108ea)
+   
+6. -1000 meters underwater exaple
 
+   ![-100_1](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8dd49c90-b93c-4fc5-9027-94bf7419955a)
+
+Diagrams:
 
 ![171694909092_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4aa7866d-86af-4879-b908-e642d052f8b3)
 
@@ -316,7 +321,6 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ae15f66d-20
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ffb916fa-6401-4451-8d52-4c0c02dcdca7
 
   
-
 
 3. **Interactions #2: Emotion Checker**
 
