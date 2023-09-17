@@ -16,7 +16,8 @@ E) [Modify the code to make the display your own](#part-e)
 - [Baseline. Mirroring the changing emotions](#Baseline-Mirroring-the-changing-emotions)
 - [Interactions 1. Reflection Reminder](#Interactions-1-Reflection-Reminder)
 - [Interactions 2. Emotion Checker](#Interactions-2-Emotion-Checker)
-- [Interactions 3. Memory Collector](#Interactions-3-Memory-Collector)
+- [Interactions 3. Tour with Sustainability Awareness](#Interactions-3-Tour-with-Sustainability-Awareness)
+- [Interactions 4. Memory Collector](#Interactions-4-Memory-Collector)
 
 F) [Make a short video of your modified barebones PiClock](#part-f)
 
@@ -195,14 +196,18 @@ Option 3. A nowadays often preferred method is to use Microsoft [VS code to remo
 Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/latest) you can even setup a VS Code coding environment hosted on your raspberry pi and code through a web browser on your tablet or smartphone! 
 
 ## Part E.
-### Modify the barebones clock to make it your own
 
+<details>
+  
+  <summary>Click to expand the requiremnts</summary>
 Does time have to be linear?  How do you measure a year? [In daylights? In midnights? In cups of coffee?](https://www.youtube.com/watch?v=wsj15wPpjLY)
 
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
 
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
+
+</details>
 
 ## The Sensory Time Capsule Clock. ClockIn
 
@@ -225,7 +230,10 @@ Instead of showing numerical time, the clock displays inspirational quotes, pers
 The clock triggers a brief mindfulness exercise base on time, prompting users to reflect on their emotions and well-being. It might suggest a deep breath, a moment of gratitude, or a mindfulness exercise. (Please see video).
 
 ![Alt text](diagram1.jpg)
-Sample Exercises
+
+<details>
+  <summary>Sample Exercises</summary>
+  
 ```
 suggestions = {
   'morning' : ['Good Morning~~~~~',
@@ -254,7 +262,30 @@ suggestions = {
               "Prepare for tomorrow and set goals.",'ƪ(˘⌣˘)ʃ']}
 ```
 
-#### Interactions 3. Memory Collector
+</details>
+
+#### Interactions 3. Tour with Sustainability Awareness 
+The Clock will allow you take a brief break to another world at different altitude. After the tour it will display a enviormental issue 
+
+The current demo version is the Marine World, from 600 meters in the sky to -1000 meters in the water.
+It allows you to go to different levels of altitude or different views at the same sea level. 
+After the tour, it will tell you how many marine animals have died because of the plastic during your touring time length. (Please see video).
+
+Folder `aqua` contains different photos for the tour, and here are a few examples:
+1. 60 meter example ![60_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/43a96764-566d-459b-8bb5-a0ddc27ab863)
+2. 0 meter sea level example ![0_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e404e4ef-4546-4b03-aa86-23766bb108ea)
+3. -1000 meters underwater exaple ![-100_1](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8dd49c90-b93c-4fc5-9027-94bf7419955a)
+
+
+
+![171694909092_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4aa7866d-86af-4879-b908-e642d052f8b3)
+
+![181694909466_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1ffa0323-ea8e-4829-aa86-7c173d36f3fc)
+
+![191694909874_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/9c58ead9-224d-4845-8221-2ec3b7b09623)
+
+
+#### Interactions 4. Memory Collector
 The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snap with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
 ![Alt text](diagram2.jpg)
 
@@ -298,6 +329,14 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4dd66868-4a
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6811117a-97aa-4250-a3dd-d602004ea246
 
 
+4. **Interactions #3: Tour with Sustainability Awareness**
+
+- Step in the tour
+- Interact with hand gestures up / down / left / right
+- End the tour if reach the bottom of sea / the top of the sky / click button A to exit
+- Show the number of marine animals died due to plastic since the player stepped in the tour.
+
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/88dae20b-cdcb-4ace-a5f8-0dfe4327f26d
 
 
   
