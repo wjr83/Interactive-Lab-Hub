@@ -105,35 +105,56 @@ def disp_out(image_filepath):
     t_image = image_raspPi(image_filepath)
     disp.image(t_image)
 
-# Timer
+# Timer (Currently only works for mintues and seconds)
 def timer(image_name):
   
     # Get cooking time of food
-    t = get_cooking_time(image_name) # t = minutes (type: int)
+    t = get_cooking_time(image_name) # t = seconds (type: int)
 
     # Start Timer
+    hour = 0
     while t:
+        
         mins, secs = divmod(t, 60)      # Convert minute to minutes and seconds
-        print(f"{mins:02d}:{secs:02d}") # For troubleshooting
+        # hours, mins = divmod(mins, 60) 
+        print(f"{hour:02d}:{mins:02d}:{secs:02d}") # For troubleshooting
+        # if hour != hours:
+        #     hour = hours
+        # if hour - hours ==1:
+        #     mins = 60
 
-        if mins*(secs/60) == t:
+        halftime = float(2*(mins*60 + secs))
+        print([mins, secs])
+        print(float(2*(mins*60 + secs))) 
+        print(float(get_cooking_time(image_name)))
+        # Display Time to Flip Protein
+        if halftime == float(get_cooking_time(image_name)):
             disp_out(img_filepaths['flip_protein'])
             sleep(3)
+        elif halftime == float(get_cooking_time(image_name))-1: # Accounts for odd cooking time
+            disp_out(img_filepaths['flip_protein'])
+            sleep(5)
 
         ss = a_sec * np.sin(secs*rads)
         mm = a_min * np.sin(mins*rads)
+        hh = a_min * np.sin(hour*rads)
 
         # Plot countdown as a polar plot of sin()
-        fig, (ax2, ax3) = plt.subplots(1, 2, subplot_kw=dict(projection='polar'))
+        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, subplot_kw=dict(projection='polar'))
+        ax1.plot(rads, hh, color='r',)
+        ax1.axis('off') # Remove Degree Labels on Polar Subplots
         ax2.plot(rads, mm, color='b',)
         ax2.axis('off') # Remove Degree Labels on Polar Subplots
         ax3.plot(rads, ss, color='g')
         ax3.axis('off') # Remove Degree Labels on Polar Subplots
+        ax1.set_yticklabels([])
+        ax1.set_theta_zero_location('N')
         ax2.set_yticklabels([])
         ax2.set_theta_zero_location('N')
         ax3.set_yticklabels([])
         ax3.set_theta_zero_location('N')
-        ax2.title.set_text('Minutes')
+        ax1.title.set_text('Hours')
+        ax2.title.set_text('Cooking Time Left\nMinutes')
         ax3.title.set_text('Seconds')
 
         # Save subplots as image 
@@ -144,6 +165,7 @@ def timer(image_name):
         # Subtract 1 second
         sleep(1)
         t -= 1
+    sleep(1.5)
 
         
 #Helper function to pad image background with white
@@ -235,8 +257,10 @@ def plot_time():
         ax3.set_yticklabels([])
         ax3.set_theta_zero_location('N')
         ax1.title.set_text('Hours')
-        ax2.title.set_text('Minutes')
+        ax2.title.set_text('Current Time\nMinutes')
         ax3.title.set_text('Seconds')
+        
+        
 
         # Save subplots as image 
         plt.savefig(img_filepaths['time_output'])
@@ -469,7 +493,7 @@ def cook():
         disp_out(img_filepaths['time_output'])
 
     # Display Welcome Screen
-    sleep(2)
+    sleep(1)
     set_buttons_HIGH()
     while GPIO.input(23) == GPIO.HIGH and GPIO.input(24) == GPIO.HIGH:
         disp_out(img_filepaths['grill_menu'])
@@ -477,9 +501,9 @@ def cook():
 
     # Display Available Proteins
     # sleep(1)
-    sleep(2)
-    set_buttons_HIGH()
     sleep(1)
+    set_buttons_HIGH()
+    sleep(0.1)
     flag = True
     for key, value in img_filepaths.items():
         if flag == True:
