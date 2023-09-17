@@ -17,7 +17,8 @@ E) [Modify the code to make the display your own](#part-e)
 - [Interactions 1. Reflection Reminder](#Interactions-1-Reflection-Reminder)
 - [Interactions 2. Emotion Checker](#Interactions-2-Emotion-Checker)
 - [Interactions 3. Tour with Sustainability Awareness](#Interactions-3-Tour-with-Sustainability-Awareness)
-- [Interactions 4. Memory Collector](#Interactions-4-Memory-Collector)
+- [Interactions 4. Chinese Divination](#Interactions-4-Chinese-Divination)
+- [Interactions 5. Memory Collector](#Interactions-5-Memory-Collector)
 
 F) [Make a short video of your modified barebones PiClock](#part-f)
 
@@ -291,7 +292,7 @@ Diagrams:
 
 ![221694912716_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/a6801d45-2129-4961-a114-256ae8003c5b)
 
-**Interactions #4: Tour with Sustainability Awareness**
+#### Interactions #4: Chinese Divination
 The clock will generate a divination based on Chinese Lunar Calender. 梅花易数 is a tradition Chinese divination method like tarot.
 However, I couldn't figure out how the code would work properly. The [link](https://www.cnblogs.com/luoxian1011/p/15732754.html) contains the code I found for converting time to a divination.
 
@@ -305,7 +306,7 @@ Then if the player wants to do a divination, the display will show the result li
 With further connections / explaintions to the nature element like fire / wind / water / metal / soil.
 <img width="434" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/46abaa17-1aa5-4040-b1e2-05920f9774fe">
 
-  #### Interactions 5. Memory Collector
+#### Interactions 5. Memory Collector
 The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snap with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
 ![Alt text](diagram2.jpg)
 
