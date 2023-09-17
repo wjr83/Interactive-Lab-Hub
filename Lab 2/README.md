@@ -297,13 +297,16 @@ The clock will generate a divination based on Chinese Lunar Calender. 梅花易�
 However, I couldn't figure out how the code would work properly. The [link](https://www.cnblogs.com/luoxian1011/p/15732754.html) contains the code I found for converting time to a divination.
 
 ideally I would display time in the format in the picture:
+
 <img width="292" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/14a6f6f2-d43e-48a3-a014-4cfb46eeb712">
 
 Then if the player wants to do a divination, the display will show the result like:
+
 <img width="482" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/f054e06f-e3a9-4593-a54d-c3aed02f5a7e">
 
 
 With further connections / explaintions to the nature element like fire / wind / water / metal / soil.
+
 <img width="434" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/46abaa17-1aa5-4040-b1e2-05920f9774fe">
 
 #### Interactions 5. Memory Collector
