@@ -24,14 +24,14 @@ import adafruit_rgb_display.ssd1331 as ssd1331  # pylint: disable=unused-import
 subprocess.call(["sudo", "systemctl", "stop", "mini-screen.service"])
 sleep(2)
 
-# Foods [Temperature, Cooking Minutes]
+# Foods [Temperature, Cooking  in seconds (Minutes*60)]
 food_temp_time = {
-  'chicken' : ['Medium Heat', 20],
-  'fish' : ['Med-High Heat', 10],
+  'chicken' : ['Medium Heat', 20*60],
+  'fish' : ['Med-High Heat', 10*60],
   'lamb' : ["High", 15],
-  'pork' : ["High", 15], 
-  'shirmp' : ["Med-High Heat", 6],
-  'steak' : ["High", 13], 
+  'pork' : ["High", 15*60], 
+  'shirmp' : ["Med-High Heat", 6*60],
+  'steak' : ["High", 13*60], 
 }
 
 # Define filepaths of images to display:
@@ -61,6 +61,14 @@ a_sec = 5
 # Returns name of current image shown
 def get_food(image_filepath):
     return Path(image_filepath).name.split(".")[0]
+
+# Returns temperature of food image shown
+def get_cooking_temp(image_name):
+    return food_temp_time[image_name][2]
+
+# Returns cooking time of food image shown
+def get_cooking_time(image_name):
+    return food_temp_time[image_name][1]
 
 # Display Image to Screen
 def image_raspPi(image_filepath):
@@ -98,44 +106,44 @@ def disp_out(image_filepath):
     disp.image(t_image)
 
 # Timer
-def timer(t,image_name):
-  # Start Timer
-  while t:
-    mins, secs = divmod(t, 60)
-    print(f"{mins:02d}:{secs:02d}")
-    ss = a_sec * np.sin(secs*rads)
-    mm = a_min * np.sin(mins*rads)
+def timer(image_name):
+  
+    # Get cooking time of food
+    t = get_cooking_time(image_name) # t = minutes (type: int)
 
-    # Plot countdown as a polar plot of sin()
-    fig, (ax2, ax3) = plt.subplots(1, 2, subplot_kw=dict(projection='polar'))
-    ax2.plot(rads, mm, color='b',)
-    ax2.axis('off') # Remove Degree Labels on Polar Subplots
-    ax3.plot(rads, ss, color='g')
-    ax3.axis('off') # Remove Degree Labels on Polar Subplots
-    ax2.set_yticklabels([])
-    ax2.set_theta_zero_location('N')
-    ax3.set_yticklabels([])
-    ax3.set_theta_zero_location('N')
-    ax2.title.set_text('Minutes')
-    ax3.title.set_text('Seconds')
+    # Start Timer
+    while t:
+        mins, secs = divmod(t, 60)      # Convert minute to minutes and seconds
+        print(f"{mins:02d}:{secs:02d}") # For troubleshooting
 
-    # Save subplots as image 
-    plt.savefig(img_filepaths['countdown_output'])
-    plt.close() # close plot to save resources
+        if mins*(secs/60) == t:
+            disp_out(img_filepaths['flip_protein'])
+            sleep(3)
 
+        ss = a_sec * np.sin(secs*rads)
+        mm = a_min * np.sin(mins*rads)
 
-    # Subtract 1 second
-    sleep(1)
-    t -= 1
+        # Plot countdown as a polar plot of sin()
+        fig, (ax2, ax3) = plt.subplots(1, 2, subplot_kw=dict(projection='polar'))
+        ax2.plot(rads, mm, color='b',)
+        ax2.axis('off') # Remove Degree Labels on Polar Subplots
+        ax3.plot(rads, ss, color='g')
+        ax3.axis('off') # Remove Degree Labels on Polar Subplots
+        ax2.set_yticklabels([])
+        ax2.set_theta_zero_location('N')
+        ax3.set_yticklabels([])
+        ax3.set_theta_zero_location('N')
+        ax2.title.set_text('Minutes')
+        ax3.title.set_text('Seconds')
 
-# Plot Countdown 
-def plot_countdown(image_name):
-        temperature = food_temp_time[image_name][0]
-        minutes = food_temp_time[image_name][1]
-        seconds = minutes*60
-        
-        # Generate function output for plotting time on a polar graph.
-        timer(seconds,image_name)
+        # Save subplots as image 
+        plt.savefig(img_filepaths['countdown_output'])
+        plt.close() # close plot to save resources
+
+        disp_out(img_filepaths['countdown_output']) 
+        # Subtract 1 second
+        sleep(1)
+        t -= 1
 
         
 #Helper function to pad image background with white
@@ -238,11 +246,10 @@ def plot_time():
 
 
 
-GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
-GPIO.setup(23, GPIO.OUT)           # set GPIO24 as an output   
-GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output   
-GPIO.output(23, 1)         # set GPIO24 to 1/GPIO.HIGH/True (Button A, upper) (0/GPIO.LOW/FALSE)
-GPIO.output(24, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton B, lower) (0/GPIO.LOW/FALSE)
+# GPIO.setup(23, GPIO.OUT)           # set GPIO24 as an output   
+# GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output   
+# GPIO.output(23, 1)         # set GPIO24 to 1/GPIO.HIGH/True (Button A, upper) (0/GPIO.LOW/FALSE)
+# GPIO.output(24, 1)         # set GPIO24 to 1/GPIO.HIGH/True (BUtton B, lower) (0/GPIO.LOW/FALSE)
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -440,16 +447,80 @@ def button_logic():
 #     disp.image(image, rotation)
 #     time.sleep(1)
 
+
+GPIO.setmode(GPIO.BCM)             # choose BCM or BOARD  
+
+def set_buttons_HIGH():
+    GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)  # 
+    GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+
+def set_buttons_LOW():
+    GPIO.setup(23, GPIO.OUT)           # set GPIO24 as an output   
+    GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output   
+    GPIO.output(23, 0)         # set GPIO24 to (0/GPIO.LOW/FALSE)
+    GPIO.output(24, 0)         # set GPIO24 to (0/GPIO.LOW/FALSE)
+    
 def cook():
+    #Display current time unless either button is pressed. 
+    set_buttons_HIGH()
+    while GPIO.input(23) == GPIO.HIGH and GPIO.input(24) == GPIO.HIGH:
+        plot_time()
+        disp_out(img_filepaths['time_output'])
+
     # Display Welcome Screen
-    disp_out(img_filepaths['grill_menu'])
-    sleep(3)
+    sleep(2)
+    set_buttons_HIGH()
+    while GPIO.input(23) == GPIO.HIGH and GPIO.input(24) == GPIO.HIGH:
+        disp_out(img_filepaths['grill_menu'])
+        
 
     # Display Available Proteins
+    # sleep(1)
+    sleep(2)
+    set_buttons_HIGH()
+    sleep(1)
+    flag = True
     for key, value in img_filepaths.items():
-        if key in food_temp_time.keys():
-            disp_out(value) # Value is the filepath
-            sleep(3)
+        if flag == True:
+            if key in food_temp_time.keys():
+                
+                disp_out(value) # Display food item (value is the filepath of the current food item)
+                
+                # Wait for button response
+                while True:
+                    try: 
+                        
+                        # Check the state of the GPIO pin
+                        if GPIO.input(23) == GPIO.LOW:         # Show next available menu item.    
+                            print("Button A was pressed!")
+                            break # Display next food item
+                            
+                        if GPIO.input(24) == GPIO.LOW:         # Select meal to cook
+                            print("Button B was pressed!")  
+
+                            #Display image "Let's Cook"
+                            disp_out(img_filepaths['lets_cook'])
+                            sleep(2)
+
+                            # Start Timer
+                            timer(key)
+                            flag = False # To break for loop after timer is done.
+
+                            #Display Bon Appetit
+                            disp_out(img_filepaths['bon_appetit'])
+                            sleep(3)
+                            break   # Break While Loop
+                    except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt  
+                        GPIO.cleanup()  
+        else:
+            break
+            
+            
+            
+
+            # if 
+    
 
 
     # Cyle Through Proteins (Button A = Next, Button B = Select Protein)
@@ -466,4 +537,18 @@ def cook():
 
     # Return to Menu Selection (Press both buttons)
 
+
 cook()
+
+# Create a loop that will wait for a button press
+# GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# while True:
+#     # Check the state of the GPIO pin
+#     if GPIO.input(23) == GPIO.LOW:
+#         print("Button was pressed!")
+        
+#     if GPIO.input(23) == GPIO.HIGH:
+#         print("Not pressed.")
+        
+#     # Wait 0.1 seconds before checking the button state again
+#     sleep(0.1)
