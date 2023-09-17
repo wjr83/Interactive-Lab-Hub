@@ -289,6 +289,7 @@ Diagrams:
 
 ![211694912591_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ae381e54-403e-4377-aee9-1391d6fcd6ba)
 
+![221694912716_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/a6801d45-2129-4961-a114-256ae8003c5b)
 
 #### Interactions 4. Memory Collector
 The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snap with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
