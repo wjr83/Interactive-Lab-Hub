@@ -285,9 +285,9 @@ Diagrams:
 
 ![171694909092_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/4aa7866d-86af-4879-b908-e642d052f8b3)
 
-![181694909466_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1ffa0323-ea8e-4829-aa86-7c173d36f3fc)
+![201694912466_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/dddb1f74-9e13-4b22-8e9a-448736e88c3e)
 
-![191694909874_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/9c58ead9-224d-4845-8221-2ec3b7b09623)
+![211694912591_ pic](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/ae381e54-403e-4377-aee9-1391d6fcd6ba)
 
 
 #### Interactions 4. Memory Collector
