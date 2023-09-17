@@ -273,11 +273,11 @@ Folder `aqua` contains different photos for the tour, and here are a few example
 
    ![60_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/43a96764-566d-459b-8bb5-a0ddc27ab863)
   
-3. 0 meter sea level example
+2. 0 meter sea level example
    
    ![0_3](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e404e4ef-4546-4b03-aa86-23766bb108ea)
    
-6. -1000 meters underwater exaple
+3. -1000 meters underwater exaple
 
    ![-100_1](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/8dd49c90-b93c-4fc5-9027-94bf7419955a)
 
@@ -291,7 +291,21 @@ Diagrams:
 
 ![221694912716_ pic_hd](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/a6801d45-2129-4961-a114-256ae8003c5b)
 
-#### Interactions 4. Memory Collector
+**Interactions #4: Tour with Sustainability Awareness**
+The clock will generate a divination based on Chinese Lunar Calender. 梅花易数 is a tradition Chinese divination method like tarot.
+However, I couldn't figure out how the code would work properly. The [link](https://www.cnblogs.com/luoxian1011/p/15732754.html) contains the code I found for converting time to a divination.
+
+ideally I would display time in the format in the picture:
+<img width="292" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/14a6f6f2-d43e-48a3-a014-4cfb46eeb712">
+
+Then if the player wants to do a divination, the display will show the result like:
+<img width="482" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/f054e06f-e3a9-4593-a54d-c3aed02f5a7e">
+
+
+With further connections / explaintions to the nature element like fire / wind / water / metal / soil.
+<img width="434" alt="image" src="https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/46abaa17-1aa5-4040-b1e2-05920f9774fe">
+
+  #### Interactions 5. Memory Collector
 The Clock will generate a random task on the right side, and display the time remaining to complete the task on the left side. The color blocks representing the time will decrease as time passes by. After the task is finished, the clock saves a snap with the current sensory experience in a digital journal for later reflection. (I'm still trying to figure out for the code so there is no video for this interaction.)
 ![Alt text](diagram2.jpg)
 
@@ -344,29 +358,37 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6811117a-97
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/88dae20b-cdcb-4ace-a5f8-0dfe4327f26d
 
 
+
   
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
 1. Interactions: Mood Tracker
+   
 Include a mood tracker that prompts users to rate their mood periodically. Over time, the clock can create a mood history chart, helping users identify patterns in their emotional well-being.
 
 2. Interactions: Music and Soundscapes
+   
 Allow users to select background music or soundscapes that match the sensory experience. For example, during a "Beach Day" theme, users can choose to play ocean waves in the background.
 
 3. Interactions: Mindful Breathing Exercises
+   
 Expand the "Emotion Checker" interaction to include guided mindful breathing exercises. Users can follow along with on-screen animations and instructions for relaxation and stress reduction.
 
 4. Interactions: Goal Setting
+   
 Enable users to set daily or weekly goals through the clock. The clock can remind users of their goals and provide motivational messages to help them stay on track.
 
 5. Interactions: Daily Challenges
+   
 Present users with daily challenges related to well-being, creativity, or personal growth. Completing these challenges can lead to rewards or additional sensory experiences.
 
 6. Feature: Weather
+   
 Integrate weather information and adjust the clock's sensory elements based on the current weather conditions. For instance, on a rainy day, the clock could display soothing raindrop animations and calming messages.
 
 7. Feature: Themed Days
+   
 Introduce themed days or weeks where the clock aligns its sensory elements with a particular theme chosen by the user. For example, a "Nature Week" could feature natural background images, colors, and messages related to the outdoors.
 
 _____________
@@ -386,7 +408,6 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
   
-
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
 # Lab 2 Part 2
@@ -396,6 +417,10 @@ Pull Interactive Lab Hub updates to your repo.
 Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
+
+i have some ideas about the Chinese Lunar Calender and make divination based on that. However, I couldn't figure out how the code would work properly. The link below contains the code I found for converting time to a divination
+-  https://www.cnblogs.com/luoxian1011/p/15732754.html
+
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
