@@ -27,7 +27,7 @@ sleep(2)
 # Foods [Temperature, Cooking  in seconds (Minutes*60)]
 food_temp_time = {
   'chicken' : ['Medium Heat', 20*60],
-  'fish' : ['Med-High Heat', 10*60],
+  'fish' : ['Med-High Heat', 10],
   'lamb' : ["High", 15*60],
   'pork' : ["High", 15*60], 
   'shirmp' : ["Med-High Heat", 6*60],
@@ -490,9 +490,12 @@ def set_buttons_LOW():
 def cook():
     #Display current time unless either button is pressed. 
     set_buttons_HIGH()
-    while GPIO.input(23) == GPIO.HIGH and GPIO.input(24) == GPIO.HIGH:
+    while GPIO.input(23) == GPIO.HIGH:
         plot_time()
         disp_out(img_filepaths['time_output'])
+        if GPIO.input(24) != GPIO.HIGH:
+            continue
+
 
     # Display Welcome Screen
     sleep(1)
