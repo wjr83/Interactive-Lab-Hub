@@ -28,12 +28,13 @@ sleep(2)
 food_temp_time = {
   'chicken' : ['Medium Heat', 20*60],
   'fish' : ['Med-High Heat', 10*60],
-  'lamb' : ["High", 15],
+  'lamb' : ["High", 15*60],
   'pork' : ["High", 15*60], 
   'shirmp' : ["Med-High Heat", 6*60],
   'steak' : ["High", 13*60], 
 }
 
+# TODO: Improve Display of Images to show entire images (including time plots & )
 # Define filepaths of images to display:
 img_filepaths = {
     'time_output' : "Images/time_output.jpg",
@@ -107,11 +108,11 @@ def disp_out(image_filepath):
 
 # Timer (Currently only works for mintues and seconds)
 def timer(image_name):
-  
+
     # Get cooking time of food
     t = get_cooking_time(image_name) # t = seconds (type: int)
 
-    # Start Timer
+    # Start Timer (TODO: Add functionality to stop, continue and reset timer)
     hour = 0
     while t:
         
@@ -484,7 +485,8 @@ def set_buttons_LOW():
     GPIO.setup(24, GPIO.OUT)           # set GPIO24 as an output   
     GPIO.output(23, 0)         # set GPIO24 to (0/GPIO.LOW/FALSE)
     GPIO.output(24, 0)         # set GPIO24 to (0/GPIO.LOW/FALSE)
-    
+
+# Main Function (TODO: Add functionality to return to main menu where the current time is displayed)    
 def cook():
     #Display current time unless either button is pressed. 
     set_buttons_HIGH()
