@@ -280,6 +280,9 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab
 <img width="40" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/fd4a28da-816c-48ff-8283-cc7c82014339">
 <img width="80" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/701bcabe-eb64-4838-a599-aa991322e4a1">
 
+* Display a timer to cook different meats to perfection.
+
+
 
 
 # Prep for Part 2
@@ -314,4 +317,109 @@ You are permitted (but not required) to work in groups and share a turn-in; you 
 ## Per feedback received in class, I removed the axis of the polar plots to just display flowers (cosines and sines plotted in polar coordinates) with changing petals to denote hours, minutes, and seconds.
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/b9b1864f-2092-46c8-b8ff-f806594da82c)
 
+
+## Brainstorming Additional Ideas 
+Certainly! Time can be harnessed creatively for a wide range of applications. Here are some creative ideas:
+
+1. **Time Capsule Messages**: Create a digital platform where people can send messages, photos, or videos to their future selves or loved ones. These messages can be scheduled to be delivered on a specific date, such as a birthday, anniversary, or even many years into the future.
+
+2. **Time-Limited Art Gallery**: Host an online art gallery that displays artworks for a limited time, creating a sense of urgency and exclusivity. Users can bid on or purchase the artworks during the exhibition, and once the timer runs out, the gallery closes, and the art is no longer available.
+
+3. **Time-Based Charity Challenges**: Launch a platform where users can commit to donating a certain amount of money to a chosen charity if they fail to complete a specific challenge within a given timeframe. This could be anything from running a marathon to quitting a bad habit.
+
+4. **Time-Activated Escape Room**: Design an escape room game where players solve puzzles and follow clues, but with a twist - they have a limited amount of real-time to complete it. The game can only be played at specific times and only lasts for a set duration.
+
+5. **Time-Triggered Augmented Reality Stories**: Develop an AR app that allows users to experience stories or historical events at specific real-world locations. For example, users can visit a historical site, and the app uses GPS and time triggers to overlay historical scenes and characters onto the location.
+
+6. **Time-Managed Music Streaming**: Create a music streaming service that curates playlists based on the time of day or season. Users can select playlists optimized for sunrise, sunset, rainy days, or even specific historical eras.
+
+7. **Time-Dependent Recipe Recommendations**: Build a cooking app that suggests recipes based on the time available and the ingredients on hand. Users can input how much time they have, and the app provides suitable recipes with step-by-step instructions.
+
+8. **Time-Driven Meditation Guides**: Develop a meditation app that guides users through different meditation techniques based on the time of day and their personal preferences. Morning meditations could focus on energizing, while evening meditations could be geared toward relaxation.
+
+9. **Time-Stamped Travel Journals**: Create a travel app that automatically generates a digital journal of a user's journey, complete with photos, notes, and GPS data, timestamped at each location visited. Users can revisit their trips virtually and see their experiences unfold over time.
+
+10. **Time-Encoded Educational Challenges**: Gamify learning by offering challenges and quizzes that are only accessible at specific times. For instance, users could unlock new lessons or challenges daily, encouraging consistent engagement.
+
+11. **Time-Controlled Greenhouses**: Develop a smart greenhouse system that adjusts lighting, temperature, and humidity based on real-time and historical weather data, optimizing plant growth and minimizing resource usage.
+
+12. **Time-Triggered Photography Challenges**: Develop a photography app that presents users with daily or weekly photo challenges, such as "golden hour landscapes" or "motion blur." Users have a limited time to capture and upload their photos, fostering creativity and community engagement.
+
+13. **Time-Managed Fitness Classes**: Offer virtual fitness classes that adapt in real-time to the user's energy level. Users input their current mood and energy, and the class intensity and style adjust accordingly.
+
+14. **Time-Stamped Event Planning**: Develop an event planning app that helps users coordinate schedules and logistics for gatherings. It includes a countdown timer, real-time updates, and reminders for tasks leading up to the event.
+
+15. **Time-Dependent Gardening Assistance**: Create a gardening app that provides users with timely reminders and advice on when to plant, water, and harvest their crops based on their location and the current season.
+
+16. **Time-Limited Learning Challenges**: Design a platform where users can compete in time-limited learning challenges. Participants have a set amount of time to study a topic and then take a quiz to earn points or rewards.
+
+17. **Time-Activated Financial Goals**: Build a financial planning app that allows users to set time-based financial goals, like saving for a vacation or retirement. The app provides a visual representation of progress over time and suggests actions to meet those goals.
+
+18. **Time-Driven Energy Conservation**: Create a smart home system that adjusts lighting, heating, and cooling based on the time of day, occupancy patterns, and weather forecasts to optimize energy efficiency.
+
+19. **Time-Bound Virtual Book Club**: Organize a virtual book club where participants read a book together over a fixed duration. Weekly discussions and live author Q&A sessions make the experience immersive and time-bound.
+
+20. **Time-Managed Productivity Tools**: Create a productivity app that helps users allocate their time effectively. It combines task management with time-blocking techniques, helping users plan their day and track their progress.
+
+21. **Time-Driven Language Learning**: Build a language-learning app that offers short, time-bound lessons throughout the day. Users receive bite-sized language challenges during their free moments, making learning convenient and effective.
+
+22. **Time-Activated Environmental Sensors**: Deploy environmental sensors that collect data on air quality, noise levels, and temperature over time. Users can access historical data and receive alerts when conditions surpass specified thresholds.
+
+23. **Time-Enhanced Virtual Museums**: Create virtual museums where historical events, artifacts, and exhibits are showcased in chronological order. Users can explore history as it unfolds over time.
+
+## Choose and Idea and Explore it Further
+
+### Idea Chosen: Display a timer to cook different meats to perfection. 
+
+Text-based storyboard shown below for Cooking Timer
+
+Title: Raspberry Pi Cooking Timer Interaction Storyboard
+
+Storyboard Description:
+This storyboard outlines the user interaction with a cooking timer application running on a Raspberry Pi. The user wants to set a timer for cooking a specific type of meat on the stove. Current available options: chicken, lamb, fish, shrimp, pork, and steak. This text-based storyboard illustrates the step-by-step interaction of a user with athe cooking timer application on a Raspberry Pi, from setting the timer to acknowledging its completion.  
+
+Scene 1:
+[Image: A user standing in a kitchen with a Raspberry Pi and a touchscreen display.]
+
+Narration: "User stands in the kitchen, ready to bake cookies."
+
+1. User taps the Raspberry Pi display to wake it up.
+2. Raspberry Pi displays current time at home screen.
+
+Scene 2:
+[Image: Close-up of the Raspberry Pi display.]
+
+3. User presses top button to launch the cooking timer app.
+
+Scene 3:
+[Image: The Cooking App opens with a Grill Menu screen.]
+
+4. The Cooking Timer app opens.
+
+Scene 4:
+[Image: Browse Menu Options]
+5. User presses top button to show the first item in the menu.
+6. User keeps pressing the top button to show the next item on the menu.
+
+Scene 4:
+[Image: The user selects the desired protein to cook.]
+7. To select the intended protein to cook, user presses the bottom button.
+
+Narration: "Cooking Timer Starts"
+
+8. User is prompted to start cooking.
+9. Timer starts at a predifined number of minutes depending on the protein selected.
+
+Scene 5:
+[Image: The Cooking Timer alerts user it's time to flip the protein]
+
+10. When the elapsed time is half of the total time for that protein, the user is prompted to turn the protein on its other side.
+
+Scene 6:
+[Image: Cooking Timer Continues until remaining time has elapsed]
+11. The timer then continues.
+
+Scene 7:
+[Image: Cooking Timer Alerts User Food is done until remaining time has elapsed]
+12. User is visually told the food is ready!
 
