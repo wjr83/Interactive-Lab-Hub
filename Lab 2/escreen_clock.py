@@ -48,7 +48,7 @@ img_filepaths = {
     'fish' : "Images/fish.jpg",
     'shirmp' : "Images/shrimp.jpg",
     'steak' : "Images/steak.jpg",
-    'flip_protein' : "Images/flip_protein.jpg"
+    'flip_protein' : "Images/flip_protein.png"
 }
 
 # Instantiante sampling size of radians 
@@ -541,11 +541,10 @@ def cook():
                         GPIO.cleanup()  
         else:
             break
-            
-            
-            
-
-            # if 
+                  
+    # Recursive call to function to see menu options again
+    # Cycle through menu options 
+    cook()        
     
 
 
