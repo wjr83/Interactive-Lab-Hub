@@ -39,9 +39,9 @@ food_temp_time = {
 img_filepaths = {
     'time_output' : "Images/time_output.jpg",
     'countdown_output' : "Images/countdown_output.jpg",
-    'bon_appetit' : 'Images/bon_appetit.jpg',
+    'bon_appetit' : 'Images/bon_appetit.png',
     'grill_menu' : 'Images/grill_menu.jpg',
-    'lets_cook' : 'Images/lets_cook.jpg',
+    'lets_cook' : 'Images/lets_cook.png',
     'chicken' : "Images/chicken.jpg",
     'lamb' : 'Images/lamb.jpg',
     'pork' : "Images/pork.jpg",
@@ -126,8 +126,8 @@ def timer(image_name):
 
         halftime = float(2*(mins*60 + secs))
         print([mins, secs])
-        print(float(2*(mins*60 + secs))) 
-        print(float(get_cooking_time(image_name)))
+        # print(float(2*(mins*60 + secs))) 
+        # print(float(get_cooking_time(image_name)))
         # Display Time to Flip Protein
         if halftime == float(get_cooking_time(image_name)):
             disp_out(img_filepaths['flip_protein'])
