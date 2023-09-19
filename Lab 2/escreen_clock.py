@@ -27,9 +27,9 @@ sleep(2)
 # Foods [Temperature, Cooking  in seconds (Minutes*60)]
 food_temp_time = {
   'chicken' : ['Medium Heat', 20*60],
-  'fish' : ['Med-High Heat', 10],
+  'fish' : ['Med-High Heat', 10*60],
   'lamb' : ["High Heat", 15*60],
-  'pork' : ["High", 15*60], 
+  'pork' : ["High Heat", 15*60], 
   'shrimp' : ["Med-High Heat", 6*60],
   'steak' : ["High Heat", 13*60], 
 }
@@ -40,7 +40,7 @@ img_filepaths = {
     'time_output' : "Images/time_output.jpg",
     'countdown_output' : "Images/countdown_output.jpg",
     'bon_appetit' : 'Images/bon_appetit.png',
-    'grill_menu' : 'Images/grill_menu.jpg',
+    'grill_menu' : 'Images/grill_menu.png',
     'lets_cook' : 'Images/lets_cook.png',
     'chicken' : "Images/chicken.jpg",
     'lamb' : 'Images/lamb.jpg',
@@ -65,7 +65,7 @@ def get_food(image_filepath):
 
 # Returns temperature of food image shown
 def get_cooking_temp(image_name):
-    return food_temp_time[image_name][2]
+    return food_temp_time[image_name][0]
 
 # Returns cooking time of food image shown
 def get_cooking_time(image_name):
@@ -118,14 +118,14 @@ def timer(image_name):
         
         mins, secs = divmod(t, 60)      # Convert minute to minutes and seconds
         # hours, mins = divmod(mins, 60) 
-        print(f"{hour:02d}:{mins:02d}:{secs:02d}") # For troubleshooting
+        print(f"Time Remaining: {hour:02d}:{mins:02d}:{secs:02d} (hh:mm_ss)") # For troubleshooting
         # if hour != hours:
         #     hour = hours
         # if hour - hours ==1:
         #     mins = 60
 
         halftime = float(2*(mins*60 + secs))
-        print([mins, secs])
+        # print([mins, secs])
         # print(float(2*(mins*60 + secs))) 
         # print(float(get_cooking_time(image_name)))
         # Display Time to Flip Protein
@@ -535,10 +535,52 @@ def cook():
                             
                         if GPIO.input(24) == GPIO.LOW:         # Select meal to cook
                             print("Button B was pressed!")  
-
+                            
                             #Display image "Let's Cook"
                             disp_out(img_filepaths['lets_cook'])
                             sleep(2)
+
+                            # Display Cooking Temperature.
+                            # Create blank image for drawing.
+                            # Make sure to create image with mode 'RGB' for full color.
+                            height = disp.width  # we swap height/width to rotate it to landscape!
+                            width = disp.height
+                            image = Image.new("RGB", (width, height))
+                            rotation = 90
+
+                            # Get drawing object to draw on image.
+                            draw = ImageDraw.Draw(image)
+
+                            # Draw a black filled box to clear the image.
+                            draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+                            disp.image(image, rotation)
+                            # Draw some shapes.
+                            # First define some constants to allow easy resizing of shapes.
+                            padding = -2
+                            top = padding
+                            bottom = height - padding
+                            # Move left to right keeping track of the current x position for drawing shapes.
+                            x = 0
+
+                            # Alternatively load a TTF font.  Make sure the .ttf font file is in the
+                            # same directory as the python script!
+                            # Some other nice fonts to try: http://www.dafont.com/bitmap.php
+                            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 18)
+
+                            # Turn on the backlight
+                            backlight = digitalio.DigitalInOut(board.D22)
+                            backlight.switch_to_output()
+                            backlight.value = True
+                            draw.rectangle((0, 0, width, height), outline=0, fill=(11, 8, 48))  # Cornell Tech Color set -> fill=400
+                            
+                            temperature = "Cooking Temperature \nfor " + key + ": \n" + get_cooking_temp(key) + "\n\n"
+                            cooking_time = "Cooking Time \nfor " + key + ": " + str(get_cooking_time(key)/60) + " min"
+                            y = top
+                            draw.text((x, y), temperature + cooking_time, font=font, fill="#FFFFFF")
+                            
+                            # Display image.
+                            disp.image(image, rotation)
+                            sleep(5)
 
                             # Start Timer
                             timer(key)
@@ -546,7 +588,7 @@ def cook():
 
                             #Display Bon Appetit
                             disp_out(img_filepaths['bon_appetit'])
-                            sleep(3)
+                            sleep(5)
                             break   # Break While Loop
                     except KeyboardInterrupt:          # trap a CTRL+C keyboard interrupt  
                         GPIO.cleanup()  
