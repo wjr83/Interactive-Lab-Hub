@@ -146,7 +146,7 @@ Line up the screen and press it on the headers. The hole in the screen should ma
 
 The display uses a communication protocol called [SPI](https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/) to speak with the raspberry pi. We won't go in depth in this course over how SPI works. The port on the bottom of the display connects to the SDA and SCL pins used for the I2C communication protocol which we will cover later. GPIO (General Purpose Input/Output) pins 23 and 24 are connected to the two buttons on the left. GPIO 22 controls the display backlight.
 
-To show you the IP and Mac address of the Pi to allow connecting remotely we created a service that launches a python script that runs on boot. For the following steps stop the service by typing ``` sudo systemctl stop mini-screen.service```. Othwerise two scripts will try to use the screen at once. 
+To show you the IP and Mac address of the Pi to allow connecting remotely we created a service that launches a python script that runs on boot. For the following steps stop the service by typing ``` sudo systemctl stop mini-screen.service```. Otherwise, two scripts will try to use the screen at once. 
 
 We can test it by typing 
 ```
@@ -187,7 +187,7 @@ Option 2. Another way for you to edit scripts is to use VNC on your laptop to re
 
 Now you should be able to edit python scripts with Thonny on your Pi.
 
-Option 3. A nowadays often preferred method is to use Microsoft [VS code to remote connect to the Pi](https://www.raspberrypi.com/news/coding-on-raspberry-pi-remotely-with-visual-studio-code/). This gives you access to a fullly equipped and responsive code editor with terminal and file browser.  
+Option 3. A nowadays often preferred method is to use Microsoft [VS code to remote connect to the Pi](https://www.raspberrypi.com/news/coding-on-raspberry-pi-remotely-with-visual-studio-code/). This gives you access to a fully equipped and responsive code editor with terminal and file browser.  
 
 Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/latest) you can even setup a VS Code coding environment hosted on your raspberry pi and code through a web browser on your tablet or smartphone! 
 
@@ -287,7 +287,7 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4e181d51-a537-44ab
 
 # Prep for Part 2
 
-1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
+1. Pick up the remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
   
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
@@ -297,12 +297,12 @@ Feedback received:
 - Nice contrast in colors and curves
 - The labels seem to distract a bit from this
 - I would try to find a way to fullscreen the visuals and discard the text and white space
-- The aesthetics are really awesome, thinking about ways to maximize there appearance
+- The aesthetics are really awesome, thinking about ways to maximize their appearance
 - Maybe divide the 3 units of time across 3 different screens, integrating a button to push between them
 - Overall I think you're on to something great with this, just need to try and remove the text distractors
 - Add dynamic art component (similar to abstract screensaver, but this time the art itself should tell time).
 - How important are the hours and minutes polar displays of time? Maybe these can be smaller compared to the seconds display as they change less frequently.
-- - Maybe stack the hours and minutes vertically and center the seconds polar display on the screen.
+- - Maybe stack the hours and minutes vertically and center the seconds' polar display on the screen.
 
 # Lab 2 Part 2
 
@@ -371,55 +371,77 @@ Certainly! Time can be harnessed creatively for a wide range of applications. He
 
 ### Idea Chosen: Display a timer to cook different meats to perfection. 
 
-Text-based storyboard shown below for Cooking Timer
+A visual representation is shown below for Cooking Timer application:
 
 Title: Raspberry Pi Cooking Timer Interaction Storyboard
 
 Storyboard Description:
 This storyboard outlines the user interaction with a cooking timer application running on a Raspberry Pi. The user wants to set a timer for cooking a specific type of meat on the stove. Current available options: chicken, lamb, fish, shrimp, pork, and steak. This text-based storyboard illustrates the step-by-step interaction of a user with athe cooking timer application on a Raspberry Pi, from setting the timer to acknowledging its completion.  
 
-Scene 1:
-[Image: A user standing in a kitchen with a Raspberry Pi and a touchscreen display.]
+Scene 1: A user standing in a kitchen with a Raspberry Pi and a display, hoping to cook a protein to perfection.
 
-Narration: "User stands in the kitchen, ready to bake cookies."
-
-1. User taps the Raspberry Pi display to wake it up.
+1. User turns on the Raspberry Pi.
 2. Raspberry Pi displays current time at home screen.
 
-Scene 2:
-[Image: Close-up of the Raspberry Pi display.]
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4b6bf7c4-4f8d-4d93-9253-846de44c3cb5">
+
+Scene 2: Close-up of the Raspberry Pi display.
 
 3. User presses top button to launch the cooking timer app.
 
-Scene 3:
-[Image: The Cooking App opens with a Grill Menu screen.]
+Scene 3: The Cooking App opens with a Grill Menu screen.
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/3d2f22da-2a7b-4e8b-9a3f-0ecce31c8960">
 
 4. The Cooking Timer app opens.
 
 Scene 4:
 [Image: Browse Menu Options]
+
 5. User presses top button to show the first item in the menu.
-6. User keeps pressing the top button to show the next item on the menu.
+6. User keeps pressing the top button to show the next item on the menu. See all menu options below:
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/fbcd0048-b9e8-446c-a870-09c3adfa9381">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e746b36b-9441-45cf-8e6c-efb393d85431">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eaddb382-8429-4cea-962f-122b02e8f210">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/13af15ac-4acb-46f2-80a9-920399e7b45a">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5a1100d0-a39d-4c48-88a0-ce52d198bb62">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/baaba2cf-df89-4b13-b8bc-d203e86ff5ee">
+
+
 
 Scene 4:
 [Image: The user selects the desired protein to cook.]
-7. To select the intended protein to cook, user presses the bottom button.
+7. To select the intended protein to cook, the user presses the bottom button.
 
-Narration: "Cooking Timer Starts"
+8. The user is prompted to start cooking by the following image:
 
-8. User is prompted to start cooking.
-9. Timer starts at a predifined number of minutes depending on the protein selected.
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/545abce5-3326-415f-87d2-80874ee3185b">
 
-Scene 5:
-[Image: The Cooking Timer alerts user it's time to flip the protein]
+9. The timer starts at a predefined number of minutes depending on the protein selected.
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a7767d58-39f8-477d-85b8-3b0f60814625">
+
+food_temp_time = {
+  'chicken' : ['Medium Heat', 20 minutes],
+  'fish' : ['Med-High Heat', 10 minutes],
+  'lamb' : ["High", 15 minutes],
+  'pork' : ["High", 15 minutes], 
+  'shrimp' : ["Med-High Heat", 6 minutes],
+  'steak' : ["High", 13 minutes], 
+
+Scene 5: The Cooking Timer alerts the user that it's time to flip the protein (by the following image).
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/ebf1acbf-cec4-48c2-bd4d-4cb2813f416b">
 
 10. When the elapsed time is half of the total time for that protein, the user is prompted to turn the protein on its other side.
 
-Scene 6:
-[Image: Cooking Timer Continues until remaining time has elapsed]
-11. The timer then continues.
+Scene 6: Cooking Timer Continues until remaining time has elapsed
 
-Scene 7:
-[Image: Cooking Timer Alerts User Food is done until remaining time has elapsed]
-12. User is visually told the food is ready!
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a7767d58-39f8-477d-85b8-3b0f60814625">
+
+Scene 7: Cooking Timer Alerts User Food is done when all the remaining time has elapsed.
+11. User is visually told the food is ready!
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e57faa98-f772-41cb-b2cd-3aac0c07a410">
 
