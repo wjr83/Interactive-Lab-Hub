@@ -450,3 +450,6 @@ Scene 7: Cooking Timer Alerts User Food is done when all the remaining time has 
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4adf0d36-dfbd-4902-8c7b-398ad7a768d9">
 
+Scene 8: Display returns to show the current time.
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6de7ec00-7d2b-4101-8b74-f9e1be95c568">
