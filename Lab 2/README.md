@@ -453,3 +453,15 @@ Scene 7: Cooking Timer Alerts User Food is done when all the remaining time has 
 Scene 8: Display returns to show the current time.
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6de7ec00-7d2b-4101-8b74-f9e1be95c568">
+
+## Videos of final result: PiClock for Cooking Proteins "Just Right"! Never worry about overcooking your steak, or undercooking your poultry and seafood!
+**NOTE: You must log-in to your Cornell Google Account in order to gain access to the video links below!**
+
+Full Video: Cooking Shrimp from start to finish (Video Speed: 1x)
+> - https://drive.google.com/file/d/1xma0W7vaNPXSR1_7-gBLWx_ZqeJw_rox/view?usp=drive_link
+
+Sample Video: Cooking Pork
+> - https://drive.google.com/file/d/14cswX4Cb0FfBULm_j0k7Vz3HeHDN8ijS/view?usp=sharing
+
+Sample Video: Cooking Fish
+> - https://drive.google.com/file/d/16IUb6jiWxw2WUO4WFl1NYn1VzMqsCmk5/view?usp=sharing
