@@ -418,30 +418,30 @@ Scene 4:
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/545abce5-3326-415f-87d2-80874ee3185b">
 
-9. The timer starts at a predefined number of minutes depending on the protein selected.
+9. The timer starts at a predefined number of minutes depending on the protein selected. The cooking duration, along with the cooking temperature, is displayed to the user before the timer starts the countdown. Note that a key difference between the timer (shown below) and the current time clock (as seen in Scene 1) is that the timer's background is black while the background of the current time clock is white.
 
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a7767d58-39f8-477d-85b8-3b0f60814625">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6d4682f0-69e7-4911-979d-db92e2e9ccac">
 
-food_temp_time = {
-  'chicken' : ['Medium Heat', 20 minutes],
-  'fish' : ['Med-High Heat', 10 minutes],
-  'lamb' : ["High", 15 minutes],
-  'pork' : ["High", 15 minutes], 
-  'shrimp' : ["Med-High Heat", 6 minutes],
-  'steak' : ["High", 13 minutes], 
+Cooking Temperature & Time for Menu Items:
+  * chicken: ['Medium Heat', 20 minutes]
+  * fish: ['Med-High Heat', 10 minutes]
+  * lamb: ['High Heat', 15 minutes]
+  * pork: ['High Heat', 15 minutes] 
+  * shrimp: ['Med-High Heat', 6 minutes]
+  * steak' ['High Heat', 13 minutes] 
 
 Scene 5: The Cooking Timer alerts the user that it's time to flip the protein (by the following image).
 
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/ebf1acbf-cec4-48c2-bd4d-4cb2813f416b">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7ade8c13-8a4b-4b6a-ad0a-ee1c9661e20a">
 
 10. When the elapsed time is half of the total time for that protein, the user is prompted to turn the protein on its other side.
 
 Scene 6: Cooking Timer Continues until remaining time has elapsed
 
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a7767d58-39f8-477d-85b8-3b0f60814625">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6d4682f0-69e7-4911-979d-db92e2e9ccac">
 
 Scene 7: Cooking Timer Alerts User Food is done when all the remaining time has elapsed.
 11. User is visually told the food is ready!
 
-<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e57faa98-f772-41cb-b2cd-3aac0c07a410">
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4adf0d36-dfbd-4902-8c7b-398ad7a768d9">
 
