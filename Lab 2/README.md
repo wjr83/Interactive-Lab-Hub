@@ -434,6 +434,11 @@ Cooking Temperature & Time for Menu Items:
   * shrimp: ['Med-High Heat', 6 minutes]
   * steak' ['High Heat', 13 minutes] 
 
+
+Sample temperature and cooking time shown to user:
+
+<img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d2a24404-6a29-49e7-a968-5121bb1d4462">
+
 Scene 5: The Cooking Timer alerts the user that it's time to flip the protein (by the following image).
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7ade8c13-8a4b-4b6a-ad0a-ee1c9661e20a">
