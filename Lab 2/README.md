@@ -389,6 +389,8 @@ Scene 2: Close-up of the Raspberry Pi display.
 
 3. User presses top button to launch the cooking timer app.
 
+<img width="300" alt="image" src="https://cdn-learn.adafruit.com/assets/assets/000/082/861/original/adafruit_products_image.png">
+
 Scene 3: The Cooking App opens with a Grill Menu screen.
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/3d2f22da-2a7b-4e8b-9a3f-0ecce31c8960">
@@ -410,9 +412,11 @@ Scene 4:
 
 
 
-Scene 4:
-[Image: The user selects the desired protein to cook.]
+Scene 4: The user selects the desired protein to cook.
+
 7. To select the intended protein to cook, the user presses the bottom button.
+
+<img width="300" alt="image" src="https://cdn-learn.adafruit.com/assets/assets/000/082/861/original/adafruit_products_image.png">
 
 8. The user is prompted to start cooking by the following image:
 
@@ -436,11 +440,12 @@ Scene 5: The Cooking Timer alerts the user that it's time to flip the protein (b
 
 10. When the elapsed time is half of the total time for that protein, the user is prompted to turn the protein on its other side.
 
-Scene 6: Cooking Timer Continues until remaining time has elapsed
+Scene 6: Cooking Timer Continues until the remaining time has elapsed
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6d4682f0-69e7-4911-979d-db92e2e9ccac">
 
 Scene 7: Cooking Timer Alerts User Food is done when all the remaining time has elapsed.
+
 11. User is visually told the food is ready!
 
 <img width="300" alt="image" src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4adf0d36-dfbd-4902-8c7b-398ad7a768d9">
