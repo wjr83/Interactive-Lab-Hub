@@ -28,10 +28,10 @@ sleep(2)
 food_temp_time = {
   'chicken' : ['Medium Heat', 20*60],
   'fish' : ['Med-High Heat', 10],
-  'lamb' : ["High", 15*60],
+  'lamb' : ["High Heat", 15*60],
   'pork' : ["High", 15*60], 
-  'shirmp' : ["Med-High Heat", 6*60],
-  'steak' : ["High", 13*60], 
+  'shrimp' : ["Med-High Heat", 6*60],
+  'steak' : ["High Heat", 13*60], 
 }
 
 # TODO: Improve Display of Images to show entire images (including time plots & )
@@ -46,7 +46,7 @@ img_filepaths = {
     'lamb' : 'Images/lamb.jpg',
     'pork' : "Images/pork.jpg",
     'fish' : "Images/fish.jpg",
-    'shirmp' : "Images/shrimp.jpg",
+    'shrimp' : "Images/shrimp.jpg",
     'steak' : "Images/steak.jpg",
     'flip_protein' : "Images/flip_protein.png"
 }
@@ -129,12 +129,7 @@ def timer(image_name):
         # print(float(2*(mins*60 + secs))) 
         # print(float(get_cooking_time(image_name)))
         # Display Time to Flip Protein
-        if halftime == float(get_cooking_time(image_name)):
-            disp_out(img_filepaths['flip_protein'])
-            sleep(3)
-        elif halftime == float(get_cooking_time(image_name))-1: # Accounts for odd cooking time
-            disp_out(img_filepaths['flip_protein'])
-            sleep(5)
+        
 
         ss = a_sec * np.sin(secs*rads)
         mm = a_min * np.sin(mins*rads)
@@ -154,9 +149,21 @@ def timer(image_name):
         ax2.set_theta_zero_location('N')
         ax3.set_yticklabels([])
         ax3.set_theta_zero_location('N')
-        ax1.title.set_text('Hours')
-        ax2.title.set_text('Cooking Time Left\nMinutes')
-        ax3.title.set_text('Seconds')
+        
+        # Set Title & Black Background Plots
+        ax1.set_title('Hours', color='white')
+        ax2.set_title('Cooking Time Left\nMinutes', color='white')
+        ax3.set_title('Seconds', color='white')
+        fig.set_facecolor('black')
+
+        if halftime == float(get_cooking_time(image_name)):
+                    disp_out(img_filepaths['flip_protein'])
+                    sleep(5)
+                    
+        elif halftime == float(get_cooking_time(image_name))-1: # Accounts for odd cooking time
+            disp_out(img_filepaths['flip_protein'])
+            sleep(5)
+
 
         # Save subplots as image 
         plt.savefig(img_filepaths['countdown_output'])
@@ -402,6 +409,7 @@ disp.image(image)
 # hour, minutes, seconds  = date_time[-8:].split(":")
 
 ################################################
+# TODO: Implement useful / reudable button logics 
 def button_logic():
     while True:
         # Get current date & time
