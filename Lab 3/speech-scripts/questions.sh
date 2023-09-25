@@ -32,6 +32,7 @@ import argparse
 import queue
 import sys
 import sounddevice as sd
+import subprocess
 
 from vosk import Model, KaldiRecognizer
 
@@ -62,12 +63,60 @@ appliances = {
         "cooking": True,
         "cleaning": False
     },
-    # Add more appliances and attributes here
+    "blender": {
+
+    },
+    "fridge": {
+        
+    },
+    "microwave": {
+        
+    },
+    "oven": {
+        
+    },
+    "toaster": {
+        
+    },
+    "kettle": {
+        
+    },
+    "cutting board": {
+        
+    },
+    "knife": {
+        
+    },
+    "spatula": {
+        
+    },
+    "pot": {
+        
+    },
+    "pan": {
+        
+    },
+    "whisk": {
+        
+    },
+    "colander": {
+        
+    },
+    "strainer": {
+        
+    },
+    "measuring cups": {
+        
+    },
+    "measuring spoons": {
+        
+    }
+
 }
 
 num_questions = 20
 num_questions_asked = 0
-# TODO: random number geenrator to choose target appliance
+# TODO: random number generator to choose target appliance
 target_appliance = "refrigerator"  # You can set an initial appliance
 
 # Initialize the appliance attributes
@@ -121,6 +170,7 @@ try:
         print("You can ask yes/no questions to guess.")
         print("Press Ctrl+C to stop the game.")
         print("#" * 80)
+        subprocess.call(['sh', './greeting_20questions.sh']) # Added voice to the greeting message.
 
         rec = KaldiRecognizer(model, args.samplerate)
         while num_questions_asked < num_questions:
