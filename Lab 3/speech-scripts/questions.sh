@@ -33,6 +33,7 @@ import queue
 import sys
 import sounddevice as sd
 import subprocess
+from time import sleep
 
 from vosk import Model, KaldiRecognizer
 
@@ -116,6 +117,7 @@ appliances = {
 
 num_questions = 20
 num_questions_asked = 0
+current_question = num_questions_asked + 1
 # TODO: random number generator to choose target appliance
 target_appliance = "refrigerator"  # You can set an initial appliance
 
@@ -172,13 +174,26 @@ try:
         print("#" * 80)
         subprocess.call(['sh', './greeting_20questions.sh']) # Added voice to the greeting message.
 
+
         rec = KaldiRecognizer(model, args.samplerate)
+
+        # sleep(5)
         while num_questions_asked < num_questions:
+            if current_question == num_questions_asked + 1:
+                # Tell the user which question he/she is on.
+                current_question = num_questions_asked + 1
+                str_current_question = str(current_question)
+                subprocess.call(['sh', './say_current_question.sh', str_current_question])
+                current_question = num_questions_asked - 1
+
             data = q.get()
             if rec.AcceptWaveform(data):
                 result = rec.Result().strip().lower()
-                if result:
+                if result.strip(): # Check if the result is not empty
+                    user_question = result.strip()
+                    print(user_question)
                     if "yes" in result:
+                        continue # TODO: Add game logic 
                         print("Yes")
                         # Update the appliance attributes based on the user's input
                         for key, value in current_attributes.items():
@@ -194,6 +209,7 @@ try:
                     else:
                         print("I didn't understand. Please ask a yes/no question.")
                     num_questions_asked += 1
+                    current_question == num_questions_asked + 1
             if dump_fn is not None:
                 dump_fn.write(data)
 
