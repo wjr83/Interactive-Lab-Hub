@@ -184,7 +184,11 @@ try:
                 current_question = num_questions_asked + 1
                 str_current_question = str(current_question)
                 subprocess.call(['sh', './say_current_question.sh', str_current_question])
+                # subprocess.call(['sh', './tell_user_to_speak_now.sh', str_current_question])
                 current_question = num_questions_asked - 1
+
+            # curr_question = str(num_questions_asked + 1)
+            # subprocess.call(['sh', './tell_user_to_speak_now.sh', curr_question])
 
             data = q.get()
             if rec.AcceptWaveform(data):
@@ -203,13 +207,17 @@ try:
                                 current_attributes[key] = True
                             else:
                                 current_attributes[key] = False
+
+                        num_questions_asked += 1
+                        current_question == num_questions_asked + 1
                     elif "no" in result:
+                        continue
                         print("No")
                         # You can implement logic to ask different questions based on "No" responses
+                        num_questions_asked += 1
+                        current_question == num_questions_asked + 1
                     else:
                         print("I didn't understand. Please ask a yes/no question.")
-                    num_questions_asked += 1
-                    current_question == num_questions_asked + 1
             if dump_fn is not None:
                 dump_fn.write(data)
 
