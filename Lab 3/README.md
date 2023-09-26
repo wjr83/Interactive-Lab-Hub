@@ -212,7 +212,7 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/f46bc6e4-ab55-430f
 
 **Things that worked well during the implementation of the 20 Questions game:**
 - Using the GoogleTTS with predefined text for the Raspberry Pi to speak worked well.
-- It was straightforward to build just a few .sh files as speaking templates and pass in arguments to these .sh files from a Python script to 
+- It was straightforward to build just a few .sh files as speaking templates and pass in arguments to these .sh files from a Python script to emulate the voice of the computer/controller of the game.
 
 **Things that don't work as well:**
 - Speech processing in Vosk has a significant delay. This made it very challenging to get the timing right for the 20 Questions game. 
