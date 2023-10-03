@@ -1,42 +1,52 @@
-#!/usr/bin/env python3
+#!/bin/bash
 
+# Define a function to check if a command is available.
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
 
+# Check if 'python3' and 'pip' are available.
+if ! command_exists python3 || ! command_exists pip; then
+    echo "Python 3 and pip are required to run this script."
+    exit 1
+fi
+
+# Check if 'vosk' and 'sounddevice' Python packages are installed.
+if ! python3 -c "import vosk" || ! python3 -c "import sounddevice"; then
+    echo "Please install the 'vosk' and 'sounddevice' Python packages."
+    exit 1
+fi
+
+# Define a function to handle Ctrl+C gracefully.
+ctrl_c() {
+    echo -e "\nDone"
+    exit 0
+}
+
+# Set up a trap to catch Ctrl+C and execute the 'ctrl_c' function.
+trap ctrl_c INT
+
+# Define the Python script content as a heredoc.
+python_script=$(cat <<EOF
 import argparse
 import queue
 import sys
 import sounddevice as sd
-import subprocess  
 
 from vosk import Model, KaldiRecognizer
 
 q = queue.Queue()
 
 def int_or_str(text):
-    """Helper function for argument parsing."""
     try:
         return int(text)
     except ValueError:
         return text
 
 def callback(indata, frames, time, status):
-    """This is called (from a separate thread) for each audio block."""
     if status:
         print(status, file=sys.stderr)
     q.put(bytes(indata))
-
-# Add the espeak command to generate the spoken prompt
-espeak_command = [
-    "espeak",
-    "-ven+f2",
-    "-k5",
-    "-s150",
-    "--stdout",
-    "How many pets do you have?"
-]
-
-# Use subprocess to run the espeak command and pipe its output to aplay
-espeak_process = subprocess.Popen(espeak_command, stdout=subprocess.PIPE)
-aplay_process = subprocess.Popen(["aplay"], stdin=espeak_process.stdout)
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument(
@@ -65,7 +75,6 @@ args = parser.parse_args(remaining)
 try:
     if args.samplerate is None:
         device_info = sd.query_devices(args.device, "input")
-        # soundfile expects an int, sounddevice provides a float:
         args.samplerate = int(device_info["default_samplerate"])
         
     if args.model is None:
@@ -78,7 +87,7 @@ try:
     else:
         dump_fn = None
 
-    with sd.RawInputStream(samplerate=args.samplerate, blocksize = 8000, device=args.device,
+    with sd.RawInputStream(samplerate=args.samplerate, blocksize=8000, device=args.device,
             dtype="int16", channels=1, callback=callback):
         print("#" * 80)
         print("Press Ctrl+C to stop the recording")
@@ -95,7 +104,12 @@ try:
                 dump_fn.write(data)
 
 except KeyboardInterrupt:
-    print("\nDone")
+    print("\\nDone")
     parser.exit(0)
 except Exception as e:
     parser.exit(type(e).__name__ + ": " + str(e))
+EOF
+)
+
+# Run the Python script using 'python3'.
+python3 -c "$python_script"
