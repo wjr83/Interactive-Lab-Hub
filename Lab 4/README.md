@@ -85,7 +85,6 @@ We want to introduce you to the [capacitive sensor](https://learn.adafruit.com/a
 
 <p float="left">
 <img src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/226/medium640/MPR121_top_angle.jpg?1609282424" height="150" />
-<img src="https://cdn-shop.adafruit.com/1200x900/4401-01.jpg" height="150">
 </p>
 
 Plug in the capacitive sensor board with the QWIIC connector. Connect your Twizzlers with either the copper tape or the alligator clips (the clips work better). Install the latest requirements from your working virtual environment:
@@ -110,7 +109,7 @@ Twizzler 6 touched!
 
 We here want you to get to know this awesome sensor [Adafruit APDS-9960](https://www.adafruit.com/product/3595). It is capable of sensing proximity, light (also RGB), and gesture! 
 
-<img src="https://cdn-shop.adafruit.com/970x728/3595-03.jpg" width=200>
+<img src="https://cdn-shop.adafruit.com/970x728/3595-06.jpg" width=200>
 
 Connect it to your pi with Qwiic connector and try running the three example scripts individually to see what the sensor is capable of doing!
 
@@ -125,14 +124,13 @@ Connect it to your pi with Qwiic connector and try running the three example scr
 
 You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_CircuitPython_APDS9960) to see more examples for this sensor!
 
-#### Rotary Encoder
+#### Rotary Encoder (optional)
 
-> **_NOTE:_**  Not in the kit yet.
+> **_NOTE:_**  Not in the kit yet - skip this.
 
 A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals. The [Adafruit rotary encoder](https://www.adafruit.com/product/4991#technical-details) we ordered for you came with separate breakout board and encoder itself, that is, they will need to be soldered if you have not yet done so! We will be bringing the soldering station to the lab class for you to use, also, you can go to the MakerLAB to do the soldering off-class. Here is some [guidance on soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering/preparation) from Adafruit. When you first solder, get someone who has done it before (ideally in the MakerLAB environment). It is a good idea to review this material beforehand so you know what to look at.
 
 <p float="left">
-<img src="https://cdn-shop.adafruit.com/970x728/4991-01.jpg" height="200" />
 <img src="https://cdn-shop.adafruit.com/970x728/377-02.jpg" height="200" />
 <img src="https://cdn-shop.adafruit.com/970x728/4991-09.jpg" height="200">
 </p>
@@ -145,9 +143,7 @@ Connect it to your pi with Qwiic connector and try running the example script, i
 
 You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython) to learn more about the sensor! The sensor actually comes with an LED (neo pixel): Can you try lighting it up? 
 
-#### Joystick
-
-> **_NOTE:_**  Not in the kit yet.
+#### Joystick (optional)
 
 A [joystick](https://www.sparkfun.com/products/15168) can be used to sense and report the input of the stick for it pivoting angle or direction. It also comes with a button input!
 
@@ -165,21 +161,19 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joyst
 
 #### Distance Sensor
 
-> **_NOTE:_**  Not in the kit yet.
-
-Earlier we have asked you to play with the proximity sensor, which is able to sense objects within a short distance. Here, we offer [Qwiic Multi Distance Sensor](https://www.sparkfun.com/products/17072), which has a field of view of about 25° and is able to detect objects up to 3 meters away! 
+Earlier we have asked you to play with the proximity sensor, which is able to sense objects within a short distance. Here, we offer [Sparkfun Proximity Sensor Breakout](https://www.sparkfun.com/products/15177), With the ability to detect objects up to 20cm away.
 
 <p float="left">
-<img src="https://cdn.sparkfun.com//assets/parts/1/6/0/3/4/17072-Qwiic_Multi_Distance_Sensor_-_VL53L3CX-01.jpg" height="200" />
+<img src="https://cdn.sparkfun.com//assets/parts/1/3/5/9/2/15177-SparkFun_Proximity_Sensor_Breakout_-_20cm__VCNL4040__Qwiic_-01.jpg" height="200" />
 </p>
 
 Connect it to your pi with Qwiic connector and try running the example script to see how it works!
 
 ```
-(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python distance_test.py
+(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python qwiic_distance.py
 ```
 
-You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L1X_Py) to learn more about the sensor and see other examples!
+You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proximity_Py) to learn more about the sensor and see other examples!
 
 ### Part C
 ### Physical considerations for sensing
@@ -208,13 +202,10 @@ Here is another prototype for a paper display:
 
 <img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/b_box.png?raw=true"  width="250"/>
 
-> **_NOTE:_**  Not in the kit yet.
-
 Your kit includes these [SparkFun Qwiic OLED screens](https://www.sparkfun.com/products/17153). These use less power than the MiniTFTs you have mounted on the GPIO pins of the Pi, but, more importantly, they can be more flexibly mounted elsewhere on your physical interface. The way you program this display is almost identical to the way you program a  Pi display. Take a look at `oled_test.py` and some more of the [Adafruit examples](https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/tree/master/examples).
 
 <p float="left">
 <img src="https://cdn.sparkfun.com//assets/parts/1/6/1/3/5/17153-SparkFun_Qwiic_OLED_Display__0.91_in__128x32_-01.jpg" height="200" />
-<img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="200">
 </p>
 
 
