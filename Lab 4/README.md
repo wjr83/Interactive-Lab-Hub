@@ -205,6 +205,8 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 5.	**Game: Color Mixing!** (main sensor: Capacitive Touch Sensor) 
 >* A variation of the game above (perhaps a more challenging approach) would be to press the two colors (using the subtractive color model) that when mixed (e.g., such as when mixing paint) make the color displayed on the screen. This would be a fun game to teach young kids the basics of color theory for an introductory art class.
 > <p align="center"><img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2cef0175-3a23-4445-aa98-fb090ffa0d6a"  width="500" > </p>
+> <p align="center"><img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/00938d5a-15cc-4ff7-9e00-7283e87d5308"  width="500" > </p>
+
 6.	**A Piano with 12 Keys** (main sensor: Capacitive Touch Sensor) 
 >* Have the functionality to record the music generated (using the green or red button to start and stop the recording through the camera’s microphone). The OLED screen can display the notes to play (if practicing a specific song). Note: This would be most feasible for four-chord songs. 
 
@@ -217,6 +219,10 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 >* The prompts would be random. This means that a random number (or two random numbers depending on the operation) would be generated and fed through a function to solve and check the answer provided by the player. 
 >* The game will display a countdown (2 minutes) on the OLED screen (or miniPiTFT screen).
 >* The objective of the game is to solve as many of the mathematical expressions as possible before the countdown reaches zero. 
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/40730086-216b-4156-922c-8e07ffb1a421)
+
+
 9.	**Hoops on the Pi** (main sensors: Light/Proximity/Gesture sensor and Distance Sensor, coupled with speakers, and green and red LED buttons) 
 >*  Use the distance sensor and proximity sensor to detect if an object (ball) has made it through the basket/hoop. 
 >>*  This avoids us having to be connected to the ball (e.g., through a conductive string) as would be the case if this were being done with the capacitive touch sensor.
