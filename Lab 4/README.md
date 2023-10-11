@@ -180,6 +180,9 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proxi
 Usually, sensors need to be positioned in specific locations or orientations to make them useful for their application. Now that you've tried a bunch of the sensors, pick one that you would like to use, and an application where you use the output of that sensor for an interaction. For example, you can use a distance sensor to measure someone's height if you position it overhead and get them to stand under it.
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
+9 total ideas are described below. Sketches were drawn for 5 of the ideas whose primary sensor was the capacitive sensor.
+
+
 1.	**Musical painting** (main sensor: Capacitive Touch Sensor) 
 >* A canvas will be painted to create an interactive painting experience whereby touching specific parts of the canvas results in sounds being played through the camera’s speaker (these sounds are mapped using the capacitive touch sensor). 
 
@@ -246,9 +249,20 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 >*	The game can be played with ping-pong balls (ideally), aluminum foil balls, paper balls, or any other object that fits through the cardboard hoop and won’t damage the structural components.
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+* How big should the interactive device be? How portable should the interactive device be?
+* Where should the sensors and Raspberry Pi be stored such that these are not visible to the user?
+>* How will the Raspberry Pi be powered hidden in this context?
+* Where should the screen be positioned?
+* Where should the buttons be positioned?
+* Is any insulation needed to ensure connections to the capacitive sensor don't touch other connections by mistake?
+* How should the circuitry to the capacitive sensor be designed so as to minimize real estate and materials used?
+* Which colors should be used for what task?
+* How should the information on the small display be designed such that it maximizes readability?
+* How fun or amusing will users find these interactive devices? How long will they want to play for?
+
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
-
+1.	**Musical painting** was chosen for Part 1 of Lab 4.
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
