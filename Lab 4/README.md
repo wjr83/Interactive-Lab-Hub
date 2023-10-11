@@ -207,6 +207,9 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 > <p align="center"><img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2cef0175-3a23-4445-aa98-fb090ffa0d6a"  width="500" > </p>
 6.	**A Piano with 12 Keys** (main sensor: Capacitive Touch Sensor) 
 >* Have the functionality to record the music generated (using the green or red button to start and stop the recording through the camera’s microphone). The OLED screen can display the notes to play (if practicing a specific song). Note: This would be most feasible for four-chord songs. 
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cddfda53-8e0a-4d02-822f-9a68f4dcd4ed)
+
 7.	**Game: Crack the Cipher to Unlock the Box!** (main sensor: Capacitive Touch Sensor, green and red LED buttons) 
 >* The player must solve a series of puzzles in order to progress to the next level. The puzzles will range from easy to hard, and they will increase in difficulty the higher the level reached. A broad range of skills will be utilized in solving these puzzles, including technology, math, music, science, language, history, current news, etc. The OLED screen will provide the riddle to solve. Hints will be provided (a maximum of 3 hints per level). The inspiration for this game came from the Escape Room team-building game.
 8.	**Math Speed Game:** (main sensor: Capacitive Touch Sensor) 
