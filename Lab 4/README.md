@@ -181,8 +181,50 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proxi
 Usually, sensors need to be positioned in specific locations or orientations to make them useful for their application. Now that you've tried a bunch of the sensors, pick one that you would like to use, and an application where you use the output of that sensor for an interaction. For example, you can use a distance sensor to measure someone's height if you position it overhead and get them to stand under it.
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
+1.	**Musical painting** (main sensor: Capacitive Touch Sensor) 
+>* A canvas will be painted to create an interactive painting experience whereby touching specific parts of the canvas results in sounds being played through the camera’s speaker (these sounds are mapped using the capacitive touch sensor). 
+2.	**A Halloween Display** (main sensor: OLED Screen)
+>*  For example, a display of different scary exhibits on the OLED screen such as:
+>>* Pet the spider and its legs fly at the user in doing so
+>>* A pumpkin that laughs at the user if he/she presses green LED button or scares if the user presses the red LED button
+3.	**Garage Band or Guitar Hero type musical game** (main sensor: Capacitive Touch Sensor) 
+>* There are four or more colored objects the user has to touch or step on (barefoot for conductivity to work with the capacitive touch sensor). The user is told which items to touch on the OLED screen (the color of object is displayed) and for how long.
+4.	**Game: Twister Box!** (main sensor: Capacitive Touch Sensor) 
+>* Raspberry Pi sits inside a box with conductive stickers (or perhaps the entire side of the box is conductive, each side mapping to some feature or action). The OLED screen tells the user which color to touch (the color of object is displayed) and for how long. The objective of the game is to touch all the colors prompted by the computer in the least amount of time possible. The device will keep a record of high scores. The ID for the high scores can be inputted with the keypad (date of birth), a button to enable speech recognition to convert a name spoken to the name of the player, and an actual keyboard to input the player’s name. 
+5.	**Game: Color Mixing!** (main sensor: Capacitive Touch Sensor) 
+>* A variation of the game above (perhaps a more challenging approach) would be to press the two colors (using the subtractive color model) that when mixed (e.g., such as when mixing paint) make the color displayed on the screen. This would be a fun game to teach young kids the basics of color theory for an introductory art class.
+6.	**A Piano with 12 Keys** (main sensor: Capacitive Touch Sensor) 
+>* Have the functionality to record the music generated (using the green or red button to start and stop the recording through the camera’s microphone). The OLED screen can display the notes to play (if practicing a specific song). Note: This would be most feasible for four-chord songs. 
+7.	**Game: Crack the Cipher to Unlock the Box!** (main sensor: Capacitive Touch Sensor, green and red LED buttons) 
+>* The player must solve a series of puzzles in order to progress to the next level. The puzzles will range from easy to hard, and they will increase in difficulty the higher the level reached. A broad range of skills will be utilized in solving these puzzles, including technology, math, music, science, language, history, current news, etc. The OLED screen will provide the riddle to solve. Hints will be provided (a maximum of 3 hints per level). The inspiration for this game came from the Escape Room team-building game.
+8.	**Math Speed Game:** (main sensor: Capacitive Touch Sensor) 
+>*  Prompts are shown on the OLED Screen (multiplication, division, square root, exponents, binary numbers that need a decimal conversion, etc.) one at a time and the user needs to provide the answer through a keypad (which could be a lead-drawn keypad or object-inspired keypad using the capacitive touch sensor). 
+>* The prompts would be random. This means that a random number (or two random numbers depending on the operation) would be generated and fed through a function to solve and check the answer provided by the player. 
+>* The game will display a countdown (2 minutes) on the OLED screen (or miniPiTFT screen).
+>* The objective of the game is to solve as many of the mathematical expressions as possible before the countdown reaches zero. 
+9.	**Hoops on the Pi** (main sensors: Light/Proximity/Gesture sensor and Distance Sensor, coupled with speakers, and green and red LED buttons) 
+>*  Use the distance sensor and proximity sensor to detect if an object (ball) has made it through the basket/hoop. 
+>>*  This avoids us having to be connected to the ball (e.g., through a conductive string) as would be the case if this were being done with the capacitive touch sensor.
+>* Multiplayer game (maximum of two players, unless Khushi and William can combine their sensors on the same bus – then it is a maximum of four players assuming we can differentiate between two identical sensors on the bus).
+>
+>* **Version A of the Hoops Game:**
+>>*  Players take turns shooting at the same basket to play the game H-O-R-S-E. 
+>>>*  H-O-R-S-E is a game played by two people on a basketball court. The idea of the game involves matching baskets. The player who makes shots that the opponent does not duplicate wins the game. Example: The second person shooting must duplicate the first-person's shot if it is made. If the second shooter misses, he/she receives the letter "H". If the first person's shot is missed, the second shooter may attempt any shot. If his/her shot is made, the opponent is obligated to duplicate it. Each time a shooter misses a shot that he/she attempted to duplicate, a letter is "awarded". The game continues until one person accumulates 5 letters or H-O-R-S-E.
+>>*  The user tells the computer which player is throwing at any given time by pressing the green LED button (i.e., Player #1) or the red LED button (i.e., Player #2).
+>>*  This version of the game is not timed. 
+>*  **Version B of the Hoops Game:**
+>>*  At the beginning of the game, one player will input the duration of their game (for the countdown that will be displayed).
+>>*  Two players face each other on opposite sides of a tall, thin box where each of the two sides has its own basket/hoop. Alternatively, each player can face a cardboard wall that has two hoops positioned at the same height but with a horizontal distance between each other. The OLED screen will keep track of the number of points made by each player (or team, if two pairs are shooting into the same basket). 
+>>>*  Or four players each face a side of a box, where each box has its own basket/hoop. Note: this is only possible if Khushi and I can combine both our Gesture Sensors and Distance Sensors on the same bus. This game can also be played with teams of two competing for a joint high score.
+>>* Points will be displayed to each user player on the OLED screen.
+>>*The miniPiTFT screen will display a timer/countdown. The objective of the game is to score as many baskets as possible before the timer runs out. 
+>* The camera’s speaker can be used to make a sound every time a basket/hoop is made. 
+>>* Note: the basket/hoop would be shaped as a cone (so that it’s easier to make a basket) with an open top and bottom to allow the ping-pong ball to fall through.
+>>* Current Idea: The sensor would be positioned flush with the bottom of the conical basket (needs to be tested).
+>* The speaker will also indicate which player won.
+>*	The game can be played with ping-pong balls (ideally), aluminum foil balls, paper balls, or any other object that fits through the cardboard hoop and won’t damage the structural components.
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
