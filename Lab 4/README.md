@@ -182,6 +182,10 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 1.	**Musical painting** (main sensor: Capacitive Touch Sensor) 
 >* A canvas will be painted to create an interactive painting experience whereby touching specific parts of the canvas results in sounds being played through the camera’s speaker (these sounds are mapped using the capacitive touch sensor). 
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/b1748cc7-35f6-4aee-846c-c5fee1886969)
+
+
 2.	**A Halloween Display** (main sensor: OLED Screen)
 >*  For example, a display of different scary exhibits on the OLED screen such as:
 >>* Pet the spider and its legs fly at the user in doing so
