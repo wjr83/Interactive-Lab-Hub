@@ -307,7 +307,7 @@ Label: Canvas with OLED screen and copper tape
 
 <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd49d034-ed90-4f1e-907c-fb927238bb47"  width="500"/>
 
-* Sketch #1: OLED Screen outside of canvas, next to the artist's name and description of artwork. 
+* Sketch #1: OLED Screen outside of canvas, next to the artist's name and description of the artwork. 
 
 > <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/909f5d54-5e7a-40f3-ba4e-d4f1de9c5226"  width="800"/>
 
@@ -315,7 +315,7 @@ Label: Canvas with OLED screen and copper tape
 
 > <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bb8a9205-1857-4e35-b7db-73c7fb7917d9"  width="500"/>
 
-* Sketch #3: OLED Screen outside of canvas, centered below the canvas.
+* Sketch #3: OLED Screen outside of the canvas, centered below the canvas.
 
 > <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/78681d14-df55-4134-a4b4-db4024f90384"  width="500"/>
 
@@ -323,17 +323,23 @@ Label: Canvas with OLED screen and copper tape
 
 > <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cbb065a6-38a6-4af6-ac56-19159814d5ac"  width="500"/>
 
-* Sketch #5:OLED Screen on canvas, bottom right corner of the canvas.
+* Sketch #5: OLED Screen on canvas, bottom right corner of the canvas.
 
 > <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/393a64b5-f7b6-4a80-aa62-ed327b78b610"  width="500"/>
 
 
-
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+* What should be the primary interaction? The OLED Screen or the sounds emitted from the canvas?
+>* Depending on the answer to the previous question, where should the OLED screen be positioned such that it does not subtract or distract from the immersive musical experience?
+>>* At the same time, we would like the OLED screen to be noticed (even if it's deemed secondary in importance relative to the sounds). What would be the best way to achieve this?
+>* How close to the canvas should users be to best appreciate the coupled interaction between the OLED screen, painting, and sounds emitted from the canvas?
+>* The OLED Screen's electric circuitry should not cause the canvas to emit sounds (the OLED screen needs to be properly insulated from the conductive paint that's connected to the capacitive sensor). 
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
+* Sketch #3 was chosen (OLED Screen outside of the canvas, centered below the canvas).
 
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+Sketch #3 was chosen (OLED Screen outside of the canvas, centered below the canvas) because it provided the closest proximity of the OLED screen to the canvas without blocking any of the painted artwork. Additionally, having the OLED screen on the canvas required more complexity to properly insulate the back of the OLED Screen so that the OLED screen does not activate any of the sensors on the capacitive sensor through the conductive paint on the canvas. The art piece will be displayed in a gallery along with other paintings. When visiting museums and art galleries, Khushi and William agreed that most visitors look at the art piece first, and only a few stop to read the artist's name and description of the piece (which is why "Sketch #1" was **not** chosen to prototype). 
 
 Build a cardboard prototype of your design.
 
