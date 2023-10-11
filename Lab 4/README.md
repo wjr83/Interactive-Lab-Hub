@@ -199,6 +199,9 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 
 4.	**Game: Twister Box!** (main sensor: Capacitive Touch Sensor) 
 >* Raspberry Pi sits inside a box with conductive stickers (or perhaps the entire side of the box is conductive, each side mapping to some feature or action). The OLED screen tells the user which color to touch (the color of object is displayed) and for how long. The objective of the game is to touch all the colors prompted by the computer in the least amount of time possible. The device will keep a record of high scores. The ID for the high scores can be inputted with the keypad (date of birth), a button to enable speech recognition to convert a name spoken to the name of the player, and an actual keyboard to input the player’s name. 
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d605edaa-1b5b-4ee4-9988-4dfeb17596f3)
+
 5.	**Game: Color Mixing!** (main sensor: Capacitive Touch Sensor) 
 >* A variation of the game above (perhaps a more challenging approach) would be to press the two colors (using the subtractive color model) that when mixed (e.g., such as when mixing paint) make the color displayed on the screen. This would be a fun game to teach young kids the basics of color theory for an introductory art class.
 > <p align="center"><img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2cef0175-3a23-4445-aa98-fb090ffa0d6a"  width="500" > </p>
