@@ -303,6 +303,32 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+Label: Canvas with OLED screen and copper tape
+
+<img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd49d034-ed90-4f1e-907c-fb927238bb47"  width="500"/>
+
+* Sketch #1: OLED Screen outside of canvas, next to the artist's name and description of artwork. 
+
+> <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/909f5d54-5e7a-40f3-ba4e-d4f1de9c5226"  width="800"/>
+
+* Sketch #2: OLED Screen centered on canvas, rotated 90 degrees (vertical orientation).
+
+> <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bb8a9205-1857-4e35-b7db-73c7fb7917d9"  width="500"/>
+
+* Sketch #3: OLED Screen outside of canvas, centered below the canvas.
+
+> <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/78681d14-df55-4134-a4b4-db4024f90384"  width="500"/>
+
+* Sketch #4: OLED Screen on canvas, top left corner of the canvas.
+
+> <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cbb065a6-38a6-4af6-ac56-19159814d5ac"  width="500"/>
+
+* Sketch #5:OLED Screen on canvas, bottom right corner of the canvas.
+
+> <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/393a64b5-f7b6-4a80-aa62-ed327b78b610"  width="500"/>
+
+
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
