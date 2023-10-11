@@ -183,8 +183,7 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 1.	**Musical painting** (main sensor: Capacitive Touch Sensor) 
 >* A canvas will be painted to create an interactive painting experience whereby touching specific parts of the canvas results in sounds being played through the camera’s speaker (these sounds are mapped using the capacitive touch sensor). 
 
-![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/b1748cc7-35f6-4aee-846c-c5fee1886969)
-
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/50c35851-a878-4b36-814a-a30e1dc6186a)
 
 2.	**A Halloween Display** (main sensor: OLED Screen)
 >*  For example, a display of different scary exhibits on the OLED screen such as:
@@ -192,6 +191,12 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 >>* A pumpkin that laughs at the user if he/she presses green LED button or scares if the user presses the red LED button
 3.	**Garage Band or Guitar Hero type musical game** (main sensor: Capacitive Touch Sensor) 
 >* There are four or more colored objects the user has to touch or step on (barefoot for conductivity to work with the capacitive touch sensor). The user is told which items to touch on the OLED screen (the color of object is displayed) and for how long.
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/f9dd17cd-1f0b-476e-b7ad-bf1d27efe098)
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/79f72f06-ee2a-4c22-8ded-8c48b13d1e25)
+
+
 4.	**Game: Twister Box!** (main sensor: Capacitive Touch Sensor) 
 >* Raspberry Pi sits inside a box with conductive stickers (or perhaps the entire side of the box is conductive, each side mapping to some feature or action). The OLED screen tells the user which color to touch (the color of object is displayed) and for how long. The objective of the game is to touch all the colors prompted by the computer in the least amount of time possible. The device will keep a record of high scores. The ID for the high scores can be inputted with the keypad (date of birth), a button to enable speech recognition to convert a name spoken to the name of the player, and an actual keyboard to input the player’s name. 
 5.	**Game: Color Mixing!** (main sensor: Capacitive Touch Sensor) 
