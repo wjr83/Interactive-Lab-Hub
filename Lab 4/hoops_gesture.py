@@ -6,6 +6,7 @@ from adafruit_apds9960.apds9960 import APDS9960
 import busio
 import qwiic_oled_display
 import time
+from time import sleep
 import math
 import qwiic_proximity
 
@@ -39,7 +40,7 @@ myOLED.clear(myOLED.PAGE)
 # Initialize Variables
 p1_score = 0
 p2_score = 0
-seconds = 60    # Duration of 2-player game
+seconds = 30    # Duration of 2-player game
 
 def oled_update_score(p1_score, p2_score, countdown):
     
@@ -116,6 +117,8 @@ def start_2_player_game(seconds, p1_score, p2_score):
         proxValue = oProx.get_proximity()
         print("Proximity Value: %d" % proxValue) # For Troubleshooting
         if proxValue > 75: # Need to confirm optimal value after building prototype
+            # TODO: need to ensure that hoop for player 2 is not double counted (the sleep function below doesn't work as well if the ball falls slowly past the distance sensor)
+            sleep(0.1)
             p2_score += 1
             print("Player 2\nHoops made:", p1_score)
             oled_update_score(p1_score, p2_score, countdown)
