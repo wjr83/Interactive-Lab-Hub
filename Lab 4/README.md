@@ -303,7 +303,7 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
-Label: Canvas with OLED screen and copper tape
+Label: Canvas with an OLED screen and copper tape
 
 <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd49d034-ed90-4f1e-907c-fb927238bb47"  width="500"/>
 
@@ -344,7 +344,34 @@ Sketch #3 was chosen (OLED Screen outside of the canvas, centered below the canv
 Build a cardboard prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
+> Explanation of how the canvas was built:
+>* https://drive.google.com/file/d/1BsVfzuWh_NoRWDA-dklnQ7_ReMfcErx3/view?usp=sharing
 
+
+Work in Progress: 
+
+> https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/b6ee3583-9b68-4e4e-b652-fac1c0158c52
+
+
+
+> https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e4afe588-acd1-4dbe-8542-afc698f1d670
+
+
+
+> https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/8510b69e-f023-466b-a832-77fe28af47d3
+
+
+
+> https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/98188df9-7155-4f9c-8754-294a0231ea78
+
+
+
+> https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/742fa614-d0a6-4fbf-9ffd-8219caba780c
+
+
+
+> Final Working Prototype:
+>* https://drive.google.com/file/d/1IGTGFBhhlMhjE33mpCJneUV5W9Ue77PH/view?usp=sharing
 
 LAB PART 2
 
