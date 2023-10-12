@@ -260,6 +260,7 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 * How should the information on the small display be designed such that it maximizes readability?
 * How fun or amusing will users find these interactive devices? How long will they want to play for?
 
+We would need to physically prototype any inputs from the user, sensor connections, and proximity to the interactive device.
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 1.	**Musical painting** was chosen for Part 1 of Lab 4.
@@ -333,7 +334,9 @@ Label: Canvas with an OLED screen and copper tape
 >* Depending on the answer to the previous question, where should the OLED screen be positioned such that it does not subtract or distract from the immersive musical experience?
 >>* At the same time, we would like the OLED screen to be noticed (even if it's deemed secondary in importance relative to the sounds). What would be the best way to achieve this?
 >* How close to the canvas should users be to best appreciate the coupled interaction between the OLED screen, painting, and sounds emitted from the canvas?
->* The OLED Screen's electric circuitry should not cause the canvas to emit sounds (the OLED screen needs to be properly insulated from the conductive paint that's connected to the capacitive sensor). 
+>* The OLED Screen's electric circuitry should not cause the canvas to emit sounds (the OLED screen needs to be properly insulated from the conductive paint that's connected to the capacitive sensor).
+>* How would a new user know to touch the canvas?
+We would need to physically prototype the interaction with new users (50% with / 50% without telling them instructions of how the art piece works), paying attention to the distance users maintain from the interactive device and if they notice the OLED screen (after how much time do they notice the OLED screen, is it ignored shortly after, etc.).
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 * Sketch #3 was chosen (OLED Screen outside of the canvas, centered below the canvas).
