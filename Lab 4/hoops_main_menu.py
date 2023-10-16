@@ -10,7 +10,7 @@ from time import sleep
 import math
 import qwiic_proximity
 import qwiic_twist
-from hoops_gesture import * # Import All of Game #1
+import arcade_game_1 # Game #1: Arcade
 
 def set_up():
     i2c = board.I2C()
@@ -124,7 +124,7 @@ def main_menu():
     game_number = game_options(myOLED, myTwist)
 
     if game_number == 1:
-        game_1_main()
+        arcade_game_1.game_1_main()
     if game_number == 2:
         pass
     if game_number == 3:
