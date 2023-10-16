@@ -224,4 +224,3 @@ def game_1_main():
 #         print("Player 1\nHoops made:", p1_score)
 #         oled_update_score(p1_score, p2_score)
          
-game_1_main()

@@ -129,7 +129,7 @@ def main_menu():
         pass
     if game_number == 3:
         pass
-    time.sleep(1)
+    time.sleep(3)
     main_menu()
 
 main_menu()
