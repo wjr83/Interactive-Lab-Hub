@@ -12,41 +12,42 @@ import qwiic_proximity
 import qwiic_twist
 
 
-def initialize_hoops():
-    i2c = board.I2C()
+from hoops_gesture  
 
-    apds = APDS9960(i2c)
-    apds.enable_proximity = True
-    apds.enable_gesture = True
+i2c = board.I2C()
 
-    ########### Initialize OLED Screen ###################################################
+apds = APDS9960(i2c)
+apds.enable_proximity = True
+apds.enable_gesture = True
 
-    myOLED = qwiic_oled_display.QwiicOledDisplay()
+########### Initialize OLED Screen ###################################################
 
-    if not myOLED.connected:
-        print("The Qwiic OLED Display isn't connected to the system. Please check your connection", \
-            file=sys.stderr)
-        
+myOLED = qwiic_oled_display.QwiicOledDisplay()
 
-    myOLED.begin()
-    #  clear(ALL) will clear out the OLED's graphic memory.
-    #  clear(PAGE) will clear the Arduino's display buffer.
-    myOLED.clear(myOLED.ALL)  #  Clear the display's memory (gets rid of artifacts)
-    #  To actually draw anything on the display, you must call the
-    #  display() function.
-    myOLED.display()
-    time.sleep(1)
+if not myOLED.connected:
+    print("The Qwiic OLED Display isn't connected to the system. Please check your connection", \
+        file=sys.stderr)
+    
 
-    myOLED.clear(myOLED.PAGE)
+myOLED.begin()
+#  clear(ALL) will clear out the OLED's graphic memory.
+#  clear(PAGE) will clear the Arduino's display buffer.
+myOLED.clear(myOLED.ALL)  #  Clear the display's memory (gets rid of artifacts)
+#  To actually draw anything on the display, you must call the
+#  display() function.
+myOLED.display()
+time.sleep(1)
 
-    ############# Qwiic Twist ############################################################################################# 
-    print("\nSparkFun qwiic Twist   Example 2 - crazy colors\n")
-    myTwist = qwiic_twist.QwiicTwist()
+myOLED.clear(myOLED.PAGE)
 
-    if myTwist.connected == False:
-        print("The Qwiic twist device isn't connected to the system. Please check your connection", \
-            file=sys.stderr)
-    return myOLED, myTwist, apds
+############# Qwiic Twist ############################################################################################# 
+print("\nSparkFun qwiic Twist   Example 2 - crazy colors\n")
+myTwist = qwiic_twist.QwiicTwist()
+
+if myTwist.connected == False:
+    print("The Qwiic twist device isn't connected to the system. Please check your connection", \
+        file=sys.stderr)
+
 
 # while True:
 
@@ -58,7 +59,7 @@ def initialize_hoops():
 
 #     time.sleep(.3)
 ###########################################################################################################
-def oled_update_score(myOLED, p1_score, p2_score, countdown):
+def oled_update_score(p1_score, p2_score, countdown):
     
     myOLED.clear(myOLED.PAGE)            # Clear the display
     
@@ -106,7 +107,7 @@ def oled_update_score(myOLED, p1_score, p2_score, countdown):
 
 
 
-def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
+def start_2_player_game(seconds, p1_score, p2_score):
     ####### Initialize Distance Sensor #############################
     print("\nSparkFun Proximity Sensor VCN4040 Example 1\n")
     oProx = qwiic_proximity.QwiicProximity()
@@ -119,7 +120,7 @@ def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
     start = time.time()
     while math.floor(time.time() - start) < seconds:
         countdown = seconds - math.floor(time.time() - start)
-        oled_update_score(myOLED, p1_score, p2_score, countdown)
+        oled_update_score(p1_score, p2_score, countdown)
         sleep(0.1)
         
         # Read Gesture Sensor Data
@@ -128,7 +129,7 @@ def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
             # print("down")
             p1_score += 1
             print("Player 1\nHoops made:", p1_score)
-            oled_update_score(myOLED, p1_score, p2_score, countdown)
+            oled_update_score(p1_score, p2_score, countdown)
             sleep(0.1)
 
         # Read Distance Sensro Data
@@ -139,18 +140,17 @@ def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
             sleep(0.1)
             p2_score += 1
             print("Player 2\nHoops made:", p1_score)
-            oled_update_score(myOLED, p1_score, p2_score, countdown)
+            oled_update_score(p1_score, p2_score, countdown)
             
-    oled_update_score(myOLED, p1_score, p2_score, 0)
+    oled_update_score(p1_score, p2_score, 0)
             
     # return math.floor(time.time() - start)
 
 
-def oled_set_duration_game_1(myOLED, myTwist):
+def oled_set_duration_game_1():
     
     myOLED.clear(myOLED.PAGE)            # Clear the display
     
-    # Initialize Rotary Encoder Value
     myTwist.begin()
     myTwist.count = 0
 
@@ -200,21 +200,16 @@ def oled_set_duration_game_1(myOLED, myTwist):
 
 # Initial Screen Set-Up
 # Initialize Variables
+p1_score = 0
+p2_score = 0
+seconds = 30    # Duration of 2-player game
 
-def game_1_main():
-    
-    myOLED, myTwist, apds = initialize_hoops()
+seconds = oled_set_duration_game_1()
+oled_update_score(p1_score, p2_score, seconds)
+sleep(0.1)
 
-    p1_score = 0
-    p2_score = 0
-    seconds = 30    # Duration of 2-player game
-
-    countdown = oled_set_duration_game_1(myOLED, myTwist)
-    oled_update_score(myOLED, p1_score, p2_score, countdown)
-    sleep(0.1)
-
-    # Start Game
-    start_2_player_game(myOLED, apds, countdown, p1_score, p2_score)
+# Start Game
+start_2_player_game(seconds, p1_score, p2_score)
 
 # Troubleshooting for Single Player Game
 # while True:
@@ -226,4 +221,3 @@ def game_1_main():
 #         print("Player 1\nHoops made:", p1_score)
 #         oled_update_score(p1_score, p2_score)
          
-game_1_main()
