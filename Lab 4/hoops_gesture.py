@@ -17,7 +17,7 @@ def initialize_hoops():
 
     apds = APDS9960(i2c)
     apds.enable_proximity = True
-    apds.enable_gesture = True
+    # apds.enable_gesture = True
 
     ########### Initialize OLED Screen ###################################################
 
@@ -61,7 +61,7 @@ def oled_update_score(myOLED, p1_score, p2_score, countdown):
     
     myOLED.clear(myOLED.PAGE)            # Clear the display
     
-    myOLED.set_cursor(32, 24)           # Set cursor to bottom-left
+    myOLED.set_cursor(38, 24)           # Set cursor to bottom-left
     myOLED.set_font_type(0)             # Smallest font
     myOLED.print("Timer: " + str(countdown))          
     
@@ -108,7 +108,7 @@ def oled_update_score(myOLED, p1_score, p2_score, countdown):
 def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
     ####### Initialize Distance Sensor #############################
     oProx = qwiic_proximity.QwiicProximity()
-
+    
     if oProx.connected == False:
         print("The Qwiic Proximity device isn't connected to the system. Please check your connection", \
             file=sys.stderr)
@@ -121,18 +121,26 @@ def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
         sleep(0.1)
         
         # Read Gesture Sensor Data
-        gesture = apds.gesture() 
-        if gesture == 0x02:
-            # print("down")
+        # # gesture = apds.gesture() 
+        # if gesture == 0x02:
+        #     # print("down")
+        #     p1_score += 1
+        #     print("Player 1\nHoops made:", p1_score)
+        #     oled_update_score(myOLED, p1_score, p2_score, countdown)
+        #     sleep(0.1)
+
+       
+        # proximity = apds.proximity()
+        if apds.proximity > 4:
+            time.sleep(0.1)
             p1_score += 1
             print("Player 1\nHoops made:", p1_score)
             oled_update_score(myOLED, p1_score, p2_score, countdown)
-            sleep(0.1)
-
+            # sleep(0.1)
         # Read Distance Sensro Data
         proxValue = oProx.get_proximity()
         print("Proximity Value: %d" % proxValue) # For Troubleshooting
-        if proxValue > 75: # Need to confirm optimal value after building prototype
+        if proxValue > 30: # Need to confirm optimal value after building prototype
             # TODO: need to ensure that hoop for player 2 is not double counted (the sleep function below doesn't work as well if the ball falls slowly past the distance sensor)
             sleep(0.1)
             p2_score += 1
@@ -153,7 +161,10 @@ def oled_set_duration_game_1(myOLED, myTwist):
     myTwist.count = 0
 
     while not myTwist.pressed:
-        myOLED.set_cursor(32, 24)           # Set cursor to bottom-left
+        myOLED.set_cursor(14, 0)           # Set cursor to bottom-left
+        myOLED.set_font_type(1) 
+        myOLED.print("A R C A D E")
+        myOLED.set_cursor(38, 24)           # Set cursor to bottom-left
         myOLED.set_font_type(0)             # Smallest font
         myOLED.print("Timer: " + str(myTwist.count))          
 
