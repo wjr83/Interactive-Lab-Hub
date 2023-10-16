@@ -10,6 +10,7 @@ from time import sleep
 import math
 import qwiic_proximity
 import qwiic_twist
+import sys
 
 i2c = board.I2C()
 
@@ -101,7 +102,6 @@ def oled_update_score(p1_score, p2_score, countdown):
 
     myOLED.display()
     time.sleep(.1)
-
 
 
 def start_2_player_game(seconds, p1_score, p2_score):
