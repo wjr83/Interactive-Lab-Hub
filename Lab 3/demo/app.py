@@ -8,8 +8,9 @@ from subprocess import Popen, call
 import time
 import board
 import busio
-#import adafruit_mpu6050
-from adafruit_msa3xx import MSA311
+# import adafruit_mpu6050
+# from adafruit_msa3xx import MSA311
+from adafruit_lsm6ds.lsm6ds3 import LSM6DS3
 import json
 import socket
 
@@ -17,13 +18,30 @@ import signal
 import sys
 from queue import Queue
 
+print("Digital IO ok!")
+import smbus
+bus = smbus.SMBus(1)
+for address in range(0x08, 0x78):
+    try:
+        # Try to read a byte from the current address
+        bus.read_byte(address)
+        print(f"Device found at address: 0x{hex(address)}")
+    except:
+        pass
  
 i2c = busio.I2C(board.SCL, board.SDA)
-#mpu = adafruit_mpu6050.MPU6050(i2c)
-msa = MSA311(i2c)
+
+print("I2C ok!")
+sox_add = 0x6a
+sox = LSM6DS3(i2c, sox_add)
+# mpu = adafruit_mpu6050.MPU6050(i2c, mpu_add)
+# if (not mpu.begin()):
+#   print("Failed to find MPU6050 chip")
+# msa = MSA311(i2c, mpu_add)
+print('SOX OK')
 
 hostname = socket.gethostname()
-hardware = 'plughw:2,0'
+hardware = 'plughw:1,0'
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -41,7 +59,10 @@ def test_connect():
 @socketio.on('ping-gps')
 def handle_message(val):
     # print(mpu.acceleration)
-    emit('pong-gps', msa.acceleration) 
+    emit('pong-gps', sox.acceleration) 
+    print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(sox.acceleration))
+    print("Gyro X:%.2f, Y: %.2f, Z: %.2f radians/s"%(sox.gyro))
+    # print(sox.acceleration)
 
 
 

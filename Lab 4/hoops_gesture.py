@@ -9,6 +9,7 @@ import time
 from time import sleep
 import math
 import qwiic_proximity
+import qwiic_twist
 
 i2c = board.I2C()
 
@@ -35,13 +36,26 @@ myOLED.display()
 time.sleep(1)
 
 myOLED.clear(myOLED.PAGE)
+
+############# Qwiic Twist ############################################################################################# 
+print("\nSparkFun qwiic Twist   Example 2 - crazy colors\n")
+myTwist = qwiic_twist.QwiicTwist()
+
+if myTwist.connected == False:
+    print("The Qwiic twist device isn't connected to the system. Please check your connection", \
+        file=sys.stderr)
+
+
+# while True:
+
+#     print("Count: %d, Pressed: %s" % (myTwist.count, \
+#         "YES" if myTwist.pressed else "NO", \
+#         ))
+
+#     myTwist.set_color( random.randint(0,256), random.randint(0,256),random.randint(0,256))
+
+#     time.sleep(.3)
 ###########################################################################################################
-
-# Initialize Variables
-p1_score = 0
-p2_score = 0
-seconds = 30    # Duration of 2-player game
-
 def oled_update_score(p1_score, p2_score, countdown):
     
     myOLED.clear(myOLED.PAGE)            # Clear the display
@@ -104,6 +118,7 @@ def start_2_player_game(seconds, p1_score, p2_score):
     while math.floor(time.time() - start) < seconds:
         countdown = seconds - math.floor(time.time() - start)
         oled_update_score(p1_score, p2_score, countdown)
+        sleep(0.1)
         
         # Read Gesture Sensor Data
         gesture = apds.gesture() 
@@ -112,6 +127,7 @@ def start_2_player_game(seconds, p1_score, p2_score):
             p1_score += 1
             print("Player 1\nHoops made:", p1_score)
             oled_update_score(p1_score, p2_score, countdown)
+            sleep(0.1)
 
         # Read Distance Sensro Data
         proxValue = oProx.get_proximity()
@@ -128,8 +144,66 @@ def start_2_player_game(seconds, p1_score, p2_score):
     # return math.floor(time.time() - start)
 
 
+def oled_set_duration_game_1():
+    
+    myOLED.clear(myOLED.PAGE)            # Clear the display
+    
+    myTwist.begin()
+    myTwist.count = 0
+
+    while not myTwist.pressed:
+        myOLED.set_cursor(32, 24)           # Set cursor to bottom-left
+        myOLED.set_font_type(0)             # Smallest font
+        myOLED.print("Timer: " + str(myTwist.count))          
+
+        # if countdown == 0:
+        # # Player 1 Wins
+        # if p1_score > p2_score:
+        #     myOLED.set_cursor(24, 24)        
+        #     myOLED.set_font_type(0)         
+        #     myOLED.print("Player 1 Wins!")  
+        # # Player 2 Wins
+        # if p1_score < p2_score:
+        #     myOLED.set_cursor(24, 24)        
+        #     myOLED.set_font_type(0)         
+        #     myOLED.print("Player 2 Wins!") 
+        # # It's a tie!
+        # if p1_score == p2_score:
+        #     myOLED.set_cursor(32, 24)        
+        #     myOLED.set_font_type(0)         
+        #     myOLED.print("It's a tie!")     
+
+        # myOLED.set_cursor(0, 0)        # Set cursor to top-left
+        # myOLED.set_font_type(0)         # Smallest font
+        # myOLED.print("P1: ")          # Print "P1"
+        # myOLED.set_font_type(2)         # 7-segment font
+        # myOLED.print("%.3d" % p1_score)
+
+        # # myOLED.set_cursor(0, 16)       # Set cursor to top-middle-left
+        # # myOLED.set_font_type(0)         # Repeat
+        # # myOLED.print("P2: ")
+        # # myOLED.set_font_type(2)
+
+        # # myOLED.print("%.3d" % hoops)
+        # myOLED.set_cursor(64, 0)
+        # myOLED.set_font_type(0)
+        # myOLED.print("P2: ")
+        # myOLED.set_font_type(2)
+        # myOLED.print("%.3d" % p2_score)
+
+        myOLED.display()
+        time.sleep(.1)
+    return myTwist.count
+
 # Initial Screen Set-Up
+# Initialize Variables
+p1_score = 0
+p2_score = 0
+seconds = 30    # Duration of 2-player game
+
+seconds = oled_set_duration_game_1()
 oled_update_score(p1_score, p2_score, seconds)
+sleep(0.1)
 
 # Start Game
 start_2_player_game(seconds, p1_score, p2_score)
