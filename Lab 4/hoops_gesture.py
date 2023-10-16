@@ -40,7 +40,6 @@ def initialize_hoops():
     myOLED.clear(myOLED.PAGE)
 
     ############# Qwiic Twist ############################################################################################# 
-    print("\nSparkFun qwiic Twist   Example 2 - crazy colors\n")
     myTwist = qwiic_twist.QwiicTwist()
 
     if myTwist.connected == False:
@@ -108,7 +107,6 @@ def oled_update_score(myOLED, p1_score, p2_score, countdown):
 
 def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
     ####### Initialize Distance Sensor #############################
-    print("\nSparkFun Proximity Sensor VCN4040 Example 1\n")
     oProx = qwiic_proximity.QwiicProximity()
 
     if oProx.connected == False:
