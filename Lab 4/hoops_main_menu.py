@@ -10,6 +10,7 @@ from time import sleep
 import math
 import qwiic_proximity
 import qwiic_twist
+import sys
 import arcade_game_1 # Game #1: Arcade
 
 def set_up():

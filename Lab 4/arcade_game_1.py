@@ -10,6 +10,7 @@ from time import sleep
 import math
 import qwiic_proximity
 import qwiic_twist
+import sys
 
 
 def initialize_hoops():
