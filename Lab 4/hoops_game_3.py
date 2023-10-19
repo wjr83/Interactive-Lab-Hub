@@ -33,11 +33,11 @@ def init():
     if my_stick.begin() == False:
         print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
             file=sys.stderr)
+    my_stick.set_all_LED_brightness(4)
     ########### NEOslider #########################
     # neoslider = Seesaw(i2c, 0x30)
     # potentiometer = AnalogInput(neoslider, 18)
     # pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
-
     print("sensor init complete")
     return apds, oProx, my_stick
 
@@ -56,9 +56,9 @@ def display_LED_lose(my_stick, minus_who_p, p1_score, p2_score, red_list, green_
         for i in range(0, t+1):
             my_stick.set_all_LED_brightness(0)
             time.sleep(0.1)
-            my_stick.set_all_LED_brightness(32)
+            my_stick.set_all_LED_brightness(20)
             time.sleep(0.1)
-        my_stick.set_all_LED_brightness(6)
+        my_stick.set_all_LED_brightness(2)
     if p1_score >= 5 or p2_score >= 5:
         if p2_score == 5:
             # Yellow to green
@@ -129,14 +129,14 @@ def game_3_main():
             if p == 0:
                 if p1_prox > 5:
                     is_score = True
-                    walking_rainbow(my_stick, 20, 10, 0.01)
+                    # walking_rainbow(my_stick, 20, 10, 0.1)
                     break
             if p == 1:
-                if p2_prox > 75:
+                if p2_prox > 240:
                     is_score = True
-                    walking_rainbow(my_stick, 20, 10, 0.01)
+                    # walking_rainbow(my_stick, 20, 10, 0.1)
                     break
-            sleep(0.1)
+            # sleep(0.1)
         my_stick.set_all_LED_unique_color(red_list, green_list, blue_list, LED_length)
         print(p, is_score, p1_score, p2_score)
         if is_score == False:
@@ -148,8 +148,8 @@ def game_3_main():
         # print(potentiometer.value / 1023 * 255)
         sleep(0.1)
 
-
-
+game_3_main()
+# walking_rainbow(my_stick, 20, 10, 0.1)
 # def display_LED(add_who, p1_score, p2_score):
 #     total_score = p1_score + p2_score
 #     print('1', p1_score, '2', p2_score)

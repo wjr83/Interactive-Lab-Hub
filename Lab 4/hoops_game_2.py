@@ -57,7 +57,7 @@ def display_LED(my_stick, add_who, p1_score, p2_score, red_list, green_list, blu
             time.sleep(0.1)
             my_stick.set_all_LED_brightness(32)
             time.sleep(0.1)
-        my_stick.set_all_LED_brightness(6)
+        my_stick.set_all_LED_brightness(2)
     total_score = p1_score + p2_score
     print('1', p1_score, '2', p2_score)
     if total_score >= 10:
@@ -99,11 +99,11 @@ def game_2_main():
     while True:
         add_who = None
         p1_prox = apds.proximity
-        if p1_prox > 5:
+        if p1_prox > 2:
             p1_score += 1
             add_who = 1
         p2_prox = oProx.get_proximity()
-        if p2_prox > 75:
+        if p2_prox > 240:
             p2_score += 1
             add_who = 2
         if add_who:
@@ -111,4 +111,4 @@ def game_2_main():
         # print(potentiometer.value / 1023 * 255)
         sleep(0.1)
 
-
+game_2_main()
