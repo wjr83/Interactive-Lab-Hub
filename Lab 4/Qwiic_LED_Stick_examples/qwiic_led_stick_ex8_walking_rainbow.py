@@ -105,6 +105,7 @@ def run_example():
     print("\nLED Stick ready!")
 
     while True:
+        my_stick.change_length(10)
         walking_rainbow(my_stick, 20, 10, 0.3)
 
 if __name__ == '__main__':

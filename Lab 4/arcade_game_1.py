@@ -132,8 +132,8 @@ def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
 
        
         # proximity = apds.proximity()
-        if apds.proximity > 4:
-            time.sleep(0.1)
+        if apds.proximity > 8:
+            # time.sleep(0.1)
             p1_score += 1
             print("Player 1\nHoops made:", p1_score)
             oled_update_score(myOLED, p1_score, p2_score, countdown)
@@ -141,9 +141,9 @@ def start_2_player_game(myOLED, apds, seconds, p1_score, p2_score):
         # Read Distance Sensro Data
         proxValue = oProx.get_proximity()
         print("Proximity Value: %d" % proxValue) # For Troubleshooting
-        if proxValue > 30: # Need to confirm optimal value after building prototype
+        if proxValue > 2000: # Need to confirm optimal value after building prototype
             # TODO: need to ensure that hoop for player 2 is not double counted (the sleep function below doesn't work as well if the ball falls slowly past the distance sensor)
-            sleep(0.1)
+            # sleep(0.1)
             p2_score += 1
             print("Player 2\nHoops made:", p1_score)
             oled_update_score(myOLED, p1_score, p2_score, countdown)

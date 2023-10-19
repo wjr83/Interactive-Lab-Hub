@@ -12,6 +12,8 @@ import qwiic_proximity
 import qwiic_twist
 import sys
 import arcade_game_1 # Game #1: Arcade
+import hoops_game_2
+import hoops_game_3
 
 def set_up():
     i2c = board.I2C()
@@ -127,9 +129,9 @@ def main_menu():
     if game_number == 1:
         arcade_game_1.game_1_main()
     if game_number == 2:
-        pass
+        hoops_game_2.game_2_main()
     if game_number == 3:
-        pass
+        hoops_game_3.game_3_main()
     time.sleep(3)
     main_menu()
 

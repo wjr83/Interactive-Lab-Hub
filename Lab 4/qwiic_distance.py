@@ -61,7 +61,7 @@ def runExample():
 	while True:
 		proxValue = oProx.get_proximity()
 		print("Proximity Value: %d" % proxValue)
-		time.sleep(.4)
+		time.sleep(0.1)
 
 
 if __name__ == '__main__':
