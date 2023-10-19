@@ -18,38 +18,39 @@ from adafruit_seesaw import neopixel
 
 from Qwiic_LED_Stick_examples.qwiic_led_stick_ex8_walking_rainbow import walking_rainbow 
 
-i2c = busio.I2C(board.SCL, board.SDA)
-########### apds9960 ##########################
-apds = APDS9960(i2c)
-apds.enable_proximity = True
-####### Distance Sensor #######################
-oProx = qwiic_proximity.QwiicProximity()
-if oProx.begin() == False:
-    print("The Qwiic Proximity device isn't connected to the system. Please check your connection", \
-        file=sys.stderr)
-########### LEDStick ##########################
-my_stick = qwiic_led_stick.QwiicLEDStick()
-if my_stick.begin() == False:
-    print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
-        file=sys.stderr)
-########### NEOslider #########################
-neoslider = Seesaw(i2c, 0x30)
-potentiometer = AnalogInput(neoslider, 18)
-pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
+def init():
+    i2c = busio.I2C(board.SCL, board.SDA)
+    ########### apds9960 ##########################
+    apds = APDS9960(i2c)
+    apds.enable_proximity = True
+    ####### Distance Sensor #######################
+    oProx = qwiic_proximity.QwiicProximity()
+    if oProx.begin() == False:
+        print("The Qwiic Proximity device isn't connected to the system. Please check your connection", \
+            file=sys.stderr)
+    ########### LEDStick ##########################
+    my_stick = qwiic_led_stick.QwiicLEDStick()
+    if my_stick.begin() == False:
+        print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
+            file=sys.stderr)
+    ########### NEOslider #########################
+    neoslider = Seesaw(i2c, 0x30)
+    potentiometer = AnalogInput(neoslider, 18)
+    pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 
-print("sensor init complete")
+    print("sensor init complete")
+    return apds, oProx, my_stick
 
 def potentiometer_to_color(value):
     """Scale the potentiometer values (0-1023) to the colorwheel values (0-255)."""
     return value / 1023 * 255
 
-def neo_slider():
-    print(potentiometer.value)
-    # Fill the pixels a color based on the position of the potentiometer.
-    pixels.fill(colorwheel(potentiometer_to_color(potentiometer.value)))
+# def neo_slider():
+#     # Fill the pixels a color based on the position of the potentiometer.
+#     pixels.fill(colorwheel(potentiometer_to_color(potentiometer.value)))
     
 
-def display_LED(add_who, p1_score, p2_score):
+def display_LED(my_stick, add_who, p1_score, p2_score, red_list, green_list, blue_list, LED_length):
     def blink(t = 1):
         for i in range(0, t+1):
             my_stick.set_all_LED_brightness(0)
@@ -85,17 +86,18 @@ def display_LED(add_who, p1_score, p2_score):
         
     
 # Initialize Variables
-walking_rainbow(my_stick, 20, 10, 0.1)
-p1_score = 0
-p2_score = 0
-LED_length = 10
-red_list = [0] * LED_length
-green_list = [0] * LED_length
-blue_list = [0] * LED_length
-my_stick.LED_off()
-print("game starts now")
-while True:
-    try:
+def game_2_main():
+    apds, oProx, my_stick = init()
+    walking_rainbow(my_stick, 20, 10, 0.1)
+    p1_score = 0
+    p2_score = 0
+    LED_length = 10
+    red_list = [0] * LED_length
+    green_list = [0] * LED_length
+    blue_list = [0] * LED_length
+    my_stick.LED_off()
+    print("game starts now")
+    while True:
         add_who = None
         p1_prox = apds.proximity
         if p1_prox > 5:
@@ -106,9 +108,8 @@ while True:
             p2_score += 1
             add_who = 2
         if add_who:
-            display_LED(add_who, p1_score, p2_score)
+            display_LED(my_stick, add_who, p1_score, p2_score,red_list, green_list, blue_list, LED_length)
         # print(potentiometer.value / 1023 * 255)
         sleep(0.1)
-    except KeyboardInterrupt: 
-        break   
+
 
