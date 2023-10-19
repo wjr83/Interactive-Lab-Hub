@@ -33,10 +33,10 @@ def init():
     if my_stick.begin() == False:
         print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
             file=sys.stderr)
-    ########### NEOslider #########################
-    neoslider = Seesaw(i2c, 0x30)
-    potentiometer = AnalogInput(neoslider, 18)
-    pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
+    # ########### NEOslider #########################
+    # neoslider = Seesaw(i2c, 0x30)
+    # potentiometer = AnalogInput(neoslider, 18)
+    # pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 
     print("sensor init complete")
     return apds, oProx, my_stick
@@ -82,7 +82,7 @@ def display_LED_lose(my_stick, minus_who_p, p1_score, p2_score, red_list, green_
         my_stick.set_all_LED_unique_color(red_list, green_list, blue_list, LED_length)
         blink()        
 def get_random_player(my_stick, LED_length):
-    r, g, b = [0] * 10, [0] * 10, [0] * 10
+    r, g, b = [0] * LED_length, [0] * LED_length, [0] * LED_length
     p = random.randint(0, 1)
     if p == 0:
         g[4] = 128
@@ -99,8 +99,8 @@ def init_rgb(LED_length):
     red_list = [0] * LED_length
     green_list = [0] * LED_length
     blue_list = [0] * LED_length
-    for i in range(10):
-        if i < 5:
+    for i in range(LED_length):
+        if i < LED_length//2:
             green_list[i] = 128
         else:
             red_list[i] = 255
@@ -108,14 +108,13 @@ def init_rgb(LED_length):
 # Initialize Variables
 def game_3_main():
     apds, oProx, my_stick = init()
-    walking_rainbow(my_stick, 20, 10, 0.1)
-    p1_score = 0
-    p2_score = 0
+    p1_score, p2_score = 0, 0
     LED_length = 10
+    walking_rainbow(my_stick, 20, LED_length, 0.1)
     red_list, green_list, blue_list = init_rgb(LED_length)
     my_stick.set_all_LED_unique_color(red_list, green_list, blue_list, LED_length)
     print("game starts now")
-    print('s',red_list, green_list, blue_list)
+    # print('s',red_list, green_list, blue_list)
     while True:
         t0 = time.time()
         p = get_random_player(my_stick, LED_length)

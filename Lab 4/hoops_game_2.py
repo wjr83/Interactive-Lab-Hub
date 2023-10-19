@@ -88,14 +88,13 @@ def display_LED(my_stick, add_who, p1_score, p2_score, red_list, green_list, blu
 # Initialize Variables
 def game_2_main():
     apds, oProx, my_stick = init()
-    walking_rainbow(my_stick, 20, 10, 0.1)
-    p1_score = 0
-    p2_score = 0
+    p1_score, p2_score = 0, 0
     LED_length = 10
+    walking_rainbow(my_stick, 20, LED_length, 0.1)
     red_list = [0] * LED_length
     green_list = [0] * LED_length
     blue_list = [0] * LED_length
-    my_stick.LED_off()
+    # my_stick.LED_off()
     print("game starts now")
     while True:
         add_who = None
