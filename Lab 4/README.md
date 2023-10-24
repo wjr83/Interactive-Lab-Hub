@@ -465,3 +465,38 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+**Looks like:**
+**We started out with this [initial prototype](https://drive.google.com/file/d/1oaXo3QvoKQwaQ03WDGpz5IlhfeEvjE5C/view?usp=sharing)**
+
+However, we immediately ran into physical errors where the hoop wasn't able to stand up. So we created a funnel that would not only support the hoop but also guide the ball. This ended up not working though since the ball would get stuck in the funnel. 
+
+So we redid the entire design by designing 3D-printed hoops.
+
+<img src="./Images/img8.png" width="738px" height="622px"/> 
+
+
+That ended up making this. 
+
+<img src="./Images/img1.png" width="530px" height="649px"/> 
+
+<img src="./Images/img2.png" width="530px" height="649px"/> 
+
+We then redid the basketball hoop's physical interface. 
+
+<img src="./Images/img3.png" width="530px" height="649px"/> 
+
+Here are some pictures of us building a portable, basketball court. 
+
+<img src="./Images/img4.png" width="530px" height="649px"/> 
+
+<img src="./Images/img5.png" width="530px" height="649px"/> 
+
+<img src="./Images/img6.png" width="530px" height="649px"/> 
+
+This was our final product. 
+
+<img src="./Images/img7.png" width="347px" height="594px"/> 
+
+In this prototype, we are using an OLED screen to display game instructions and show the user a live point display, and a modifiable timer. We are also using an LED stick for 2 games to indicate whose turn it is. We use a rotary encoder by turning it to pick different games to play from the OLED screen display. We use the proximity sensor and the distance sensor on each hoop to measure whether a ball has made it through the hoop.  
+
+**Here's a recording of our [final interaction](https://drive.google.com/file/d/1Ph0qyhnytpZ1bpy8CmlznIPA5ZA2bH7j/view?usp=sharing)**
