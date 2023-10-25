@@ -33,10 +33,10 @@ def init():
     if my_stick.begin() == False:
         print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
             file=sys.stderr)
-    ########### NEOslider #########################
-    neoslider = Seesaw(i2c, 0x30)
-    potentiometer = AnalogInput(neoslider, 18)
-    pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
+    # ########### NEOslider #########################
+    # neoslider = Seesaw(i2c, 0x30)
+    # potentiometer = AnalogInput(neoslider, 18)
+    # pixels = neopixel.NeoPixel(neoslider, 14, 4, pixel_order=neopixel.GRB)
 
     print("sensor init complete")
     return apds, oProx, my_stick
@@ -50,7 +50,7 @@ def potentiometer_to_color(value):
 #     pixels.fill(colorwheel(potentiometer_to_color(potentiometer.value)))
     
 
-def display_LED(my_stick, add_who, p1_score, p2_score, red_list, green_list, blue_list, LED_length):
+def display_LED(my_stick, add_who, p1_score, p2_score, red_list, green_list, blue_list, LED_length = 10):
     def blink(t = 1):
         for i in range(0, t+1):
             my_stick.set_all_LED_brightness(0)
