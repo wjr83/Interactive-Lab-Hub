@@ -504,6 +504,46 @@ This was our final product.
 
 **Works like:** In this prototype, we are using an OLED screen to display game instructions, and show the user a live point display, and a modifiable timer. We are also using an LED stick for 2 games to indicate whose turn it is. We use a rotary encoder by turning it to pick different games to play from the OLED screen display. We use the proximity sensor and the distance sensor on each hoop to measure whether a ball has made it through the hoop. We wanted to use these sensors to replicate the feeling of playing a real basketball game where points increase when you shoot a ball through the hoop. We tried to incorporate a few minigames to add depth to our game. 
 
+
+OLED Display:
+_________________________
+|Main Menu:			|
+| - Game 1: Arcade		|
+| - Game 2: Tiebreak		|
+| - Game 3: Reaction Speed	|
+——————————————
+
+Game 1: Arcade
+
+<img src="./Images/game1.png" width="400px" height="400px"/>
+
+First set the customized Timer in seconds (s).
+Then the two players compete for the number of balls successfully thrown into the hoop. 
+The OLED would display the score of each player.
+
+Game 2: Tiebreak
+The maximum total score of a game is 10.
+The two players compete for the number of balls successfully thrown into the hoop. 
+If the total sum of their score is 10, the winner will be announced, and if the two players have the same score, which is 5, then a tie will be announced.
+The LED would display the score of each player, and when the game ends, announce the results.
+
+Game 3: Reaction Speed Game
+A simplified reaction speed game that is similar to the picture showing:
+
+<img src="./Images/game2.png" width="400px" height="400px"/>
+
+The two players compete for the number of balls missed thrown into the hoop. 
+Each player has a score of 5 initially.
+First the LED would randomly display the player who should go for a move: RED or GREEN.
+Then the corresponded player would throw their ball into the hoop within 3-10 seconds (a random time frame).
+If they miss any throw, their score would decrease 1. 
+Keep playing.
+If the any of their score is 0, the winner will be announced, and if the two players have the same score, which is 5, then a tie will be announced.
+The LED would display the score of each player, and when the game ends, announce the results.
+
+
+
+
 **Acts like: Here's a recording of our [final interaction](https://drive.google.com/file/d/1Ph0qyhnytpZ1bpy8CmlznIPA5ZA2bH7j/view?usp=sharing)**
 
 **Reflections:** We really struggled with I/O errors due to the fact that so many sensors were being used simulatenously. We tried troubleshooting with different cables that connected the sensors, changing the order of the sensors, as well as removing some sensors and testing but all failed. Additionally, with every game with had to reprogram the proximity sensor and the distance sensor readings to different values because they vaired greatly when we placed the sensors on the back of the hoop, versus underneath the hoop versus connected to the cardboard. 
