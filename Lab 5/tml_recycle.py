@@ -9,8 +9,8 @@ cap = cv.VideoCapture(0)
 # labels_path = "recycling_model_1/labels.txt"
 
 # Model 2: Kaggle Dataset
-model_path = 'recycling_model_2_kgldataset/model.tflite'
-labels_path = "recycling_model_2_kgldataset/labels.txt"
+model_path = 'recycling_model_2_kgldataset_v2/model.tflite'
+labels_path = "recycling_model_2_kgldataset_v2/labels.txt"
 
 image_file_name = "frame.jpg"
 
@@ -35,15 +35,16 @@ while True:
             y += int(0.2 * (y - prev_y))
             w += int(0.2 * (w - prev_w))
             h += int(0.2 * (h - prev_h))
+            # Draw a bounding box and label on the frame
+            prev_x, prev_y, prev_w, prev_h = x, y, w, h
+            # cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Green rectangle
+            #TODO: Adjust display of identified object, color code by type
+            cv.putText(frame, results['label'], (x, y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
         tracking = True
     else:
         tracking = False
 
-    # Draw a bounding box and label on the frame
-    prev_x, prev_y, prev_w, prev_h = x, y, w, h
-    # cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Green rectangle
-    #TODO: Adjust display of identified object, color code by type
-    cv.putText(frame, results['label'], (x, y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+    
 
     cv.imshow('Cam', frame)
     cv.imwrite(image_file_name, frame)
