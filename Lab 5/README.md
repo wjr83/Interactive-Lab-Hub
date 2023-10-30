@@ -120,6 +120,16 @@ Next train your own model. Visit [TeachableMachines](https://teachablemachine.wi
 ![Tensorflow Lite Download](Readme_files/tml_download-model.png)
 
 Include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2eb054b0-2e39-4ac9-a730-bb3c57d75006)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/26b8b476-2a81-42ee-8e07-f88adb1a5dc8)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1ac64b9b-1920-4bec-8dd2-412905f0ef32)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/ed2c09b5-dcb2-4130-9d0f-f91d89112c23)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d934a539-a00b-4f30-a705-47af48ac1cf4)
+
+Trained a second model using available databases of recyclable and non-recyclable objects found online at: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification/
+![Screenshot from 2023-10-30 04-06-32](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1e484efe-5ac3-4e49-85d8-e3bc5f01fb35)
+![Screenshot from 2023-10-30 04-06-15](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/f1f32453-a83f-4255-94c0-c42e44185d68)
+
 
 #### (Optional) Legacy audio and computer vision observation approaches
 In an earlier version of this class students experimented with observing through audio cues. Find the material here:
