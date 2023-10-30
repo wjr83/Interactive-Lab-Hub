@@ -148,6 +148,25 @@ In an earlier version of this class students experimented with foundational comp
 
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
+> * I chose to use the Teachable Machines model. Ideas brainstormed for interaction:
+> * 1. ASL (American Sign Language) gesture classification to allow deaf or hard-of-hearing individuals to use ASL with individuals who are not proficient in ASL. Interaction would be first prototyped to work on systems such as Zoom or Google Meet (i.e., video calls).
+>   2. Alert users when a parking spot opens on his/her street. Rationale: street parking in Manhattan is in extremely high demand. The alert could help a user find street parking closer to his/her apartment.
+>   3. System to Recognize Recyclable Objects. 
+
+I chose to implement idea #3: System to Recognize Recyclable Objects
+
+Implementing a system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
+> * Environmental Conservation: Effective waste separation and recycling play a crucial role in reducing the environmental impact of waste disposal. It helps conserve resources, reduce energy consumption, and lower greenhouse gas emissions.
+> * Waste Reduction: Proper recycling minimizes the volume of waste sent to landfills or incinerators, leading to a reduction in the need for landfill space and decreased pollution from incineration.
+> * Consumer Education: Confusion among individuals about the correct sorting of waste is a common issue. This system can serve as an educational tool, clarifying recycling guidelines and encouraging responsible disposal practices.
+> * Convenience: Many consumers find it challenging to decipher complex instructions or symbols on bins. A machine learning solution simplifies the process by instantly classifying waste items through images, making it more user-friendly.
+
+> Description of the System:
+> > The proposed system introduces a novel user interface by integrating a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it might look, feel, and operate:
+> User Interface:
+> > A camera is integrated into the trashcan and recycling bin system, making it a seamless part of the waste disposal process in various settings, including businesses, cafes, and outdoor spaces.
+Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
+
 
 ### Part C
 ### Test the interaction prototype
