@@ -5,7 +5,7 @@ import HandTrackingModule as htm
 import math
 from ctypes import cast, POINTER
 import alsaaudio
-m = alsaaudio.Mixer(control='Speaker', cardindex=3)
+m = alsaaudio.Mixer(control='Speaker', cardindex=2) # Change the card index by confirming the alsamixer card index assigned to the camera by the Raspberry Pi 
 m.setvolume(5) 
 import subprocess
 

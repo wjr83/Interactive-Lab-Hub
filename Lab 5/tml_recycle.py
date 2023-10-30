@@ -3,13 +3,13 @@ import cv2 as cv
 
 cap = cv.VideoCapture(0)
 
-model_path = 'model.tflite'
+model_path = 'recycling_model_1/model.tflite'
 # model_path = 'lite-model_yolo-v5-tflite_tflite_model_1.tflite'
 # model_path = 'ssd_mobilenet_v1_1_metadata_1.tflite'
 
 
 image_file_name = "frame.jpg"
-labels_path = "labels.txt"
+labels_path = "recycling_model_1/labels.txt"
 # labels_path = "labelmap.txt"
 
 tm_model = TeachableMachineLite(model_path=model_path, labels_file_path=labels_path)
