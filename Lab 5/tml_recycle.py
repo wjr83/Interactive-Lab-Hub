@@ -39,6 +39,7 @@ while True:
     # Draw a bounding box and label on the frame
     prev_x, prev_y, prev_w, prev_h = x, y, w, h
     # cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Green rectangle
+    #TODO: Adjust display of identified object, color code by type
     cv.putText(frame, results['label'], (x, y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
     cv.imshow('Cam', frame)
