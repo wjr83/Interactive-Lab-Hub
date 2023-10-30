@@ -163,6 +163,7 @@ Implementing a system to recognize recyclable objects from non-recyclable object
 
 > Description of the System:
 > > The proposed system introduces a novel user interface by integrating a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it might look, feel, and operate:
+
 > User Interface:
 > > A camera is integrated into the trashcan and recycling bin system, making it a seamless part of the waste disposal process in various settings, including businesses, cafes, and outdoor spaces.
 Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
