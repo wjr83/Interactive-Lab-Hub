@@ -179,9 +179,9 @@ Sample Tests Screenshots of System that Recognizes Recyclable Objects (Model #2)
 ![IMG_4060](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6a3b12bc-2208-4383-a02a-3eb88539eb1c)
 ![IMG_4059](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eb50df40-0e3d-49b4-a0f2-85bd4bd84990)
 
-Sample Video Interaction / Test:
+**Sample Video Interaction / Test:** https://drive.google.com/file/d/1u-p_H_ba_3ORCzK4hywkZke2gTsULy2J/view?usp=sharing
 
-https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/23aa7962-0dc6-44b8-b884-e2ae458af5d6
+
 
 
 
@@ -236,6 +236,50 @@ During the lecture, we mentioned questions to help characterize a material:
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
 
+> **Video Link:** https://drive.google.com/file/d/1u-p_H_ba_3ORCzK4hywkZke2gTsULy2J/view?usp=sharing
+
+1. What can you use the recyclable material identification system for?
+
+> * The recyclable material identification system can be used for efficiently identifying and sorting recyclable materials, compostables, and landfill-bound waste, simplifying the waste disposal process.
+> * It can serve as an educational tool, raising awareness about responsible waste management and encouraging proper recycling practices.
+> * The system can contribute to environmental conservation by promoting recycling, reducing waste, and minimizing landfill usage.
+
+What is a good environment for the recyclable material identification system?
+
+> * The recyclable material identification system thrives in environments with well-lit and clear waste disposal areas, where the camera can capture high-quality images of waste items.
+> * It performs well in settings with users who are receptive to using technology for waste sorting and are open to real-time guidance.
+> * Collaborative environments where users can provide feedback to enhance the recyclable material identification system's accuracy are ideal.
+
+What is a bad environment for the recyclable material identification system?
+
+> * The recyclable material identification system may not perform well in dimly lit or obstructed areas, as these conditions can hinder the camera's image capture and classification accuracy.
+> * Environments with resistance to technology adoption or where users prefer traditional waste sorting methods may not be suitable for the system.
+> * Locations with a lack of maintenance or a history of neglecting system upkeep can be problematic for the recyclable material identification system's long-term reliability.
+
+When will the recyclable material identification system break?
+
+> * The recyclable material identification system is susceptible to malfunction or breakdown when exposed to extreme environmental conditions, such as extreme heat, heavy rain, or physical damage.
+> * Regular wear and tear, including camera lens contamination and sensor degradation, can contribute to breakdown over time.
+> * If the machine learning model used in the recyclable material identification system becomes outdated and no longer receives updates or refinements, it may become less effective.
+> * In the event of loss of power or, if solar-powered, weather (rain or snow) preventing optimal charge of the system causing system to turn-off.
+
+When it breaks, how will the recyclable material identification system break?
+
+> * The recyclable material identification system may break by experiencing sensor or camera malfunctions, causing it to fail in accurately identifying waste items.
+> * Software breakdowns or system crashes may lead to an inability to provide real-time guidance to users.
+> * The system could break gradually, with a decline in accuracy, rather than an abrupt failure, depending on the nature of the issue.
+
+Other properties/behaviors of the recyclable material identification system:
+
+> * The recyclable material identification system continuously learns and improves from user interactions and feedback.
+> * It can provide real-time feedback to users, including guidance on which bin to use and potential disposal instructions.
+> * The system promotes responsible waste management and environmental sustainability, aligning with the United Nations Sustainable Development Goal 12.
+
+How does the recyclable material identification system feel?
+
+> * The recyclable material identification system offers a user-friendly and efficient waste sorting experience, reducing the complexity of recycling and waste disposal.
+> * It can make users feel empowered to contribute to environmental conservation and engage in responsible waste practices.
+> * Users might feel confident in using the system, knowing it simplifies their role in sorting waste materials correctly.
 
 
 ### Part 2.
