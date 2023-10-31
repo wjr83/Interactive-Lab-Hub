@@ -120,6 +120,58 @@ Next train your own model. Visit [TeachableMachines](https://teachablemachine.wi
 ![Tensorflow Lite Download](Readme_files/tml_download-model.png)
 
 Include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.
+
+Using Google's Teachable Machines to create your own classifier is a relatively user-friendly and accessible way to train a machine learning model for various classification tasks. Here's how you might use Teachable Machines and the different affordances it offers compared to OpenCV or MediaPipe:
+
+Steps to Create My Own Classifier with Google's Teachable Machines:
+
+> Data Collection:
+
+> * Gather a dataset of images or use your device's camera to capture live video feed of objects or actions you want to classify.
+> Access Teachable Machines:
+> > Go to Google's Teachable Machines website (https://teachablemachine.withgoogle.com/) and select the "Get Started" button.
+
+> Model Creation:
+
+> * Choose the type of model you want to create: Image Project (for image classification), Audio Project (for sound classification), or Pose Project (for pose estimation).
+> * Import dataset, whether it's images, audio clips, or poses.
+> * Organize dataset into classes or categories, such as "Cat" and "Dog" for an image classifier.
+
+> Training:
+
+> * Click the "Train Model" button to start the training process.
+> * The system will use transfer learning, which means it fine-tunes a pre-trained model using your data. This is a significant advantage as it requires less data than training from scratch.
+
+> Evaluation and Export:
+
+> * After training, you can test your model using the in-browser webcam to check its accuracy.
+> * Once satisfied with the model's performance, you can export it for use in your applications or projects.
+
+Affordances of Google's Teachable Machines:
+
+> User-Friendly Interface:
+
+> * Teachable Machines provides a user-friendly and intuitive interface, making it accessible to individuals with limited machine learning expertise.
+
+> Transfer Learning:
+
+> * The system uses transfer learning, which leverages pre-trained models, enabling you to create effective classifiers with relatively small datasets. This is especially useful when you don't have access to extensive data.
+
+> Real-Time Testing:
+
+> *  You can test your model in real-time using your webcam, allowing for immediate feedback and adjustments to improve model accuracy.
+> No Code Required:
+> * Teachable Machines doesn't require writing code. It simplifies the process of training a machine learning model for classification tasks, making it accessible to a broader audience.
+
+Comparison to OpenCV or MediaPipe:
+
+> * Teachable Machines is a user-friendly, no-code platform, making it ideal for beginners or those with limited coding experience. In contrast, OpenCV and MediaPipe typically require coding skills in languages like Python to create custom classifiers or object recognition systems.
+> * Teachable Machines is suitable for small to medium-sized datasets, thanks to transfer learning. OpenCV and MediaPipe often require larger, more diverse datasets for training complex models.
+> * OpenCV and MediaPipe offer more extensive customization and control over model architecture and functionality, making them better suited for advanced computer vision projects. In contrast, Teachable Machines simplifies the process, trading off some customization for ease of use.
+
+> > In summary, Google's Teachable Machines is a valuable tool for quickly creating custom classifiers for image, audio, or pose-based tasks, offering accessibility and ease of use. It is particularly advantageous when you have limited data or lack advanced coding skills, but it may not offer the same level of control and sophistication as OpenCV or MediaPipe for more complex computer vision applications.
+
+
 Model #1: Using self-made dataset from objects found in my apartment.
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2eb054b0-2e39-4ac9-a730-bb3c57d75006)
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/26b8b476-2a81-42ee-8e07-f88adb1a5dc8)
