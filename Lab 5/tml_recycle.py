@@ -1,5 +1,18 @@
 from teachable_machine_lite import TeachableMachineLite
 import cv2 as cv
+import time
+from adafruit_servokit import ServoKit
+
+# Set channels to the number of servo channels on your kit.
+# There are 16 channels on the PCA9685 chip.
+kit = ServoKit(channels=16)
+
+# Name and set up the servo according to the channel you are using.
+servo = kit.servo[2]
+
+# Set the pulse width range of your servo for PWM control of rotating 0-180 degree (min_pulse, max_pulse)
+# Each servo might be different, you can normally find this information in the servo datasheet
+servo.set_pulse_width_range(500, 2500)
 
 cap = cv.VideoCapture(0)
 
@@ -22,7 +35,11 @@ tracking = True
 prev_x, prev_y, prev_w, prev_h = 0, 0, 0, 0
 
 text_color = (0, 0, 0)
+servo.angle = 0
+
 while True:
+    servo.angle = 0
+
     ret, frame = cap.read()
     results = tm_model.classify_frame(image_file_name)
 
@@ -31,14 +48,27 @@ while True:
         
         if results['id'] == 1: # plastic
             text_color = (255, 0, 255)
+             # Set the servo to 180 degree position
+            servo.angle = 36
+            time.sleep(1)
         elif results['id'] == 2 or results['id'] == 5: # paper (2) and cardboard (5)
             text_color = (0, 255, 255) 
+            # Set the servo to 180 degree position
+            servo.angle = 36*2
+            time.sleep(1)
         elif results['id'] == 3: # metal
             text_color = (255, 255, 0)
+            # Set the servo to 180 degree position
+            servo.angle = 36*3
+            time.sleep(1)
         elif results['id'] == 4: # glass
             text_color = (0, 0, 255)
+            servo.angle = 36*4
+            time.sleep(1)
         elif results['id'] == 0: # trash
             text_color = (255, 0, 0)
+            servo.angle = (36*5)-1
+            time.sleep(1)
             
         x, y, w, h = 100, 100, 200, 200  # Adjust the coordinates and size of the bounding box
         
