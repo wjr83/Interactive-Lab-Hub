@@ -506,6 +506,7 @@ This was our final product.
 
 
 OLED Display:
+
 _________________________
 |Main Menu:			|
 | - Game 1: Arcade		|
@@ -517,29 +518,35 @@ Game 1: Arcade
 
 <img src="./Images/game1.png" width="400px" height="400px"/>
 
-First set the customized Timer in seconds (s).
-Then the two players compete for the number of balls successfully thrown into the hoop. 
-The OLED would display the score of each player.
+1. First set the customized Timer in seconds (s).
+2. Then the two players compete for the number of balls successfully thrown into the hoop. 
+3. The OLED would display the score of each player.
 
 Game 2: Tiebreak
+
 The maximum total score of a game is 10.
+
 The two players compete for the number of balls successfully thrown into the hoop. 
+
 If the total sum of their score is 10, the winner will be announced, and if the two players have the same score, which is 5, then a tie will be announced.
+
 The LED would display the score of each player, and when the game ends, announce the results.
 
 Game 3: Reaction Speed Game
+
 A simplified reaction speed game that is similar to the picture showing:
 
 <img src="./Images/game2.png" width="400px" height="400px"/>
 
 The two players compete for the number of balls missed thrown into the hoop. 
 Each player has a score of 5 initially.
-First the LED would randomly display the player who should go for a move: RED or GREEN.
-Then the corresponded player would throw their ball into the hoop within 3-10 seconds (a random time frame).
-If they miss any throw, their score would decrease 1. 
-Keep playing.
-If the any of their score is 0, the winner will be announced, and if the two players have the same score, which is 5, then a tie will be announced.
-The LED would display the score of each player, and when the game ends, announce the results.
+
+1. First the LED would randomly display the player who should go for a move: RED or GREEN.
+2. Then the corresponded player would throw their ball into the hoop within 3-10 seconds (a random time frame).
+3. If they miss any throw, their score would decrease 1. 
+4. Keep playing.
+5. If the any of their score is 0, the winner will be announced, and if the two players have the same score, which is 5, then a tie will be announced.
+6. The LED would display the score of each player, and when the game ends, announce the results.
 
 
 
