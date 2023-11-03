@@ -214,7 +214,7 @@ In an earlier version of this class students experimented with foundational comp
 2. Alert users when a parking spot opens on his/her street. Rationale: street parking in Manhattan is in extremely high demand. The alert could help a user find street parking closer to his/her apartment.
 3. System to Recognize Recyclable Objects. 
 
-> **The final choice is to implement idea #3: System to Recognize Recyclable Objects**
+**The final choice is to implement idea #3: System to Recognize Recyclable Objects**
 
 Making this choice and implementing a system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
 
@@ -223,19 +223,39 @@ Making this choice and implementing a system to recognize recyclable objects fro
 > * Consumer Education: Confusion among individuals about the correct sorting of waste is a common issue. This system can serve as an educational tool, clarifying recycling guidelines and encouraging responsible disposal practices.
 > * Convenience: Many consumers find it challenging to decipher complex instructions or symbols on bins. A machine learning solution simplifies the process by instantly classifying waste items through images, making it more user-friendly.
 
-> **Description of the System:**
-> > The proposed system integrates a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it will look, feel, and operate: 
->
-> We tried to make the system identify the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
-> 
-> [Demo Folder](https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
-> 
-> ![setup_1](https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
+**Description of the System:**
 
-> **User Interface:**
-> > A camera is integrated into the trashcan and recycling bin system, making it a seamless part of the waste disposal process in various settings, including businesses, cafes, and outdoor spaces.
+The proposed system integrates a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it will look, feel, and operate: 
+
+#### Look and Feel
+- We design the trash can to be a trash-eating monster for awareness-raising for adults and education for kids.
+- The Trash Can itself will be felt like normal trash can.
+  
+> - how will the trash can look like:
+
+![main](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/3bf5e727-950b-45b9-8366-4438e0c25807)
+
+> - how will the setup can look like:
+
+> ![setup_0](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/d2b87369-ce23-4ff8-8900-40bfc21aace8)
 > 
-> > Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
+> ![setup_1](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/2c1d5a78-ca52-44c5-81f1-94f89862c0a3)
+
+
+#### Operate
+- We tried to make the system identify the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+
+> how it operates:
+
+> Sample recognition for metal: ![rec_sample_metal](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1889602c-1c89-46ce-862c-1db8aaf5cf63)
+> 
+> Sample recognition for trash: ![rec_sample_trash](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e076bb97-54b0-4892-8e29-87481d28ff9d)
+
+
+**User Interface:**
+> A camera is integrated into the trashcan and recycling bin system, making it a seamless part of the waste disposal process in various settings, including businesses, cafes, and outdoor spaces.
+
+> Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
 
 
 ### Part C
@@ -257,11 +277,20 @@ Sample Tests Videos of System that Recognizes Recyclable Objects (Model #3) in a
 1. Fail test because of the trash can material
 (https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
 
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/58a06b58-612c-473c-afcc-378bf88f8e21
+
+
 2. Fail test because of the setup of the servo
    (https://drive.google.com/file/d/1Ys0qppKyxyMv89Qit53MTH5-sW39A0VH/view?usp=share_link) 
 
+https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6bb87330-8fdd-4634-a26f-1d6f9d7c8555
 
 
+3. Success Demo:
+
+Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+
+https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
 
 
 
