@@ -225,6 +225,9 @@ Making this choice and implementing a system to recognize recyclable objects fro
 
 > **Description of the System:**
 > > The proposed system integrates a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it will look, feel, and operate: 
+>
+> We tried to make the system identify the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+> 
 > [Demo Folder](https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
 > 
 > ![setup_1](https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
@@ -365,4 +368,7 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
+Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
 
+Success Demo:
+https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
