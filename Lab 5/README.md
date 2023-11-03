@@ -2,6 +2,8 @@
 
 **NAMES OF COLLABORATORS HERE**
 
+**COLLABORATORS:** [William Reid (NetID: wjr83)](https://github.com/wjr83/Interactive-Lab-Hub/edit/Fall2023/Lab%204/README.md), [Khushi Bhansali (NetID: kb737)](https://github.com/Khushibhansali/Interactive-Lab-Hub/tree/Fall2023/Lab%204)
+
 
 For lab this week, we focus on creating interactive systems that can detect and respond to events or stimuli in the environment of the Pi, like the Boat Detector we mentioned in lecture. 
 Your **observant device** could, for example, count items, find objects, recognize an event or continuously monitor a room.
@@ -121,6 +123,71 @@ Next train your own model. Visit [TeachableMachines](https://teachablemachine.wi
 
 Include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.
 
+Using Google's Teachable Machines to create your own classifier is a relatively user-friendly and accessible way to train a machine learning model for various classification tasks. Here's how you might use Teachable Machines and the different affordances it offers compared to OpenCV or MediaPipe:
+
+Steps to Create My Own Classifier with Google's Teachable Machines:
+
+> Data Collection:
+
+> * Gather a dataset of images or use your device's camera to capture live video feed of objects or actions you want to classify.
+> Access Teachable Machines:
+> > Go to Google's Teachable Machines website (https://teachablemachine.withgoogle.com/) and select the "Get Started" button.
+
+> Model Creation:
+
+> * Choose the type of model you want to create: Image Project (for image classification), Audio Project (for sound classification), or Pose Project (for pose estimation).
+> * Import dataset, whether it's images, audio clips, or poses.
+> * Organize dataset into classes or categories, such as "Cat" and "Dog" for an image classifier.
+
+> Training:
+
+> * Click the "Train Model" button to start the training process.
+> * The system will use transfer learning, which means it fine-tunes a pre-trained model using your data. This is a significant advantage as it requires less data than training from scratch.
+
+> Evaluation and Export:
+
+> * After training, you can test your model using the in-browser webcam to check its accuracy.
+> * Once satisfied with the model's performance, you can export it for use in your applications or projects.
+
+Affordances of Google's Teachable Machines:
+
+> User-Friendly Interface:
+
+> * Teachable Machines provides a user-friendly and intuitive interface, making it accessible to individuals with limited machine learning expertise.
+
+> Transfer Learning:
+
+> * The system uses transfer learning, which leverages pre-trained models, enabling you to create effective classifiers with relatively small datasets. This is especially useful when you don't have access to extensive data.
+
+> Real-Time Testing:
+
+> *  You can test your model in real-time using your webcam, allowing for immediate feedback and adjustments to improve model accuracy.
+> No Code Required:
+> * Teachable Machines doesn't require writing code. It simplifies the process of training a machine learning model for classification tasks, making it accessible to a broader audience.
+
+Comparison to OpenCV or MediaPipe:
+
+> * Teachable Machines is a user-friendly, no-code platform, making it ideal for beginners or those with limited coding experience. In contrast, OpenCV and MediaPipe typically require coding skills in languages like Python to create custom classifiers or object recognition systems.
+> * Teachable Machines is suitable for small to medium-sized datasets, thanks to transfer learning. OpenCV and MediaPipe often require larger, more diverse datasets for training complex models.
+> * OpenCV and MediaPipe offer more extensive customization and control over model architecture and functionality, making them better suited for advanced computer vision projects. In contrast, Teachable Machines simplifies the process, trading off some customization for ease of use.
+
+> > In summary, Google's Teachable Machines is a valuable tool for quickly creating custom classifiers for image, audio, or pose-based tasks, offering accessibility and ease of use. It is particularly advantageous when you have limited data or lack advanced coding skills, but it may not offer the same level of control and sophistication as OpenCV or MediaPipe for more complex computer vision applications.
+
+## For Part a) Play:
+### Model #1: Using self-made dataset from objects found in my apartment.
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2eb054b0-2e39-4ac9-a730-bb3c57d75006)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/26b8b476-2a81-42ee-8e07-f88adb1a5dc8)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1ac64b9b-1920-4bec-8dd2-412905f0ef32)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/ed2c09b5-dcb2-4130-9d0f-f91d89112c23)
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d934a539-a00b-4f30-a705-47af48ac1cf4)
+
+### Model #2: Trained a second model using available databases of recyclable and non-recyclable objects found online 
+source at: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification/
+
+![Screenshot from 2023-10-30 04-06-32](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1e484efe-5ac3-4e49-85d8-e3bc5f01fb35)
+![Screenshot from 2023-10-30 04-06-15](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/f1f32453-a83f-4255-94c0-c42e44185d68)
+
+
 #### (Optional) Legacy audio and computer vision observation approaches
 In an earlier version of this class students experimented with observing through audio cues. Find the material here:
 [Audio_optional/audio.md](Audio_optional/audio.md). 
@@ -139,21 +206,97 @@ In an earlier version of this class students experimented with foundational comp
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+* I chose to use the Teachable Machines model. 
+
+**Ideas brainstormed for interaction:**
+
+1. ASL (American Sign Language) gesture classification to allow deaf or hard-of-hearing individuals to use ASL with individuals who are not proficient in ASL. Interaction would be first prototyped to work on systems such as Zoom or Google Meet (i.e., video calls).
+2. Alert users when a parking spot opens on his/her street. Rationale: street parking in Manhattan is in extremely high demand. The alert could help a user find street parking closer to his/her apartment.
+3. System to Recognize Recyclable Objects. 
+
+> **The final choice is to implement idea #3: System to Recognize Recyclable Objects**
+
+Making this choice and implementing a system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
+
+> * Environmental Conservation: Effective waste separation and recycling play a crucial role in reducing the environmental impact of waste disposal. It helps conserve resources, reduce energy consumption, and lower greenhouse gas emissions.
+> * Waste Reduction: Proper recycling minimizes the volume of waste sent to landfills or incinerators, leading to a reduction in the need for landfill space and decreased pollution from incineration.
+> * Consumer Education: Confusion among individuals about the correct sorting of waste is a common issue. This system can serve as an educational tool, clarifying recycling guidelines and encouraging responsible disposal practices.
+> * Convenience: Many consumers find it challenging to decipher complex instructions or symbols on bins. A machine learning solution simplifies the process by instantly classifying waste items through images, making it more user-friendly.
+
+> **Description of the System:**
+> > The proposed system integrates a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it will look, feel, and operate: 
+> [Demo Folder](https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
+> 
+> ![setup_1](https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
+
+> **User Interface:**
+> > A camera is integrated into the trashcan and recycling bin system, making it a seamless part of the waste disposal process in various settings, including businesses, cafes, and outdoor spaces.
+> 
+> > Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
+
+
 ### Part C
 ### Test the interaction prototype
 
+## 1. Test for Model #2
+Sample Tests Screenshots of System that Recognizes Recyclable Objects (Model #2) in action:
+![IMG_4062](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9032bc7f-e3c9-4f62-bbaa-6cf6d8a511fc)
+![IMG_4061](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/bb37b888-9d66-418e-99b0-6472d74871bb)
+![IMG_4060](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6a3b12bc-2208-4383-a02a-3eb88539eb1c)
+![IMG_4059](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/eb50df40-0e3d-49b4-a0f2-85bd4bd84990)
+
+**Sample Video Interaction / Test:** https://drive.google.com/file/d/1u-p_H_ba_3ORCzK4hywkZke2gTsULy2J/view?usp=sharing
+
+
+## 2. Test for Model #3
+Sample Tests Videos of System that Recognizes Recyclable Objects (Model #3) in action:
+
+1. Fail test because of the trash can material
+(https://drive.google.com/drive/u/2/folders/1qCKEubHjXd1xtYYphaeVq0LjEabTZmkg)
+
+2. Fail test because of the setup of the servo
+   (https://drive.google.com/file/d/1Ys0qppKyxyMv89Qit53MTH5-sW39A0VH/view?usp=share_link) 
+
+
+
+
+
+
 Now flight test your interactive prototype and **note down your observations**:
 For example:
-1. When does it what it is supposed to do?
+1. When does it do what it is supposed to do?
+> * The system accurately identifies waste items. The next step in the design of this system would be to guide the user to the correct disposal bin, streamlining the waste sorting process. Thus, users receive clear guidance on which bin to use before disposing of their waste.
 1. When does it fail?
+> * In cases of poor lighting or obstructed views, making it challenging for the camera to capture clear images of the waste items.
+> * When tested on some objects it hasn't seen or different sides of objects it has seen but was not tested on.
+> * It also struggles when identifying items with similar appearances that belong in different bins, such as clear plastics and glass, which look alike.
+> * In situations where users deposit waste items very quickly, the system may occasionally struggle to keep up, leading to slight delays in providing guidance.
 1. When it fails, why does it fail?
+> * Poor lighting conditions can affect image quality, leading to misclassifications or a failure to identify the waste item correctly.
+> * Obstructed views or partially obscured items may make it difficult for the camera to capture and classify the waste.
+> * Similar-looking items may pose a challenge because the system may not have fine-grained classification capabilities to distinguish between them or not enough training data to yield a robust trash vs. recyclables classification model.
+> * Rapid user turnover can overwhelm the system's processing capacity, causing it to miss some waste items or provide guidance after the item has been deposited.
 1. Based on the behavior you have seen, what other scenarios could cause problems?
+> * Language barriers: If the system relies on verbal or text-based instructions to guide users, individuals who do not understand the language used might face difficulties.
+> * Age and accessibility issues: Users with visual or hearing impairments might face challenges if the system relies heavily on visual or audio cues without considering accessibility features.
+> * Rapid user turnover: In busy public spaces, multiple users deposit waste items in quick succession. The system should be capable of handling high user volumes efficiently without causing bottlenecks or errors.
+> * Maintenance issues: The camera and machine learning model require regular maintenance to ensure proper functioning. Neglecting maintenance can lead to performance issues over time.
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
+> * Users may not always be fully aware of the uncertainties in the system. They might assume that the system's classifications are always accurate, especially if it doesn't provide clear feedback about its confidence level. 
+2. How bad would they be impacted by a miss classification?
+> * The impact of a misclassification on users can vary. In some cases, misclassifying an item as recyclable when it's not could lead to contamination of recycling streams and added processing costs. Misclassifying an item as non-recyclable when it's recyclable might lead to missed recycling opportunities. For compostable materials, misclassification could affect organic waste diversion rates.
+3. How could change your interactive system to address this?
+> * To address these concerns, the interactive system could:
+> > * Implement a confidence level indicator: The system could provide a confidence score along with its classification. This way, users are aware of how certain or uncertain the system is about its decision.
+> > * Offer clear instructions: If an item is challenging to classify, the system could provide guidance to the user, such as suggesting a specific bin but indicating that the user should double-check.
+> > * Collect user feedback: Allow users to report misclassifications or provide feedback, which can be used to improve the system's accuracy over time.
+4. Are there optimizations you can try to do on your sense-making algorithm.
+> * Continuous learning: Implement a self-learning algorithm that can adapt to new objects and user behaviors over time.
+> * Real-time model updates: Ensure that the machine learning model is regularly updated with new data to stay current with evolving waste items.
+> * Transfer Learning: Utilize transfer learning techniques where the model is initially trained on a broad dataset of waste items and then fine-tuned with specific data from the local environment. This can help the system adapt to local variations in waste categorization.
+> * Semantic Segmentation: Employ more advanced computer vision techniques like semantic segmentation to precisely identify regions within an image that correspond to different waste materials. This level of granularity can improve classification accuracy.
 
 ### Part D
 ### Characterize your own Observant system
@@ -170,8 +313,56 @@ During the lecture, we mentioned questions to help characterize a material:
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
 
+> **Video Link:** https://drive.google.com/file/d/1u-p_H_ba_3ORCzK4hywkZke2gTsULy2J/view?usp=sharing
+
+1. What can you use the recyclable material identification system for?
+
+> * The recyclable material identification system can be used for efficiently identifying and sorting recyclable materials, compostables, and landfill-bound waste, simplifying the waste disposal process.
+> * It can serve as an educational tool, raising awareness about responsible waste management and encouraging proper recycling practices.
+> * The system can contribute to environmental conservation by promoting recycling, reducing waste, and minimizing landfill usage.
+
+What is a good environment for the recyclable material identification system?
+
+> * The recyclable material identification system thrives in environments with well-lit and clear waste disposal areas, where the camera can capture high-quality images of waste items.
+> * It performs well in settings with users who are receptive to using technology for waste sorting and are open to real-time guidance.
+> * Collaborative environments where users can provide feedback to enhance the recyclable material identification system's accuracy are ideal.
+
+What is a bad environment for the recyclable material identification system?
+
+> * The recyclable material identification system may not perform well in dimly lit or obstructed areas, as these conditions can hinder the camera's image capture and classification accuracy.
+> * Environments with resistance to technology adoption or where users prefer traditional waste sorting methods may not be suitable for the system.
+> * Locations with a lack of maintenance or a history of neglecting system upkeep can be problematic for the recyclable material identification system's long-term reliability.
+
+When will the recyclable material identification system break?
+
+> * The recyclable material identification system is susceptible to malfunction or breakdown when exposed to extreme environmental conditions, such as extreme heat, heavy rain, or physical damage.
+> * Regular wear and tear, including camera lens contamination and sensor degradation, can contribute to breakdown over time.
+> * If the machine learning model used in the recyclable material identification system becomes outdated and no longer receives updates or refinements, it may become less effective.
+> * In the event of loss of power or, if solar-powered, weather (rain or snow) preventing optimal charge of the system causing system to turn-off.
+
+When it breaks, how will the recyclable material identification system break?
+
+> * The recyclable material identification system may break by experiencing sensor or camera malfunctions, causing it to fail in accurately identifying waste items.
+> * Software breakdowns or system crashes may lead to an inability to provide real-time guidance to users.
+> * The system could break gradually, with a decline in accuracy, rather than an abrupt failure, depending on the nature of the issue.
+
+Other properties/behaviors of the recyclable material identification system:
+
+> * The recyclable material identification system continuously learns and improves from user interactions and feedback.
+> * It can provide real-time feedback to users, including guidance on which bin to use and potential disposal instructions.
+> * The system promotes responsible waste management and environmental sustainability, aligning with the United Nations Sustainable Development Goal 12.
+
+How does the recyclable material identification system feel?
+
+> * The recyclable material identification system offers a user-friendly and efficient waste sorting experience, reducing the complexity of recycling and waste disposal.
+> * It can make users feel empowered to contribute to environmental conservation and engage in responsible waste practices.
+> * Users might feel confident in using the system, knowing it simplifies their role in sorting waste materials correctly.
+
+
 ### Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+
