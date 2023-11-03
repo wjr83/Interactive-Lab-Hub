@@ -246,10 +246,17 @@ The proposed system integrates a camera into trash and recycling bins, providing
 - We tried to make the system identify the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
 
 > how it operates:
+> 1. Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
+> 2. Then Our system successfully identifies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+> 3. After that, the trash can lid will rotate to the corresponding trash segment and allows the user to toss the trash.
+> 4. The user tosses their trash and leave.
 
 > Sample recognition for metal: ![rec_sample_metal](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1889602c-1c89-46ce-862c-1db8aaf5cf63)
 > 
 > Sample recognition for trash: ![rec_sample_trash](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e076bb97-54b0-4892-8e29-87481d28ff9d)
+>
+> Success Video Demo: (https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link) **Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.**
+
 
 
 **User Interface:**
@@ -287,8 +294,13 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6bb87330-8f
 
 
 3. Success Demo:
+Sample recognition for metal: ![rec_sample_metal](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1889602c-1c89-46ce-862c-1db8aaf5cf63)
+
+Sample recognition for trash: ![rec_sample_trash](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e076bb97-54b0-4892-8e29-87481d28ff9d)
 
 Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+
+Video:
 
 https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
 
