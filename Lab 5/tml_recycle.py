@@ -22,8 +22,8 @@ cap = cv.VideoCapture(0)
 # labels_path = "recycling_model_1/labels.txt"
 
 # Model 2: Kaggle Dataset
-model_path = 'recycling_model_2_kgldataset_v2/model.tflite'
-labels_path = "recycling_model_2_kgldataset_v2/labels.txt"
+model_path = 'recycling_model_2_kgldataset_v3/model.tflite'
+labels_path = "recycling_model_2_kgldataset_v3/labels.txt"
 
 image_file_name = "frame.jpg"
 
@@ -38,7 +38,7 @@ text_color = (0, 0, 0)
 servo.angle = 0
 
 while True:
-    servo.angle = 0
+    
 
     ret, frame = cap.read()
     results = tm_model.classify_frame(image_file_name)
@@ -50,25 +50,25 @@ while True:
             text_color = (255, 0, 255)
              # Set the servo to 180 degree position
             servo.angle = 36
-            time.sleep(1)
+            # time.sleep(1)
         elif results['id'] == 2 or results['id'] == 5: # paper (2) and cardboard (5)
             text_color = (0, 255, 255) 
             # Set the servo to 180 degree position
             servo.angle = 36*2
-            time.sleep(1)
+            # time.sleep(1)
         elif results['id'] == 3: # metal
             text_color = (255, 255, 0)
             # Set the servo to 180 degree position
             servo.angle = 36*3
-            time.sleep(1)
+            # time.sleep(1)
         elif results['id'] == 4: # glass
             text_color = (0, 0, 255)
             servo.angle = 36*4
-            time.sleep(1)
+            # time.sleep(1)
         elif results['id'] == 0: # trash
             text_color = (255, 0, 0)
             servo.angle = (36*5)-1
-            time.sleep(1)
+            # time.sleep(1)
             
         x, y, w, h = 100, 100, 200, 200  # Adjust the coordinates and size of the bounding box
         
