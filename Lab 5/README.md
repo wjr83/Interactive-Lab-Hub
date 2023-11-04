@@ -123,7 +123,7 @@ Next train your own model. Visit [TeachableMachines](https://teachablemachine.wi
 
 Include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.
 
-Using Google's Teachable Machines to create your own classifier is a relatively user-friendly and accessible way to train a machine learning model for various classification tasks. Here's how you might use Teachable Machines and the different affordances it offers compared to OpenCV or MediaPipe:
+Using Google's Teachable Machines to create your own classifier is a relatively user-friendly and accessible way to train a machine-learning model for various classification tasks. Here's how you might use Teachable Machines and the different affordances it offers compared to OpenCV or MediaPipe:
 
 Steps to Create My Own Classifier with Google's Teachable Machines:
 
@@ -189,18 +189,18 @@ source at: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification/
 
 
 #### (Optional) Legacy audio and computer vision observation approaches
-In an earlier version of this class students experimented with observing through audio cues. Find the material here:
+In an earlier version of this class, students experimented with observing through audio cues. Find the material here:
 [Audio_optional/audio.md](Audio_optional/audio.md). 
-Teachable machines provides an audio classifier too. If you want to use audio classification this is our suggested method. 
+Teachable machines provide an audio classifier too. If you want to use audio classification this is our suggested method. 
 
-In an earlier version of this class students experimented with foundational computer vision techniques such as face and flow detection. Techniques like these can be sufficient, more performant, and allow non discrete classification. Find the material here:
+In an earlier version of this class, students experimented with foundational computer vision techniques such as face and flow detection. Techniques like these can be sufficient, more performant, and allow non-discrete classification. Find the material here:
 [CV_optional/cv.md](CV_optional/cv.md).
 
 ### Part B
 ### Construct a simple interaction.
 
 * Pick one of the models you have tried, and experiment with prototyping an interaction.
-* This can be as simple as the boat detector showen in a previous lecture from Nikolas Matelaro.
+* This can be as simple as the boat detector shown in a previous lecture from Nikolas Matelaro.
 * Try out different interaction outputs and inputs.
 
 
@@ -228,14 +228,14 @@ Making this choice and implementing a system to recognize recyclable objects fro
 The proposed system integrates a camera into trash and recycling bins, providing guidance on which bin to use before disposal. Here's how it will look, feel, and operate: 
 
 #### Look and Feel
-- We design the trash can to be a trash-eating monster for awareness-raising for adults and education for kids.
-- The Trash Can itself will be felt like normal trash can.
+- We designed the smart recycling system to be a "trash-eating monster" for awareness-raising for adults and education for kids.
+- The smart recycling system itself will feel like a normal trash can, with the exception that the item will not be dropped into a hole but rather placed on a flat surface for a quick classification scan before the user drops the item into the corresponding bin.
   
 > - how will the trash can look like:
 
 ![main](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/3bf5e727-950b-45b9-8366-4438e0c25807)
 
-> - how will the setup can look like:
+> - The setup looks like this:
 
 > ![setup_0](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/d2b87369-ce23-4ff8-8900-40bfc21aace8)
 > 
@@ -243,19 +243,20 @@ The proposed system integrates a camera into trash and recycling bins, providing
 
 
 #### Operate
-- We tried to make the system identify the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+- We tried to make the system identify the 5 recycled materials (including cardboard, glass, plastic, paper, metal) and trash.
 
-> how it operates:
+> How it operates:
 > 1. Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
-> 2. Then Our system successfully identifies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
-> 3. After that, the trash can lid will rotate to the corresponding trash segment and allows the user to toss the trash.
-> 4. The user tosses their trash and leave.
+> 2. Then, the smart recycling system successfully identifies the object shown as 1 of the 5 recycled materials the model was trained on (cardboard, glass, plastic, paper, and metal) or as trash.
+> > * NOTE: The model was also trained on a background image such that it wouldn't classify an object nor move the servo motor if the background was shown, but as will be seen later, the background training needs to be refined as it sometimes confuses the background with cardboard. 
+> 4. After that, the trash can lid will spin to the corresponding trash segment where the user should dispose of the object.
+> 5. The user tosses the item he/she no longer needs and leaves.
 
 > Sample recognition for metal: ![rec_sample_metal](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1889602c-1c89-46ce-862c-1db8aaf5cf63)
 > 
 > Sample recognition for trash: ![rec_sample_trash](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e076bb97-54b0-4892-8e29-87481d28ff9d)
 >
-> Success Video Demo: (https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link) **Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.**
+> Successful Video Demo: (https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link) **Our system successfully identifies and classifies the item into 1 of the 5 recycled materials (including cardboard, glass, plastic, paper, metal) or otherwise as trash.**
 
 
 
@@ -278,7 +279,7 @@ Sample Tests Screenshots of System that Recognizes Recyclable Objects (Model #2)
 **Sample Video Interaction / Test:** https://drive.google.com/file/d/1u-p_H_ba_3ORCzK4hywkZke2gTsULy2J/view?usp=sharing
 
 
-## 2. Test for Model #3
+## 2. Tests for Model #3
 Sample Tests Videos of System that Recognizes Recyclable Objects (Model #3) in action:
 
 1. Fail test because of the trash can material
@@ -293,16 +294,14 @@ https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/58a06b58-61
 https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/6bb87330-8fdd-4634-a26f-1d6f9d7c8555
 
 
-3. Success Demo:
+3. Successful Demo:
 Sample recognition for metal: ![rec_sample_metal](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/1889602c-1c89-46ce-862c-1db8aaf5cf63)
 
 Sample recognition for trash: ![rec_sample_trash](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/e076bb97-54b0-4892-8e29-87481d28ff9d)
 
-Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+Our system successfully identifies and classifies an object into one of the 5 recycled materials (including cardboard, glass, plastic, paper, and metal) or as trash.
 
-Video:
-
-https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
+Video Link to Demo: https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
 
 
 
@@ -330,13 +329,13 @@ For example:
 1. Are they aware of the uncertainties in the system?
 > * Users may not always be fully aware of the uncertainties in the system. They might assume that the system's classifications are always accurate, especially if it doesn't provide clear feedback about its confidence level. 
 2. How bad would they be impacted by a miss classification?
-> * The impact of a misclassification on users can vary. In some cases, misclassifying an item as recyclable when it's not could lead to contamination of recycling streams and added processing costs. Misclassifying an item as non-recyclable when it's recyclable might lead to missed recycling opportunities. For compostable materials, misclassification could affect organic waste diversion rates.
+> * The impact of misclassification on users can vary. In some cases, misclassifying an item as recyclable when it's not could lead to contamination of recycling streams and added processing costs. Misclassifying an item as non-recyclable when it's recyclable might lead to missed recycling opportunities. For compostable materials, misclassification could affect organic waste diversion rates.
 3. How could change your interactive system to address this?
 > * To address these concerns, the interactive system could:
 > > * Implement a confidence level indicator: The system could provide a confidence score along with its classification. This way, users are aware of how certain or uncertain the system is about its decision.
 > > * Offer clear instructions: If an item is challenging to classify, the system could provide guidance to the user, such as suggesting a specific bin but indicating that the user should double-check.
 > > * Collect user feedback: Allow users to report misclassifications or provide feedback, which can be used to improve the system's accuracy over time.
-4. Are there optimizations you can try to do on your sense-making algorithm.
+4. Are there optimizations you can try to do on your sense-making algorithm?
 > * Continuous learning: Implement a self-learning algorithm that can adapt to new objects and user behaviors over time.
 > * Real-time model updates: Ensure that the machine learning model is regularly updated with new data to stay current with evolving waste items.
 > * Transfer Learning: Utilize transfer learning techniques where the model is initially trained on a broad dataset of waste items and then fine-tuned with specific data from the local environment. This can help the system adapt to local variations in waste categorization.
@@ -382,7 +381,7 @@ When will the recyclable material identification system break?
 > * The recyclable material identification system is susceptible to malfunction or breakdown when exposed to extreme environmental conditions, such as extreme heat, heavy rain, or physical damage.
 > * Regular wear and tear, including camera lens contamination and sensor degradation, can contribute to breakdown over time.
 > * If the machine learning model used in the recyclable material identification system becomes outdated and no longer receives updates or refinements, it may become less effective.
-> * In the event of loss of power or, if solar-powered, weather (rain or snow) preventing optimal charge of the system causing system to turn-off.
+> * In the event of loss of power or, if solar-powered, weather (rain or snow) preventing optimal charge of the system causing the system to turn off.
 
 When it breaks, how will the recyclable material identification system break?
 
@@ -409,7 +408,20 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
-Our system successfully identifies and classfies the 5 recycled matrials (including cardboard, glass, plastic, paper, metal) and trash.
+Our system successfully identifies and classifies an object as one of the 5 recycled materials (cardboard, glass, plastic, paper, and metal) or otherwise as trash.
 
-Success Demo:
-https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
+> * Successful Demo (Video Link): https://drive.google.com/file/d/1avhTgtqcQr5u4EQSTJDn--qpWvSgFQ5v/view?usp=share_link
+
+**\*\*\*Future Work: Reflection Ideas for Improving on Performance, Design, and Interaction.\*\*\***
+> * Increase training dataset. In particular, we need to keep the following in mind as we acquire more data:
+> > * Types of objects
+> > * Orientation and deformation of objects
+> > * Lighting conditions
+> > * Add a category for compost
+> > * Add a category for toxic waste (e.g., such as batteries) 
+> * The type of trash / recyclable objects will vary drastically depending on the location of the system. We may need to add location-specific data for training for the smart recycling system (e.g., add feedback loop with new sample data collected --> label new data --> retrain classification model with location-specific data --> aggregate new data from all location-specific acquisitions into the model --> release automatic update of the model in the physical smart recycling system). 
+> * Simplify Interaction and Design:
+> > *  It would be ideal if the user would simply place the object on a flat surface, where the camera would determine the type of object, and once that is confirmed, the servo will spin the trash can lid until the object sits above the bin it corresponds to (e.g., metal). At this point, the item would fall into the bin it corresponds to (perhaps another servo motor would be required to let go of the object through the hole, but not necessarily.
+> * Improve the recognition of the background so that the system displays only the count of all types of objects recycled or trashed but does not show a prediction for the background.
+> * Add a feature to count the number of items of each type recycled (e.g., using a distance sensor or proximity sensor in a similar fashion as we used in [Lab 4](https://github.com/wjr83/Interactive-Lab-Hub/edit/Fall2023/Lab%204/README.md).
+> > * Display these counts to the user by category type in hopes of promoting the mindset: reduce, reuse, recycle.
