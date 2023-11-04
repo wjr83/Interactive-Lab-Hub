@@ -180,7 +180,7 @@ Comparison to OpenCV or MediaPipe:
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/d934a539-a00b-4f30-a705-47af48ac1cf4)
 
 ### Model #2: Trained a second model using available databases of recyclable and non-recyclable objects found online 
-source at: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification/
+> * Dataset source at: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification/
 
 ![Screenshot from 2023-10-30 04-06-32](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1e484efe-5ac3-4e49-85d8-e3bc5f01fb35)
 ![Screenshot from 2023-10-30 04-06-15](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/f1f32453-a83f-4255-94c0-c42e44185d68)
