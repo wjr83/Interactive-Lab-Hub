@@ -229,7 +229,7 @@ The proposed system integrates a camera into trash and recycling bins, providing
 - We designed the smart recycling system to be a "trash-eating monster" for awareness-raising for adults and education for kids.
 - The smart recycling system itself will feel like a normal trash can, with the exception that the item will not be dropped into a hole but rather placed on a flat surface for a quick classification scan before the user drops the item into the corresponding bin.
   
-> - how will the trash can look like:
+> - How the smart recycling bin/trashcan looks like:
 
 ![main](https://github.com/annetta-zheng/Interactive-Lab-Hub/assets/67286396/3bf5e727-950b-45b9-8366-4438e0c25807)
 
@@ -241,7 +241,7 @@ The proposed system integrates a camera into trash and recycling bins, providing
 
 
 #### Operate
-- We tried to make the system identify the 5 recycled materials (including cardboard, glass, plastic, paper, metal) and trash.
+- The system identifies an object and classifies it as one of the 5 recycled materials (including cardboard, glass, plastic, paper, and metal) or otherwise as trash.
 
 > How it operates:
 > 1. Users approach the integrated camera system with their waste items and receive real-time guidance on which bin their waste item belongs to before disposal.
@@ -308,7 +308,7 @@ For example:
 1. When does it do what it is supposed to do?
 > * The system accurately identifies waste items. The next step in the design of this system would be to guide the user to the correct disposal bin, streamlining the waste sorting process. Thus, users receive clear guidance on which bin to use before disposing of their waste.
 1. When does it fail?
-> * In cases of poor lighting or obstructed views, making it challenging for the camera to capture clear images of the waste items.
+> * In cases of poor lighting or obstructed views, it is challenging for the camera to capture clear images of the waste items.
 > * When tested on some objects it hasn't seen or different sides of objects it has seen but was not tested on.
 > * It also struggles when identifying items with similar appearances that belong in different bins, such as clear plastics and glass, which look alike.
 > * In situations where users deposit waste items very quickly, the system may occasionally struggle to keep up, leading to slight delays in providing guidance.
