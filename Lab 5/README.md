@@ -416,7 +416,9 @@ Our system successfully identifies and classifies an object as one of the 5 recy
 > > * Orientation and deformation of objects
 > > * Lighting conditions
 > > * Add a category for compost
-> > * Add a category for toxic waste (e.g., such as batteries) 
+> > * Add a category for toxic waste (e.g., such as batteries)
+> > * Could the sound an object makes when squished be used to train a Machine Learning model that exceeds the performance of a computer vision-focused Machine Learning model?
+> > * Need to investigate: Are there any sensors that may help identify the structural component of objects (e.g., spectroscopy) that are feasible in this scenario?  
 > * The type of trash / recyclable objects will vary drastically depending on the location of the system. We may need to add location-specific data for training for the smart recycling system (e.g., add feedback loop with new sample data collected --> label new data --> retrain classification model with location-specific data --> aggregate new data from all location-specific acquisitions into the model --> release automatic update of the model in the physical smart recycling system). 
 > * Simplify Interaction and Design:
 > > *  It would be ideal if the user would simply place the object on a flat surface, where the camera would determine the type of object, and once that is confirmed, the servo will spin the trash can lid until the object sits above the bin it corresponds to (e.g., metal). At this point, the item would fall into the bin it corresponds to (perhaps another servo motor would be required to let go of the object through the hole, but not necessarily.
