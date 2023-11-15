@@ -2,7 +2,7 @@
 
 Using the tools and techniques you learned in this class, design, prototype, and test an interactive device.
 
-
+#### COLLABORATOR: Khushi Bhansali
 
 #### Motivation for Project
 - A system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
