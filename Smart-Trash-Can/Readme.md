@@ -1,6 +1,23 @@
-# Final Project
+# Final Project: Smart Trash Can
 
 Using the tools and techniques you learned in this class, design, prototype, and test an interactive device.
+
+
+
+#### Motivation for Project
+- A system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
+
+> - Environmental Conservation: Effective waste separation and recycling play a crucial role in reducing the environmental impact of waste disposal. It helps conserve resources, reduce energy consumption, and lower greenhouse gas emissions.
+> - Waste Reduction: Proper recycling minimizes the volume of waste sent to landfills or incinerators, leading to a reduction in the need for landfill space and decreased pollution from incineration.
+> - Consumer Education: Confusion among individuals about the correct sorting of waste is a common issue. This system can serve as an educational tool, clarifying recycling guidelines and encouraging responsible disposal practices.
+> - Convenience: Many consumers find it challenging to decipher complex instructions or symbols on bins. A machine learning solution simplifies the process by instantly classifying waste items through images, making it more user-friendly.
+
+#### Intended Operation
+- The system identifies an object and classifies it as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), compost, special handling materials (e.g., batteries), or otherwise as trash.
+
+> - Primary Goal: Design a system capable of identifying recyclable objects (paper, cardboard, plastic, glass, and metal), compost, items requiring special handling (e.g., batteries), and trash.
+> - Secondary Goal: Deployment of the system increases the number of items recycled, and decreases the incidence of non-recyclable objects being mixed with recyclable items in the recycling bin due to misinformation about what items can and cannot be recycled.
+> - Tertiary Goal: Educate the general public on what items can be recycled and which ones cannot.
 
 Project plan - November 14
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/278df58d-139e-486b-bb4d-aecda3a21b7c)
