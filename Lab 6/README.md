@@ -201,12 +201,15 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4de7847d-b60d-46b6-ad69-f754a523950d)
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
+The LED Button was integrated in a similar fashion to indicate whether or not the button was pressed on the MQTT 
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/04821297-7c0a-42f1-854e-28632fff1f48)
 
 
 ### Part D
 ### The One True ColorNet
 
-It is with great fortitude and resilience that we shall worship at the altar of the *OneColor*. Through unity of the collective RGB, we too can find unity in our heart, minds and souls. With the help of machines, we can overthrow the bourgeoisie, get on the same wavelength (this was also a color pun) and establish [Fully Automated Luxury Communism](https://en.wikipedia.org/wiki/Fully_Automated_Luxury_Communism).
+It is with great fortitude and resilience that we shall worship at the altar of the *OneColor*. Through unity of the collective RGB, we too can find unity in our hearts, minds, and souls. With the help of machines, we can overthrow the bourgeoisie, get on the same wavelength (this was also a color pun) and establish [Fully Automated Luxury Communism](https://en.wikipedia.org/wiki/Fully_Automated_Luxury_Communism).
 
 The first step on the path to *collective* enlightenment, plug the [APDS-9960 Proximity, Light, RGB, and Gesture Sensor](https://www.adafruit.com/product/3595) into the [MiniPiTFT Display](https://www.adafruit.com/product/4393). You are almost there!
 
@@ -239,7 +242,31 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote-controlled banana piano, explain why anyone would want such a thing.
 
-My partner and I designed an encrypted messaging system where she acted as the sender of messages. The process involved encrypting messages and publishing them to an MQTT broker. Simultaneously, I ran a decrypter script on my Raspberry Pi, which received the encrypted messages, decrypted them, notified me once a new message was received with a light indicator (LED Button turned on for 3 seconds), and displayed the original messages on an OLED screen.
+Design Explanation: Encrypted Messaging System with Raspberry Pi and MQTT
+
+Our goal in creating this encrypted messaging system was to establish a secure and private means of communication between my partner and me. The design incorporated several components, utilizing MQTT for efficient message transfer and a Raspberry Pi for decryption and message display. Here's an in-depth explanation of the design:
+
+Sender Module (Partner's Side):
+
+> - The sender module, operated by my partner, was responsible for composing messages on a computer or mobile device.
+> - A script encrypted these messages using a secure algorithm, ensuring the confidentiality of the communication.
+> - The encrypted messages were then published to specific MQTT topics on a broker.
+
+
+Receiver Module (My Side - Raspberry Pi):
+
+> - On my side, a Raspberry Pi served as the receiver module.
+> - The Raspberry Pi subscribed to the MQTT topics where the encrypted messages were published by my partner.
+> - An MQTT client script on the Raspberry Pi constantly monitored these topics for new messages.
+> > - Decryption and Notification:
+
+> > > - Upon receiving an encrypted message, the Raspberry Pi ran a decryption script.
+> > > - The decryption script utilized a secure key or algorithm, transforming the encrypted message into its original, readable form.
+> > > - To notify me of a new message, an LED button on the Raspberry Pi was programmed to light up for a short duration (e.g., 3 seconds), creating a visual indicator.
+
+> > - Message Display:
+> > > - Simultaneously, the Raspberry Pi displayed the decrypted message on an OLED screen connected to it.
+> > > - The OLED screen provided a convenient and discrete way to read the messages without requiring an external display.
 
 
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
@@ -265,8 +292,18 @@ Sender (Your Raspberry Pi)
 
 For the user interface, the system acts as a secure notification system. As the sender, I interact with my Raspberry Pi to input messages. The OLED screen on my partner's Raspberry Pi serves as the output, displaying decrypted messages in a secure manner. Users interacting with the system in the wild would only see the OLED screen, which acts as a discreet notification display, preserving the confidentiality of the messages that pass through the MQTT broker (available to everyone). The interaction is minimal, emphasizing the discreet nature of the encrypted messaging system.
 
+Sender's Raspberry Pi:
+
+> - The sender interacts with their Raspberry Pi to input messages. This interaction can occur through a simple command-line interface or a more sophisticated graphical user interface (GUI) depending on the design.
+> - The sender's Raspberry Pi handles the encryption process and publishes the encrypted messages to the designated MQTT topics.
+
+Receiver's Raspberry Pi:
+
+> - Users encountering the system in the wild would primarily interact with the OLED screen on the receiver's Raspberry Pi. The OLED screen acts as a discreet notification display.
+> - There's minimal user interaction required on the receiver's side. The system is designed to automatically decrypt incoming messages and display them on the OLED screen without additional input from the user.
+
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing a response in another location.
-[Here is a demo!](https://drive.google.com/file/d/133k2zyBwb7Y0QzSkS0HCe5Ngb2HYswb_/view?usp=sharing)
+Link to Video: [Secure Messanger](https://drive.google.com/file/d/133k2zyBwb7Y0QzSkS0HCe5Ngb2HYswb_/view?usp=sharing)
 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
