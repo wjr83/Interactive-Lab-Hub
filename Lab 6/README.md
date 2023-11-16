@@ -228,11 +228,21 @@ The second step to achieving our great enlightenment is to run `color.py`. We ha
  ...
  ```
 
-By running the script, wou will find the two squares on the display. Half is showing an approximation of the output from the color sensor. The other half is up to the collective. Press the top button to share your color with the class. Your color is now our color, our color is now your color. We are one.
+By running the script, you will find the two squares on the display. Half is showing an approximation of the output from the color sensor. The other half is up to the collective. Press the top button to share your color with the class. Your color is now our color, our color is now your color. We are one.
 
 (A message from the previous TA, Ilan: I was not super careful with handling the loop so you may need to press more than once if the timing isn't quite right. Also, I haven't load-tested it so things might just immediately break when everyone pushes the button at once.)
 
 **\*\*\*Can you set up the script that can read the color anyone else publishes and display it on your screen?\*\*\***
+
+Video showing a working version of reading a color anyone else publishes and displaying it on my screen: 
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7dd90030-6b9b-4659-a2d6-08def3265134
+
+
+
+Printed to the terminal the RGB of the colors received through MQTT Broker messages: 
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/493fa38d-b5e9-4e35-96eb-bef66981229a)
 
 
 ### Part E
