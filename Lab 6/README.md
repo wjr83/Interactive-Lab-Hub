@@ -1,6 +1,6 @@
 # Little Interactions Everywhere
 
-**NAMES OF COLLABORATORS HERE**
+**NAMES OF COLLABORATORS HERE**: [Khushi Bhansali](https://github.com/Khushibhansali/Interactive-Lab-Hub/edit/Fall2023/Lab%206/README.md)
 
 ## Prep
 
