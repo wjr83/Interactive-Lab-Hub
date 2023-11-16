@@ -56,6 +56,7 @@ sensor = adafruit_apds9960.apds9960.APDS9960(i2c)
 sensor.enable_color = True
 r, g, b, a = sensor.color_data
 
+
 topic = 'IDD/colors'
 
 def on_connect(client, userdata, flags, rc):
@@ -65,8 +66,9 @@ def on_connect(client, userdata, flags, rc):
 def on_message(cleint, userdata, msg):
     # if a message is recieved on the colors topic, parse it and set the color
     if msg.topic == topic:
-        colors = list(map(int, msg.payload.decode('UTF-8').split(',')))
-        draw.rectangle((0, 0, width, height*0.5), fill=color)
+        color = tuple(map(int, msg.payload.decode('UTF-8').split(',')))
+        print(color)
+        draw.rectangle((0, 0, width, height*0.5), fill=color[:3])
         disp.image(image)
 
 client = mqtt.Client(str(uuid.uuid1()))
@@ -87,13 +89,12 @@ def handler(signum, frame):
     client.loop_stop()
     exit (0)
 
-# hen sigint happens, do the handler callback function
+# When sigint happens, do the handler callback function
 signal.signal(signal.SIGINT, handler)
 
 # our main loop
 while True:
     r, g, b, a = sensor.color_data
-    
     # there's a few things going on here 
     # colors are reported at 16bits (thats 65536 levels per color).
     # we need to convert that to 0-255. thats what the 255*(x/65536) is doing
