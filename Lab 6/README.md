@@ -159,11 +159,35 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+My partner and I designed an encrypted messaging system where I acted as the sender of messages. The process involved encrypting messages and publishing them to an MQTT broker. Simultaneously, my partner ran a decrypter script on their Raspberry Pi, which received the encrypted messages, decrypted them, and displayed the original messages on an OLED screen.
+
+
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+
+Sender (Your Raspberry Pi)
+
+   | [Type message on Raspberry Pi's Terminal]---> [ Encryption] ---> [ MQTT Publish ] ---> MQTT Broker (farlab.infosci.cornell.edu)
+
+                                                                              
+Decrypter (Partner's Raspberry Pi) 
+
+
+  |--- [ MQTT Subscribe ] ---> [ Decryption ] ---> [LED Button Turns On for 3 Seconds] ---> [OLED Screen Displays Decrypted Message]
+  
+  
+- Sender (Your Raspberry Pi): Responsible for writing and encrypting messages and publishing them to the MQTT broker.
+- MQTT Broker (farlab.infosci.cornell.edu): Acts as an intermediary for message communication between the sender Raspberry Pi (encryptor) and the receiving Raspberry Pi  (decrypter).
+- Decrypter (Partner's Raspberry Pi): Subscribes to the MQTT broker to receive encrypted messages, decrypts them, notifies the user a new message has been received by flashing the LED on the LED Button and displays the original messages on the OLED screen.
+- LED Button: Flashes for 3 seconds every time a new message is received.
+- OLED Screen: Displays the decrypted messages.
+
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
-**\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+For the user interface, the system acts as a secure notification system. As the sender, I interact with my Raspberry Pi to input messages. The OLED screen on my partner's Raspberry Pi serves as the output, displaying decrypted messages in a secure manner. Users interacting with the system in the wild would only see the OLED screen, which acts as a discreet notification display, preserving the confidentiality of the messages that pass through the MQTT broker (available to everyone). The interaction is minimal, emphasizing the discreet nature of the encrypted messaging system.
+
+**\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing a response in another location.
+[Here is a demo!](https://drive.google.com/file/d/133k2zyBwb7Y0QzSkS0HCe5Ngb2HYswb_/view?usp=sharing)
 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
