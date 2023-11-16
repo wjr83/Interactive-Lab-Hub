@@ -313,7 +313,7 @@ Receiver's Raspberry Pi:
 > - There's minimal user interaction required on the receiver's side. The system is designed to automatically decrypt incoming messages and display them on the OLED screen without additional input from the user.
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing a response in another location.
-> - Link to Video: [Secure Messanger](https://drive.google.com/file/d/133k2zyBwb7Y0QzSkS0HCe5Ngb2HYswb_/view?usp=sharing)
+> - Link to Video: [Secure Messenger](https://drive.google.com/file/d/133k2zyBwb7Y0QzSkS0HCe5Ngb2HYswb_/view?usp=sharing)
 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
