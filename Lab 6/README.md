@@ -96,6 +96,86 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+Home Automation System:
+
+- Use Raspberry Pi as a central hub for home automation.
+- Connect various sensors (e.g., motion sensors, temperature sensors, door/window sensors) to the Raspberry Pi.
+- Use MQTT to publish sensor data to specific topics.
+- Implement subscriber devices (smartphones, tablets, or other Raspberry Pis) to receive and act upon the sensor data, triggering home automation actions like turning lights on/off, adjusting thermostat settings, etc.
+
+
+Smart Garden Monitoring:
+
+- Connect sensors to Raspberry Pi to monitor soil moisture, temperature, and sunlight levels in a garden.
+- Use MQTT to publish real-time data to specific topics.
+- Subscribers (e.g., a mobile app or a web interface) can receive updates and provide insights about the garden conditions.
+- Implement automated watering systems or send alerts to users when the garden needs attention.
+
+
+Interactive Display for Events:
+
+- Set up Raspberry Pi-powered interactive displays at events or exhibitions.
+- Use MQTT to push real-time updates, such as schedule changes, announcements, or interactive polls.
+- Attendees can interact with the displays using their smartphones, with the Raspberry Pi serving as a central communication point.
+
+
+Security System with Camera Integration:
+
+- Build a home security system using Raspberry Pi with a camera module.
+- Use motion detection to trigger capturing images or video clips.
+- Publish security alerts and captured images/videos to MQTT topics.
+- Subscribers (e.g., a security monitoring app) can receive instant notifications and access the captured media.
+
+
+Weather Station:
+
+- Create a weather station using Raspberry Pi with sensors for temperature, humidity, and barometric pressure.
+- Use MQTT to publish weather data to specific topics at regular intervals.
+- Users can subscribe to receive weather updates on their devices, or you can integrate the data into a web dashboard.
+- Additional features such as historical data storage or weather trend analysis could also be implemented.
+
+
+
+
+Several games could also be implemented, such as the ones listed below:
+
+Quiz Game:
+
+- Create a multiplayer quiz game where each Raspberry Pi acts as a player's buzzer.
+- Use MQTT to transmit quiz questions to all players simultaneously.
+- Players can press a button on their Raspberry Pi to submit their answers.
+- The central Raspberry Pi receives the answers, scores them, and displays the results.
+
+
+Multiplayer Arcade Game:
+
+- Develop a simple multiplayer arcade game (e.g., a racing game or a space shooter).
+- Each Raspberry Pi serves as a game controller with buttons or sensors.
+- Use MQTT to synchronize game events and player actions across all devices.
+- Display the game screen on a central display connected to another Raspberry Pi.
+
+
+Escape Room Puzzle:
+
+- Design an escape room-style game where each Raspberry Pi represents a different puzzle or challenge.
+- Use MQTT to send and receive messages related to solving puzzles.
+- Players must collaborate, solving puzzles on different Raspberry Pis to progress through the "escape room."
+
+
+Real-Time Strategy (RTS) Game:
+
+- Implement a simple RTS game where each Raspberry Pi represents a player's base or unit.
+- Use MQTT to transmit game state, commands, and updates between the Raspberry Pis.
+- Players can control their units and engage in real-time battles or strategic moves.
+
+
+Collaborative Drawing Game:
+
+- Create a collaborative drawing game where each Raspberry Pi contributes to a shared canvas.
+- Use MQTT to transmit drawing commands (lines, colors) between devices.
+- Players can use buttons or sensors to control their drawing tools.
+- The collaborative canvas is displayed on a central screen.
+
 ### Part C
 ### Streaming a Sensor
 
