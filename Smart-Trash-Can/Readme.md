@@ -66,4 +66,3 @@ You can and are not required to work in teams. Be clear in documentation who con
 ## Examples
 
 [Here is a list of good final projects from previous classes.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Previous-Final-Projects)
-
