@@ -1,6 +1,6 @@
 # Little Interactions Everywhere
 
-**NAMES OF COLLABORATORS HERE**: [Khushi Bhansali](https://github.com/Khushibhansali/Interactive-Lab-Hub/edit/Fall2023/Lab%206/README.md)
+**NAMES OF COLLABORATORS HERE**: [Khushi Bhansali](https://github.com/Khushibhansali/Interactive-Lab-Hub/edit/Fall2023/Lab%206)
 
 ## Prep
 
@@ -149,7 +149,7 @@ By running the script, wou will find the two squares on the display. Half is sho
 
 (A message from the previous TA, Ilan: I was not super careful with handling the loop so you may need to press more than once if the timing isn't quite right. Also, I haven't load-tested it so things might just immediately break when everyone pushes the button at once.)
 
-**\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
+**\*\*\*Can you set up the script that can read the color anyone else publishes and display it on your screen?\*\*\***
 
 
 ### Part E
@@ -157,22 +157,21 @@ By running the script, wou will find the two squares on the display. Half is sho
 
 Find at least one class (more are okay) partner, and design a distributed application together based on the exercise we asked you to do in this lab.
 
-**\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
+**\*\*\*1. Explain your design\*\*\*** For example, if you made a remote-controlled banana piano, explain why anyone would want such a thing.
 
-My partner and I designed an encrypted messaging system where I acted as the sender of messages. The process involved encrypting messages and publishing them to an MQTT broker. Simultaneously, my partner ran a decrypter script on their Raspberry Pi, which received the encrypted messages, decrypted them, and displayed the original messages on an OLED screen.
+My partner and I designed an encrypted messaging system where she acted as the sender of messages. The process involved encrypting messages and publishing them to an MQTT broker. Simultaneously, I ran a decrypter script on my Raspberry Pi, which received the encrypted messages, decrypted them, notified me once a new message was received with a light indicator (LED Button turned on for 3 seconds), and displayed the original messages on an OLED screen.
 
 
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
 Sender (Your Raspberry Pi)
 
-   | [Type message on Raspberry Pi's Terminal]---> [ Encryption] ---> [ MQTT Publish ] ---> MQTT Broker (farlab.infosci.cornell.edu)
+>   | --- [Type message on Raspberry Pi's Terminal] ---> [ Encryption] ---> [ MQTT Publish ] ---> MQTT Broker (farlab.infosci.cornell.edu)
 
                                                                               
-Decrypter (Partner's Raspberry Pi) 
+**Decrypter (Partner's Raspberry Pi) **
 
-
-  |--- [ MQTT Subscribe ] ---> [ Decryption ] ---> [LED Button Turns On for 3 Seconds] ---> [OLED Screen Displays Decrypted Message]
+>   |--- [ MQTT Subscribe ] ---> [ Decryption ] ---> [LED Button Turns On for 3 Seconds] ---> [OLED Screen Displays Decrypted Message]
   
   
 - Sender (Your Raspberry Pi): Responsible for writing and encrypting messages and publishing them to the MQTT broker.
