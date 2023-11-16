@@ -201,7 +201,7 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4de7847d-b60d-46b6-ad69-f754a523950d)
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
-The LED Button was integrated in a similar fashion to indicate whether or not the button was pressed on the MQTT 
+> - The LED Button was integrated in a similar fashion to indicate whether or not the button was pressed on the MQTT Explorer.
 
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/04821297-7c0a-42f1-854e-28632fff1f48)
 
