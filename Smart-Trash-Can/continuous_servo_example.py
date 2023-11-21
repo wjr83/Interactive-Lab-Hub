@@ -6,8 +6,8 @@ from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 
 # Name and set up the servos according to the channels you are using.
-servo_180 = kit.servo[2]  # 180 degree servo
-continuous_servo = kit.servo[3]  # Continuous servo
+servo_180 = kit.servo[1]  # 180 degree servo
+continuous_servo = kit.servo[2]  # Continuous servo
 
 # Set the pulse width range of your 180 degree servo for PWM control of rotating 0-180 degrees
 servo_180.set_pulse_width_range(500, 2500)
