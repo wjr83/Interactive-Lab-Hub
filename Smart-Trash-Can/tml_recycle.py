@@ -22,8 +22,8 @@ cap = cv.VideoCapture(0)
 # labels_path = "recycling_model_1/labels.txt"
 
 # Model 2: Kaggle Dataset
-model_path = 'recycling_model_2_kgldataset_v3/model.tflite'
-labels_path = "recycling_model_2_kgldataset_v3/labels.txt"
+model_path = 'smart_trashcan_model_v1/model.tflite'
+labels_path = 'smart_trashcan_model_v1/labels.txt'
 
 image_file_name = "frame.jpg"
 
@@ -43,7 +43,7 @@ while True:
     ret, frame = cap.read()
     results = tm_model.classify_frame(image_file_name)
 
-     # Draw a bounding box and label on the frame
+     # Draw label on the frame
     if results['confidence'] > 0.5 and results['label'] != 'background':  # You can adjust the confidence threshold as needed
         
         if results['id'] == 1: # plastic
@@ -74,12 +74,12 @@ while True:
         
         if tracking:
             # Adjust the bounding box position based on object movement
-            x += int(0.2 * (x - prev_x))
-            y += int(0.2 * (y - prev_y))
-            w += int(0.2 * (w - prev_w))
-            h += int(0.2 * (h - prev_h))
+            # x += int(0.2 * (x - prev_x))
+            # y += int(0.2 * (y - prev_y))
+            # w += int(0.2 * (w - prev_w))
+            # h += int(0.2 * (h - prev_h))
             # Draw a bounding box and label on the frame
-            prev_x, prev_y, prev_w, prev_h = x, y, w, h
+            # prev_x, prev_y, prev_w, prev_h = x, y, w, h
             # cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Green rectangle
             #TODO: Adjust display of identified object, color code by type
             cv.putText(frame, results['label'], (x, y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.9, text_color, 2)
