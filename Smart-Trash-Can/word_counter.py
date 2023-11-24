@@ -8,10 +8,10 @@ class WordCounter:
     def process_word(self, word):
         if self.current_word == word:
             self.count += 1
-            print(f"The word '{word}' has been received '{self.count}' times. Counting finished.")
-            if self.count == 30:
-                print(f"The word '{word}' has been received 30 times. Counting finished.")
-                self.reset_counter()
+            print(f"The word '{word}' has been received '{self.count}' times.")
+            if self.count == 50:
+                print(f"The word '{word}' has been received '{self.count}' times. Counting finished.")
+                # self.reset_counter()
         else:
             self.current_word = word
             self.count = 1

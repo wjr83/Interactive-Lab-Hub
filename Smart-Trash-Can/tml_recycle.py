@@ -97,9 +97,10 @@ while True:
     # Visualize Results in Terminal
     print("results:",results)
     
-    k = cv.waitKey(1)
-    if k% 255 == 27:
-        # press ESC to close camera view.
+    # Break the loop if 'q' key is pressed
+    if cv.waitKey(1) & 0xFF == ord('q'):
+        cap.release()
+        cv.destroyAllWindows()
         break
 
 
