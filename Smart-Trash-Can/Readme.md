@@ -1,10 +1,26 @@
-# Final Project: Smart Trash Can
+# Final Project: iRecycle
 
-Using the tools and techniques you learned in this class, design, prototype, and test an interactive device.
+[Project Plan](#project-plan) 
+
+[Functioning Project](#functioning-project) 
+
+[Documentation of Design Process](#documentation-of-design-process) 
+
+[Archive of All Code and Design Patterns](#archive-of-all-code-and-design-patterns) 
+
+[Video Demo](#video-demo) 
+
+[Reflections on Process](#reflections-on-process) 
+
+[Group Work Distribution](#group-work-distribution) 
+
+
+## Project Plan
+Using the tools and techniques learned in this class, design, prototype, and test an interactive device that can distinguish between recyclable objects (paper, cardboard, plastic, glass, metal), trash, and batteries. 
 
 #### COLLABORATOR: [Khushi Bhansali (ID: kb737)](https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/FinalProject.md)
 
-#### Motivation for Project
+### Big Idea & Motivation for Project
 - A system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
 
 > - Environmental Conservation: Effective waste separation and recycling play a crucial role in reducing the environmental impact of waste disposal. It helps conserve resources, reduce energy consumption, and lower greenhouse gas emissions.
@@ -29,6 +45,35 @@ Functional check-off - November 28 & 30
 Final Project Presentations - December 5 & 7
 
 Write-up and documentation due - December 14
+
+### Parts Needed
+
+The Device:
+
+- 1x [Raspberry Pi 4 Model B Board]()
+
+- 1x [32GB MicroSD Cards w/ Card Reader]()
+
+### Challenges  & Fall-back Plan
+- A single continuous servo vs. multiple 180-degree servos for opening and closing the bins
+
+### Work in Progress
+#### Classification Algorithm
+Classes trained: paper, cardboard, plastic, glass, metal, trash, background
+> Video of 1st Working Model --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c-b6e4-dba596737b10
+
+
+
+#### Physical Prototype
+
+#### Sensors
+
+
+
+
+
 
 ## Objective
 
