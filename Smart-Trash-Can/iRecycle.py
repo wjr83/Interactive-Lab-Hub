@@ -94,12 +94,12 @@ servo.angle = 0
 def confirm_classification(label, r, g, b):
     # label = results['label']
     label_counter.process_word(label)
-    if label_counter.count == 20:
+    if label_counter.count == 10:
         flag = False
         #TODO: All LEDs on LED Stick should be turned on 
         # my_stick.change_length(label_counter.count // 50) # turn on the LED's as a progress bar of confidence
         my_stick.set_all_LED_color(r, g, b)
-    elif label_counter.count == 1:
+    elif label_counter.count == 0:
         my_stick.LED_off()
         time.sleep(0.1)
         my_stick.set_single_LED_color(0, r, g, b)
@@ -107,7 +107,7 @@ def confirm_classification(label, r, g, b):
         #TODO: Every 5 words turn on an LED
         pass
         time.sleep(0.1) # Necessary to avoid spamming the bus. Prevents I/O error
-        my_stick.set_single_LED_color(label_counter.count // 2, r, g, b) # turn on the LED's as a progress bar of confidence
+        my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
         # my_stick.set_all_LED_color(r, g, b)
     print("text_color:", colors_dict[label])
     text_color = (r, g, b)
@@ -182,7 +182,10 @@ def read_object():
             
             # Place text on Camera Display
             cv.putText(frame, results['label'], (100, 90), cv.FONT_HERSHEY_SIMPLEX, 0.9, text_color, 2) # coordinates (x, y) for text placement = (100, 90)
-        
+        else:
+            time.sleep(0.1)
+            my_stick.LED_off() # Turn off LED Stick if reading background
+
         # Display Camera & Prediction Label
         cv.imshow('Cam', frame)
         # Save current image
@@ -190,11 +193,11 @@ def read_object():
         # Visualize Results in Terminal
         print("results:", results)
 
-        # Break the loop if 'q' key is pressed
+        # To terminate the program, press 'q' on the keyboard
         if cv.waitKey(1) & 0xFF == ord('q'):
-            cap.release()
-            cv.destroyAllWindows()
-            my_stick.LED_off()
+            cap.release() # Close Camera Connection
+            cv.destroyAllWindows() # Close Camera Window
+            my_stick.LED_off() # Turn of LED Stick
             # Break the loop if 'q' key is pressed
             sys.exit(0)
             

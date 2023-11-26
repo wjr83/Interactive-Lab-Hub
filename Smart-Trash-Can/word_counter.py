@@ -11,14 +11,13 @@ class WordCounter:
             print(f"The word '{word}' has been received '{self.count}' times.")
             if self.count == 50:
                 print(f"The word '{word}' has been received '{self.count}' times. Counting finished.")
-                # self.reset_counter()
+                # self.reset_counter()  # Uncomment this line if you want to reset on reaching count 50.
         else:
             self.current_word = word
-            self.count = 1
+            self.count = 0
 
-    def reset_counter(self):
-        self.current_word = None
-        self.count = 0
+    
+
 
 
 # Example usage:
