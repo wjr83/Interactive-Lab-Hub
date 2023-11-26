@@ -1,29 +1,44 @@
 from teachable_machine_lite import TeachableMachineLite
 import os
+import sys
 from datetime import datetime
 import cv2 as cv
 import time
 from adafruit_servokit import ServoKit
-# import qwiic_led_stick
+import qwiic_led_stick
 from word_counter import WordCounter # custom class to validate reading from camera
+import walking_rainbow_LED_stick
 
 
 
 ##############################################################################
 label_counter = WordCounter()
-# my_stick = qwiic_led_stick.QwiicLEDStick()
-# my_stick.set_all_LED_brightness(5)
+
+walking_rainbow_LED_stick.run_example()
+my_stick = qwiic_led_stick.QwiicLEDStick()
+my_stick.set_all_LED_color(0,50,0)
+my_stick.set_all_LED_brightness(1)
+# Turn on all the LEDs to white
+my_stick.LED_off()
+
+
+
+if my_stick.begin() == False:
+    print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
+        file=sys.stderr)
+
+print("\nLED Stick ready!")
 
 # Dictionary to map classifications to colors
 colors_dict = {
-    'background': (255, 255, 255),   # White
-    'paper': (255, 255, 102),        # Yellow
-    'cardboard': (128, 0, 128),      # Purple
+    'background': (155, 155, 155),   # White
+    'paper': (155, 155, 52),        # Yellow
+    'cardboard': (78, 0, 78),      # Purple
     'trash': (255, 165, 0),          # Orange
-    'plastic': (255, 0, 255),        # Magenta
-    'metal': (0, 255, 255),          # Cyan
+    'plastic': (155, 0, 155),        # Magenta
+    'metal': (0, 155, 155),          # Cyan
     'glass': (0, 128, 0),            # Dark Green
-    'batteries': (200, 150, 100)     # Light Brown
+    'batteries': (100, 75, 50)     # Light Brown
 }
 
 # Dictionary to store file paths for misclassified items
@@ -79,15 +94,20 @@ servo.angle = 0
 def confirm_classification(label, r, g, b):
     # label = results['label']
     label_counter.process_word(label)
-    if label_counter.count == 50:
+    if label_counter.count == 20:
         flag = False
         #TODO: All LEDs on LED Stick should be turned on 
         # my_stick.change_length(label_counter.count // 50) # turn on the LED's as a progress bar of confidence
-        # my_stick.set_all_LED_color(r, g, b)
+        my_stick.set_all_LED_color(r, g, b)
+    elif label_counter.count == 1:
+        my_stick.LED_off()
+        time.sleep(0.1)
+        my_stick.set_single_LED_color(0, r, g, b)
     else:
         #TODO: Every 5 words turn on an LED
         pass
-        # my_stick.change_length(label_counter.count // 50) # turn on the LED's as a progress bar of confidence
+        time.sleep(0.1) # Necessary to avoid spamming the bus. Prevents I/O error
+        my_stick.set_single_LED_color(label_counter.count // 2, r, g, b) # turn on the LED's as a progress bar of confidence
         # my_stick.set_all_LED_color(r, g, b)
     print("text_color:", colors_dict[label])
     text_color = (r, g, b)
@@ -174,16 +194,24 @@ def read_object():
         if cv.waitKey(1) & 0xFF == ord('q'):
             cap.release()
             cv.destroyAllWindows()
-            break
-
+            my_stick.LED_off()
+            # Break the loop if 'q' key is pressed
+            sys.exit(0)
+            
 
 while True:
+    try:
+        # Classify Item
+        read_object()
 
-    # Classify Item
-    read_object()
-
-    time.sleep(5)
+        time.sleep(5)
     
+    except (KeyboardInterrupt, SystemExit) as exErr:
+        print("Terminating iRecycle")
+        my_stick.LED_off()
+        # Break the loop if 'q' key is pressed
+        sys.exit(0)
+   
     k = cv.waitKey(1)
     if k% 255 == 27:
         # press ESC to close camera view.
