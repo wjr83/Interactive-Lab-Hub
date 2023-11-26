@@ -53,26 +53,37 @@ misclassified_items = {
 }
 
 # Dictionary to map label to servo rotation
-servo_rotation = {
-    'paper': 60,
-    'cardboard': 60,
-    'trash': 120,
-    'plastic': 180,
-    'metal': 240,
-    'glass': 300,
-    'batteries': 360
+servo_index = {
+    'paper': 0,
+    'cardboard': 0,
+    'trash': 7,
+    'plastic': 8,
+    'metal': 15,
+    'glass': 10,
+    'batteries': 12
 }
 ##############################################################################
 # Set channels to the number of servo channels on your kit.
 # There are 16 channels on the PCA9685 chip.
 kit = ServoKit(channels=16)
 
-# Name and set up the servo according to the channel you are using.
-servo = kit.servo[2]
+# Name and set up the servo according to channel using for physical prototype.
+servo_paper_cardboard = kit.servo[servo_index['paper']]
+servo_trash = kit.servo[servo_index['trash']]
+servo_plastic = kit.servo[servo_index['plastic']]
+servo_metal = kit.servo[servo_index['metal']]
+servo_glass = kit.servo[servo_index['glass']]
+servo_batteries = kit.servo[servo_index['batteries']]
+
 
 # Set the pulse width range of your servo for PWM control of rotating 0-180 degree (min_pulse, max_pulse)
 # Each servo might be different, you can normally find this information in the servo datasheet
-servo.set_pulse_width_range(500, 2500)
+servo_paper_cardboard.set_pulse_width_range(525, 2500)
+servo_trash.set_pulse_width_range(525, 2500)
+servo_plastic.set_pulse_width_range(525, 2500)
+servo_metal.set_pulse_width_range(525, 2500)
+servo_glass.set_pulse_width_range(525, 2500)
+servo_batteries.set_pulse_width_range(525, 2500)
 
 # Model 1: wjr83 selfmade dataset
 # model_path = 'recycling_model_1/model.tflite'
@@ -89,7 +100,13 @@ tm_model = TeachableMachineLite(model_path=model_path, labels_file_path=labels_p
 
 
 text_color = (0, 0, 0)
-servo.angle = 0
+servo_paper_cardboard.angle = 0
+servo_trash.angle = 0
+servo_plastic.angle = 0
+servo_metal.angle = 0
+servo_glass.angle = 0
+servo_batteries.angle = 0
+
 
 def confirm_classification(label, r, g, b):
     # label = results['label']
@@ -101,8 +118,9 @@ def confirm_classification(label, r, g, b):
         my_stick.set_all_LED_color(r, g, b)
     elif label_counter.count == 0:
         my_stick.LED_off()
-        time.sleep(0.1)
+        time.sleep(0.5) # Account for person placing object
         my_stick.set_single_LED_color(0, r, g, b)
+        time.sleep(0.5) # Account for person placing object
     else:
         #TODO: Every 5 words turn on an LED
         pass
@@ -117,7 +135,7 @@ def confirm_classification(label, r, g, b):
     # time.sleep(1)
 
 
-def save_misclassified_item(label, frame):
+def save_item(label, frame): # Increase dataset of objects by saving a picture to folder
     folder_path = misclassified_items.get(label)
     if folder_path:
         # Use the class name and timestamp to create a unique file name
@@ -130,20 +148,25 @@ def save_misclassified_item(label, frame):
     else:
         print(f"Error: No folder path defined for misclassified item ({label})")
 
-# Function to rotate servo to a specified set of degrees 
-def rotate_servo(label):
-    angle = servo_rotation.get(label)
+# Function to rotate servo pertaining to identified item to a specified set of degrees 
+def rotate_servo_up(label, degrees):
     
-    if angle is not None:
-        # Ensure the angle is within the valid range (0 to 180)
-        angle = max(0, min(angle, 180))
+    if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
+        servo_paper_cardboard.angle = degrees
+    elif label == 'trash': # trash
+        servo_trash.angle = degrees
+    elif label == 'plastic': # plastic
+         servo_plastic.angle = degrees
+    elif label == 'metal': # metal
+        servo_metal.angle = degrees
+    elif label == 'glass': # glass
+        servo_glass.angle = degrees
+    elif label == 'batteries': # batteries
+        servo_batteries.angle = degrees
         
-        # Set the servo angle
-        kit.servo[2].angle = angle
-        
-        print(f"Rotated servo to {angle} degrees for item: {label}")
-    else:
-        print(f"Error: No servo angle defined for item: {label}")
+
+    
+    
 
 def read_object():
 
@@ -154,8 +177,8 @@ def read_object():
     # Set the frame width and height (optional)
     cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
     cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
-    flag = True
-    while flag == True:
+    label_counter.count = 0 # Reset counter everytime a new object is placed onto the tray
+    while True: 
 
         # Get frame from camera
         ret, frame = cap.read()
@@ -171,14 +194,46 @@ def read_object():
         if results['confidence'] > 0.5 and label != 'background':  # You can adjust the confidence threshold as needed
             if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
                 text_color = confirm_classification(label, r, g, b)
+                if label_counter.count == 10:
+                    save_item(label, frame) # save image to class folder 
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
+                    break
             elif label == 'trash': # trash
                 text_color = confirm_classification(label, r, g, b)
+                if label_counter.count == 10:
+                    save_item(label, frame) # save image to class folder 
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
+                    break
             elif label == 'plastic': # plastic
                 text_color = confirm_classification(label, r, g, b)
+                if label_counter.count == 10:
+                    save_item(label, frame) # save image to class folder 
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
+                    break
             elif label == 'metal': # metal
                 text_color = confirm_classification(label, r, g, b)
+                if label_counter.count == 10:
+                    save_item(label, frame) # save image to class folder 
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
+                    break
             elif label == 'glass': # glass
                 text_color = confirm_classification(label, r, g, b)
+                if label_counter.count == 10:
+                    save_item(label, frame) # save image to class folder 
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
+                    break
+            elif label == 'batteries': # batteries
+                text_color = confirm_classification(label, r, g, b)
+                if label_counter.count == 10:
+                    save_item(label, frame) # save image to class folder 
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
+                    break
             
             # Place text on Camera Display
             cv.putText(frame, results['label'], (100, 90), cv.FONT_HERSHEY_SIMPLEX, 0.9, text_color, 2) # coordinates (x, y) for text placement = (100, 90)
@@ -187,9 +242,10 @@ def read_object():
             my_stick.LED_off() # Turn off LED Stick if reading background
 
         # Display Camera & Prediction Label
-        cv.imshow('Cam', frame)
-        # Save current image
-        cv.imwrite(image_file_name, frame)
+        if label_counter.count < 10: # Only display camera output prior to prediction confirmation
+            cv.imshow('Cam', frame)
+            # Save current image
+            cv.imwrite(image_file_name, frame)
         # Visualize Results in Terminal
         print("results:", results)
 
@@ -200,14 +256,25 @@ def read_object():
             my_stick.LED_off() # Turn of LED Stick
             # Break the loop if 'q' key is pressed
             sys.exit(0)
+    return label
             
 
 while True:
     try:
         # Classify Item
-        read_object()
+        label = read_object()  # returns classified object
 
-        time.sleep(5)
+        time.sleep(1)
+
+        rotate_servo_up(label, 180)
+
+        time.sleep(2)
+
+        rotate_servo_up(label, 90)
+
+        time.sleep(2)
+
+        rotate_servo_up(label, 0)
     
     except (KeyboardInterrupt, SystemExit) as exErr:
         print("Terminating iRecycle")
