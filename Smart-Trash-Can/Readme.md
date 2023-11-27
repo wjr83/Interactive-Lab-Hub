@@ -83,11 +83,37 @@ Classes trained: paper, cardboard, plastic, glass, metal, trash, background
 
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c-b6e4-dba596737b10
 
+> Videos of 1st Working Model with LED Stick and Servos Integrated --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
+
+> Links to additional Videos:
+> - https://drive.google.com/file/d/1xpXrHjJocF4GKEThj-ELTZfUBcCoxF5q/view?usp=sharing
+> - https://drive.google.com/file/d/1u5IOfdlreLqH__jfYqqWnZNcfAI5ys2A/view?usp=sharing
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e-a48b-be5314112139
+
 
 
 #### Physical Prototype
+Design Ideas:
+
+|   IMG_4276   |   IMG_4275   |
+|--------------|--------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0cf385db-62f5-4247-9103-cb08558ad7c0" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5f507f83-7a58-41ba-8c84-88d19e497a48" width="400"> |
+
+|   IMG_4274   |   IMG_4273   |
+|--------------|--------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/27158b1c-629d-479c-b009-ede3cd14a9cc" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7ca94ed1-0a77-4f49-8ee6-b183b7e945ca" width="400"> |
+
+|   IMG_4272   |   IMG_4271   |
+|--------------|--------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a92b3efc-e882-4b84-9125-16936d8d337c" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/73553a26-5a32-422a-bba6-448396a9feb4" width="400"> |
+
+
+
+
 
 #### Sensors
+
 
 
 
