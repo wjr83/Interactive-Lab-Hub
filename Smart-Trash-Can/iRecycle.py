@@ -31,14 +31,14 @@ print("\nLED Stick ready!")
 
 # Dictionary to map classifications to colors
 colors_dict = {
-    'background': (155, 155, 155),   # White
-    'paper': (155, 155, 52),        # Yellow
-    'cardboard': (78, 0, 78),      # Purple
-    'trash': (255, 165, 0),          # Orange
-    'plastic': (155, 0, 155),        # Magenta
-    'metal': (0, 155, 155),          # Cyan
-    'glass': (0, 128, 0),            # Dark Green
-    'batteries': (100, 75, 50)     # Light Brown
+    'background': (255, 255, 255),   # White
+    'paper': (255, 255, 0),           # Yellow
+    'cardboard': (128, 0, 128),       # Purple
+    'trash': (255, 0, 0),             # Red
+    'plastic': (0, 0, 255),           # Blue
+    'metal': (0, 255, 0),             # Green
+    'glass': (255, 20, 50),           # Pink
+    'batteries': (255, 13, 0)         # Orange
 }
 
 # Dictionary to store file paths for misclassified items
@@ -266,15 +266,12 @@ while True:
 
         time.sleep(1)
 
-        rotate_servo_up(label, 180)
-
-        time.sleep(2)
-
         rotate_servo_up(label, 90)
 
         time.sleep(2)
 
         rotate_servo_up(label, 0)
+
     
     except (KeyboardInterrupt, SystemExit) as exErr:
         print("Terminating iRecycle")
