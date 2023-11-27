@@ -164,10 +164,7 @@ def rotate_servo_up(label, degrees):
     elif label == 'batteries': # batteries
         servo_batteries.angle = degrees
         
-
     
-    
-
 def read_object():
 
     # Check if the camera opened successfully
@@ -259,23 +256,53 @@ def read_object():
     return label
             
 
+# Main Loop
 while True:
     try:
-        # Classify Item
-        label = read_object()  # returns classified object
+        # TODO: Always display statistics in full screen on the iPad (via VNC). Update statitcs (plot) once every time a new time is added.
+        
+        # Classify Item: Constantly be looking for objects (but don't predict if background is detected)
+        label = read_object()  # returns name (as a string) of classified object
 
         time.sleep(1)
 
+        # TODO: Open lid corresponding to item detected. Update block accordingly to support feedback.
         rotate_servo_up(label, 90)
 
-        time.sleep(2)
+        # TODO: Display Prediction on OLED Screen. 
 
+        # TODO: Add feedback to correct wrong prediction using Qwiic Buttons. Make sure instruction to do so are clear (these can be written on the physical prototype)
+        # This includes closing the lid for the miscclassification and opening the correct lid based on the button pressed by the user mapped to the correct classification.
+        # Make sure to save picture of the object in the correct folder, and remove the picture of item in the folder that it was previously saved inside the read_object() function.
+        
+        time.sleep(2) 
+
+        # TODO: Close lid (when should the lid close? After how much time if the object was classified correctly?) 
+        # Should we run a classification on when a hand is detected and then count 10 seconds from there? 
+        # Should the distance sensor capture this when the lid is open? NOTE: The angle of the distance sensor is very tiny, likely to miss objects being placed inside.
+        # Should we have a 2nd camera to indicate when a person moves/grabs object/ leaves away from the system? 
+        # NOTE: Best Idea so far: If the lid is open, run a function to check when background is detected again. Only when background is detected again. 
+        # If so, wait for 10 seconds before runing the read_object() function to classify a new object.   
         rotate_servo_up(label, 0)
+
+        # TODO: Integrate distance sensors using i2c mux to show ow full each bin is. 
+
+        # TODO: Use distance sensor to send information to the "maintenance department's" Raspberry Pi via MQTT indicating 
+        # location of iRecycle trashcan and which bins are full / need to be emptied out. This should be display on the OLED screen
+        # of the "maintenance department's" Raspberry Pi. Once the bin is emptied out, the distance sensor should update the OLED screen
+        # on Raspberry Pi of the maintenance departement showing that no bin needs to be emptied out. The maintenance department should 
+        # not need to press any button to confirm the bins were emptied (this should be captured automatically by the distance sensor). 
+        # We do NOT need a way (a code, that only the maintenance department knows) to open the lid when when the trash is full as the bins are not
+        # physically attached to the lids, they simply sit underneath the lid. The bins are all independent from each other. The lids are attached to the 
+        # "table" of the system, not the actual bins.
+
+        # TODO: Nice to have: a button to pause/resume execution of the read_object() function in case the maintenance department needs to clean the spot 
+        # where items are placed and avoid any noisy data from being captured.
 
     
     except (KeyboardInterrupt, SystemExit) as exErr:
         print("Terminating iRecycle")
-        my_stick.LED_off()
+        my_stick.LED_off() # Turn off LED Stick
         # Break the loop if 'q' key is pressed
         sys.exit(0)
    
