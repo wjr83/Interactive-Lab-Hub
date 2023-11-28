@@ -8,6 +8,8 @@ from adafruit_servokit import ServoKit
 import qwiic_led_stick
 from word_counter import WordCounter # custom class to validate reading from camera
 import walking_rainbow_LED_stick
+import qwiic_button
+
 
 
 
@@ -62,6 +64,17 @@ servo_index = {
     'glass': 10,
     'batteries': 12
 }
+
+# Dictionary to map label to qwiic button
+qwiic_button_address = {
+    'paper': 0x6b,      # Soldered: A2 -> Green Button
+    'cardboard': 0x6b,  # Soldered: A2 -> Green Button
+    'trash': 0x6c,      # Soldered: A0 & A1 -> Green Button
+    'plastic': 0x6e,    # Soldered: A0 -> Green Button
+    'metal': 0x69,      # Soldered: A1 & A2 -> Green Button
+    'glass': 0x67,      # Soldered: A3 -> Green Button 
+    'batteries': 0x63   # Soldered: A2 & A3 -> Green Button
+}
 ##############################################################################
 # Set channels to the number of servo channels on your kit.
 # There are 16 channels on the PCA9685 chip.
@@ -84,7 +97,17 @@ servo_plastic.set_pulse_width_range(525, 2500)
 servo_metal.set_pulse_width_range(525, 2500)
 servo_glass.set_pulse_width_range(525, 2500)
 servo_batteries.set_pulse_width_range(525, 2500)
+#############################################################################################################
+# Initialize buttons for each class
+red_button = qwiic_button.QwiicButton(0x6f) # Soldered: None (Set -> Red Button)
+paper_button = qwiic_button.QwiicButton(qwiic_button_address['paper']) # Soldered: A2 -> Green Button
+trash_button = qwiic_button.QwiicButton(qwiic_button_address['trash']) # Soldered: A0 & A1 -> Green Button
+plastic_button = qwiic_button.QwiicButton(qwiic_button_address['plastic']) # Soldered: A0 -> Green Button
+metal_button = qwiic_button.QwiicButton(qwiic_button_address['metal']) # Soldered: A1 & A2 -> Green Button
+glass_button = qwiic_button.QwiicButton(qwiic_button_address['glass']) # Soldered: A3 -> Green Button 
+battery_button = qwiic_button.QwiicButton(qwiic_button_address['batteries']) # Soldered: A2 & A3 -> Green Button
 
+##############################################################################################################
 # Model 1: wjr83 selfmade dataset
 # model_path = 'recycling_model_1/model.tflite'
 # labels_path = "recycling_model_1/labels.txt"
