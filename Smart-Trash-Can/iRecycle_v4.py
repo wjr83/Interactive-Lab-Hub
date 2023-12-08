@@ -145,30 +145,24 @@ servo_battery.angle = 90
 def confirm_classification(label, r, g, b):
     # label = results['label']
     label_counter.process_word(label)
-    if label != 'background':
-        if label_counter.count == 10:
-            flag = False
-            #TODO: All LEDs on LED Stick should be turned on 
-            # my_stick.change_length(label_counter.count // 50) # turn on the LED's as a progress bar of confidence
-            my_stick.set_all_LED_color(r, g, b)
-        elif label_counter.count == 0:
-            my_stick.LED_off()
-            time.sleep(0.5) # Account for person placing object
-            my_stick.set_single_LED_color(0, r, g, b)
-            time.sleep(0.5) # Account for person placing object
-        else:
-            #TODO: Every 5 words turn on an LED
-            pass
-            time.sleep(0.1) # Necessary to avoid spamming the bus. Prevents I/O error
-            my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
-            # my_stick.set_all_LED_color(r, g, b)
-        print("text_color:", colors_dict[label])
-        text_color = (r, g, b)
+    if label_counter.count == 10:
+        flag = False
+        #TODO: All LEDs on LED Stick should be turned on 
+        # my_stick.change_length(label_counter.count // 50) # turn on the LED's as a progress bar of confidence
+        my_stick.set_all_LED_color(r, g, b)
+    elif label_counter.count == 0:
+        my_stick.LED_off()
+        time.sleep(0.5) # Account for person placing object
+        my_stick.set_single_LED_color(0, r, g, b)
+        time.sleep(0.5) # Account for person placing object
     else:
-        if label_counter.count == 400:
-            my_stick.LED_off()
-            close_lid(label)
-
+        #TODO: Every 5 words turn on an LED
+        pass
+        time.sleep(0.1) # Necessary to avoid spamming the bus. Prevents I/O error
+        my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
+        # my_stick.set_all_LED_color(r, g, b)
+    print("text_color:", colors_dict[label])
+    text_color = (r, g, b)
     return text_color 
     # Set the servo to 180 degree position
     # servo.angle = 36*2
@@ -242,37 +236,43 @@ def read_object():
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
-                    
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
                     break
             elif label == 'trash': # trash
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
-                    
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
                     break
             elif label == 'plastic': # plastic
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
-                    
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
                     break
             elif label == 'metal': # metal
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
-                    
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
                     break
             elif label == 'glass': # glass
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
-                    
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
                     break
             elif label == 'battery': # battery
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
-                    
+                    cap.release()
+                    cv.destroyAllWindows() # Close Camera Window
                     break
             
             # Place text on Camera Display

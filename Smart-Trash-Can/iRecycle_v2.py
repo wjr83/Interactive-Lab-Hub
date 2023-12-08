@@ -10,9 +10,16 @@ import qwiic_led_stick
 from word_counter import WordCounter # custom class to validate reading from camera
 import walking_rainbow_LED_stick
 import qwiic_button
+import numpy as np
 
-
-
+##############################################################################
+# Check if the camera opened successfully
+cap = cv.VideoCapture(0)
+if not cap.isOpened():
+    print("Error: Could not open camera.")
+# Set the frame width and height (optional)
+cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
 
 ##############################################################################
 label_counter = WordCounter()
@@ -24,7 +31,8 @@ my_stick.set_all_LED_brightness(1)
 # Turn on all the LEDs to white
 my_stick.LED_off()
 
-
+bin_lid = 'closed'  # Closed bin, dummy variable to check whether any bin is open.
+last_saved_label = None
 
 if my_stick.begin() == False:
     print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
@@ -34,13 +42,13 @@ print("\nLED Stick ready!")
 
 # Dictionary to map classifications to colors
 colors_dict = {
-    'background': (255, 255, 255),   # White
-    'paper': (255, 255, 0),           # Yellow
-    'cardboard': (128, 0, 128),       # Purple
-    'trash': (255, 0, 0),             # Red
-    'plastic': (0, 0, 255),           # Blue
-    'metal': (0, 255, 0),             # Green
-    'glass': (255, 20, 50),           # Pink
+    'background': (0,0,0),          # Off
+    'paper': (0, 0, 255),           # Blue
+    'cardboard': (0, 0, 255),       # Blue      # (128, 0, 128),       # Purple
+    'trash': (255, 255, 255),       # White
+    'plastic': (255, 0, 0),         # Red
+    'metal': (255, 255, 0),         # Yellow             
+    'glass': (0, 255, 0),           # Green
     'battery': (255, 13, 0)         # Orange
 }
 
@@ -108,14 +116,25 @@ metal_button = qwiic_button.QwiicButton(qwiic_button_address['metal']) # Soldere
 glass_button = qwiic_button.QwiicButton(qwiic_button_address['glass']) # Soldered: A3 -> Green Button 
 battery_button = qwiic_button.QwiicButton(qwiic_button_address['battery']) # Soldered: A2 & A3 -> Green Button
 
+def turn_off_all_buttons(brightness=0):
+    # Turn off all buttons
+    red_button.LED_off()
+    paper_button.LED_off()
+    trash_button.LED_off()
+    plastic_button.LED_off()
+    metal_button.LED_off()
+    glass_button.LED_off()
+    battery_button.LED_off()
+
+turn_off_all_buttons()
 ##############################################################################################################
 # Model 1: wjr83 selfmade dataset
 # model_path = 'recycling_model_1/model.tflite'
 # labels_path = "recycling_model_1/labels.txt"
 
-# Model 2: Kaggle Dataset
-model_path = 'smart_trashcan_model_v1/model.tflite'
-labels_path = 'smart_trashcan_model_v1/labels.txt'
+# Model
+model_path = 'iRecycle_cornell_background/model.tflite' #'smart_trashcan_model_v1/model.tflite'
+labels_path = 'iRecycle_cornell_background/labels.txt' #'smart_trashcan_model_v1/labels.txt'
 
 image_file_name = "frame.jpg"
 
@@ -124,36 +143,54 @@ tm_model = TeachableMachineLite(model_path=model_path, labels_file_path=labels_p
 
 
 text_color = (0, 0, 0)
-servo_paper_cardboard.angle = 0
-servo_trash.angle = 0
-servo_plastic.angle = 0
-servo_metal.angle = 0
-servo_glass.angle = 0
-servo_battery.angle = 0
+# Close all bins
+def close_all_bins():
+    servo_paper_cardboard.angle = 90
+    servo_trash.angle = 90
+    servo_plastic.angle = 90
+    servo_metal.angle = 97  # Correction based on testing
+    servo_glass.angle = 90
+    servo_battery.angle = 90
+    bin_lid = 'closed'
+close_all_bins()
+
+def open_all_bins():
+    servo_paper_cardboard.angle = 00
+    servo_trash.angle = 0
+    servo_plastic.angle = 0
+    servo_metal.angle = 0  # Correction based on testing
+    servo_glass.angle = 0
+    servo_battery.angle = 0
+    bin_lid = 'open'
 
 
 def confirm_classification(label, r, g, b):
     # label = results['label']
     label_counter.process_word(label)
-    if label_counter.count == 10:
-        flag = False
-        #TODO: All LEDs on LED Stick should be turned on 
-        # my_stick.change_length(label_counter.count // 50) # turn on the LED's as a progress bar of confidence
-        my_stick.set_all_LED_color(r, g, b)
-    elif label_counter.count == 0:
-        my_stick.LED_off()
-        time.sleep(0.5) # Account for person placing object
-        my_stick.set_single_LED_color(0, r, g, b)
-        time.sleep(0.5) # Account for person placing object
+    if label != 'background' and bin_lid == 'closed':
+        if label_counter.count >= 10:
+            # All LEDs on LED Stick should be turned on 
+            my_stick.set_all_LED_color(r, g, b)
+            display_solid_window(label, r, g, b)
+        elif label_counter.count == 0:
+            my_stick.LED_off()
+            time.sleep(0.5) # Account for person placing object
+            my_stick.set_single_LED_color(0, r, g, b)
+            time.sleep(0.5) # Account for person placing object
+        else:
+            #TODO: Every 5 words turn on an LED
+            pass
+            time.sleep(0.15) # Necessary to avoid spamming the bus. Prevents I/O error
+            my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
+            display_solid_window(label, r, g, b) # Display "Processing Item..."
+            # my_stick.set_all_LED_color(r, g, b)
+        # print("text_color:", colors_dict[label])
+        text_color = (r, g, b)
     else:
-        #TODO: Every 5 words turn on an LED
-        pass
-        time.sleep(0.1) # Necessary to avoid spamming the bus. Prevents I/O error
-        my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
-        # my_stick.set_all_LED_color(r, g, b)
-    print("text_color:", colors_dict[label])
-    text_color = (r, g, b)
-    return text_color 
+        if label_counter.count == 100: # Modify accordingly to give ample time for disposal of item and/or correction in the event of a misclassification
+            my_stick.set_all_LED_color(r, g, b)
+            close_all_bins()
+    
     # Set the servo to 180 degree position
     # servo.angle = 36*2
     # time.sleep(1)
@@ -201,7 +238,7 @@ def move_item_to_correct_folder(label, corrected_label):
             print(f"Renamed to {new_name} in '{correct_folder}'.")
 
             # Rotate the corresponding servo by 90 degrees
-            rotate_servo_up(corrected_label, 90)
+            open_bin(corrected_label, 90)
             # time.sleep(1)  # Adjust sleep time as needed
         else:
             print(f"No items found in '{misclassified_folder}'.")
@@ -239,8 +276,9 @@ def turn_off_button(label,brightness=0):
  
 
 # Function to rotate servo pertaining to identified item to a specified set of degrees 
-def rotate_servo_up(label, degrees=90):
+def open_bin(label, degrees=0):
     turn_on_button(label)
+    bin_lid = 'open'
     if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
         servo_paper_cardboard.angle = degrees
     elif label == 'trash': # trash
@@ -253,10 +291,12 @@ def rotate_servo_up(label, degrees=90):
         servo_glass.angle = degrees
     elif label == 'battery': # battery
         servo_battery.angle = degrees
+    
 
 # Function to rotate servo pertaining to identified item to a specified set of degrees 
-def rotate_servo_down(label, degrees=0):
+def close_bin(label, degrees=90):
     turn_off_button(label)
+    bin_lid = 'closed'
     if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
         servo_paper_cardboard.angle = degrees
     elif label == 'trash': # trash
@@ -264,91 +304,146 @@ def rotate_servo_down(label, degrees=0):
     elif label == 'plastic': # plastic
          servo_plastic.angle = degrees
     elif label == 'metal': # metal
-        servo_metal.angle = degrees
+        servo_metal.angle = 97
     elif label == 'glass': # glass
         servo_glass.angle = degrees
     elif label == 'battery': # battery
         servo_battery.angle = degrees
         
-    
+def display_solid_window(label, r, g, b):
+    label_counter.process_word(label)
+    if label == 'background':
+        # Load the image.png from memory
+        image_path = 'custom_bullseye_v4_black_background.png'
+        background_image = cv.imread(image_path)
+        text = "Place object on target displayed to start scan."
+        text_size = cv.getTextSize(text, cv.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
+        text_x = (1000 - text_size[0]) // 2
+        text_y = (1000 - text_size[1]) - 50
+        cv.putText(background_image, text, (text_x, text_y), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv.LINE_AA)
+
+        if background_image is None:
+            # If the image loading fails, create a solid black background
+            background_image = np.zeros((1000, 1000, 3), dtype=np.uint8)
+            text_size = cv.getTextSize(text, cv.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
+            text_x = (1000 - text_size[0]) // 2
+            text_y = (1000 + text_size[1]) // 2
+            cv.putText(background_image, text, (text_x, text_y), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv.LINE_AA)
+
+        # Display the window and wait for a key press
+        cv.imshow('Object Classification', background_image)
+    else:
+        # Create a solid color image
+        if label == 'trash':
+            r, g, b = 0, 0, 0
+
+        # Check if label_counter.count is less than 10
+        if label_counter.count < 10:
+            # Display solid white background with "Processing Item..." text
+            window = np.ones((1000, 1000, 3), dtype=np.uint8) * 255  # White background
+            processing_text = "Processing Item..."
+            text_size = cv.getTextSize(processing_text, cv.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
+            text_x = (1000 - text_size[0]) // 2
+            text_y = (1000 + text_size[1]) // 2
+            cv.putText(window, processing_text, (text_x, text_y), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv.LINE_AA)
+        if label_counter.count >= 10:
+            # Determine text color based on class
+            text_color = (255, 255, 255) if label in ['paper', 'plastic', 'trash'] else (0, 0, 0)
+
+            # Create a solid color window
+            window = np.ones((1000, 1000, 3), dtype=np.uint8) * np.array([b, g, r], dtype=np.uint8)
+
+            # Display the class label in text, centered and large
+            font = cv.FONT_HERSHEY_SIMPLEX
+            text_size = cv.getTextSize(label, font, 5, 10)[0]
+            text_x = (1000 - text_size[0]) // 2
+            text_y = (1000 + text_size[1]) // 2
+            cv.putText(window, label, (text_x, text_y), font, 5, text_color, 10, cv.LINE_AA)
+
+        # Display the window and wait for a key press
+        cv.imshow('Object Classification', window)
+
+
 def read_object():
 
-    # Check if the camera opened successfully
-    cap = cv.VideoCapture(0)
-    if not cap.isOpened():
-        print("Error: Could not open camera.")
-    # Set the frame width and height (optional)
-    cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
     label_counter.count = 0 # Reset counter everytime a new object is placed onto the tray
+
     while True: 
 
         # Get frame from camera
         ret, frame = cap.read()
+        cv.imwrite(image_file_name, frame)
 
-        # Classify current fram of camera
+        # Classify current frame of camera
         results = tm_model.classify_frame(image_file_name)
         label = results['label']
-
+        # label_counter.process_word(label)
+        
         # Set the color scheme for the LED Stick & Label on Camera
         r, g, b = colors_dict[results['label']][0], colors_dict[results['label']][1], colors_dict[results['label']][2]
+        display_solid_window(label, r, g, b)
 
         # Draw label on the frame
-        if results['confidence'] > 0.5 and label != 'background':  # You can adjust the confidence threshold as needed
+        if results['confidence'] > 0.5 and label != 'background':   # You can adjust the confidence threshold as needed
             if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
-                text_color = confirm_classification(label, r, g, b)
+                confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
-                    save_item(label, frame) # save image to class folder 
-                    cap.release()
-                    cv.destroyAllWindows() # Close Camera Window
+                    display_solid_window(label, r, g, b)
+                    save_item(label, frame) # save image to class folder
+                    last_saved_label = label
+                    open_bin(last_saved_label)
                     break
             elif label == 'trash': # trash
-                text_color = confirm_classification(label, r, g, b)
+                confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
-                    save_item(label, frame) # save image to class folder 
-                    cap.release()
-                    cv.destroyAllWindows() # Close Camera Window
+                    display_solid_window(label, r, g, b)
+                    save_item(label, frame) # save image to class folder
+                    last_saved_label = label
+                    open_bin(last_saved_label)
                     break
             elif label == 'plastic': # plastic
-                text_color = confirm_classification(label, r, g, b)
+                confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
+                    display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
-                    cap.release()
-                    cv.destroyAllWindows() # Close Camera Window
+                    last_saved_label = label
+                    open_bin(last_saved_label)
                     break
             elif label == 'metal': # metal
-                text_color = confirm_classification(label, r, g, b)
+                confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
+                    display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
-                    cap.release()
-                    cv.destroyAllWindows() # Close Camera Window
+                    last_saved_label = label
+                    open_bin(last_saved_label)
                     break
             elif label == 'glass': # glass
-                text_color = confirm_classification(label, r, g, b)
+                confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
+                    display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
-                    cap.release()
-                    cv.destroyAllWindows() # Close Camera Window
+                    last_saved_label = label
+                    open_bin(last_saved_label)
                     break
             elif label == 'battery': # battery
-                text_color = confirm_classification(label, r, g, b)
+                confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
+                    display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
-                    cap.release()
-                    cv.destroyAllWindows() # Close Camera Window
+                    last_saved_label = label
+                    open_bin(last_saved_label)
                     break
-            
-            # Place text on Camera Display
-            cv.putText(frame, results['label'], (100, 90), cv.FONT_HERSHEY_SIMPLEX, 0.9, text_color, 2) # coordinates (x, y) for text placement = (100, 90)
         else:
-            time.sleep(0.1)
+            display_solid_window(label, r, g, b)
             my_stick.LED_off() # Turn off LED Stick if reading background
 
         # Display Camera & Prediction Label
         if label_counter.count < 10: # Only display camera output prior to prediction confirmation
-            cv.imshow('Cam', frame)
+            # cv.imshow('Cam', frame)
             # Save current image
+            
             cv.imwrite(image_file_name, frame)
+            print(f"{label} has been observed this many times:", label_counter.count)
         # Visualize Results in Terminal
         print("results:", results)
 
@@ -357,41 +452,52 @@ def read_object():
             cap.release() # Close Camera Connection
             cv.destroyAllWindows() # Close Camera Window
             my_stick.LED_off() # Turn of LED Stick
+            turn_off_all_buttons() # Turn off all buttons
+            close_all_bins()
             # Break the loop if 'q' key is pressed
             sys.exit(0)
-    return label
+    
+    
+    return label, r, g, b
 
 # Decoration Function for LED Button
-def perform_led_pattern(button, duration=0.05):
-    button.LED_on(200)
+def perform_led_pattern(duration=0.1):
+    # Create a snake pattern of the LED's turning on and turning off to signal to the user to press one
+    battery_button.LED_on(200)  # Button in the 10 o'clock position
     time.sleep(duration)
-    button.LED_on(0)
+    battery_button.LED_on(0)
+    
+    glass_button.LED_on(200)   # Button in the 8 o'clock position
+    time.sleep(duration)
+    glass_button.LED_on(0)
+
+    metal_button.LED_on(200)    # Button in the 6 o'clock position
+    time.sleep(duration)
+    metal_button.LED_on(0)
+
+    paper_button.LED_on(200)   # Button in the 12th o'clock position
+    time.sleep(duration)
+    paper_button.LED_on(0)
+
+    plastic_button.LED_on(200) # Button in the 4 o'clock position
+    time.sleep(duration)
+    plastic_button.LED_on(0)
+
+    trash_button.LED_on(200)   # Button in the 2 o'clock position
+    time.sleep(duration)
+    trash_button.LED_on(0)
 
 def is_background_detected():
     # Check if the camera is already open
-    cap = cv.VideoCapture(0)
-    if not cap.isOpened():
-        print("Error: Could not open camera.")
-        return False  # Return False if the camera is not open
-
-    # Set the frame width and height (optional)
-    cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
-
-    label_counter.count = 0  # Reset counter every time a new object is placed onto the tray
-
+   
     # Get frame from the camera
-    ret, frame = cap.read()
+    ret, frame = cap.read() 
+    cv.imwrite(image_file_name, frame)
 
     # Classify the frame
     results = tm_model.classify_frame(image_file_name)
 
-    # Place text on Camera Display
-    cv.putText(frame, results['label'], (100, 90), cv.FONT_HERSHEY_SIMPLEX, 0.9, text_color, 2) # coordinates (x, y) for text placement = (100, 90)
-    
-    cv.imshow('Cam', frame)
-    # Save current image
-    cv.imwrite(image_file_name, frame)
+   
     # Visualize Results in Terminal
     print("results:", results)
 
@@ -406,80 +512,155 @@ while True:
         # TODO: Always display statistics in full screen on the iPad (via VNC). Update statitcs (plot) once every time a new time is added.
         
         # Classify Item: Constantly be looking for objects (but don't predict if background is detected)
-        label = read_object()  # returns name (as a string) of classified object
-
-        while True:
-            # Check for button presses to correct misclassifications
         
-            if is_background_detected() == True:
-                # Skip processing if background is detected
-                # cap.release() # Close Camera Connection
-                # cv.destroyAllWindows() # Close Camera Window
-                break
+        label, r, g, b = read_object()  # returns name (as a string) of classified object
+        # label_counter.process_word(label)
+        display_solid_window(label, r, g, b) # Display Prediction
+        open_bin(label)
+        
+        time.sleep(3)
+        close_bin(label)
             
+        if bin_lid == 'closed':
+            continue
+
+        if bin_lid == 'open': # To keep track if an object was detected or not
+            confirm_classification(label, r,g,b)
+        # cap.release() # Close Camera Connection
+        # cv.destroyAllWindows() # Close Camera Window
             if red_button.is_button_pressed():
                 red_button.LED_on(150)
-                # If the red button is pressed, wait for the user to press one of the correction buttons
                 print("Misclassification detected. Press a correction button.")
-                
-                # Wait for one of the correction buttons to be pressed
                 corrected_label = None
                 while corrected_label is None:
+                    # To terminate the program, press 'q' on the keyboard
+                    if cv.waitKey(1) & 0xFF == ord('q'):
+                        cap.release() # Close Camera Connection
+                        cv.destroyAllWindows() # Close Camera Window
+                        my_stick.LED_off() # Turn of LED Stick
+                        turn_off_all_buttons() # Turn off all buttons
+                        close_all_bins()
+                        # Break the loop if 'q' key is pressed
+                        sys.exit(0)
                     if paper_button.is_button_pressed():
                         corrected_label = 'paper'
+                        turn_off_all_buttons()
+                        paper_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label) 
                     elif trash_button.is_button_pressed():
                         corrected_label = 'trash'
+                        turn_off_all_buttons()
+                        time.sleep(0.1)
+                        trash_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label)
                     elif plastic_button.is_button_pressed():
                         corrected_label = 'plastic'
+                        turn_off_all_buttons()
+                        time.sleep(0.1)
+                        plastic_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label)
                     elif metal_button.is_button_pressed():
                         corrected_label = 'metal'
+                        turn_off_all_buttons()
+                        time.sleep(0.1)
+                        metal_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label)
                     elif glass_button.is_button_pressed():
                         corrected_label = 'glass'
+                        turn_off_all_buttons()
+                        time.sleep(0.1)
+                        glass_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label)
                     elif battery_button.is_button_pressed():
                         corrected_label = 'battery'
+                        turn_off_all_buttons()
+                        time.sleep(0.1)
+                        battery_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label)
                     else:
-                        # Create a snake pattern of the LED's turning on and turning off to signal to the user to press one
-                        paper_button.LED_on(200)   # Button in the 12th o'clock position
-                        time.sleep(0.05)
-                        paper_button.LED_on(0)
+                        perform_led_pattern()
+            break
+    
+        if red_button.is_button_pressed():
+            red_button.LED_on(150)
+            # If the red button is pressed, wait for the user to press one of the correction buttons
+            print("Misclassification detected. Press a correction button.")
+            perform_led_pattern()
 
-                        trash_button.LED_on(200)   # Button in the 2 o'clock position
-                        time.sleep(0.05)
-                        trash_button.LED_on(0)
+            # Wait for one of the correction buttons to be pressed
+            corrected_label = None
+            while corrected_label is None:
+                # To terminate the program, press 'q' on the keyboard
+                if cv.waitKey(1) & 0xFF == ord('q'):
+                    cap.release() # Close Camera Connection
+                    cv.destroyAllWindows() # Close Camera Window
+                    my_stick.LED_off() # Turn of LED Stick
+                    turn_off_all_buttons() # Turn off all buttons
+                    close_all_bins()
+                    # Break the loop if 'q' key is pressed
+                    sys.exit(0)
+                if paper_button.is_button_pressed():
+                    corrected_label = 'paper'
+                    turn_off_all_buttons()
+                    paper_button.LED_on(150)
+                    move_item_to_correct_folder(label, corrected_label) 
+                elif trash_button.is_button_pressed():
+                    corrected_label = 'trash'
+                    turn_off_all_buttons()
+                    time.sleep(0.1)
+                    trash_button.LED_on(150)
+                    move_item_to_correct_folder(label, corrected_label)
+                elif plastic_button.is_button_pressed():
+                    corrected_label = 'plastic'
+                    turn_off_all_buttons()
+                    time.sleep(0.1)
+                    plastic_button.LED_on(150)
+                    move_item_to_correct_folder(label, corrected_label)
+                elif metal_button.is_button_pressed():
+                    corrected_label = 'metal'
+                    turn_off_all_buttons()
+                    time.sleep(0.1)
+                    metal_button.LED_on(150)
+                    move_item_to_correct_folder(label, corrected_label)
+                elif glass_button.is_button_pressed():
+                    corrected_label = 'glass'
+                    turn_off_all_buttons()
+                    time.sleep(0.1)
+                    glass_button.LED_on(150)
+                    move_item_to_correct_folder(label, corrected_label)
+                elif battery_button.is_button_pressed():
+                    corrected_label = 'battery'
+                    turn_off_all_buttons()
+                    time.sleep(0.1)
+                    battery_button.LED_on(150)
+                    move_item_to_correct_folder(label, corrected_label)
+                else:
+                    perform_led_pattern()
 
-                        plastic_button.LED_on(200) # Button in the 4 o'clock position
-                        time.sleep(0.05)
-                        plastic_button.LED_on(0)
+            red_button.LED_off()
+                # time.sleep(0.1)  # Adjust sleep time as needed
+            
+            # Move the misclassified item to the correct folder
+            close_bin(label)
+            open_bin(corrected_label)
+            move_item_to_correct_folder(label, corrected_label)
+            time.sleep(2) 
+            close_bin(corrected_label)
+            
+            # To terminate the program, press 'q' on the keyboard
+            if cv.waitKey(1) & 0xFF == ord('q'):
+                cap.release() # Close Camera Connection
+                cv.destroyAllWindows() # Close Camera Window
+                my_stick.LED_off() # Turn of LED Stick
+                turn_off_all_buttons() # Turn off all buttons
+                close_all_bins()
+                # Break the loop if 'q' key is pressed
+                sys.exit(0)
+            break
 
-                        metal_button.LED_on(200)    # Button in the 6 o'clock position
-                        time.sleep(0.05)
-                        metal_button.LED_on(0)
-
-                        glass_button.LED_on(200)   # Button in the 8 o'clock position
-                        time.sleep(0.05)
-                        glass_button.LED_on(0)
-
-                        battery_button.LED_on(200)  # Button in the 10 o'clock position
-                        time.sleep(0.05)
-                        battery_button.LED_on(0)
-
-                    time.sleep(0.1)  # Adjust sleep time as needed
-                
-                # Move the misclassified item to the correct folder
-                rotate_servo_down(label)
-                rotate_servo_up(corrected_label)
-                move_item_to_correct_folder(label, corrected_label)
-                time.sleep(2) 
-                rotate_servo_down(corrected_label)
-                
-                
-                break
-
-
-        time.sleep(1)
 
         # TODO: Open lid corresponding to item detected. Update block accordingly to support feedback.
-        rotate_servo_down(label)
+        
 
         # TODO: Display Prediction on OLED Screen. 
 
@@ -487,7 +668,6 @@ while True:
         # This includes closing the lid for the miscclassification and opening the correct lid based on the button pressed by the user mapped to the correct classification.
         # Make sure to save picture of the object in the correct folder, and remove the picture of item in the folder that it was previously saved inside the read_object() function.
         
-        time.sleep(2) 
 
         # TODO: Close lid (when should the lid close? After how much time if the object was classified correctly?) 
         # Should we run a classification on when a hand is detected and then count 10 seconds from there? 
@@ -495,7 +675,7 @@ while True:
         # Should we have a 2nd camera to indicate when a person moves/grabs object/ leaves away from the system? 
         # NOTE: Best Idea so far: If the lid is open, run a function to check when background is detected again. Only when background is detected again. 
         # If so, wait for 10 seconds before runing the read_object() function to classify a new object.   
-        rotate_servo_up(label, 0)
+        
 
         # TODO: Integrate distance sensors using i2c mux to show ow full each bin is. 
 
