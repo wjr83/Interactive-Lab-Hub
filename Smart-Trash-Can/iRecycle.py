@@ -40,7 +40,7 @@ colors_dict = {
     'plastic': (0, 0, 255),           # Blue
     'metal': (0, 255, 0),             # Green
     'glass': (255, 20, 50),           # Pink
-    'batteries': (255, 13, 0)         # Orange
+    'battery': (255, 13, 0)         # Orange
 }
 
 # Dictionary to store file paths for misclassified items
@@ -51,7 +51,7 @@ misclassified_items = {
     'plastic': 'new_training_items/plastic',
     'metal': 'new_training_items/metal',
     'glass': 'new_training_items/glass',
-    'batteries': 'new_training_items/batteries'
+    'battery': 'new_training_items/batteries'
 }
 
 # Dictionary to map label to servo rotation
@@ -62,7 +62,7 @@ servo_index = {
     'plastic': 8,
     'metal': 15,
     'glass': 10,
-    'batteries': 12
+    'battery': 12
 }
 
 # Dictionary to map label to qwiic button
@@ -73,7 +73,7 @@ qwiic_button_address = {
     'plastic': 0x6e,    # Soldered: A0 -> Green Button
     'metal': 0x69,      # Soldered: A1 & A2 -> Green Button
     'glass': 0x67,      # Soldered: A3 -> Green Button 
-    'batteries': 0x63   # Soldered: A2 & A3 -> Green Button
+    'battery': 0x63   # Soldered: A2 & A3 -> Green Button
 }
 ##############################################################################
 # Set channels to the number of servo channels on your kit.
@@ -86,7 +86,7 @@ servo_trash = kit.servo[servo_index['trash']]
 servo_plastic = kit.servo[servo_index['plastic']]
 servo_metal = kit.servo[servo_index['metal']]
 servo_glass = kit.servo[servo_index['glass']]
-servo_batteries = kit.servo[servo_index['batteries']]
+servo_batteries = kit.servo[servo_index['battery']]
 
 
 # Set the pulse width range of your servo for PWM control of rotating 0-180 degree (min_pulse, max_pulse)
@@ -105,7 +105,7 @@ trash_button = qwiic_button.QwiicButton(qwiic_button_address['trash']) # Soldere
 plastic_button = qwiic_button.QwiicButton(qwiic_button_address['plastic']) # Soldered: A0 -> Green Button
 metal_button = qwiic_button.QwiicButton(qwiic_button_address['metal']) # Soldered: A1 & A2 -> Green Button
 glass_button = qwiic_button.QwiicButton(qwiic_button_address['glass']) # Soldered: A3 -> Green Button 
-battery_button = qwiic_button.QwiicButton(qwiic_button_address['batteries']) # Soldered: A2 & A3 -> Green Button
+battery_button = qwiic_button.QwiicButton(qwiic_button_address['battery']) # Soldered: A2 & A3 -> Green Button
 
 ##############################################################################################################
 # Model 1: wjr83 selfmade dataset
@@ -113,8 +113,9 @@ battery_button = qwiic_button.QwiicButton(qwiic_button_address['batteries']) # S
 # labels_path = "recycling_model_1/labels.txt"
 
 # Model 2: Kaggle Dataset
-model_path = 'smart_trashcan_model_v1/model.tflite'
-labels_path = 'smart_trashcan_model_v1/labels.txt'
+model_path = 'iRecycle_cornell_background/model.tflite' #'smart_trashcan_model_v1/model.tflite'
+labels_path = 'iRecycle_cornell_background/labels.txt' #'smart_trashcan_model_v1/labels.txt'
+
 
 image_file_name = "frame.jpg"
 
@@ -184,7 +185,7 @@ def rotate_servo_up(label, degrees):
         servo_metal.angle = degrees
     elif label == 'glass': # glass
         servo_glass.angle = degrees
-    elif label == 'batteries': # batteries
+    elif label == 'battery': # batteries
         servo_batteries.angle = degrees
         
     
@@ -247,7 +248,7 @@ def read_object():
                     cap.release()
                     cv.destroyAllWindows() # Close Camera Window
                     break
-            elif label == 'batteries': # batteries
+            elif label == 'battery': # batteries
                 text_color = confirm_classification(label, r, g, b)
                 if label_counter.count == 10:
                     save_item(label, frame) # save image to class folder 
@@ -290,7 +291,7 @@ while True:
         time.sleep(1)
 
         # TODO: Open lid corresponding to item detected. Update block accordingly to support feedback.
-        rotate_servo_up(label, 90)
+        rotate_servo_up(label, 0)
 
         # TODO: Display Prediction on OLED Screen. 
 
@@ -306,7 +307,7 @@ while True:
         # Should we have a 2nd camera to indicate when a person moves/grabs object/ leaves away from the system? 
         # NOTE: Best Idea so far: If the lid is open, run a function to check when background is detected again. Only when background is detected again. 
         # If so, wait for 10 seconds before runing the read_object() function to classify a new object.   
-        rotate_servo_up(label, 0)
+        rotate_servo_up(label, 90)
 
         # TODO: Integrate distance sensors using i2c mux to show ow full each bin is. 
 
