@@ -171,7 +171,7 @@ def open_all_bins():
     #     if label_counter.count >= 10:
     #         # All LEDs on LED Stick should be turned on 
     #         # my_stick.set_all_LED_color(r, g, b)
-    #         # display_solid_window(label, r, g, b)
+    #         # display_solid_window(label, r, g, b, frame)
     #     elif label_counter.count == 0:
     #         my_stick.LED_off()
     #         time.sleep(0.25) # Account for person placing object
@@ -182,7 +182,7 @@ def open_all_bins():
     #         # pass
     #         time.sleep(0.15) # Necessary to avoid spamming the bus. Prevents I/O error
     #         my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
-    #         display_solid_window(label, r, g, b) # Display "Processing Item..."
+    #         display_solid_window(label, r, g, b, frame) # Display "Processing Item..."
     #         # my_stick.set_all_LED_color(r, g, b)
     #     # print("text_color:", colors_dict[label])
     #     text_color = (r, g, b)
@@ -210,7 +210,7 @@ def save_item(label, frame): # Increase dataset of objects by saving a picture t
         print(f"Error: No folder path defined for misclassified item ({label})")
 
 # If item was misclassified, user inputs correct label by pressing the red button followed by the corrected green button associated with the class.
-def move_item_to_correct_folder(label, corrected_label):
+def move_item_to_correct_folder(label, corrected_label, r, g, b, frame):
     # Get the folder paths for misclassified and correct labels
     misclassified_folder = misclassified_items.get(label)
     correct_folder = misclassified_items.get(corrected_label)
@@ -238,7 +238,7 @@ def move_item_to_correct_folder(label, corrected_label):
             print(f"Renamed to {new_name} in '{correct_folder}'.")
 
             # Rotate the corresponding servo by 90 degrees
-            open_bin(corrected_label, 90)
+            open_bin(corrected_label, r, g, b, frame, 90)
             # time.sleep(1)  # Adjust sleep time as needed
         else:
             print(f"No items found in '{misclassified_folder}'.")
@@ -276,7 +276,7 @@ def turn_off_button(label,brightness=0):
  
 
 # Function to rotate servo pertaining to identified item to a specified set of degrees 
-def open_bin(label, degrees=0):
+def open_bin(label, r, g, b, frame, degrees=0):
     turn_on_button(label)
     bin_lid = 'open'
     if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
@@ -291,6 +291,11 @@ def open_bin(label, degrees=0):
         servo_glass.angle = degrees
     elif label == 'battery': # battery
         servo_battery.angle = degrees
+
+    display_solid_window(label, r, g, b, frame)
+    cv.waitKey(1) # Necessary in order for window to update.
+
+    timer(label)
     
 
 # Function to rotate servo pertaining to identified item to a specified set of degrees 
@@ -310,7 +315,7 @@ def close_bin(label, degrees=90):
     elif label == 'battery': # battery
         servo_battery.angle = degrees
         
-def display_solid_window(label, r, g, b):
+def display_solid_window(label, r, g, b, frame):
     label_counter.process_word(label)
     if label == 'background':
         # Load the image.png from memory
@@ -339,6 +344,36 @@ def display_solid_window(label, r, g, b):
         if label == 'battery':
             r, g, b = 255, 127, 0
 
+        if label_counter.count == 10:
+            # if label == 'trash':
+            #     r, g, b = 255, 255, 255
+            if label == 'trash':
+                my_stick.set_all_LED_color(255, 255, 255)
+            elif label == 'battery':
+                    my_stick.set_all_LED_color(255, 13, 0)
+            else: 
+                my_stick.set_all_LED_color(r, g, b)
+            # Determine text color based on class
+            text_color = (255, 255, 255) if label in ['paper', 'plastic', 'trash'] else (0, 0, 0)
+
+            # Create a solid color window
+            window = np.ones((1000, 1000, 3), dtype=np.uint8) * np.array([b, g, r], dtype=np.uint8)
+
+            # Display the class label in text, centered and large
+            font = cv.FONT_HERSHEY_SIMPLEX
+            text_size = cv.getTextSize(label, font, 5, 10)[0]
+            text_x = (1000 - text_size[0]) // 2
+            text_y = (1000 + text_size[1]) // 2
+            cv.putText(window, label.capitalize(), (text_x, text_y), font, 5, text_color, 10, cv.LINE_AA)
+
+            cv.imshow('Object Classification', window)
+
+            # time.sleep(1)
+            save_item(label, frame) # save image to class folder
+            last_saved_label = label
+            open_bin(last_saved_label, r, g, b, frame)
+
+        
         # Check if label_counter.count is less than 10
         if label_counter.count < 10:
             if label_counter.count == 0:
@@ -366,31 +401,42 @@ def display_solid_window(label, r, g, b):
             text_x = (1000 - text_size[0]) // 2
             text_y = (1000 + text_size[1]) // 2
             cv.putText(window, processing_text, (text_x, text_y), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv.LINE_AA)
+
+            cv.imshow('Object Classification', window)
+        
+        
+        
             
-        if label_counter.count >= 10:
-            # if label == 'trash':
-            #     r, g, b = 255, 255, 255
-            if label == 'trash':
-                my_stick.set_all_LED_color(255, 255, 255)
-            elif label == 'battery':
-                    my_stick.set_all_LED_color(0, 255, 13, 0)
-            else: 
-                my_stick.set_all_LED_color(r, g, b)
-            # Determine text color based on class
-            text_color = (255, 255, 255) if label in ['paper', 'plastic', 'trash'] else (0, 0, 0)
+            
+        # if label_counter.count > 10:
+        #     # if label == 'trash':
+        #     #     r, g, b = 255, 255, 255
+        #     if label == 'trash':
+        #         my_stick.set_all_LED_color(255, 255, 255)
+        #     elif label == 'battery':
+        #             my_stick.set_all_LED_color(255, 13, 0)
+        #     else: 
+        #         my_stick.set_all_LED_color(r, g, b)
+        #     # Determine text color based on class
+        #     text_color = (255, 255, 255) if label in ['paper', 'plastic', 'trash'] else (0, 0, 0)
 
-            # Create a solid color window
-            window = np.ones((1000, 1000, 3), dtype=np.uint8) * np.array([b, g, r], dtype=np.uint8)
+        #     # Create a solid color window
+        #     window = np.ones((1000, 1000, 3), dtype=np.uint8) * np.array([b, g, r], dtype=np.uint8)
 
-            # Display the class label in text, centered and large
-            font = cv.FONT_HERSHEY_SIMPLEX
-            text_size = cv.getTextSize(label, font, 5, 10)[0]
-            text_x = (1000 - text_size[0]) // 2
-            text_y = (1000 + text_size[1]) // 2
-            cv.putText(window, label, (text_x, text_y), font, 5, text_color, 10, cv.LINE_AA)
+        #     # Display the class label in text, centered and large
+        #     font = cv.FONT_HERSHEY_SIMPLEX
+        #     text_size = cv.getTextSize(label, font, 5, 10)[0]
+        #     text_x = (1000 - text_size[0]) // 2
+        #     text_y = (1000 + text_size[1]) // 2
+        #     cv.putText(window, label.capitalize(), (text_x, text_y), font, 5, text_color, 10, cv.LINE_AA)
 
+        #     cv.imshow('Object Classification', window)
+            
+            
         # Display the window and wait for a key press
-        cv.imshow('Object Classification', window)
+        # cv.imshow('Object Classification', window)
+        
+        
 
 
 
@@ -411,66 +457,66 @@ def read_object():
         
         # Set the color scheme for the LED Stick & Label on Camera
         r, g, b = colors_dict[results['label']][0], colors_dict[results['label']][1], colors_dict[results['label']][2]
-        display_solid_window(label, r, g, b)
+        # display_solid_window(label, r, g, b, frame)
 
         # Draw label on the frame
         if results['confidence'] > 0.5 and label != 'background':   # You can adjust the confidence threshold as needed
             if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
                 # confirm_classification(label, r, g, b)
-                display_solid_window(label, r, g, b)
-                if label_counter.count == 10:
-                    display_solid_window(label, r, g, b)
-                    save_item(label, frame) # save image to class folder
-                    last_saved_label = label
-                    open_bin(last_saved_label)
-                    break
+                display_solid_window(label, r, g, b, frame)
+                # if label_counter.count == 10:
+                #     display_solid_window(label, r, g, b, frame)
+                #     save_item(label, frame) # save image to class folder
+                #     last_saved_label = label
+                #     open_bin(last_saved_label)
+                #     break
             elif label == 'trash': # trash
                 # confirm_classification(label, r, g, b)
-                display_solid_window(label, r, g, b)
-                if label_counter.count == 10:
-                    display_solid_window(label, r, g, b)
-                    save_item(label, frame) # save image to class folder
-                    last_saved_label = label
-                    open_bin(last_saved_label)
-                    break
+                display_solid_window(label, r, g, b, frame)
+                # if label_counter.count == 10:
+                #     display_solid_window(label, r, g, b, frame)
+                #     save_item(label, frame) # save image to class folder
+                #     last_saved_label = label
+                #     open_bin(last_saved_label)
+                #     break
             elif label == 'plastic': # plastic
                 # confirm_classification(label, r, g, b)
-                display_solid_window(label, r, g, b)
-                if label_counter.count == 10:
-                    display_solid_window(label, r, g, b)
-                    save_item(label, frame) # save image to class folder 
-                    last_saved_label = label
-                    open_bin(last_saved_label)
-                    break
+                display_solid_window(label, r, g, b, frame)
+                # if label_counter.count == 10:
+                #     display_solid_window(label, r, g, b, frame)
+                #     save_item(label, frame) # save image to class folder 
+                #     last_saved_label = label
+                #     open_bin(last_saved_label)
+                #     break
             elif label == 'metal': # metal
                 # confirm_classification(label, r, g, b)
-                display_solid_window(label, r, g, b)
-                if label_counter.count == 10:
-                    display_solid_window(label, r, g, b)
-                    save_item(label, frame) # save image to class folder 
-                    last_saved_label = label
-                    open_bin(last_saved_label)
-                    break
+                display_solid_window(label, r, g, b, frame)
+                # if label_counter.count == 10:
+                #     display_solid_window(label, r, g, b, frame)
+                #     save_item(label, frame) # save image to class folder 
+                #     last_saved_label = label
+                #     open_bin(last_saved_label)
+                #     break
             elif label == 'glass': # glass
                 # confirm_classification(label, r, g, b)
-                display_solid_window(label, r, g, b)
-                if label_counter.count == 10:
-                    display_solid_window(label, r, g, b)
-                    save_item(label, frame) # save image to class folder 
-                    last_saved_label = label
-                    open_bin(last_saved_label)
-                    break
+                display_solid_window(label, r, g, b, frame)
+                # if label_counter.count == 10:
+                #     display_solid_window(label, r, g, b, frame)
+                #     save_item(label, frame) # save image to class folder 
+                #     last_saved_label = label
+                #     open_bin(last_saved_label)
+                #     break
             elif label == 'battery': # battery
                 # confirm_classification(label, r, g, b)
-                display_solid_window(label, r, g, b)
-                if label_counter.count == 10:
-                    display_solid_window(label, r, g, b)
-                    save_item(label, frame) # save image to class folder 
-                    last_saved_label = label
-                    open_bin(last_saved_label)
-                    break
+                display_solid_window(label, r, g, b, frame)
+                # if label_counter.count == 10:
+                #     display_solid_window(label, r, g, b, frame)
+                #     save_item(label, frame) # save image to class folder 
+                #     last_saved_label = label
+                #     open_bin(last_saved_label)
+                #     break
         else:
-            display_solid_window(label, r, g, b)
+            display_solid_window(label, r, g, b, frame)
             my_stick.LED_off() # Turn off LED Stick if reading background
 
         # Display Camera & Prediction Label
@@ -479,9 +525,9 @@ def read_object():
             # Save current image
             
             cv.imwrite(image_file_name, frame)
-            print(f"{label} has been observed this many times:", label_counter.count)
+            # print(f"{label} has been observed this many times:", label_counter.count)
         # Visualize Results in Terminal
-        print("results:", results)
+        # print("results:", results)
 
         # To terminate the program, press 'q' on the keyboard
         if cv.waitKey(1) & 0xFF == ord('q'):
@@ -494,7 +540,7 @@ def read_object():
             sys.exit(0)
     
     
-    return label, r, g, b
+    return label, r, g, b, frame
 
 # Decoration Function for LED Button
 def perform_led_pattern(duration=0.1):
@@ -540,7 +586,27 @@ def is_background_detected():
     # Return True if the "background" class is detected with high confidence
     return results['label'] == 'background' and results['confidence'] > 0.5
 
+def timer(label, seconds=10):
+    start_time = time.time()
 
+    while True:
+        elapsed_time = time.time() - start_time
+
+        if elapsed_time >= seconds:
+            close_bin(label)
+            break
+        else:
+            #TODO: check if red button was pressed
+            
+            pass
+
+        # You can add some other processing or print statements here if needed
+        print(f"Time elapsed: {elapsed_time:.2f} seconds")
+
+        # Adjust the delay based on your needs
+        time.sleep(0.1)
+
+    
 
 # Main Loop
 while True:
@@ -549,10 +615,13 @@ while True:
         
         # Classify Item: Constantly be looking for objects (but don't predict if background is detected)
         
-        label, r, g, b = read_object()  # returns name (as a string) of classified object
+        label, r, g, b, frame = read_object()  # returns name (as a string) of classified object
         # label_counter.process_word(label)
-        display_solid_window(label, r, g, b) # Display Prediction
-        open_bin(label)
+        display_solid_window(label, r, g, b, frame) # Display Prediction
+        # open_bin(label)
+        print("Counter Value:", label_counter.count)
+        if label_counter.count == 10:
+            timer(label)
         
         time.sleep(3)
         close_bin(label)
@@ -583,37 +652,37 @@ while True:
                         corrected_label = 'paper'
                         turn_off_all_buttons()
                         paper_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label) 
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame) 
                     elif trash_button.is_button_pressed():
                         corrected_label = 'trash'
                         turn_off_all_buttons()
                         time.sleep(0.1)
                         trash_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                     elif plastic_button.is_button_pressed():
                         corrected_label = 'plastic'
                         turn_off_all_buttons()
                         time.sleep(0.1)
                         plastic_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                     elif metal_button.is_button_pressed():
                         corrected_label = 'metal'
                         turn_off_all_buttons()
                         time.sleep(0.1)
                         metal_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                     elif glass_button.is_button_pressed():
                         corrected_label = 'glass'
                         turn_off_all_buttons()
                         time.sleep(0.1)
                         glass_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                     elif battery_button.is_button_pressed():
                         corrected_label = 'battery'
                         turn_off_all_buttons()
                         time.sleep(0.1)
                         battery_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                     else:
                         perform_led_pattern()
             break
@@ -640,37 +709,37 @@ while True:
                     corrected_label = 'paper'
                     turn_off_all_buttons()
                     paper_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label) 
+                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame) 
                 elif trash_button.is_button_pressed():
                     corrected_label = 'trash'
                     turn_off_all_buttons()
                     time.sleep(0.1)
                     trash_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label)
+                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                 elif plastic_button.is_button_pressed():
                     corrected_label = 'plastic'
                     turn_off_all_buttons()
                     time.sleep(0.1)
                     plastic_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label)
+                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                 elif metal_button.is_button_pressed():
                     corrected_label = 'metal'
                     turn_off_all_buttons()
                     time.sleep(0.1)
                     metal_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label)
+                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                 elif glass_button.is_button_pressed():
                     corrected_label = 'glass'
                     turn_off_all_buttons()
                     time.sleep(0.1)
                     glass_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label)
+                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                 elif battery_button.is_button_pressed():
                     corrected_label = 'battery'
                     turn_off_all_buttons()
                     time.sleep(0.1)
                     battery_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label)
+                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
                 else:
                     perform_led_pattern()
 
@@ -679,8 +748,8 @@ while True:
             
             # Move the misclassified item to the correct folder
             close_bin(label)
-            open_bin(corrected_label)
-            move_item_to_correct_folder(label, corrected_label)
+            open_bin(corrected_label, r, g, b, frame)
+            move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
             time.sleep(2) 
             close_bin(corrected_label)
             
