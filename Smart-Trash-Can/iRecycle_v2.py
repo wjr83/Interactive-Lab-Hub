@@ -178,8 +178,11 @@ def plot_bar_chart(file_counts):
     data = {'Item Categories': list(file_counts.keys()), 'Quantity': list(file_counts.values())}
     df = pd.DataFrame(data)
 
+    # Sort DataFrame by 'Item Categories' column
+    df = df.sort_values(by='Item Categories')
+
     # Set a color palette
-    colors = sns.color_palette('viridis', n_colors=len(df))
+    colors = sns.color_palette("viridis", n_colors=len(df))
 
     # Set the background color to black
     sns.set(style="darkgrid")
@@ -191,9 +194,9 @@ def plot_bar_chart(file_counts):
     # Set background color
     ax.set_facecolor('#1E1E1E')
 
-    # Set text color to white
-    plt.xticks(color='white', fontsize=16)
-    plt.yticks(color='white', fontsize=16)
+    # Set text color to white and capitalize x-axis labels
+    plt.xticks(ticks=range(len(df['Item Categories'])), labels=df['Item Categories'].str.capitalize(), color='yellow', fontsize=16, rotation=0, ha='center')
+    plt.yticks(color='yellow', fontsize=16)
     ax.xaxis.label.set_color('white')
     ax.yaxis.label.set_color('white')
 
@@ -214,6 +217,7 @@ def plot_bar_chart(file_counts):
     # Save the plot
     plt.savefig('statistics_plot.png')
     plt.close()
+
 
 def display_statistics_window():
     statistics_image = cv.imread('statistics_plot.png')
