@@ -96,7 +96,7 @@ def walking_rainbow(LED_stick, rainbow_length, LED_length, delay):
 
 def run_example():
 
-    print("\nSparkFun Qwiic LED Stick Example 1")
+    # print("\nSparkFun Qwiic LED Stick Example 1")
     my_stick = qwiic_led_stick.QwiicLEDStick()
 
     if my_stick.begin() == False:
@@ -112,5 +112,5 @@ if __name__ == '__main__':
     try:
         run_example()
     except (KeyboardInterrupt, SystemExit) as exErr:
-        print("\nEnding Example 8")
+        # print("\nEnding Example 8")
         sys.exit(0)

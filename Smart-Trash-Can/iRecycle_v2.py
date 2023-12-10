@@ -164,32 +164,32 @@ def open_all_bins():
     bin_lid = 'open'
 
 
-def confirm_classification(label, r, g, b):
+# def confirm_classification(label, r, g, b):
     # label = results['label']
-    label_counter.process_word(label)
-    if label != 'background' and bin_lid == 'closed':
-        if label_counter.count >= 10:
-            # All LEDs on LED Stick should be turned on 
-            my_stick.set_all_LED_color(r, g, b)
-            display_solid_window(label, r, g, b)
-        elif label_counter.count == 0:
-            my_stick.LED_off()
-            time.sleep(0.5) # Account for person placing object
-            my_stick.set_single_LED_color(0, r, g, b)
-            time.sleep(0.5) # Account for person placing object
-        else:
-            #TODO: Every 5 words turn on an LED
-            pass
-            time.sleep(0.15) # Necessary to avoid spamming the bus. Prevents I/O error
-            my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
-            display_solid_window(label, r, g, b) # Display "Processing Item..."
-            # my_stick.set_all_LED_color(r, g, b)
-        # print("text_color:", colors_dict[label])
-        text_color = (r, g, b)
-    else:
-        if label_counter.count == 100: # Modify accordingly to give ample time for disposal of item and/or correction in the event of a misclassification
-            my_stick.set_all_LED_color(r, g, b)
-            close_all_bins()
+    # label_counter.process_word(label)
+    # if label != 'background' and bin_lid == 'closed':
+    #     if label_counter.count >= 10:
+    #         # All LEDs on LED Stick should be turned on 
+    #         # my_stick.set_all_LED_color(r, g, b)
+    #         # display_solid_window(label, r, g, b)
+    #     elif label_counter.count == 0:
+    #         my_stick.LED_off()
+    #         time.sleep(0.25) # Account for person placing object
+    #         my_stick.set_single_LED_color(0, r, g, b)
+    #         time.sleep(0.25) # Account for person placing object
+    #     elif label_counter.count < 10:
+    #         # #TODO: Every 5 words turn on an LED
+    #         # pass
+    #         time.sleep(0.15) # Necessary to avoid spamming the bus. Prevents I/O error
+    #         my_stick.set_single_LED_color(label_counter.count, r, g, b) # turn on the LED's as a progress bar of confidence
+    #         display_solid_window(label, r, g, b) # Display "Processing Item..."
+    #         # my_stick.set_all_LED_color(r, g, b)
+    #     # print("text_color:", colors_dict[label])
+    #     text_color = (r, g, b)
+    # else:
+    #     if label_counter.count == 100: # Modify accordingly to give ample time for disposal of item and/or correction in the event of a misclassification
+    #         my_stick.set_all_LED_color(r, g, b)
+    #         close_all_bins()
     
     # Set the servo to 180 degree position
     # servo.angle = 36*2
@@ -336,9 +336,29 @@ def display_solid_window(label, r, g, b):
         # Create a solid color image
         if label == 'trash':
             r, g, b = 0, 0, 0
+        if label == 'battery':
+            r, g, b = 255, 127, 0
 
         # Check if label_counter.count is less than 10
         if label_counter.count < 10:
+            if label_counter.count == 0:
+                my_stick.LED_off()
+                time.sleep(0.25) # Account for person placing object
+                if label == 'trash':
+                    my_stick.set_single_LED_color(0, 255, 255, 255)
+                elif label == 'battery':
+                    my_stick.set_single_LED_color(0, 255, 13, 0)
+                else:
+                    my_stick.set_single_LED_color(0, r, g, b)
+                    time.sleep(0.25) # Account for person placing object
+            time.sleep(0.15) # Necessary to avoid spamming the bus. Prevents I/O error
+            if label == 'trash':
+                    my_stick.set_single_LED_color(label_counter.count, 255, 255, 255)
+            elif label == 'battery':
+                my_stick.set_single_LED_color(label_counter.count, 255, 13, 0)
+            else:
+                my_stick.set_single_LED_color(label_counter.count, r, g, b)
+
             # Display solid white background with "Processing Item..." text
             window = np.ones((1000, 1000, 3), dtype=np.uint8) * 255  # White background
             processing_text = "Processing Item..."
@@ -346,7 +366,16 @@ def display_solid_window(label, r, g, b):
             text_x = (1000 - text_size[0]) // 2
             text_y = (1000 + text_size[1]) // 2
             cv.putText(window, processing_text, (text_x, text_y), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv.LINE_AA)
+            
         if label_counter.count >= 10:
+            # if label == 'trash':
+            #     r, g, b = 255, 255, 255
+            if label == 'trash':
+                my_stick.set_all_LED_color(255, 255, 255)
+            elif label == 'battery':
+                    my_stick.set_all_LED_color(0, 255, 13, 0)
+            else: 
+                my_stick.set_all_LED_color(r, g, b)
             # Determine text color based on class
             text_color = (255, 255, 255) if label in ['paper', 'plastic', 'trash'] else (0, 0, 0)
 
@@ -362,6 +391,7 @@ def display_solid_window(label, r, g, b):
 
         # Display the window and wait for a key press
         cv.imshow('Object Classification', window)
+
 
 
 def read_object():
@@ -386,7 +416,8 @@ def read_object():
         # Draw label on the frame
         if results['confidence'] > 0.5 and label != 'background':   # You can adjust the confidence threshold as needed
             if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
-                confirm_classification(label, r, g, b)
+                # confirm_classification(label, r, g, b)
+                display_solid_window(label, r, g, b)
                 if label_counter.count == 10:
                     display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder
@@ -394,7 +425,8 @@ def read_object():
                     open_bin(last_saved_label)
                     break
             elif label == 'trash': # trash
-                confirm_classification(label, r, g, b)
+                # confirm_classification(label, r, g, b)
+                display_solid_window(label, r, g, b)
                 if label_counter.count == 10:
                     display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder
@@ -402,7 +434,8 @@ def read_object():
                     open_bin(last_saved_label)
                     break
             elif label == 'plastic': # plastic
-                confirm_classification(label, r, g, b)
+                # confirm_classification(label, r, g, b)
+                display_solid_window(label, r, g, b)
                 if label_counter.count == 10:
                     display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
@@ -410,7 +443,8 @@ def read_object():
                     open_bin(last_saved_label)
                     break
             elif label == 'metal': # metal
-                confirm_classification(label, r, g, b)
+                # confirm_classification(label, r, g, b)
+                display_solid_window(label, r, g, b)
                 if label_counter.count == 10:
                     display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
@@ -418,7 +452,8 @@ def read_object():
                     open_bin(last_saved_label)
                     break
             elif label == 'glass': # glass
-                confirm_classification(label, r, g, b)
+                # confirm_classification(label, r, g, b)
+                display_solid_window(label, r, g, b)
                 if label_counter.count == 10:
                     display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
@@ -426,7 +461,8 @@ def read_object():
                     open_bin(last_saved_label)
                     break
             elif label == 'battery': # battery
-                confirm_classification(label, r, g, b)
+                # confirm_classification(label, r, g, b)
+                display_solid_window(label, r, g, b)
                 if label_counter.count == 10:
                     display_solid_window(label, r, g, b)
                     save_item(label, frame) # save image to class folder 
@@ -522,10 +558,11 @@ while True:
         close_bin(label)
             
         if bin_lid == 'closed':
-            continue
+            pass
 
         if bin_lid == 'open': # To keep track if an object was detected or not
-            confirm_classification(label, r,g,b)
+            pass
+            # confirm_classification(label, r,g,b)
         # cap.release() # Close Camera Connection
         # cv.destroyAllWindows() # Close Camera Window
             if red_button.is_button_pressed():
