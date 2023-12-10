@@ -11,6 +11,9 @@ from word_counter import WordCounter # custom class to validate reading from cam
 import walking_rainbow_LED_stick
 import qwiic_button
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
 
 ##############################################################################
 # Check if the camera opened successfully
@@ -163,6 +166,65 @@ def open_all_bins():
     servo_battery.angle = 0
     bin_lid = 'open'
 
+def count_files_in_folders(folder_paths):
+    file_counts = {}
+    for label, folder_path in folder_paths.items():
+        file_counts[label] = len([f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))])
+    return file_counts
+
+
+def plot_bar_chart(file_counts):
+    # Convert the file_counts dictionary to a DataFrame
+    data = {'Item Categories': list(file_counts.keys()), 'Quantity': list(file_counts.values())}
+    df = pd.DataFrame(data)
+
+    # Set a color palette
+    colors = sns.color_palette('viridis', n_colors=len(df))
+
+    # Set the background color to black
+    sns.set(style="darkgrid")
+
+    # Create a bar chart using seaborn
+    plt.figure(figsize=(11, 12), dpi=80)
+    ax = sns.barplot(x='Item Categories', y='Quantity', data=df, palette=colors, edgecolor='w')
+
+    # Set background color
+    ax.set_facecolor('#1E1E1E')
+
+    # Set text color to white
+    plt.xticks(color='white', fontsize=16)
+    plt.yticks(color='white', fontsize=16)
+    ax.xaxis.label.set_color('white')
+    ax.yaxis.label.set_color('white')
+
+    # Remove x-axis label
+    ax.set(xlabel=None)
+
+    # Set title and labels
+    plt.ylabel('Quantity', fontsize=16, color='white')
+    plt.title('Quantity of Items Disposed', fontsize=16, color='white')
+
+    # Remove empty space between bars
+    plt.tight_layout()
+
+    # Set the face color of the entire figure to black
+    fig = plt.gcf()
+    fig.set_facecolor('#1E1E1E')
+
+    # Save the plot
+    plt.savefig('statistics_plot.png')
+    plt.close()
+
+def display_statistics_window():
+    statistics_image = cv.imread('statistics_plot.png')
+    cv.imshow('Statistics', statistics_image)
+    # cv.moveWindow('Statistics', 0, 0)  # Move the window to the top left corner
+    cv.waitKey(1)  # Required to update the window
+
+# Initialize statistics window
+cv.namedWindow('Statistics', cv.WINDOW_NORMAL)
+cv.resizeWindow('Statistics', 950, 1050)  # Set the size of the statistics window
+
 
 # def confirm_classification(label, r, g, b):
     # label = results['label']
@@ -237,6 +299,9 @@ def move_item_to_correct_folder(label, corrected_label, r, g, b, frame):
 
             print(f"Moved {last_item} from '{misclassified_folder}' to '{correct_folder}'.")
             print(f"Renamed to {new_name} in '{correct_folder}'.")
+            file_counts = count_files_in_folders(misclassified_items)
+            plot_bar_chart(file_counts)
+            display_statistics_window()
 
             # Open correct bin per user input
             turn_off_all_buttons()
@@ -439,6 +504,9 @@ def display_solid_window(label, r, g, b, frame):
             # time.sleep(1)
             save_item(label, frame) # save image to class folder
             last_saved_label = label
+            file_counts = count_files_in_folders(misclassified_items)
+            plot_bar_chart(file_counts)
+            display_statistics_window()
             open_bin(last_saved_label, r, g, b, frame)
 
         
@@ -509,7 +577,14 @@ def display_solid_window(label, r, g, b, frame):
 
 
 def read_object():
+    # Count the number of files in each folder
+    file_counts = count_files_in_folders(misclassified_items)
 
+    # Plot the bar chart
+    plot_bar_chart(file_counts)
+    display_statistics_window()
+
+    
     label_counter.count = 0 # Reset counter everytime a new object is placed onto the tray
 
     while True: 
@@ -755,146 +830,146 @@ while True:
         # if label_counter.count == 10:
         #     timer(label)
         
-        time.sleep(3)
-        close_bin(label)
+        # time.sleep(3)
+        # close_bin(label)
             
-        if bin_lid == 'closed':
-            pass
+        # if bin_lid == 'closed':
+        #     pass
 
-        if bin_lid == 'open': # To keep track if an object was detected or not
-            pass
-            # confirm_classification(label, r,g,b)
-        # cap.release() # Close Camera Connection
-        # cv.destroyAllWindows() # Close Camera Window
-            if red_button.is_button_pressed():
-                red_button.LED_on(150)
-                print("Misclassification detected. Press a correction button.")
-                corrected_label = None
-                while corrected_label is None:
-                    # To terminate the program, press 'q' on the keyboard
-                    if cv.waitKey(1) & 0xFF == ord('q'):
-                        cap.release() # Close Camera Connection
-                        cv.destroyAllWindows() # Close Camera Window
-                        my_stick.LED_off() # Turn of LED Stick
-                        turn_off_all_buttons() # Turn off all buttons
-                        close_all_bins()
-                        # Break the loop if 'q' key is pressed
-                        sys.exit(0)
-                    if paper_button.is_button_pressed():
-                        corrected_label = 'paper'
-                        turn_off_all_buttons()
-                        paper_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame) 
-                    elif trash_button.is_button_pressed():
-                        corrected_label = 'trash'
-                        turn_off_all_buttons()
-                        time.sleep(0.1)
-                        trash_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                    elif plastic_button.is_button_pressed():
-                        corrected_label = 'plastic'
-                        turn_off_all_buttons()
-                        time.sleep(0.1)
-                        plastic_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                    elif metal_button.is_button_pressed():
-                        corrected_label = 'metal'
-                        turn_off_all_buttons()
-                        time.sleep(0.1)
-                        metal_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                    elif glass_button.is_button_pressed():
-                        corrected_label = 'glass'
-                        turn_off_all_buttons()
-                        time.sleep(0.1)
-                        glass_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                    elif battery_button.is_button_pressed():
-                        corrected_label = 'battery'
-                        turn_off_all_buttons()
-                        time.sleep(0.1)
-                        battery_button.LED_on(150)
-                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                    else:
-                        perform_led_pattern()
-            break
+        # if bin_lid == 'open': # To keep track if an object was detected or not
+        #     pass
+        #     # confirm_classification(label, r,g,b)
+        # # cap.release() # Close Camera Connection
+        # # cv.destroyAllWindows() # Close Camera Window
+        #     if red_button.is_button_pressed():
+        #         red_button.LED_on(150)
+        #         print("Misclassification detected. Press a correction button.")
+        #         corrected_label = None
+        #         while corrected_label is None:
+        #             # To terminate the program, press 'q' on the keyboard
+        #             if cv.waitKey(1) & 0xFF == ord('q'):
+        #                 cap.release() # Close Camera Connection
+        #                 cv.destroyAllWindows() # Close Camera Window
+        #                 my_stick.LED_off() # Turn of LED Stick
+        #                 turn_off_all_buttons() # Turn off all buttons
+        #                 close_all_bins()
+        #                 # Break the loop if 'q' key is pressed
+        #                 sys.exit(0)
+        #             if paper_button.is_button_pressed():
+        #                 corrected_label = 'paper'
+        #                 turn_off_all_buttons()
+        #                 paper_button.LED_on(150)
+        #                 move_item_to_correct_folder(label, corrected_label, r, g, b, frame) 
+        #             elif trash_button.is_button_pressed():
+        #                 corrected_label = 'trash'
+        #                 turn_off_all_buttons()
+        #                 time.sleep(0.1)
+        #                 trash_button.LED_on(150)
+        #                 move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #             elif plastic_button.is_button_pressed():
+        #                 corrected_label = 'plastic'
+        #                 turn_off_all_buttons()
+        #                 time.sleep(0.1)
+        #                 plastic_button.LED_on(150)
+        #                 move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #             elif metal_button.is_button_pressed():
+        #                 corrected_label = 'metal'
+        #                 turn_off_all_buttons()
+        #                 time.sleep(0.1)
+        #                 metal_button.LED_on(150)
+        #                 move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #             elif glass_button.is_button_pressed():
+        #                 corrected_label = 'glass'
+        #                 turn_off_all_buttons()
+        #                 time.sleep(0.1)
+        #                 glass_button.LED_on(150)
+        #                 move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #             elif battery_button.is_button_pressed():
+        #                 corrected_label = 'battery'
+        #                 turn_off_all_buttons()
+        #                 time.sleep(0.1)
+        #                 battery_button.LED_on(150)
+        #                 move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #             else:
+        #                 perform_led_pattern()
+        #     break
     
-        if red_button.is_button_pressed():
-            red_button.LED_on(150)
-            # If the red button is pressed, wait for the user to press one of the correction buttons
-            print("Misclassification detected. Press a correction button.")
-            perform_led_pattern()
+        # if red_button.is_button_pressed():
+        #     red_button.LED_on(150)
+        #     # If the red button is pressed, wait for the user to press one of the correction buttons
+        #     print("Misclassification detected. Press a correction button.")
+        #     perform_led_pattern()
 
-            # Wait for one of the correction buttons to be pressed
-            corrected_label = None
-            while corrected_label is None:
-                # To terminate the program, press 'q' on the keyboard
-                if cv.waitKey(1) & 0xFF == ord('q'):
-                    cap.release() # Close Camera Connection
-                    cv.destroyAllWindows() # Close Camera Window
-                    my_stick.LED_off() # Turn of LED Stick
-                    turn_off_all_buttons() # Turn off all buttons
-                    close_all_bins()
-                    # Break the loop if 'q' key is pressed
-                    sys.exit(0)
-                if paper_button.is_button_pressed():
-                    corrected_label = 'paper'
-                    turn_off_all_buttons()
-                    paper_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame) 
-                elif trash_button.is_button_pressed():
-                    corrected_label = 'trash'
-                    turn_off_all_buttons()
-                    time.sleep(0.1)
-                    trash_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                elif plastic_button.is_button_pressed():
-                    corrected_label = 'plastic'
-                    turn_off_all_buttons()
-                    time.sleep(0.1)
-                    plastic_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                elif metal_button.is_button_pressed():
-                    corrected_label = 'metal'
-                    turn_off_all_buttons()
-                    time.sleep(0.1)
-                    metal_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                elif glass_button.is_button_pressed():
-                    corrected_label = 'glass'
-                    turn_off_all_buttons()
-                    time.sleep(0.1)
-                    glass_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                elif battery_button.is_button_pressed():
-                    corrected_label = 'battery'
-                    turn_off_all_buttons()
-                    time.sleep(0.1)
-                    battery_button.LED_on(150)
-                    move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-                else:
-                    perform_led_pattern()
+        #     # Wait for one of the correction buttons to be pressed
+        #     corrected_label = None
+        #     while corrected_label is None:
+        #         # To terminate the program, press 'q' on the keyboard
+        #         if cv.waitKey(1) & 0xFF == ord('q'):
+        #             cap.release() # Close Camera Connection
+        #             cv.destroyAllWindows() # Close Camera Window
+        #             my_stick.LED_off() # Turn of LED Stick
+        #             turn_off_all_buttons() # Turn off all buttons
+        #             close_all_bins()
+        #             # Break the loop if 'q' key is pressed
+        #             sys.exit(0)
+        #         if paper_button.is_button_pressed():
+        #             corrected_label = 'paper'
+        #             turn_off_all_buttons()
+        #             paper_button.LED_on(150)
+        #             move_item_to_correct_folder(label, corrected_label, r, g, b, frame) 
+        #         elif trash_button.is_button_pressed():
+        #             corrected_label = 'trash'
+        #             turn_off_all_buttons()
+        #             time.sleep(0.1)
+        #             trash_button.LED_on(150)
+        #             move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #         elif plastic_button.is_button_pressed():
+        #             corrected_label = 'plastic'
+        #             turn_off_all_buttons()
+        #             time.sleep(0.1)
+        #             plastic_button.LED_on(150)
+        #             move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #         elif metal_button.is_button_pressed():
+        #             corrected_label = 'metal'
+        #             turn_off_all_buttons()
+        #             time.sleep(0.1)
+        #             metal_button.LED_on(150)
+        #             move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #         elif glass_button.is_button_pressed():
+        #             corrected_label = 'glass'
+        #             turn_off_all_buttons()
+        #             time.sleep(0.1)
+        #             glass_button.LED_on(150)
+        #             move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #         elif battery_button.is_button_pressed():
+        #             corrected_label = 'battery'
+        #             turn_off_all_buttons()
+        #             time.sleep(0.1)
+        #             battery_button.LED_on(150)
+        #             move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #         else:
+        #             perform_led_pattern()
 
-            red_button.LED_off()
-                # time.sleep(0.1)  # Adjust sleep time as needed
+        #     red_button.LED_off()
+        #         # time.sleep(0.1)  # Adjust sleep time as needed
             
-            # Move the misclassified item to the correct folder
-            close_bin(label)
-            open_bin(corrected_label, r, g, b, frame)
-            move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
-            time.sleep(2) 
-            close_bin(corrected_label)
+        #     # Move the misclassified item to the correct folder
+        #     close_bin(label)
+        #     open_bin(corrected_label, r, g, b, frame)
+        #     move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+        #     time.sleep(2) 
+        #     close_bin(corrected_label)
             
-            # To terminate the program, press 'q' on the keyboard
-            if cv.waitKey(1) & 0xFF == ord('q'):
-                cap.release() # Close Camera Connection
-                cv.destroyAllWindows() # Close Camera Window
-                my_stick.LED_off() # Turn of LED Stick
-                turn_off_all_buttons() # Turn off all buttons
-                close_all_bins()
-                # Break the loop if 'q' key is pressed
-                sys.exit(0)
-            break
+        #     # To terminate the program, press 'q' on the keyboard
+        #     if cv.waitKey(1) & 0xFF == ord('q'):
+        #         cap.release() # Close Camera Connection
+        #         cv.destroyAllWindows() # Close Camera Window
+        #         my_stick.LED_off() # Turn of LED Stick
+        #         turn_off_all_buttons() # Turn off all buttons
+        #         close_all_bins()
+        #         # Break the loop if 'q' key is pressed
+        #         sys.exit(0)
+        #     break
 
 
         # TODO: Open lid corresponding to item detected. Update block accordingly to support feedback.
