@@ -211,6 +211,7 @@ def save_item(label, frame): # Increase dataset of objects by saving a picture t
 
 # If item was misclassified, user inputs correct label by pressing the red button followed by the corrected green button associated with the class.
 def move_item_to_correct_folder(label, corrected_label, r, g, b, frame):
+    close_bin(label) # Close incorrectly opened bin due to misclassification
     # Get the folder paths for misclassified and correct labels
     misclassified_folder = misclassified_items.get(label)
     correct_folder = misclassified_items.get(corrected_label)
@@ -237,8 +238,75 @@ def move_item_to_correct_folder(label, corrected_label, r, g, b, frame):
             print(f"Moved {last_item} from '{misclassified_folder}' to '{correct_folder}'.")
             print(f"Renamed to {new_name} in '{correct_folder}'.")
 
-            # Rotate the corresponding servo by 90 degrees
-            open_bin(corrected_label, r, g, b, frame, 90)
+            # Open correct bin per user input
+            turn_off_all_buttons()
+            turn_on_button(corrected_label)
+            if corrected_label == 'paper' or corrected_label == 'cardboard': # paper (1) and cardboard (2)
+                servo_paper_cardboard.angle = 0
+            elif corrected_label == 'trash': # trash
+                servo_trash.angle = 0
+            elif corrected_label == 'plastic': # plastic
+                servo_plastic.angle = 0
+            elif corrected_label == 'metal': # metal
+                servo_metal.angle = 0
+            elif corrected_label == 'glass': # glass
+                servo_glass.angle = 0
+            elif corrected_label == 'battery': # battery
+                servo_battery.angle = 0
+            
+            # Display corrected label
+            # Create a solid color image
+            if corrected_label == 'trash':
+                r, g, b = 0, 0, 0
+            if corrected_label == 'battery':
+                r, g, b = 255, 127, 0
+
+            # if label == 'trash':
+            #     r, g, b = 255, 255, 255
+            if corrected_label == 'trash':
+                my_stick.LED_off()
+                time.sleep(0.1)
+                my_stick.set_all_LED_color(255, 255, 255)
+                time.sleep(0.1)
+            elif corrected_label == 'battery':
+                my_stick.LED_off()
+                time.sleep(0.1)
+                my_stick.set_all_LED_color(255, 13, 0)
+                time.sleep(0.1)
+            else: 
+                my_stick.LED_off()
+                time.sleep(0.1)
+                r, g, b = colors_dict[corrected_label][0], colors_dict[corrected_label][1], colors_dict[corrected_label][2]
+                my_stick.set_all_LED_color(r, g, b)
+                time.sleep(0.1)
+            # Determine text color based on class
+            text_color = (255, 255, 255) if corrected_label in ['paper', 'plastic', 'trash'] else (0, 0, 0)
+
+            # Create a solid color window
+            window = np.ones((1000, 1000, 3), dtype=np.uint8) * np.array([b, g, r], dtype=np.uint8)
+
+            # Display the class label in text, centered and large
+            font = cv.FONT_HERSHEY_SIMPLEX
+            text_size = cv.getTextSize(corrected_label, font, 5, 10)[0]
+            text_x = (1000 - text_size[0]) // 2
+            text_y = (1000 + text_size[1]) // 2
+            cv.putText(window, corrected_label.capitalize(), (text_x, text_y), font, 5, text_color, 10, cv.LINE_AA)
+
+            cv.imshow('Object Classification', window)
+            cv.waitKey(1) # Necessary in order for window to update.
+
+            # Timer for corrected label (to remain lid open)
+            new_start_time = time.time()
+            while True:
+                elapsed_time = time.time() - new_start_time
+
+                if elapsed_time >= 30:
+                    close_bin(corrected_label)
+                    # close_all_bins()
+                    break
+
+           
+            
             # time.sleep(1)  # Adjust sleep time as needed
         else:
             print(f"No items found in '{misclassified_folder}'.")
@@ -295,7 +363,7 @@ def open_bin(label, r, g, b, frame, degrees=0):
     display_solid_window(label, r, g, b, frame)
     cv.waitKey(1) # Necessary in order for window to update.
 
-    timer(label)
+    timer(label, r, g, b, frame)
     
 
 # Function to rotate servo pertaining to identified item to a specified set of degrees 
@@ -543,29 +611,29 @@ def read_object():
     return label, r, g, b, frame
 
 # Decoration Function for LED Button
-def perform_led_pattern(duration=0.1):
+def perform_led_pattern(duration=0.05):
     # Create a snake pattern of the LED's turning on and turning off to signal to the user to press one
-    battery_button.LED_on(200)  # Button in the 10 o'clock position
+    battery_button.LED_on(150)  # Button in the 10 o'clock position
     time.sleep(duration)
     battery_button.LED_on(0)
     
-    glass_button.LED_on(200)   # Button in the 8 o'clock position
+    glass_button.LED_on(150)   # Button in the 8 o'clock position
     time.sleep(duration)
     glass_button.LED_on(0)
 
-    metal_button.LED_on(200)    # Button in the 6 o'clock position
+    metal_button.LED_on(150)    # Button in the 6 o'clock position
     time.sleep(duration)
     metal_button.LED_on(0)
 
-    paper_button.LED_on(200)   # Button in the 12th o'clock position
+    paper_button.LED_on(150)   # Button in the 12th o'clock position
     time.sleep(duration)
     paper_button.LED_on(0)
 
-    plastic_button.LED_on(200) # Button in the 4 o'clock position
+    plastic_button.LED_on(150) # Button in the 4 o'clock position
     time.sleep(duration)
     plastic_button.LED_on(0)
 
-    trash_button.LED_on(200)   # Button in the 2 o'clock position
+    trash_button.LED_on(150)   # Button in the 2 o'clock position
     time.sleep(duration)
     trash_button.LED_on(0)
 
@@ -586,7 +654,7 @@ def is_background_detected():
     # Return True if the "background" class is detected with high confidence
     return results['label'] == 'background' and results['confidence'] > 0.5
 
-def timer(label, seconds=10):
+def timer(label, r, g, b, frame, seconds=30):
     start_time = time.time()
 
     while True:
@@ -598,7 +666,71 @@ def timer(label, seconds=10):
         else:
             #TODO: check if red button was pressed
             
-            pass
+            if red_button.is_button_pressed():
+                red_button.LED_on(150)
+                # If the red button is pressed, wait for the user to press one of the correction buttons
+                print("Misclassification detected. Press a correction button.")
+                perform_led_pattern()
+
+                # Wait for one of the correction buttons to be pressed
+                corrected_label = None
+                while corrected_label is None:
+                    # To terminate the program, press 'q' on the keyboard
+                    if cv.waitKey(1) & 0xFF == ord('q'):
+                        cap.release() # Close Camera Connection
+                        cv.destroyAllWindows() # Close Camera Window
+                        my_stick.LED_off() # Turn of LED Stick
+                        turn_off_all_buttons() # Turn off all buttons
+                        close_all_bins()
+                        # Break the loop if 'q' key is pressed
+                        sys.exit(0)
+                    if paper_button.is_button_pressed():
+                        corrected_label = 'paper'
+                        turn_off_all_buttons()
+                        time.sleep(0.01)
+                        paper_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+                        break 
+                    elif trash_button.is_button_pressed():
+                        corrected_label = 'trash'
+                        turn_off_all_buttons()
+                        time.sleep(0.01)
+                        trash_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+                        break
+                    elif plastic_button.is_button_pressed():
+                        corrected_label = 'plastic'
+                        turn_off_all_buttons()
+                        time.sleep(0.01)
+                        plastic_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+                        break
+                    elif metal_button.is_button_pressed():
+                        corrected_label = 'metal'
+                        turn_off_all_buttons()
+                        time.sleep(0.01)
+                        metal_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+                        break
+                    elif glass_button.is_button_pressed():
+                        corrected_label = 'glass'
+                        turn_off_all_buttons()
+                        time.sleep(0.01)
+                        glass_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+                        break
+                    elif battery_button.is_button_pressed():
+                        corrected_label = 'battery'
+                        turn_off_all_buttons()
+                        time.sleep(0.01)
+                        battery_button.LED_on(150)
+                        move_item_to_correct_folder(label, corrected_label, r, g, b, frame)
+                        break
+                    else:
+                        perform_led_pattern()
+
+                red_button.LED_off()
+                break
 
         # You can add some other processing or print statements here if needed
         print(f"Time elapsed: {elapsed_time:.2f} seconds")
@@ -619,9 +751,9 @@ while True:
         # label_counter.process_word(label)
         display_solid_window(label, r, g, b, frame) # Display Prediction
         # open_bin(label)
-        print("Counter Value:", label_counter.count)
-        if label_counter.count == 10:
-            timer(label)
+        # print("Counter Value:", label_counter.count)
+        # if label_counter.count == 10:
+        #     timer(label)
         
         time.sleep(3)
         close_bin(label)
