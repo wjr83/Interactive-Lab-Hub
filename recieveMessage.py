@@ -1,5 +1,4 @@
 from __future__ import print_function
-import paho.mqtt.client as mqtt
 import uuid
 import ssl
 import qwiic_button 
@@ -7,10 +6,7 @@ import time
 import sys
 import qwiic_oled_display
 import board
-
-my_button = qwiic_button.QwiicButton()
-my_button.LED_off()
-
+import paho.mqtt.client as mqtt
 
 i2c = board.I2C()
 myOLED = qwiic_oled_display.QwiicOledDisplay()
@@ -62,7 +58,6 @@ client.connect('farlab.infosci.cornell.edu', port=8883)
 def on_message(client, userdata, msg):
     disp_message_oled(myOLED, msg.payload)
     brightness = 100
-    my_button.LED_on(brightness)
     time.sleep(5)
 
 # Set the callback function for message reception

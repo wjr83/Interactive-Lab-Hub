@@ -600,8 +600,8 @@ def run_dist_sensor(label):
     item_counts[label] += 1
     dist_sensor_port = dist_port[label]
 
-    oProx = initialize_proximity()
     mux.enable_channels([dist_sensor_port])
+    oProx = initialize_proximity()
     prox_value = oProx.get_proximity()
     print(f"Channel {dist_sensor_port} - Proximity Value: {prox_value}")
 
