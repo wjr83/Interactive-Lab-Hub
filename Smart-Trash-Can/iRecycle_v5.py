@@ -48,17 +48,17 @@ client.connect('farlab.infosci.cornell.edu', port=8883)
 
 ##############################################################################
 
-myOLED = qwiic_oled_display.QwiicOledDisplay()
+# myOLED = qwiic_oled_display.QwiicOledDisplay()
 
-if not myOLED.connected:
-    print("The Qwiic OLED Display isn't connected to the system. Please check your connection", \
-        file=sys.stderr)
-myOLED.begin()
-myOLED.clear(myOLED.ALL)  
-myOLED.display()
-time.sleep(1)
+# if not myOLED.connected:
+#     print("The Qwiic OLED Display isn't connected to the system. Please check your connection", \
+#         file=sys.stderr)
+# myOLED.begin()
+# # myOLED.clear(myOLED.ALL)  
+# myOLED.display()
+# time.sleep(1)
 
-myOLED.clear(myOLED.PAGE)
+# myOLED.clear(myOLED.PAGE)
 
 ##############################################################################
 label_counter = WordCounter()
@@ -442,6 +442,7 @@ def turn_off_button(label,brightness=0):
 # Function to rotate servo pertaining to identified item to a specified set of degrees 
 def open_bin(label, r, g, b, frame, degrees=0):
     turn_on_button(label)
+    run_dist_sensor(label)
     bin_lid = 'open'
     if label == 'paper' or label == 'cardboard': # paper (1) and cardboard (2)
         servo_paper_cardboard.angle = degrees
@@ -539,7 +540,7 @@ def display_solid_window(label, r, g, b, frame):
             plot_bar_chart(file_counts)
             display_statistics_window()
             open_bin(last_saved_label, r, g, b, frame)
-            run_dist_sensor(label)
+            
 
         
         # Check if label_counter.count is less than 10
@@ -572,41 +573,44 @@ def display_solid_window(label, r, g, b, frame):
 
             cv.imshow('Object Classification', window)
         
-            
+def display_bin_fullness(label):
+    
+        background_image = np.zeros((1000, 1000, 3), dtype=np.uint8)
+        text = "Please empty " + label
+        text_size = cv.getTextSize(text, cv.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
+        text_x = (1000 - text_size[0]) // 2
+        text_y = (1000 - text_size[1]) - 50
+        cv.putText(background_image, text, (text_x, text_y), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv.LINE_AA)
+
+
+        # Display the window and wait for a key press
+        cv.imshow('Object Classification', background_image)
+                    
         
 # Function that prints the count of items 
-def publish_to_OLED(label):
-   # topic = f"IDD/iRecycle"
+# def publish_to_OLED(label):
+#    # topic = f"IDD/iRecycle"
 
-    # TODO: need to reset the label to 0 once the bin was emptied
-    item_counts[label] = 0
-    message = "Please Empty " + label
-    myOLED.clear(myOLED.PAGE)            # Clear the display
-    myOLED.set_cursor(0, 0)           # Set cursor to bottom-left
-    myOLED.set_font_type(1)             # Smallest font
-    myOLED.print(message)
-    myOLED.display()
+#     # TODO: need to reset the label to 0 once the bin was emptied
+#     item_counts[label] = 0
+#     message = "Please Empty " + label
+#     myOLED.clear(myOLED.PAGE)            # Clear the display
+#     myOLED.set_cursor(0, 0)           # Set cursor to bottom-left
+#     myOLED.set_font_type(1)             # Smallest font
+#     myOLED.print(message)
+#     myOLED.display()
     
-    time.sleep(10) 
-    message = "Thank you " + label
-    # client.publish(topic, message)  
-    myOLED.clear(myOLED.PAGE)            # Clear the display
-    myOLED.set_cursor(0, 0)           # Set cursor to bottom-left
-    myOLED.set_font_type(1)             # Smallest font
-    myOLED.print(message)
-    myOLED.display()
+#     time.sleep(10) 
+#     message = "Thank you " + label
+#     # client.publish(topic, message)  
+#     myOLED.clear(myOLED.PAGE)            # Clear the display
+#     myOLED.set_cursor(0, 0)           # Set cursor to bottom-left
+#     myOLED.set_font_type(1)             # Smallest font
+#     myOLED.print(message)
+#     myOLED.display()
 
 
 
-   
-def initialize_proximity():
-    oProx = qwiic_proximity.QwiicProximity()
-    if oProx.connected == False:
-        print("The Qwiic Proximity device isn't connected to the system. Please check your connection", \
-            file=sys.stderr)
-        return None
-    oProx.begin()
-    return oProx
 
 def initialize_mux():
     mux = qwiic_tca9548a.QwiicTCA9548A()
@@ -630,21 +634,24 @@ def distance_sensor():
     return oProx.get_proximity()
 
 def run_dist_sensor(label):
+    print("port eddddd " + label + " " + str(dist_port[label]))
     mux = initialize_mux()
 
-    if mux is None:
-        return
+    # if mux is None:
+    #     return
 
     item_counts[label] += 1
+    # print("port PRINT" + dist_port[label])
     dist_sensor_port = dist_port[label]
-
-    mux.enable_channels([dist_sensor_port])
+    # print("port " + dist_sensor_port)
+    mux.enable_channels(dist_sensor_port)
     distance = distance_sensor()  # Replace with your distance sensor reading function
     print(f"Channel {dist_sensor_port} - Proximity Value: {distance}")
     time.sleep(2)  # Delay between readings
 
-    if distance > 9 and item_counts[label] > 5:
-        publish_to_OLED(label)
+    if distance > 9 and item_counts[label] > 1:
+        # publish_to_OLED(label)
+        display_bin_fullness(label)
     
     time.sleep(0.1)
    
@@ -804,7 +811,7 @@ def is_background_detected():
     # Return True if the "background" class is detected with high confidence
     return results['label'] == 'background' and results['confidence'] > 0.5
 
-def timer(label, r, g, b, frame, seconds=30):
+def timer(label, r, g, b, frame, seconds=3):
     start_time = time.time()
 
     while True:
@@ -883,7 +890,7 @@ def timer(label, r, g, b, frame, seconds=30):
                 break
 
         # You can add some other processing or print statements here if needed
-        print(f"Time elapsed: {elapsed_time:.2f} seconds")
+        #print(f"Time elapsed: {elapsed_time:.2f} seconds")
 
         # Adjust the delay based on your needs
         time.sleep(0.1)
@@ -924,7 +931,7 @@ while True:
 
         # TODO: Use distance sensor to send information to the "maintenance department's" Raspberry Pi via MQTT indicating 
         # location of iRecycle trashcan and which bins are full / need to be emptied out. This should be display on the OLED screen
-        # of the "maintenance department's" Raspberry Pi. Once the bin is emptied out, the distance sensor should update the OLED screen
+        # of the "maintence department's" Raspberry Pi. Once the bin is emptied out, the distance sensor should update the OLED screen
         # on Raspberry Pi of the maintenance departement showing that no bin needs to be emptied out. The maintenance department should 
         # not need to press any button to confirm the bins were emptied (this should be captured automatically by the distance sensor). 
         # We do NOT need a way (a code, that only the maintenance department knows) to open the lid when when the trash is full as the bins are not
