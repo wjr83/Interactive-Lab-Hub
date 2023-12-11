@@ -19,6 +19,7 @@ import uuid
 import ssl
 import qwiic_proximity
 import qwiic_tca9548a
+import qwiic_oled_display
 
 ##############################################################################
 # Check if the camera opened successfully
@@ -45,6 +46,19 @@ client.username_pw_set('idd', 'device@theFarm')
 # connect to the broker
 client.connect('farlab.infosci.cornell.edu', port=8883)
 
+##############################################################################
+
+myOLED = qwiic_oled_display.QwiicOledDisplay()
+
+if not myOLED.connected:
+    print("The Qwiic OLED Display isn't connected to the system. Please check your connection", \
+        file=sys.stderr)
+myOLED.begin()
+myOLED.clear(myOLED.ALL)  
+myOLED.display()
+time.sleep(1)
+
+myOLED.clear(myOLED.PAGE)
 
 ##############################################################################
 label_counter = WordCounter()
@@ -562,12 +576,28 @@ def display_solid_window(label, r, g, b, frame):
         
 # Function that prints the count of items 
 def publish_to_OLED(label):
-    topic = f"IDD/iRecycle"
+   # topic = f"IDD/iRecycle"
 
     # TODO: need to reset the label to 0 once the bin was emptied
     item_counts[label] = 0
     message = "Please Empty " + label
-    client.publish(topic, message)      
+    myOLED.clear(myOLED.PAGE)            # Clear the display
+    myOLED.set_cursor(0, 0)           # Set cursor to bottom-left
+    myOLED.set_font_type(1)             # Smallest font
+    myOLED.print(message)
+    myOLED.display()
+    
+    time.sleep(10) 
+    message = "Thank you " + label
+    # client.publish(topic, message)  
+    myOLED.clear(myOLED.PAGE)            # Clear the display
+    myOLED.set_cursor(0, 0)           # Set cursor to bottom-left
+    myOLED.set_font_type(1)             # Smallest font
+    myOLED.print(message)
+    myOLED.display()
+
+
+
    
 def initialize_proximity():
     oProx = qwiic_proximity.QwiicProximity()
@@ -579,12 +609,25 @@ def initialize_proximity():
     return oProx
 
 def initialize_mux():
-    test = qwiic_tca9548a.QwiicTCA9548A()
-    if test.is_connected() == False:
+    mux = qwiic_tca9548a.QwiicTCA9548A()
+    if mux.is_connected() == False:
         print("The Qwiic TCA9548A device isn't connected to the system. Please check your connection", \
             file=sys.stderr)
-        return None
-    return test
+        
+    if mux.connected:
+        print("Qwiic I2X Mux connected!")
+        # Enable all ports (0, 1, 2, and 3)
+        mux.disable_channels(0x00)  # Disable all ports first
+        mux.enable_channels(0x0F)   # Enable ports 0, 1, 2, and 3
+
+    else:
+        print("Qwiic I2X Mux not connected. Please check your connections.")
+        return
+
+def distance_sensor():
+    oProx = qwiic_proximity.QwiicProximity()
+    oProx.begin()
+    return oProx.get_proximity()
 
 def run_dist_sensor(label):
     mux = initialize_mux()
@@ -595,19 +638,17 @@ def run_dist_sensor(label):
     item_counts[label] += 1
     dist_sensor_port = dist_port[label]
 
-    oProx = initialize_proximity()
     mux.enable_channels([dist_sensor_port])
-    prox_value = oProx.get_proximity()
-    print(f"Channel {dist_sensor_port} - Proximity Value: {prox_value}")
+    distance = distance_sensor()  # Replace with your distance sensor reading function
+    print(f"Channel {dist_sensor_port} - Proximity Value: {distance}")
+    time.sleep(2)  # Delay between readings
 
-    if prox_value > 2 and item_counts[label] > 1:
+    if distance > 9 and item_counts[label] > 5:
         publish_to_OLED(label)
     
     time.sleep(0.1)
    
-
-
-    mux.disable_all_channels()
+    mux.disable_channels(0x00) 
 
 
 def read_object():
