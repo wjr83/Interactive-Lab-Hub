@@ -20,7 +20,7 @@ Using the tools and techniques learned in this class, design, prototype, and tes
 
 #### COLLABORATOR: [Khushi Bhansali (ID: kb737)](https://github.com/Khushibhansali/Interactive-Lab-Hub/blob/Fall2023/FinalProject.md)
 
-### Big Idea & Motivation for Project
+### Big Idea & Motivation for Project & Objective
 - A system to recognize recyclable objects from non-recyclable objects is motivated by several factors:
 
 > - Environmental Conservation: Effective waste separation and recycling play a crucial role in reducing the environmental impact of waste disposal. It helps conserve resources, reduce energy consumption, and lower greenhouse gas emissions.
@@ -76,22 +76,6 @@ The Device:
 ### Challenges  & Fall-back Plan
 - A single continuous servo vs. multiple 180-degree servos for opening and closing the bins
 
-### Work in Progress
-#### Classification Algorithm
-Classes trained: paper, cardboard, plastic, glass, metal, trash, background
-> Video of 1st Working Model --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
-
-https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c-b6e4-dba596737b10
-
-> Videos of 1st Working Model with LED Stick and Servos Integrated --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
-
-> Links to additional Videos:
-> - https://drive.google.com/file/d/1xpXrHjJocF4GKEThj-ELTZfUBcCoxF5q/view?usp=sharing
-> - https://drive.google.com/file/d/1u5IOfdlreLqH__jfYqqWnZNcfAI5ys2A/view?usp=sharing
-
-https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e-a48b-be5314112139
-
-
 
 #### Physical Prototype
 Design Ideas:
@@ -108,51 +92,36 @@ Design Ideas:
 |--------------|--------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a92b3efc-e882-4b84-9125-16936d8d337c" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/73553a26-5a32-422a-bba6-448396a9feb4" width="400"> |
 
+[Click Here to See first Prototype of Lid Lifting](https://drive.google.com/file/d/1C5cLnaxrB7FoaEP3kzPWC2qWNnNfgsSR/view?usp=sharing)
+
+#### Sensors Design
+![inputs](inputs.png)
+![outputs](outputs.png)
 
 
+### Work in Progress
+#### Classification Algorithm
+Classes trained: paper, cardboard, plastic, glass, metal, trash, background
+> Video of 1st Working Model --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
 
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c-b6e4-dba596737b10
 
-#### Sensors
+> Videos of 1st Working Model with LED Stick and Servos Integrated --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
 
+> Links to additional Videos:
+> - https://drive.google.com/file/d/1xpXrHjJocF4GKEThj-ELTZfUBcCoxF5q/view?usp=sharing
+> - https://drive.google.com/file/d/1u5IOfdlreLqH__jfYqqWnZNcfAI5ys2A/view?usp=sharing
 
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e-a48b-be5314112139
 
+## Physical Device Prototype 
+[Click Here to see first prototype of lid lifting](https://drive.google.com/file/d/1C5cLnaxrB7FoaEP3kzPWC2qWNnNfgsSR/view?usp=sharing)
+[Click Here to see layout of bins after servo motors were attached ](https://drive.google.com/file/d/1siAHD9bbQhIL69RhRsb9UMw3Av2_2XOL/view?usp=sharing)
+[Click Here to see open studio trial](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
-
-
-
-## Objective
-
-The goal of this final project is for you to have a fully functioning and well-designed interactive device of your own design.
- 
-## Description
-Your project is to design and build an interactive device to suit a specific application of your choosing, and *test the interaction with people*. 
-
-## Deliverables
-1. Project plan: Big idea, timeline, parts needed, fall-back plan.
-2. Functioning project: The finished project should be a device, system, interface, etc. that people can interact with.
-3. Documentation of design process
-4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
-5. Video of someone using your project
-6. Reflections on process (What have you learned or wish you knew at the start?)
-7. Group work distribution questionnaire
-
-
-## Change of Design
-
-It is fine to change your project goals, but please resubmit the project plan for the new design when you do that.
-
-## Grading rubric
-
-20% Project planning: Allocation of needed resources (time, people, materials, facilities) anticipated well.
-20% Design of project: Interaction, hardware and software aspects of projects planned well.
-20% Testing of project: Functional or wizarded system tested with people
-20% Prototype functionality: System capable of interaction, either through autonomous or wizarded mechanisms
-20% Project documentation: Text, video, and photo of project illustratign capability and documenting plans and process
 
 ## Teams
+**William Reid (wjr83):** Purchased the sensors, trash bins, lasor cut & designed the scanning areas for the iRecycle scanning area, lasor cut & designed lids for each bin, lasor cut & designed battery bin, programmed the servo lifting, button misclassification handling, designed layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. 
 
-You can and are not required to work in teams. Be clear in documentation who contributed what. The total project contributions should reflect the number of people on the project.
+**Khushi Bhansali (kb737):** Programmed distance sensors to recognize when bin is full. Helped assemble the servo motors to the bins, helped design the positioning of the bin and sensor locations. Video taped the final working version. Completed the documentation. 
 
-## Examples
-
-[Here is a list of good final projects from previous classes.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Previous-Final-Projects)
