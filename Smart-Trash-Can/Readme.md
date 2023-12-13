@@ -125,10 +125,10 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 [Click Here to see Cornell Tech Open Studio Demostration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
 
-[Click Here to see final project video](https://drive.google.com/file/d/1gLK1bqc0Nupb3r_tI-tR8ZrS1cnVEamW/view?usp=sharing)
+[Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
 
-[Click Here to see final project user test](https://drive.google.com/file/d/1S7iaXc3235GXXrwpaULxwq1c2kXcYcGj/view?usp=sharing)
+[Click Here to see final project user test](https://drive.google.com/file/d/1gLK1bqc0Nupb3r_tI-tR8ZrS1cnVEamW/view?usp=sharing)
 
 ## Reflections
 The project presents an innovative system designed to recognize recyclable objects, compost, batteries, and trash, aiming to contribute to environmental conservation, waste reduction, and consumer education while offering convenience. Targeting general public spaces like airports, cafeterias, malls, and stadiums, it caters to busy individuals who might lack the knowledge or time to sort their trash effectively. Utilizing teachable machine technology and integrating multiple sensors, such as qwiic connectors, servo motors, LED strips, buttons, and OLED screens, the system provides real-time feedback. It notifies users when the trash is full, needs emptying, and can even suggest replacements for discarded items via platforms like Amazon or Instacart. Additionally, the system displays the total quantity of each recycled or disposed material, enhancing user awareness and participation in recycling efforts. An essential feature is its capability for failure correction and improvement, where users can notify the system if an item is misclassified. This prompts the trashcan to capture a picture of the object, enabling better future classification and continuous learning. 
