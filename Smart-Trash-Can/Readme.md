@@ -130,6 +130,15 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 
 [Click Here to see final project user test](https://drive.google.com/file/d/1S7iaXc3235GXXrwpaULxwq1c2kXcYcGj/view?usp=sharing)
 
+## Reflections
+The project presents an innovative system designed to recognize recyclable objects, compost, batteries, and trash, aiming to contribute to environmental conservation, waste reduction, and consumer education while offering convenience. Targeting general public spaces like airports, cafeterias, malls, and stadiums, it caters to busy individuals who might lack the knowledge or time to sort their trash effectively. Utilizing teachable machine technology and integrating multiple sensors, such as qwiic connectors, servo motors, LED strips, buttons, and OLED screens, the system provides real-time feedback. It notifies users when the trash is full, needs emptying, and can even suggest replacements for discarded items via platforms like Amazon or Instacart. Additionally, the system displays the total quantity of each recycled or disposed material, enhancing user awareness and participation in recycling efforts. An essential feature is its capability for failure correction and improvement, where users can notify the system if an item is misclassified. This prompts the trashcan to capture a picture of the object, enabling better future classification and continuous learning. 
+
+Through the experience, we learned lots about multiple sensor integration and how to deal with errors when many sensors are connected in order. We also went through many design considerations when we ideated, prototyped, laser cut, and built it but we chose this layout for ease of access and modularity. 
+
+## Future Improvements
+
+We hope to send text notifications to building cleaning faciilties to notify when bin is full. For single family homes, we could add features where you have a copy of that item added to your amazon shopping cart when you trash the original one. We would also want to improve the design of the camera scanning area and find ways to prevent lighting issues from preventing correct classification. 
+
 ## Teams
 **William Reid (wjr83):** Purchased the sensors, trash bins, lasor cut & designed the scanning areas for the iRecycle scanning area, lasor cut & designed lids for each bin, lasor cut & designed battery bin, programmed the servo lifting, button misclassification handling, designed layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. 
 
