@@ -122,10 +122,10 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 
 ![us](us.png)
 ![open](open.png)
-[Click Here to see open studio trial](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
+[Click Here to see Cornell Tech Open Studio Demostration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
 
-[Click Here to see final project video](https://drive.google.com/file/d/1DfAj0RV7CcdQFN9An4Bz-6ZBvFCYKQHe/view?usp=sharing)
+[Click Here to see final project video](https://drive.google.com/file/d/1gLK1bqc0Nupb3r_tI-tR8ZrS1cnVEamW/view?usp=sharing)
 
 
 [Click Here to see final project user test](https://drive.google.com/file/d/1S7iaXc3235GXXrwpaULxwq1c2kXcYcGj/view?usp=sharing)
