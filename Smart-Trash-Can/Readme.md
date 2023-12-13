@@ -117,19 +117,21 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 ## Physical Device Prototype 
 [Click Here to see first prototype of lid lifting](https://drive.google.com/file/d/1C5cLnaxrB7FoaEP3kzPWC2qWNnNfgsSR/view?usp=sharing)
 
+## Lasor Cut bin lids and attached servo motors
 ![bins](bins.png)
 
 
 [Click Here to see layout of bins after servo motors were attached ](https://drive.google.com/file/d/1siAHD9bbQhIL69RhRsb9UMw3Av2_2XOL/view?usp=sharing)
 
+## Cornell Tech Open Studio Demonstration in Maker Lab: Testing out code with motors for first time
 
 ![us](us.png)
 
-![open](open.png)
+![open](makerday.png)
 
-[Click Here to see Cornell Tech Open Studio Demostration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
+[Click Here to see Cornell Tech Open Studio Demonstration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
-
+## Final Project Presentation and User Testing
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
 
