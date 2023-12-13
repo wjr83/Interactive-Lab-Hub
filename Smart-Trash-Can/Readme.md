@@ -116,9 +116,19 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 
 ## Physical Device Prototype 
 [Click Here to see first prototype of lid lifting](https://drive.google.com/file/d/1C5cLnaxrB7FoaEP3kzPWC2qWNnNfgsSR/view?usp=sharing)
+
+![bins](bins.png)
 [Click Here to see layout of bins after servo motors were attached ](https://drive.google.com/file/d/1siAHD9bbQhIL69RhRsb9UMw3Av2_2XOL/view?usp=sharing)
+
+![us](us.png)
+![open](open.png)
 [Click Here to see open studio trial](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
+
+[Click Here to see final project video](https://drive.google.com/file/d/1DfAj0RV7CcdQFN9An4Bz-6ZBvFCYKQHe/view?usp=sharing)
+
+
+[Click Here to see final project user test](https://drive.google.com/file/d/1S7iaXc3235GXXrwpaULxwq1c2kXcYcGj/view?usp=sharing)
 
 ## Teams
 **William Reid (wjr83):** Purchased the sensors, trash bins, lasor cut & designed the scanning areas for the iRecycle scanning area, lasor cut & designed lids for each bin, lasor cut & designed battery bin, programmed the servo lifting, button misclassification handling, designed layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. 
