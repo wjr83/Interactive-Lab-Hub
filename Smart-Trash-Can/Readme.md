@@ -78,7 +78,12 @@ The Device:
 
 
 #### Physical Prototype
-Design Ideas:
+
+## Verplank Diagram
+![diagram](diagram.png)
+
+
+## Design Ideas:
 
 |              |              |
 |--------------|--------------|
@@ -161,10 +166,11 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 
 [Click Here to see Cornell Tech Open Studio Demonstration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
-## Final Project Presentation and User Testing
+## Final Project Presentation 
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
 
+## User Testing
 [Click Here to see final project user test](https://drive.google.com/file/d/1gLK1bqc0Nupb3r_tI-tR8ZrS1cnVEamW/view?usp=sharing)
 
 ## Reflections
