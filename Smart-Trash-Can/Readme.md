@@ -82,6 +82,71 @@ The Device:
 ## Verplank Diagram
 ![diagram](diagram.png)
 
+ What can you use the recyclable material identification system for?
+
+> * The recyclable material identification system can be used for efficiently identifying and sorting recyclable materials, hazardous materials requiring special handling (e.g., batteries), and landfill-bound waste, simplifying the waste disposal process.
+> * It can serve as an educational tool, raising awareness about responsible waste management and encouraging proper recycling practices.
+> * The system can contribute to environmental conservation by promoting recycling, reducing waste, and minimizing landfill usage.
+
+What is a good environment for the recyclable material identification system?
+
+> * The recyclable material identification system thrives in environments with well-lit and clear waste disposal areas, where the camera can capture high-quality images of waste items.
+> * It performs well in settings with users who are receptive to using technology for waste sorting and are open to real-time guidance.
+> * Collaborative environments where users can provide feedback to enhance the recyclable material identification system's accuracy are ideal.
+
+What is a bad environment for the recyclable material identification system?
+
+> * The recyclable material identification system may not perform well in dimly lit or obstructed areas, as these conditions can hinder the camera's image capture and classification accuracy.
+> * Environments with resistance to technology adoption or where users prefer traditional waste sorting methods may not be suitable for the system.
+> * Locations with a lack of maintenance or a history of neglecting system upkeep can be problematic for the recyclable material identification system's long-term reliability.
+
+When will the recyclable material identification system break?
+
+> * The recyclable material identification system is susceptible to malfunction or breakdown when exposed to extreme environmental conditions, such as extreme heat, heavy rain, or physical damage.
+> * Regular wear and tear, including camera lens contamination and sensor degradation, can contribute to breakdown over time.
+> * If the machine learning model used in the recyclable material identification system becomes outdated and no longer receives updates or refinements, it may become less effective.
+> * In the event of loss of power or, if solar-powered, weather (rain or snow) preventing optimal charge of the system causing the system to turn off.
+
+When it breaks, how will the recyclable material identification system break?
+
+> * The recyclable material identification system may break by experiencing sensor or camera malfunctions, causing it to fail in accurately identifying waste items.
+> * Software breakdowns or system crashes may lead to an inability to provide real-time guidance to users.
+> * The system could break gradually, with a decline in accuracy, rather than an abrupt failure, depending on the nature of the issue.
+
+Other properties/behaviors of the recyclable material identification system:
+
+> * The recyclable material identification system continuously learns and improves from user interactions and feedback. Every time a new item is scanned, the system saves an image of the item to memory and adds it to the machine learning model. Likewise, if the system misclassifies an item and the used prompts the system with the correct classification via the Qwiic LED Buttons, the system corrects the label of the item and adds it to memory to improve the performance of the system. All of this happens behind the scenes without the user knowing. 
+> * It can provide real-time feedback to users, including guidance on which bin to use and potential disposal instructions.
+> * The system promotes responsible waste management and environmental sustainability, aligning with the United Nations Sustainable Development Goal 12.
+
+How does the recyclable material identification system feel?
+
+> * The recyclable material identification system offers a user-friendly and efficient waste sorting experience, reducing the complexity of recycling and waste disposal.
+> * It can make users feel empowered to contribute to environmental conservation and engage in responsible waste practices.
+> * Users might feel confident in using the system, knowing it simplifies their role in sorting waste materials correctly.
+
+Our system successfully identifies and classifies an object as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), batteries, or otherwise as trash.
+
+**\*\*\*Ideas prioritized to improve performance, design, and interaction.\*\*\***
+> * Increase training dataset. In particular, we needed to keep the following in mind as we acquire more data:
+> > * Types of objects
+> > * Orientation and deformation of objects
+> > * Lighting conditions greatly affected the performance of the system. For such reason, we attempted to control the amount of light in the scanning area by creating the iRecycle box. Additionally, for all item classes, samples were collected in all of the following light conditions:
+> > > * Less than 2000K: dim, yellowish light, close to candlelight.
+> > > * 2000K-3000K: warm light with hints of yellow.
+> > > * 3100K-4500K: bright, neutral white light.
+> > > * 4600K-6500K: bright blue-white light (daylight = approx. 5200K)
+> > > * ​6500K and up: very bright, bluish light.
+> > * We originally had a category for compost, but this was later removed due to hygiene and cleanliness (the scanning bed started to get dirty and needed to be replaced). 
+> * The type of trash / recyclable objects will vary drastically depending on the location of the system. We may need to add location-specific data for training for the smart recycling system (e.g., add feedback loop with new sample data collected --> label new data --> retrain classification model with location-specific data --> aggregate new data from all location-specific acquisitions into the model --> release automatic update of the model in the physical smart recycling system). 
+> * Simplify Interaction and Design (Future Design Iteration):
+> > *  It would be ideal if the user would simply place the object on a flat surface, where the camera would determine the type of object, and once that is confirmed, the item would be disposed of automatically by the system.
+> * A lot of time was spent on improving the recognition of the background. In fact, a highly specific background target was designed in Adobe Photoshop  such that the background would not be confused with paper. 
+> > ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c0c56066-5669-42b3-86cc-f49ebe432452)
+> * Added a feature to count the number of items of each type recycled.
+> > ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/535ac271-01ce-4a27-b40e-e2aab7ba9156)
+> > * Displayed these counts to the user by category type in hopes of promoting the mindset: reduce, reuse, recycle.
+
 
 ## Design Ideas:
 
@@ -108,7 +173,6 @@ The Device:
 #### Original System Logic (before implementation)
 
 ![WhatsApp Image 2023-12-15 at 13 52 04_2a198c69](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4c185e65-c85c-45f8-b8e2-02b70d827936)
-
 
 #### Classification Algorithm
 Classes trained: paper, cardboard, plastic, glass, metal, trash, background
