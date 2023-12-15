@@ -172,7 +172,7 @@ Preliminary System Design showing scanning bed and bins.
 
 
 
-#### Mayor Design Challenges 
+#### Major Design Challenges & Resolutions
 - Using a single continuous servo to open access to bins arranged in a circle proved very difficult. Therefore, we resorted to using 1, 180-degree servo per bin used.
 - Detecting the background with 100% accuracy was difficult. We resorted to designing a high-feature / specific background to resolve this (rather than a plain, black background from previous, suboptimal iterations of our design)
 - Mitigating I / O Errors: As the number of sensors increased in the systems, we had to be much more careful in managing resources on the bus effectively such that the bus and buffers would not be spammed and cause the system to crash. 
