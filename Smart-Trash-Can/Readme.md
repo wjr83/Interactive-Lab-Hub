@@ -316,6 +316,7 @@ Final System Set-up
 - **Consistent Classification for 10 Times:** When the model consistently outputs the same label for an object in ten consecutive scans, the object is classified into one of the predefined categories: paper, cardboard, plastic, metal, glass, battery, or trash.
 - **Image Acquisition for Dataset Expansion:** An image of the object is automatically captured and saved to memory. This contributes to expanding the dataset for training the machine learning model.
 - **Display Classification to User:** The classified label is displayed to the user, color-coded according to the corresponding bin color.
+- **Report if any of the bins is full and needs to be emptied**: Distance sensors were placed in each bin and would report to the user if the bin was full. The maintenance department (using a 2nd Raspberry Pi and MQTT), would also get a notification of which bin needs replacement.
 
 #### Bin Interaction:
 
@@ -328,6 +329,7 @@ Final System Set-up
 
 - **Recycling Statistics Display:** The system updates and displays statistics on the number of items recycled per class on the screen. This provides users with information on their recycling habits and encourages environmentally friendly practices.
 
+#### Report
 
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
@@ -357,7 +359,12 @@ The development process provided valuable insights into the integration of multi
 
 ## Future Improvements
 
-We hope to send text notifications to building cleaning facilities to notify them when the bin is full. For single-family homes, we could add features where you have a copy of that item added to your Amazon shopping cart when you trash the original one. We would also want to improve the design of the camera scanning area and find ways to prevent lighting issues from preventing correct classification. 
+- We hope to send text message notifications (rather than MQTT notifications) to building cleaning facilities to notify them when the bin is full.
+- For single-family homes, we could add features where you have a copy of that item added to your Amazon shopping cart when you trash the original one.
+- We would also want to improve the design of the camera scanning area and find ways to prevent lighting issues from preventing correct classification.
+- Additionally, we want to create a conveyor-type system designed specifically to be implemented at a waste management facility to remove the need for manual sorting / correction of recyclable materials and trash.
+
+
 
 ## Teams
 **William Reid (wjr83):** Purchased the sensors, and trash bins, laser-cut & designed the scanning areas for the iRecycle scanning area, laser-cut & designed lids for each bin, laser-cut & designed battery bin, programmed the servo lifting, button misclassification handling, designed layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. 
