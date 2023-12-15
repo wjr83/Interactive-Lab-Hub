@@ -206,7 +206,10 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/40d3348f-fc50-4088-9ab4-bcf89ba6f5af" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9f230f97-e973-4d8d-89cd-48a9394cdcce" width="400"> |
 
 
-## Final Project Presentation ![Uploading IMG-20231204-WA0018.jpg…]()
+## Final Project Presentation 
+
+Final System Set-up
+![IMG-20231215-WA0038](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2923dd49-4f3c-42f4-a610-ffa26be0a574)
 
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
