@@ -144,9 +144,9 @@ Our system successfully identifies and classifies an object as one of the 5 recy
 > * The type of trash / recyclable objects will vary drastically depending on the location of the system. We may need to add location-specific data for training for the smart recycling system (e.g., add feedback loop with new sample data collected --> label new data --> retrain classification model with location-specific data --> aggregate new data from all location-specific acquisitions into the model --> release automatic update of the model in the physical smart recycling system). 
 > * A lot of time was spent on improving the recognition of the background. In fact, a highly specific background target was designed in Adobe Photoshop  such that the background would not be confused with paper. 
 > > ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c0c56066-5669-42b3-86cc-f49ebe432452)
-> * Added a feature to count the number of items of each type recycled.
+> * Added a feature to count the number of items of each type recycled. The system would continue counting from where it left off even if the system lost power. 
 > > ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/535ac271-01ce-4a27-b40e-e2aab7ba9156)
-> > * Displayed these counts to the user by category type in hopes of promoting the mindset: reduce, reuse, recycle.
+> > * Displayed these counts to the user by category type in hopes of promoting the mindset: reduce, reuse, recycle. 
 > * Simplify Interaction and Design (Future Design Iteration):
 > > *  It would be ideal if the user would simply place the object on a flat surface, where the camera would determine the type of object, and once that is confirmed, the item would be disposed of automatically by the system.
 
@@ -289,6 +289,11 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325
 
 #### Misclassification Interface & Classification Progress Indicator
 
+The first design used for testing and validating code:
+
+![IMG-20231215-WA0032](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2df81218-425f-4c0f-92a7-c70d9f93ef23)
+
+Final design designed in Adobe Illustrator and Laser Cut:
 |                      |                      | 
 |---------------------------------------------|----------------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0d96b873-314b-45fd-8dc0-944e1c1a5cca" width="600"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd10fe75-cc66-4136-975a-d25ad0b8518c" width="600"> |
