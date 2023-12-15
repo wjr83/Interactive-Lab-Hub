@@ -80,15 +80,15 @@ The Device:
 #### Physical Prototype
 Design Ideas:
 
-|   IMG_4276   |   IMG_4275   |
+|              |              |
 |--------------|--------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0cf385db-62f5-4247-9103-cb08558ad7c0" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5f507f83-7a58-41ba-8c84-88d19e497a48" width="400"> |
 
-|   IMG_4274   |   IMG_4273   |
+|              |              |
 |--------------|--------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/27158b1c-629d-479c-b009-ede3cd14a9cc" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7ca94ed1-0a77-4f49-8ee6-b183b7e945ca" width="400"> |
 
-|   IMG_4272   |   IMG_4271   |
+|              |              |
 |--------------|--------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a92b3efc-e882-4b84-9125-16936d8d337c" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/73553a26-5a32-422a-bba6-448396a9feb4" width="400"> |
 
@@ -100,6 +100,11 @@ Design Ideas:
 
 
 ### Work in Progress
+#### Original System Logic (before implementation)
+
+![WhatsApp Image 2023-12-15 at 13 52 04_2a198c69](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4c185e65-c85c-45f8-b8e2-02b70d827936)
+
+
 #### Classification Algorithm
 Classes trained: paper, cardboard, plastic, glass, metal, trash, background
 > Video of 1st Working Model --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
@@ -108,20 +113,45 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c
 
 > Videos of 1st Working Model with LED Stick and Servos Integrated --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
 
-> Links to additional Videos:
+> Links to Additional Videos:
 > - https://drive.google.com/file/d/1xpXrHjJocF4GKEThj-ELTZfUBcCoxF5q/view?usp=sharing
 > - https://drive.google.com/file/d/1u5IOfdlreLqH__jfYqqWnZNcfAI5ys2A/view?usp=sharing
 
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e-a48b-be5314112139
 
 ## Physical Device Prototype 
+#### Initial Camera Stand (Using shoe boxes)
+
+|                      |                      |
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9e5e30e1-94ad-4d18-b72a-1819cfdad07f" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/61a09718-d42c-4d72-b6b1-8c92a8300e46" width="400"> |
+
+|                      |                      |
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/34584319-32dd-4ef9-9eb4-597ca703372d" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/ff404be2-5f0a-486a-abe1-064610194c1a" width="400"> |
+
+|                      |                      |
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a7920a8b-8091-4539-9b67-fafe8f48a972" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7f294b82-89dc-4bc4-af5c-fbfee9de7a8a" width="400"> |
+
+
+
 [Click Here to see first prototype of lid lifting](https://drive.google.com/file/d/1C5cLnaxrB7FoaEP3kzPWC2qWNnNfgsSR/view?usp=sharing)
 
-## Lasor Cut bin lids and attached servo motors
+## Laser Cut Bin Lids, Laser Cut Battery Bin, Attached Servo Motors using Hot Glue Gun
+
+|                      |                      | 
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/565cc4a0-ec93-47ff-b26a-0e0e8cffdab9" width="400">   |   <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4d4266db-fba2-45d6-abbd-2aeb703e1df5" width="400"> |
+|                      |                      | 
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/3887ed32-f059-40b3-8ee2-2dc62a08cea1" width="400">  | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/6541a495-1a16-4bd7-a07d-8de08f5de65d" width="400">|
+
+
 ![bins](bins.png)
 
 
-[Click Here to see layout of bins after servo motors were attached ](https://drive.google.com/file/d/1siAHD9bbQhIL69RhRsb9UMw3Av2_2XOL/view?usp=sharing)
+[Click Here to see the layout of bins after servo motors were attached ](https://drive.google.com/file/d/1siAHD9bbQhIL69RhRsb9UMw3Av2_2XOL/view?usp=sharing)
 
 ## Cornell Tech Open Studio Demonstration in Maker Lab: Testing out code with motors for first time
 
@@ -144,10 +174,10 @@ Through the experience, we learned lots about multiple sensor integration and ho
 
 ## Future Improvements
 
-We hope to send text notifications to building cleaning faciilties to notify when bin is full. For single family homes, we could add features where you have a copy of that item added to your amazon shopping cart when you trash the original one. We would also want to improve the design of the camera scanning area and find ways to prevent lighting issues from preventing correct classification. 
+We hope to send text notifications to building cleaning facilities to notify them when the bin is full. For single-family homes, we could add features where you have a copy of that item added to your Amazon shopping cart when you trash the original one. We would also want to improve the design of the camera scanning area and find ways to prevent lighting issues from preventing correct classification. 
 
 ## Teams
-**William Reid (wjr83):** Purchased the sensors, trash bins, lasor cut & designed the scanning areas for the iRecycle scanning area, lasor cut & designed lids for each bin, lasor cut & designed battery bin, programmed the servo lifting, button misclassification handling, designed layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. 
+**William Reid (wjr83):** Purchased the sensors, and trash bins, laser-cut & designed the scanning areas for the iRecycle scanning area, laser-cut & designed lids for each bin, laser-cut & designed battery bin, programmed the servo lifting, button misclassification handling, designed layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. 
 
-**Khushi Bhansali (kb737):** Programmed distance sensors to recognize when bin is full. Helped assemble the servo motors to the bins, helped design the positioning of the bin and sensor locations. Video taped the final working version. Completed the documentation. 
+**Khushi Bhansali (kb737):** Programmed distance sensors to recognize when bin is full. Helped assemble the servo motors to the bins, and helped design the positioning of the bin and sensor locations. Videotaped the final working version. Completed the documentation. 
 
