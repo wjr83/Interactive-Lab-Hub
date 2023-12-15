@@ -206,6 +206,20 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/40d3348f-fc50-4088-9ab4-bcf89ba6f5af" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9f230f97-e973-4d8d-89cd-48a9394cdcce" width="400"> |
 
 
+#### Misclassification Interface & Classification Progress Indicator
+
+|                      |                      | 
+|---------------------------------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0d96b873-314b-45fd-8dc0-944e1c1a5cca" width="600"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd10fe75-cc66-4136-975a-d25ad0b8518c" width="600"> |
+
+|                      |                      | 
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e8f04452-9120-4155-8299-28d4757c0ee9" width="600"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/34467c8e-1ff8-478c-8ed8-1a1a597f31ef" width="600"> |
+
+
+
+
+
 ## Final Project Presentation 
 
 Final System Set-up
