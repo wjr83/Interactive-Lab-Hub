@@ -191,7 +191,23 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cf309ff3-26b8-400f
 
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325-9000-fe6a2b742e6a
 
-## Final Project Presentation 
+#### Light-Controlled Environment for Object Scanning
+
+|                      |                      | 
+|----------------------|---------------------------------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/3c8d739b-8803-4ede-aef9-912ceaee35d1" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/f216b31a-6123-4afa-af3d-d100be63e5a3" width="400"> |
+
+|                      |                      | 
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9bba7502-29fc-4553-9e3a-2e5a4794ddcc" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/092b5ad8-6b57-4f93-91d9-7b39c448a000" width="400"> |
+
+|                      |                      | 
+|----------------------|----------------------|
+| <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/40d3348f-fc50-4088-9ab4-bcf89ba6f5af" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/9f230f97-e973-4d8d-89cd-48a9394cdcce" width="400"> |
+
+
+## Final Project Presentation ![Uploading IMG-20231204-WA0018.jpg…]()
+
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
 
