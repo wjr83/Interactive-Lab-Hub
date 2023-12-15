@@ -85,11 +85,11 @@ The Device:
 **Preliminary Brainstorming On How We Think Users Will Use The System:**
 > * Users may not always be fully aware of the uncertainties in the system. They might assume that the system's classifications are always accurate, especially if it doesn't provide clear feedback about its confidence level. 
 > * The impact of misclassification on users can vary. In some cases, misclassifying an item as recyclable when it's not could lead to contamination of recycling streams and added processing costs. Misclassifying an item as non-recyclable when it's recyclable might lead to missed recycling opportunities. For compostable materials, misclassification could affect organic waste diversion rates.
-3. How could we change our interactive system to address this?
-> * To address these concerns, the interactive system will:
-> > * Implement a confidence level indicator: The system could provide a confidence score along with its classification. This way, users are aware of how certain or uncertain the system is about its decision.
-> > * Offer clear instructions: If an item is challenging to classify, the system could guide the user, such as suggesting a specific bin but indicating that the user should double-check.
-> > * Collect user feedback: Allow users to report misclassifications or provide feedback, which can be used to improve the system's accuracy over time.
+> How could we change our interactive system to address this?
+> > * To address these concerns, the interactive system will:
+> > > * Implement a confidence level indicator: The system could provide a confidence score along with its classification. This way, users are aware of how certain or uncertain the system is about its decision.
+> > > * Offer clear instructions: If an item is challenging to classify, the system could guide the user, such as suggesting a specific bin but indicating that the user should double-check.
+> > > * Collect user feedback: Allow users to report misclassifications or provide feedback, which can be used to improve the system's accuracy over time.
 
 What can you use the recyclable material identification system for?
 
@@ -157,8 +157,9 @@ Features to be implemented in a future iteration of this project:
 > * Feature that informs the maintenance department which bin is full and needs to be emptied.
 
 
-## Design Ideas:
+## Design Ideas
 
+Preliminary System Design showing scanning bed and bins.
 |              |              |
 |--------------|--------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0cf385db-62f5-4247-9103-cb08558ad7c0" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/5f507f83-7a58-41ba-8c84-88d19e497a48" width="400"> |
