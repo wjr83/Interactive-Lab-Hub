@@ -38,14 +38,6 @@ Using the tools and techniques learned in this class, design, prototype, and tes
 Project plan - November 14
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/278df58d-139e-486b-bb4d-aecda3a21b7c)
 
-Peer feedback on Project plans: November 21
-
-Functional check-off - November 28 & 30
-
-Final Project Presentations - December 5 & 7
-
-Write-up and documentation due - December 14
-
 ### Parts Needed
 
 The Device:
@@ -73,14 +65,9 @@ The Device:
 - Glue
 
 
-### Challenges  & Fall-back Plan
-- A single continuous servo vs. multiple 180-degree servos for opening and closing the bins
-
-
-#### Physical Prototype
-
 ## Verplank Diagram
 ![diagram](diagram.png)
+
 
 **Preliminary Brainstorming On How We Think Users Will Use The System:**
 > * Users may not always be fully aware of the uncertainties in the system. They might assume that the system's classifications are always accurate, especially if it doesn't provide clear feedback about its confidence level. 
@@ -184,6 +171,12 @@ Preliminary System Design showing scanning bed and bins.
 
 ![WhatsApp Image 2023-12-15 at 13 52 04_2a198c69](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4c185e65-c85c-45f8-b8e2-02b70d827936)
 
+#### Mayor Design Challenges 
+- Using a single continuous servo to open access to bins arranged in a circle proved very difficult. Therefore, we resorted to using 1, 180-degree servo per bin used.
+- Detecting the background with 100% accuracy was difficult. We resorted to designing a high-feature / specific background to resolve this (rather than a plain, black background from previous, suboptimal iterations of our design)
+- Mitigating I / O Errors: As the number of sensors increased in the systems, we had to be much more careful in managing resources on the bus effectively such that the bus and buffers would not be spammed and cause the system to crash. 
+
+### Physical Prototype
 #### Classification Algorithm
 Classes trained: paper, cardboard, plastic, glass, metal, trash, background
 > Video of 1st Working Model --> Classes trained: paper, cardboard, plastic, glass, metal, trash, background
@@ -250,7 +243,7 @@ Items samples were Collected over 1 month:
 
 
 
-Video Description:
+### Videos of System Progression / Development Overtime:
 
 
 
@@ -273,6 +266,7 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cf309ff3-26b8-400f
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325-9000-fe6a2b742e6a
 
 #### Light-Controlled Environment for Object Scanning
+Camera height was found to be optimal at 17.5 inches to account for tall objects such as wine bottles yet still discern/classify small objects well (such as batteries).
 
 |                      |                      | 
 |----------------------|---------------------------------------------|
