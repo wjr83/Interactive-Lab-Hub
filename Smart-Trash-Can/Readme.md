@@ -124,6 +124,12 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c
 
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e-a48b-be5314112139
 
+Final Algorithm Architecture (Google's Teachable Machines):
+Items samples were Collected over 1 month:
+
+![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/45ad6126-345f-4317-abda-d01c0bde7a6b)
+
+
 ## Physical Device Prototype 
 #### Initial Camera Stand (Using shoe boxes)
 
@@ -140,8 +146,17 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a7920a8b-8091-4539-9b67-fafe8f48a972" width="400"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/7f294b82-89dc-4bc4-af5c-fbfee9de7a8a" width="400"> |
 
 
+#### Initial Proof of Concept First Trashcan with Lid & Servo
 
 [Click Here to see first prototype of lid lifting](https://drive.google.com/file/d/1C5cLnaxrB7FoaEP3kzPWC2qWNnNfgsSR/view?usp=sharing)
+
+## Cornell Tech Open Studio Demonstration in Maker Lab: Testing out code with motors for first time
+
+![us](us.png)
+
+![open](makerday.png)
+
+[Click Here to see Cornell Tech Open Studio Demonstration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
 ## Laser Cut Bin Lids, Laser Cut Battery Bin, Attached Servo Motors using Hot Glue Gun
 
@@ -158,13 +173,23 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e
 
 [Click Here to see the layout of bins after servo motors were attached ](https://drive.google.com/file/d/1siAHD9bbQhIL69RhRsb9UMw3Av2_2XOL/view?usp=sharing)
 
-## Cornell Tech Open Studio Demonstration in Maker Lab: Testing out code with motors for first time
 
-![us](us.png)
 
-![open](makerday.png)
 
-[Click Here to see Cornell Tech Open Studio Demonstration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
+Video Description:
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd97780c-fdca-4bb6-b8be-0a526b275ca9
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0e3f9657-198c-4f4c-9a38-60c7b0add741
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cf309ff3-26b8-400f-b193-494464e5796b
+
+
+
+https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325-9000-fe6a2b742e6a
 
 ## Final Project Presentation 
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
