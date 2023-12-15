@@ -169,6 +169,9 @@ Preliminary System Design showing scanning bed and bins.
 
 ![WhatsApp Image 2023-12-15 at 13 52 04_2a198c69](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/4c185e65-c85c-45f8-b8e2-02b70d827936)
 
+
+
+
 #### Mayor Design Challenges 
 - Using a single continuous servo to open access to bins arranged in a circle proved very difficult. Therefore, we resorted to using 1, 180-degree servo per bin used.
 - Detecting the background with 100% accuracy was difficult. We resorted to designing a high-feature / specific background to resolve this (rather than a plain, black background from previous, suboptimal iterations of our design)
@@ -300,16 +303,57 @@ Final design designed in Adobe Illustrator and Laser Cut:
 Final System Set-up
 ![IMG-20231215-WA0038](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2923dd49-4f3c-42f4-a610-ffa26be0a574)
 
+#### Inform the User to Scan the Object:
+
+- **Instructions on the iPad:** The user is guided through the process with instructions displayed on the iPad screen. They are directed to place an object on the scanning bed, aligning it with a bulls-eye target.
+
+#### Scan Object:
+
+- **Progress Displayed on LED Stick:** The system communicates the scanning progress using an LED Stick. This is a visual representation of the classification confidence of the model. Presumably, the LED Stick changes its state or color to indicate different stages of the scanning process.
+
+#### Report Classification to User:
+
+- **Consistent Classification for 10 Times:** When the model consistently outputs the same label for an object in ten consecutive scans, the object is classified into one of the predefined categories: paper, cardboard, plastic, metal, glass, battery, or trash.
+- **Image Acquisition for Dataset Expansion:** An image of the object is automatically captured and saved to memory. This contributes to expanding the dataset for training the machine learning model.
+- **Display Classification to User:** The classified label is displayed to the user, color-coded according to the corresponding bin color.
+
+#### Bin Interaction:
+
+- **Bin Opening:** The bin corresponding to the classified label opens automatically and remains open for 20 seconds.
+- **User Feedback for Misclassification:** During this time, the user has the option to provide feedback in case of a misclassification. If the system misclassifies the object, the user can press the red button followed by the green button with the correct classification.
+- **Correction Process:** Upon correction, the system updates the image in memory with the correct label. The bin corresponding to the misclassified label is closed, and the correct bin is opened.
+- **Automatic Bin Lid Closure:** After 20 seconds, the bin's lid closes automatically.
+
+#### Statistics Update:
+
+- **Recycling Statistics Display:** The system updates and displays statistics on the number of items recycled per class on the screen. This provides users with information on their recycling habits and encourages environmentally friendly practices.
+
+
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
 
 ## User Testing
 [Click Here to see final project user test](https://drive.google.com/file/d/1gLK1bqc0Nupb3r_tI-tR8ZrS1cnVEamW/view?usp=sharing)
 
-## Reflections
-The project presents an innovative system designed to recognize recyclable objects, compost, batteries, and trash, aiming to contribute to environmental conservation, waste reduction, and consumer education while offering convenience. Targeting general public spaces like airports, cafeterias, malls, and stadiums, it caters to busy individuals who might lack the knowledge or time to sort their trash effectively. Utilizing teachable machine technology and integrating multiple sensors, such as qwiic connectors, servo motors, LED strips, buttons, and OLED screens, the system provides real-time feedback. It notifies users when the trash is full, needs emptying, and can even suggest replacements for discarded items via platforms like Amazon or Instacart. Additionally, the system displays the total quantity of each recycled or disposed material, enhancing user awareness and participation in recycling efforts. An essential feature is its capability for failure correction and improvement, where users can notify the system if an item is misclassified. This prompts the trashcan to capture a picture of the object, enabling better future classification and continuous learning. 
+### Reflections
+The project introduces an innovative system designed to revolutionize waste management by recognizing recyclable objects, compost, batteries, and general trash. This initiative aims to make a significant contribution to environmental conservation, reduce waste, and educate consumers, all while ensuring convenience. The primary focus is on public spaces such as airports, cafeterias, malls, and stadiums, targeting busy individuals who may lack the time or knowledge to effectively sort their trash.
 
-Through the experience, we learned lots about multiple sensor integration and how to deal with errors when many sensors are connected in order. We also went through many design considerations when we ideated, prototyped, laser cut, and built it but we chose this layout for ease of access and modularity. 
+#### Key Features:
+
+- **Teachable Machine Technology:** The system employs advanced teachable machine technology, offering a dynamic and adaptable approach to object recognition and classification. This ensures that the system continuously evolves and improves its accuracy over time.
+
+- **Multisensor Integration:** Integrating various sensors, including qwiic connectors, servo motors, LED strips, buttons, and OLED screens, the system provides real-time feedback to users. This comprehensive sensor integration allows for a holistic and interactive user experience.
+
+- **User-Friendly Notifications:** The system notifies users when the trash receptacle is full and needs emptying. Moreover, it can suggest replacements for discarded items through popular platforms like Amazon or Instacart, enhancing user convenience and facilitating responsible disposal.
+
+- **Quantitative User Feedback:** Beyond just notifications, the system displays the total quantity of each recycled or disposed material. This feature enhances user awareness, encouraging active participation in recycling efforts and fostering a sense of responsibility for environmental conservation.
+
+- **Error Correction and Continuous Learning:** An essential aspect of the system is its ability to learn from errors. Users can notify the system if an item is misclassified, prompting the trashcan to capture an image of the object. This captured data contributes to better future classification, ensuring the system continually refines its recognition capabilities.
+
+#### Lessons Learned:
+
+The development process provided valuable insights into the integration of multiple sensors and how to effectively handle errors that may arise in such a connected ecosystem. Design considerations were meticulously evaluated throughout the ideation, prototyping, and construction phases. The chosen layout emphasizes ease of access and modularity, underscoring the importance of user-friendly design in promoting widespread adoption and usability. The iterative nature of the project underscored the commitment to continuous improvement and adaptability, crucial elements in creating a successful and sustainable technology solution.
+
 
 ## Future Improvements
 
