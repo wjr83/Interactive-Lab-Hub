@@ -192,8 +192,8 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/1a22da79-34c1-447c
 
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/a25f285a-4d48-4d5e-a48b-be5314112139
 
-Final Algorithm Architecture (Google's Teachable Machines):
-Items samples were Collected over 1 month:
+#### Final Algorithm Architecture (Google's Teachable Machines):
+Note: Item samples were collected over 30 days:
 
 ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/45ad6126-345f-4317-abda-d01c0bde7a6b)
 
@@ -267,7 +267,7 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cf309ff3-26b8-400f
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325-9000-fe6a2b742e6a
 
 ### Light-Controlled Environment for Object Scanning
-Camera height was found to be optimal at 17.5 inches to account for tall objects such as wine bottles yet still discern/classify small objects well (such as batteries).
+Camera height was found to be optimal at 17.5 inches to account for tall objects such as wine bottles yet still discern/classify small objects well (such as batteries). All training images were collected at this height, and the final enclosing was designed to allow for the camera placement to be set at a height of 17.5 inches. 
 
 |                      |                      | 
 |----------------------|---------------------------------------------|
@@ -284,11 +284,11 @@ Camera height was found to be optimal at 17.5 inches to account for tall objects
 
 #### Misclassification Interface & Classification Progress Indicator
 
-The first LED Button design used for testing and validating the misclassification code:
+The first LED Button design used for testing and validating the misclassification code is shown below:
 
 ![IMG-20231215-WA0032](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2df81218-425f-4c0f-92a7-c70d9f93ef23)
 
-Final design designed in Adobe Illustrator and Laser Cut:
+Final design of Misclassification Interface & Classification Progress Indicator designed in Adobe Illustrator and Laser Cut:
 |                      |                      | 
 |---------------------------------------------|----------------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0d96b873-314b-45fd-8dc0-944e1c1a5cca" width="600"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd10fe75-cc66-4136-975a-d25ad0b8518c" width="600"> |
