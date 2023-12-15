@@ -82,7 +82,16 @@ The Device:
 ## Verplank Diagram
 ![diagram](diagram.png)
 
- What can you use the recyclable material identification system for?
+**Preliminary Brainstorming On How We Think Users Will Use The System:**
+> * Users may not always be fully aware of the uncertainties in the system. They might assume that the system's classifications are always accurate, especially if it doesn't provide clear feedback about its confidence level. 
+> * The impact of misclassification on users can vary. In some cases, misclassifying an item as recyclable when it's not could lead to contamination of recycling streams and added processing costs. Misclassifying an item as non-recyclable when it's recyclable might lead to missed recycling opportunities. For compostable materials, misclassification could affect organic waste diversion rates.
+3. How could we change our interactive system to address this?
+> * To address these concerns, the interactive system will:
+> > * Implement a confidence level indicator: The system could provide a confidence score along with its classification. This way, users are aware of how certain or uncertain the system is about its decision.
+> > * Offer clear instructions: If an item is challenging to classify, the system could guide the user, such as suggesting a specific bin but indicating that the user should double-check.
+> > * Collect user feedback: Allow users to report misclassifications or provide feedback, which can be used to improve the system's accuracy over time.
+
+What can you use the recyclable material identification system for?
 
 > * The recyclable material identification system can be used for efficiently identifying and sorting recyclable materials, hazardous materials requiring special handling (e.g., batteries), and landfill-bound waste, simplifying the waste disposal process.
 > * It can serve as an educational tool, raising awareness about responsible waste management and encouraging proper recycling practices.
@@ -107,12 +116,6 @@ When will the recyclable material identification system break?
 > * If the machine learning model used in the recyclable material identification system becomes outdated and no longer receives updates or refinements, it may become less effective.
 > * In the event of loss of power or, if solar-powered, weather (rain or snow) preventing optimal charge of the system causing the system to turn off.
 
-When it breaks, how will the recyclable material identification system break?
-
-> * The recyclable material identification system may break by experiencing sensor or camera malfunctions, causing it to fail in accurately identifying waste items.
-> * Software breakdowns or system crashes may lead to an inability to provide real-time guidance to users.
-> * The system could break gradually, with a decline in accuracy, rather than an abrupt failure, depending on the nature of the issue.
-
 Other properties/behaviors of the recyclable material identification system:
 
 > * The recyclable material identification system continuously learns and improves from user interactions and feedback. Every time a new item is scanned, the system saves an image of the item to memory and adds it to the machine learning model. Likewise, if the system misclassifies an item and the used prompts the system with the correct classification via the Qwiic LED Buttons, the system corrects the label of the item and adds it to memory to improve the performance of the system. All of this happens behind the scenes without the user knowing. 
@@ -127,7 +130,7 @@ How does the recyclable material identification system feel?
 
 Our system successfully identifies and classifies an object as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), batteries, or otherwise as trash.
 
-**\*\*\*Ideas prioritized to improve performance, design, and interaction.\*\*\***
+**Ideas prioritized to improve performance, design, and interaction.**
 > * Increase training dataset. In particular, we needed to keep the following in mind as we acquire more data:
 > > * Types of objects
 > > * Orientation and deformation of objects
@@ -139,13 +142,19 @@ Our system successfully identifies and classifies an object as one of the 5 recy
 > > > * ​6500K and up: very bright, bluish light.
 > > * We originally had a category for compost, but this was later removed due to hygiene and cleanliness (the scanning bed started to get dirty and needed to be replaced). 
 > * The type of trash / recyclable objects will vary drastically depending on the location of the system. We may need to add location-specific data for training for the smart recycling system (e.g., add feedback loop with new sample data collected --> label new data --> retrain classification model with location-specific data --> aggregate new data from all location-specific acquisitions into the model --> release automatic update of the model in the physical smart recycling system). 
-> * Simplify Interaction and Design (Future Design Iteration):
-> > *  It would be ideal if the user would simply place the object on a flat surface, where the camera would determine the type of object, and once that is confirmed, the item would be disposed of automatically by the system.
 > * A lot of time was spent on improving the recognition of the background. In fact, a highly specific background target was designed in Adobe Photoshop  such that the background would not be confused with paper. 
 > > ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c0c56066-5669-42b3-86cc-f49ebe432452)
 > * Added a feature to count the number of items of each type recycled.
 > > ![image](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/535ac271-01ce-4a27-b40e-e2aab7ba9156)
 > > * Displayed these counts to the user by category type in hopes of promoting the mindset: reduce, reuse, recycle.
+> * Simplify Interaction and Design (Future Design Iteration):
+> > *  It would be ideal if the user would simply place the object on a flat surface, where the camera would determine the type of object, and once that is confirmed, the item would be disposed of automatically by the system.
+
+Features to be implemented in a future iteration of this project:
+
+> * Ability to classify an object that contains more than 1 type of material (glass, metal, plastic, paper).
+> > * Semantic Segmentation: Employ more advanced computer vision techniques like semantic segmentation to precisely identify regions within an image that correspond to different waste materials. This level of granularity can improve classification accuracy.
+> * Feature that informs the maintenance department which bin is full and needs to be emptied.
 
 
 ## Design Ideas:
