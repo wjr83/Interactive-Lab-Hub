@@ -29,8 +29,7 @@ Using the tools and techniques learned in this class, design, prototype, and tes
 > - Convenience: Many consumers find it challenging to decipher complex instructions or symbols on bins. A machine learning solution simplifies the process by instantly classifying waste items through images, making it more user-friendly.
 
 #### Intended Operation
-- The system identifies an object and classifies it as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), compost, special handling materials (e.g., batteries), or otherwise as trash.
-
+- The system identifies an object and classifies it as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), compost, hazardous materials requiring special handling (e.g., batteries), or otherwise as trash.
 > - Primary Goal: Design a system capable of identifying recyclable objects (paper, cardboard, plastic, glass, and metal), compost, items requiring special handling (e.g., batteries), and trash.
 > - Secondary Goal: Deployment of the system increases the number of items recycled, and decreases the incidence of non-recyclable objects being mixed with recyclable items in the recycling bin due to misinformation about what items can and cannot be recycled.
 > - Tertiary Goal: Educate the general public on what items can be recycled and which ones cannot.
@@ -143,7 +142,6 @@ Features to be implemented in a future iteration of this project:
 > > * Semantic Segmentation: Employ more advanced computer vision techniques like semantic segmentation to precisely identify regions within an image that correspond to different waste materials. This level of granularity can improve classification accuracy.
 > * Feature that informs the maintenance department which bin is full and needs to be emptied.
 
-
 ## Design Ideas
 
 Preliminary System Design showing scanning bed and bins.
@@ -198,7 +196,7 @@ Items samples were Collected over 1 month:
 
 
 ## Physical Device Prototype 
-#### Initial Camera Stand (Using shoe boxes)
+#### Initial Camera Stand (using shoe boxes and camera with integrated light)
 
 |                      |                      |
 |----------------------|----------------------|
@@ -225,7 +223,7 @@ Items samples were Collected over 1 month:
 
 [Click Here to see Cornell Tech Open Studio Demonstration in Maker Lab](https://drive.google.com/file/d/1i4RNBf1oDMCrO1Wy92NQy5Wi5kTPHf6M/view?usp=sharing)
 
-## Laser Cut Bin Lids, Laser Cut Battery Bin, Attached Servo Motors using Hot Glue Gun
+### Laser Cut Bin Lids, Laser Cut Battery Bin, Attached Servo Motors using Hot Glue Gun
 
 |                      |                      | 
 |----------------------|----------------------|
@@ -265,7 +263,7 @@ https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/cf309ff3-26b8-400f
 
 https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/c47fa359-3f2a-4325-9000-fe6a2b742e6a
 
-#### Light-Controlled Environment for Object Scanning
+### Light-Controlled Environment for Object Scanning
 Camera height was found to be optimal at 17.5 inches to account for tall objects such as wine bottles yet still discern/classify small objects well (such as batteries).
 
 |                      |                      | 
@@ -283,7 +281,7 @@ Camera height was found to be optimal at 17.5 inches to account for tall objects
 
 #### Misclassification Interface & Classification Progress Indicator
 
-The first design used for testing and validating code:
+The first LED Button design used for testing and validating the misclassification code:
 
 ![IMG-20231215-WA0032](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2df81218-425f-4c0f-92a7-c70d9f93ef23)
 
@@ -297,10 +295,7 @@ Final design designed in Adobe Illustrator and Laser Cut:
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/e8f04452-9120-4155-8299-28d4757c0ee9" width="600"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/34467c8e-1ff8-478c-8ed8-1a1a597f31ef" width="600"> |
 
 
-
-
-
-## Final Project Presentation 
+## Final Project Presentation: The iRecycle System
 
 Final System Set-up
 ![IMG-20231215-WA0038](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2923dd49-4f3c-42f4-a610-ffa26be0a574)
