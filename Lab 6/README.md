@@ -5,8 +5,6 @@
 
 ## Overview
 
-A) [MQTT](#part-a)
-
 B) [Send and Receive on your Pi](#part-b)
 
 C) [Streaming a Sensor](#part-c)
@@ -16,9 +14,6 @@ D) [The One True ColorNet](#part-d)
 E) [Make It Your Own](#part-)
 
 ## Part 1.
-
-
-
 ### Part B
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
