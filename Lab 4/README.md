@@ -13,7 +13,7 @@ E) [Servo Control](#part-e)
 
 F) [Camera Test](#part-f)
 
-G) [Record the interaction](#part-g)
+2) [Part 2 - Record Interaction](#part-g)
 
 
 ### Part C
