@@ -366,7 +366,7 @@ The development process provided valuable insights into the integration of multi
 
 
 
-## Teams
+## Team Member Contribution
 **William Reid (wjr83):** Purchased all sensors and servos used in the system, purchased trash bins, designed and laser-cut the scanning areas for the iRecycle system, designed and laser-cut lids for each bin, designed & laser-cut the battery bin, soldered the LED Buttons uniquely to give each of the 7 LED buttons used a unique address on the bus, developed the code to scan the object, developed the code to report the classification to the user, developed the code to open the bins via servo control, developed the code for user feedback/misclassification/correction, developed code to display keep track of items recycled and display such statistics to the user, designed background, target and statistics layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. Partially developed the code to read multiple distance sensor data for bin-fullness indication. Assembled physical prototype (wiring of sensors and servos, attachment of servos to bins and lids, assembled battery bin).
 
 **Khushi Bhansali (kb737):** Programmed distance sensors to recognize when bin is full. Helped assemble the servo motors to the bins, and helped design the positioning of the bin and sensor locations. Videotaped the final working version. Helped with documentation. 
