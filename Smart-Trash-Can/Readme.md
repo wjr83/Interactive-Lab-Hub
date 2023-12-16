@@ -106,10 +106,10 @@ How does the recyclable material identification system feel?
 Our system successfully identifies and classifies an object as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), batteries, or otherwise as trash.
 
 **Ideas prioritized to improve performance, design, and interaction.**
-> * Increase training dataset. In particular, we needed to keep the following in mind as we acquire more data:
-> > * Types of objects
-> > * Orientation and deformation of objects
-> > * Lighting conditions greatly affected the performance of the system. For such reason, we attempted to control the amount of light in the scanning area by creating the iRecycle box. Additionally, for all item classes, samples were collected in all of the following light conditions:
+> * Increase training dataset. In particular, we needed to keep the following in mind as we acquired more data:
+> > * Types of objects need to be representative of all types of objects in the class.
+> > * Orientation and deformation of objects should not affect the classification if the dataset used for training is comprehensive.
+> > * Lighting conditions greatly affected the performance of the system. For such reason, we attempted to control (and reduce) the amount of light in the scanning area by creating the iRecycle box. Additionally, for all item classes, samples were collected in all of the following light conditions:
 > > > * Less than 2000K: dim, yellowish light, close to candlelight.
 > > > * 2000K-3000K: warm light with hints of yellow.
 > > > * 3100K-4500K: bright, neutral white light.
