@@ -277,7 +277,7 @@ The first LED Button design used for testing and validating the misclassificatio
 
 ![IMG-20231215-WA0032](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2df81218-425f-4c0f-92a7-c70d9f93ef23)
 
-Final design of Misclassification Interface & Classification Progress Indicator designed in Adobe Illustrator and Laser Cut:
+The final design of the Misclassification Interface & Classification Progress Indicator designed in Adobe Illustrator and Laser Cut:
 |                      |                      | 
 |---------------------------------------------|----------------------|
 | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/0d96b873-314b-45fd-8dc0-944e1c1a5cca" width="600"> | <img src="https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/dd10fe75-cc66-4136-975a-d25ad0b8518c" width="600"> |
@@ -292,6 +292,7 @@ Final design of Misclassification Interface & Classification Progress Indicator 
 Final System Set-up
 ![IMG-20231215-WA0038](https://github.com/wjr83/Interactive-Lab-Hub/assets/143034234/2923dd49-4f3c-42f4-a610-ffa26be0a574)
 
+### Description of System
 #### Inform the User to Scan the Object:
 
 - **Instructions on the iPad:** The user is guided through the process with instructions displayed on the iPad screen. They are directed to place an object on the scanning bed, aligning it with a bulls-eye target.
@@ -318,7 +319,6 @@ Final System Set-up
 
 - **Recycling Statistics Display:** The system updates and displays statistics on the number of items recycled per class on the screen. This provides users with information on their recycling habits and encourages environmentally friendly practices.
 
-#### Report
 
 [Click Here to see final project video](https://drive.google.com/file/d/1sphreEEsGq0kaO2dEE1w3JUFqz_g5T50/view?usp=sharing)
 
@@ -352,7 +352,6 @@ The development process provided valuable insights into the integration of multi
 - For single-family homes, we could add features where you have a copy of that item added to your Amazon shopping cart when you trash the original one.
 - We would also want to improve the design of the camera scanning area and find ways to prevent lighting issues from preventing correct classification.
 - Additionally, we want to create a conveyor-type system designed specifically to be implemented at a waste management facility to remove the need for manual sorting / correction of recyclable materials and trash.
-
 
 
 ## Team Member Contribution
