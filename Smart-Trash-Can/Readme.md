@@ -1,20 +1,5 @@
 # Final Project: iRecycle
 
-[Project Plan](#project-plan) 
-
-[Functioning Project](#functioning-project) 
-
-[Documentation of Design Process](#documentation-of-design-process) 
-
-[Archive of All Code and Design Patterns](#archive-of-all-code-and-design-patterns) 
-
-[Video Demo](#video-demo) 
-
-[Reflections on Process](#reflections-on-process) 
-
-[Group Work Distribution](#group-work-distribution) 
-
-
 ## Project Plan
 Using the tools and techniques learned in this class, design, prototype, and test an interactive device that can distinguish between recyclable objects (paper, cardboard, plastic, glass, metal), trash, and batteries. 
 
