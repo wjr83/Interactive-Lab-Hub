@@ -47,19 +47,23 @@ The Device:
 - 1x [GeeekPi Raspberry Pi GPIO Extension Board, Raspberry Pi 4 Expansion Board GPIO 1 to 4 for Raspberry Pi 4B / 3B+ / 3B with Screws](https://www.amazon.com/GeeekPi-Raspberry-Extension-Expansion-Screws/dp/B08C2XK25W?ref_=ast_sto_dp)
 - 1x [SparkFun Qwiic LED Stick - APA102C](https://www.sparkfun.com/products/18354)
 > - Note: The retired version of the [Qwiic LED Stick](https://www.sparkfun.com/products/retired/14783) is compatible with the Arduino but not the Raspberry Pi (no Python module for Raspberry Pi exists for this version)
-- #x [SparkFun Qwiic Button - Red LED](https://www.sparkfun.com/products/15932)
-- #x [SparkFun Qwiic Button - Green LED](https://www.sparkfun.com/products/16842)
+- 1x [SparkFun Qwiic Button - Red LED](https://www.sparkfun.com/products/15932)
+- 6x [SparkFun Qwiic Button - Green LED](https://www.sparkfun.com/products/16842)
 - 1x [SparkFun Qwiic pHAT v2.0 for Raspberry Pi](https://www.sparkfun.com/products/15945)
 - 1x [Adafruit 16-Channel PWM / Servo HAT for Raspberry Pi - Mini Kit](https://www.adafruit.com/product/2327)
-- #x [SparkFun Proximity Sensor Breakout - 20cm, VCNL4040 (Qwiic)](https://www.sparkfun.com/products/15177)
-> - 1x [5V 4A (4000mA) switching power supply - UL Listed](https://www.adafruit.com/product/1466)
-- 2x [SparkFun Qwiic Mux Breakout - 8 Channel (TCA9548A)](https://www.sparkfun.com/products/16784)
+- > - 1x [5V 4A (4000mA) switching power supply - UL Listed](https://www.adafruit.com/product/1466)
+- 6x [SparkFun Proximity Sensor Breakout - 20cm, VCNL4040 (Qwiic)](https://www.sparkfun.com/products/15177)
+- 1x [Acrimet Wastebasket Bin for Recycling, 6.75 Gallon/ 27 Quart/ 24 Liter (Made of Plastic) (Metal/Yellow, Paper/Blue, Glass/Green, Plastic/Red) (Set of 4)](https://www.amazon.com/dp/B01J5XXK1I)
+- 1x [JEBUTU Overhead Camera Mount Desk Stand with 360° Adjustable Holding Arm, Flexible Phone Stand with 360° Ballhead and Phone Mount Holder, Boom Stand for Microphone, Video Light, Webcam, Cell Phone](https://www.amazon.com/dp/B09Q31YD2K?ref=ppx_pop_mob_ap_share&th=1)
+- 2x [SparkFun QwiicBus Kit - Extend The Range of Your I2C Communication Bus RJ45 connectors Reach up to 100ft Includes 1x QwiicBus-MidPoint 2X QwiicBus-EndPoint 2X CAT 6 Cable-3ft No Soldering Required](https://www.amazon.com/dp/B098V2WHMH?ref=ppx_pop_mob_ap_share)
+- 1x [Miuzei MG996R Servo Motor Metal Gear High Speed Torque Digital Servo for RC DIY Helicopter Car Boat Robot (Set of 6)](https://www.amazon.com/dp/B0BZ4NT2JC?ref=ppx_pop_mob_ap_share&th=1)
+- 1x [30 Pcs 3-Pin Extension Cable Cord Male to Female Lead Wire Connectors for Servo Extension Connection Control Board Remote Control Parts - 5 Sizes](https://www.amazon.com/dp/B08BF4C6S2?ref=ppx_pop_mob_ap_share) 
+- 1x [SparkFun Qwiic Mux Breakout - 8 Channel (TCA9548A)](https://www.sparkfun.com/products/16784)
 > - Helpful troubleshooting guide: https://electronics.stackexchange.com/questions/585681/multiple-tca9548a-multiplexers-are-not-working-correctly-with-more-than-3-connec
 > > - https://learn.sparkfun.com/tutorials/qwiic-mux-hookup-guide?_ga=2.40512486.592347460.1700772500-269332035.1698912388&_gl=1*1s9uhgb*_ga*MjY5MzMyMDM1LjE2OTg5MTIzODg.*_ga_T369JS7J9N*MTcwMDgwOTM1OS42LjEuMTcwMDgwOTU2NS42MC4wLjA.#p 
-- Servo(s)
 - Cardboard
 - Camera with USB Connection
-- #x Qwiic Cables
+- Qwiic Cables
 - Tape
 - Glue
 
