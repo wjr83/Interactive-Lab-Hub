@@ -2,20 +2,6 @@
 
 **COLLABORATORS:** [Khushi Bhansali (NetID: kb737)](https://github.com/Khushibhansali/Interactive-Lab-Hub/tree/Fall2023/Lab%204), [Annetta Zheng (NetID: jz2272)](https://github.com/annetta-zheng/Interactive-Lab-Hub/tree/Fall2023/Lab%204)
 
-## Lab Overview
-
-
-C) [Paper Display](#part-c)
-
-D) [Materiality](#part-d)
-
-E) [Servo Control](#part-e)
-
-F) [Camera Test](#part-f)
-
-[Part 2 - Record Interaction](#part-g)
-
-
 ### Part C
 ### Physical considerations for sensing
 
