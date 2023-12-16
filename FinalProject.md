@@ -106,10 +106,10 @@ How does the recyclable material identification system feel?
 Our system successfully identifies and classifies an object as one of the 5 recycled materials (paper, cardboard, glass, plastic, and metal), batteries, or otherwise as trash.
 
 **Ideas prioritized to improve performance, design, and interaction.**
-> * Increase training dataset. In particular, we needed to keep the following in mind as we acquire more data:
-> > * Types of objects
-> > * Orientation and deformation of objects
-> > * Lighting conditions greatly affected the performance of the system. For such reason, we attempted to control the amount of light in the scanning area by creating the iRecycle box. Additionally, for all item classes, samples were collected in all of the following light conditions:
+> * Increase training dataset. In particular, we needed to keep the following in mind as we acquired more data:
+> > * Types of objects need to be representative of all types of objects in the class.
+> > * Orientation and deformation of objects should not affect the classification if the dataset used for training is comprehensive.
+> > * Lighting conditions greatly affected the performance of the system. For such reason, we attempted to control (and reduce) the amount of light in the scanning area by creating the iRecycle box. Additionally, for all item classes, samples were collected in all of the following light conditions:
 > > > * Less than 2000K: dim, yellowish light, close to candlelight.
 > > > * 2000K-3000K: warm light with hints of yellow.
 > > > * 3100K-4500K: bright, neutral white light.
@@ -355,6 +355,7 @@ The development process provided valuable insights into the integration of multi
 
 
 ## Team Member Contribution
-**William Reid (wjr83):** Purchased all sensors and servos used in the system, purchased trash bins, designed and laser-cut the scanning areas for the iRecycle system, designed and laser-cut lids for each bin, designed & laser-cut the battery bin, soldered the LED Buttons uniquely to give each of the 7 LED buttons used a unique address on the bus, developed the code to scan the object, developed the code to report the classification to the user, developed the code to open the bins via servo control, developed the code for user feedback/misclassification/correction, developed code to display keep track of items recycled and display such statistics to the user, designed background, target and statistics layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. Partially developed the code to read multiple distance sensor data for bin-fullness indication. Assembled physical prototype (wiring of sensors and servos, attachment of servos to bins and lids, assembled battery bin).
+**William Reid (wjr83):** Purchased all sensors and servos used in the system, purchased trash bins, designed and laser-cut the scanning areas for the iRecycle system, designed and laser-cut lids for each bin, designed & laser-cut the battery bin, soldered the LED Buttons uniquely to give each of the 7 LED buttons used a unique address on the bus, developed the code to scan the object, developed the code to report the classification to the user, developed the code to open the bins via servo control, developed the code for user feedback/misclassification/correction, developed code to display and keep track of items recycled and display such statistics to the user, designed background, target and statistics layout for iPad screen to show statistics on how much has been trashed and what the current label is of the item being trashed. Partially developed the code to read multiple distance sensor data for bin-fullness indication. Assembled physical prototype (wiring of sensors and servos, attachment of servos to bins and lids, assembled battery bin).
 
 **Khushi Bhansali (kb737):** Programmed distance sensors to recognize when bin is full. Helped assemble the servo motors to the bins, and helped design the positioning of the bin and sensor locations. Videotaped the final working version. Helped with documentation. 
+
